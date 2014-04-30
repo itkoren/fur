@@ -4,7 +4,8 @@
     "description": "Front end design tool.",
     "main": "index.js",
     "scripts": {
-        "test": "ci/bin/test"
+        "test": "grunt test",
+        "coverage": "istanbul cover ci/bin/test --dir doc/coverage"
     },
     "repository": {
         "type": "git",
@@ -27,6 +28,7 @@
         "grunt-cli": "^0.1.13",
         "grunt-mkdir": "^0.1.1",
         "grunt-chmod": "^1.0.3",
+        "grunt-exec": "^0.4.5",
         "grunt-jsdoc": "^0.5.1",
         "ink-docstrap": "^0.3.0-0",
         "istanbul": "^0.2.7",

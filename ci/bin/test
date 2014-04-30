@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+/**
+ * @file Run "test" for this project.
+ * @see Gruntfile.js
+ * @author undefined
+ */
+
+require('grunt').tasks([
+    'test'
+], {
+    debug: false
+});

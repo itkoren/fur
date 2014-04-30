@@ -10,5 +10,12 @@ exports['ci'] = [
         data: {
             taskName: 'build'
         }
+    },
+    {
+        filename: 'ci/bin/test',
+        tmpl: 'tmpl/bin/ci_bin.dot',
+        data: {
+            taskName: 'test'
+        }
     }
 ];
