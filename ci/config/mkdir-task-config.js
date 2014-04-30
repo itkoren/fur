@@ -1,0 +1,29 @@
+/**
+ * Directory configuration.
+ * @module ci/config/dirTaskConfig
+ * @see https://github.com/rubenv/grunt-mkdir
+ * @author Taka Okunishi
+ *
+ */
+
+exports.all = {
+    options: {
+        create: [
+            'doc',
+            'ci',
+            'ci/bin',
+            'ci/config',
+            'ci/task',
+            'lib',
+            'lib/util',
+            'test/.work',
+            'test/mock',
+            'test/unit_tests',
+            'test/unit_tests/lib',
+            'test/unit_tests/lib/util',
+            'tmpl',
+            'tmpl/bin',
+            'tmpl/js'
+        ]
+    }
+};

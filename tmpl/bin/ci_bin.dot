@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+/**
+ * @file Run "{{=it.taskName}}" for this project.
+ * @see Gruntfile.js
+ * @author {{=author}}
+ */
+
+require('grunt').tasks([
+    '{{=it.taskName}}'
+], {
+    debug: false
+});
