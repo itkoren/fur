@@ -1,37 +1,38 @@
 {
-  "name": "fur",
-  "version": "0.0.0",
-  "description": "Front end design tool.",
-  "main": "index.js",
-  "scripts": {
-    "test": "ci/bin/test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tick-tack/fur.git"
-  },
-  "author": {
-    "name": "Taka Okunishi"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tick-tack/fur/issues"
-  },
-  "homepage": "https://github.com/tick-tack/fur",
-  "dependencies": {
-    "async": "^0.7.0",
-    "mkdirp": "^0.4.0"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-cli": "^0.1.13",
-    "grunt-mkdir": "^0.1.1",
-    "grunt-chmod": "^1.0.3",
-    "grunt-jsdoc": "^0.5.1",
-    "ink-docstrap": "^0.3.0-0",
-    "istanbul": "^0.2.7",
-    "jsdoc": "^3.3.0-alpha5",
-    "nodeunit": "^0.8.7",
-    "dot": "~1.0.2"
-  }
+    "name": "fur",
+    "version": "0.0.0",
+    "description": "Front end design tool.",
+    "main": "index.js",
+    "scripts": {
+        "test": "ci/bin/test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tick-tack/fur.git"
+    },
+    "author": {
+        "name": "Taka Okunishi"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tick-tack/fur/issues"
+    },
+    "homepage": "https://github.com/tick-tack/fur",
+    "dependencies": {
+        "async": "^0.7.0",
+        "mkdirp": "^0.4.0"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-cli": "^0.1.13",
+        "grunt-mkdir": "^0.1.1",
+        "grunt-chmod": "^1.0.3",
+        "grunt-jsdoc": "^0.5.1",
+        "ink-docstrap": "^0.3.0-0",
+        "istanbul": "^0.2.7",
+        "jsdoc": "^3.3.0-alpha5",
+        "nodeunit": "^0.8.7",
+        "dot": "~1.0.2",
+        "grunt-contrib-nodeunit": "^0.3.3"
+    }
 }

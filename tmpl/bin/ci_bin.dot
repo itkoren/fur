@@ -3,7 +3,7 @@
 /**
  * @file Run "{{=it.taskName}}" for this project.
  * @see Gruntfile.js
- * @author {{=author}}
+ * @author {{=it.author}}
  */
 
 require('grunt').tasks([
