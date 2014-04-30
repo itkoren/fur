@@ -23,7 +23,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'chmod',
-        'mkdir'
+        'mkdir',
+        'scaffold'
     ]);
 
     grunt.registerTask('test', [

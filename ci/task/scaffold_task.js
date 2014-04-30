@@ -7,6 +7,8 @@
 var async = require('async'),
     grunt = require('grunt'),
     fs = require('fs'),
+    mkdirp = require('mkdirp'),
+    path = require('path'),
     renderDotTmpl = require('../../lib/util/render_dot_tmpl');
 
 module.exports = function () {
@@ -20,13 +22,19 @@ module.exports = function () {
                 callback();
                 return;
             }
-            renderDotTmpl(config.tmpl, config.data, dest, function (err) {
+            mkdirp(path.dirname(dest), function (err) {
                 if (err) {
-                    grunt.log.error(err);
-                } else {
-                    grunt.log.writeln('File created: ' + dest);
+                    callback(err);
+                    return;
                 }
-                callback(err);
+                renderDotTmpl(config.tmpl, config.data, dest, function (err) {
+                    if (err) {
+                        grunt.log.error(err);
+                    } else {
+                        grunt.log.writeln('File created: ' + dest);
+                    }
+                    callback(err);
+                });
             });
         });
     }, function () {
