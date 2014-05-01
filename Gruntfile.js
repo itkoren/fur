@@ -9,6 +9,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         exec: require('./ci/config/exec-task-config.js'),
         chmod: require('./ci/config/chmod-task-config'),
+        jsdoc: require('./ci/config/jsdoc-task-config'),
         mkdir: require('./ci/config/mkdir-task-config'),
         nodeunit: require('./ci/config/nodeunit-task-config'),
         scaffold: require('./ci/config/scaffold-task-config')
@@ -18,6 +19,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-chmod');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-exec');
+    grunt.loadNpmTasks('grunt-jsdoc');
 
     grunt.registerMultiTask('scaffold', require('./ci/task/scaffold_task'));
 
@@ -33,6 +35,10 @@ module.exports = function (grunt) {
 
     grunt.registerTask('coverage', [
         'exec:coverage'
+    ]);
+
+    grunt.registerTask('doc', [
+        'jsdoc'
     ]);
 
     grunt.registerTask('default', [

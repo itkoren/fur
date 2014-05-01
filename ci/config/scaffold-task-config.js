@@ -19,6 +19,7 @@ var moduleNames = fs.readdirSync(libDir)
 
 var binNames = [
     'build',
+    'doc',
     'test'
 ];
 
