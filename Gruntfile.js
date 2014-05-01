@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-exec');
 
-    grunt.registerMultiTask('scaffold', require('./ci/task/scaffold_task'))
+    grunt.registerMultiTask('scaffold', require('./ci/task/scaffold_task'));
 
     grunt.registerTask('build', [
         'chmod',
