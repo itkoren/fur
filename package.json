@@ -28,7 +28,8 @@
     "canvas": "^1.1.1",
     "onecolor": "^2.4.0",
     "color-scheme": "0.0.5",
-    "fabric": "^1.4.3"
+    "fabric": "^1.4.3",
+    "glob": "^3.2.9"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.0.3",

@@ -19,6 +19,7 @@ exports.all = {
             'ci/config',
             'ci/tasks',
             'dist',
+            'gallery',
             'lib',
             'lib/images',
             'lib/icons',
@@ -30,6 +31,7 @@ exports.all = {
             'test/unit_tests/lib/util',
             'tmpl',
             'tmpl/bin',
+            'tmpl/html',
             'tmpl/js'
         ]
     }
