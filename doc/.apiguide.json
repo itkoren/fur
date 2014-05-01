@@ -9,9 +9,9 @@
         "default": {
             "outputSourceFiles": true
         },
-        "systemName": "apeman",
+        "systemName": "fur",
         "footer": "",
-        "copyright": "Apeman Copyright © 2014",
+        "copyright": "tick-tack Copyright © 2014",
         "navType": "vertical",
         "theme": "journal",
         "linenums": true,
