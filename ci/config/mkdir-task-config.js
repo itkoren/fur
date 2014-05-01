@@ -10,6 +10,7 @@ exports.all = {
     options: {
         create: [
             'assets',
+            'assets/catalogs',
             'assets/web_fonts',
             'bin',
             'doc',

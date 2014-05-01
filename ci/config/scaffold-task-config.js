@@ -37,7 +37,8 @@ var binNames = [
 
 var taskNames = [
     'scaffold',
-    'badge'
+    'badge',
+    'catalog'
 ];
 
 exports.ciTask = taskNames.map(function (name) {

@@ -1,0 +1,250 @@
+{
+    "AllerDisplay": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/AllerDisplay.ttf",
+        "type": "ttf"
+    },
+    "Aller_Bd": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_Bd.ttf",
+        "type": "ttf"
+    },
+    "Aller_BdIt": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_BdIt.ttf",
+        "type": "ttf"
+    },
+    "Aller_It": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_It.ttf",
+        "type": "ttf"
+    },
+    "Aller_Lt": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_Lt.ttf",
+        "type": "ttf"
+    },
+    "Aller_LtIt": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_LtIt.ttf",
+        "type": "ttf"
+    },
+    "Aller_Rg": {
+        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_Rg.ttf",
+        "type": "ttf"
+    },
+    "Chunkfive": {
+        "filename": "assets/web_fonts/font_squirrel/ChunkFive/Chunkfive.otf",
+        "type": "otf"
+    },
+    "Prociono-Regular": {
+        "filename": "assets/web_fonts/font_squirrel/Prociono/Prociono-Regular.otf",
+        "type": "otf"
+    },
+    "Junction": {
+        "filename": "assets/web_fonts/font_squirrel/junction-regular/Junction.otf",
+        "type": "otf"
+    },
+    "AbrilFatface-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Abril_Fatface/AbrilFatface-Regular.ttf",
+        "type": "ttf"
+    },
+    "Arvo-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Arvo/Arvo-Bold.ttf",
+        "type": "ttf"
+    },
+    "Arvo-BoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Arvo/Arvo-BoldItalic.ttf",
+        "type": "ttf"
+    },
+    "Arvo-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Arvo/Arvo-Italic.ttf",
+        "type": "ttf"
+    },
+    "Arvo-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Arvo/Arvo-Regular.ttf",
+        "type": "ttf"
+    },
+    "DroidSans-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Droid_Sans/DroidSans-Bold.ttf",
+        "type": "ttf"
+    },
+    "DroidSans": {
+        "filename": "assets/web_fonts/google_fonts/Droid_Sans/DroidSans.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Bold.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-BoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-BoldItalic.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Italic.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-Light": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Light.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-LightItalic": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-LightItalic.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Regular.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-SemiBold": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-SemiBold.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-SemiBoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-SemiBoldItalic.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-Thin": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Thin.ttf",
+        "type": "ttf"
+    },
+    "JosefinSlab-ThinItalic": {
+        "filename": "assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-ThinItalic.ttf",
+        "type": "ttf"
+    },
+    "Lato-Black": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-Black.ttf",
+        "type": "ttf"
+    },
+    "Lato-BlackItalic": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-BlackItalic.ttf",
+        "type": "ttf"
+    },
+    "Lato-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-Bold.ttf",
+        "type": "ttf"
+    },
+    "Lato-BoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-BoldItalic.ttf",
+        "type": "ttf"
+    },
+    "Lato-Hairline": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-Hairline.ttf",
+        "type": "ttf"
+    },
+    "Lato-HairlineItalic": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-HairlineItalic.ttf",
+        "type": "ttf"
+    },
+    "Lato-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-Italic.ttf",
+        "type": "ttf"
+    },
+    "Lato-Light": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-Light.ttf",
+        "type": "ttf"
+    },
+    "Lato-LightItalic": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-LightItalic.ttf",
+        "type": "ttf"
+    },
+    "Lato-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Lato/Lato-Regular.ttf",
+        "type": "ttf"
+    },
+    "OldStandard-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Bold.ttf",
+        "type": "ttf"
+    },
+    "OldStandard-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Italic.ttf",
+        "type": "ttf"
+    },
+    "OldStandard-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Regular.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-Bold.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-BoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-BoldItalic.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-ExtraBold": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-ExtraBold.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-ExtraBoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-Italic.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-Light": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-Light.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-LightItalic": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-LightItalic.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-Regular.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-Semibold": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-Semibold.ttf",
+        "type": "ttf"
+    },
+    "OpenSans-SemiboldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Bold.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-BoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-BoldItalic.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Italic.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-Light": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Light.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-LightItalic": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-LightItalic.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-Medium": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Medium.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-MediumItalic": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-MediumItalic.ttf",
+        "type": "ttf"
+    },
+    "Ubuntu-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Regular.ttf",
+        "type": "ttf"
+    },
+    "Vollkorn-Bold": {
+        "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Bold.ttf",
+        "type": "ttf"
+    },
+    "Vollkorn-BoldItalic": {
+        "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-BoldItalic.ttf",
+        "type": "ttf"
+    },
+    "Vollkorn-Italic": {
+        "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Italic.ttf",
+        "type": "ttf"
+    },
+    "Vollkorn-Regular": {
+        "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Regular.ttf",
+        "type": "ttf"
+    }
+}
