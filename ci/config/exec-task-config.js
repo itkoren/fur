@@ -9,3 +9,12 @@ exports.coverage = {
     stdout: true,
     cmd: 'npm run coverage'
 };
+
+exports.commitDoc = {
+    stdout: false,
+    cmd: 'git add doc -A && git commit -a -m "Update doc task. [ci skip]"'
+};
+
+exports.pushDoc = {
+    cmd: 'git subtree push -q --squash --prefix=doc origin gh-pages'
+};

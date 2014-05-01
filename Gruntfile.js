@@ -64,7 +64,14 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('doc', [
-        'jsdoc'
+        'jsdoc',
+        'coverage'
+    ]);
+
+    grunt.registerTask('publishDoc', [
+        'doc',
+        'exec:commitDoc',
+        'exec:pushDoc'
     ]);
 
     grunt.registerTask('default', [
