@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "grunt test",
-    "coverage": "istanbul cover ci/bin/test --dir doc/coverage"
+    "coverage": "istanbul cover ci/bin/test --dir doc/coverage",
+      "send-coverage": "grunt coverage && codeclimate < doc/coverage/lcov.info"
   },
   "repository": {
     "type": "git",
