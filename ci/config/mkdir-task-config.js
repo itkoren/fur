@@ -9,12 +9,15 @@
 exports.all = {
     options: {
         create: [
+            'assets',
+            'assets/web_fonts',
             'doc',
             'ci',
             'ci/bin',
             'ci/config',
             'ci/task',
             'lib',
+            'lib/badge',
             'lib/util',
             'test/.work',
             'test/mock',

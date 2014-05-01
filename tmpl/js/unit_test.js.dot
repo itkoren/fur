@@ -1,10 +1,10 @@
 /**
- * @file nodeunit test case for
+ * @file nodeunit test case for "{{=it.moduleName}}}
  * @see {@link https://github.com/caolan/nodeunit | nodeunit}
  *
  */
 
-var {{moduleName}} = require('{{=it.relativePathToBaseDir}}/{{=it.modulePath}}'),
+var {{=it.moduleName}} = require('{{=it.relativePathToBaseDir}}/{{=it.modulePath}}'),
     testHelper = require('{{=it.relativePathToBaseDir}}/test/test_helper');
 
 exports.setUp = function(done) {
@@ -15,7 +15,7 @@ exports.tearDown = function(done) {
     done();
 };
 
-exports['{{testCaseName}}'] = function (test) {
+exports['{{=it.testCaseName}}'] = function (test) {
     test.ifError(new Error('Not implemented!'));
     test.done();
 };
