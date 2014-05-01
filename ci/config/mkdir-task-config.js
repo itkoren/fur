@@ -20,7 +20,6 @@ exports.all = {
             'dist',
             'lib',
             'lib/badges',
-            'lib/badge',
             'lib/util',
             'test/.work',
             'test/mock',

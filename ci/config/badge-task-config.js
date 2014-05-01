@@ -15,7 +15,7 @@ exports.apeman = styles.map(function (style) {
         options: {
             style: style,
             format: 'svg',
-            colors: ['#999', '#36E'],
+            colors: ['rgb(80,40,0)', 'rgb(220,160,0)'],
             texts: ['powered by', ' apeman ']
         }
     }

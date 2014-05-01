@@ -12,9 +12,21 @@ var util = require('util'),
 var baseDir = path.resolve(__dirname, '../../'),
     libDir = path.resolve(baseDir, 'lib');
 
+function capitalize(string) {
+    return string.substr(0, 1).toUpperCase() + string.substr(1);
+}
+
+function isDir(filename) {
+    return fs.statSync(filename).isDirectory();
+}
+
+
 var moduleNames = fs.readdirSync(libDir)
     .filter(function (filename) {
         return filename !== 'index.js';
+    })
+    .filter(function (filename) {
+        return isDir(path.resolve(libDir, filename));
     });
 
 var binNames = [
@@ -59,24 +71,18 @@ exports.ciBin = binNames.map(function (name) {
     }
 });
 
-exports.libIndex = moduleNames.map(function (name) {
-    return {
-        filename: util.format('lib/%s/index.js', changeCase.snakeCase(name)),
-        tmpl: 'tmpl/js/index.js.dot',
-        data: {
-            moduleName: util.format('fur/%s', name)
-        }
-    };
-});
+exports.libIndex = moduleNames
+    .map(function (name) {
+        return {
+            filename: util.format('lib/%s/index.js', changeCase.snakeCase(name)),
+            tmpl: 'tmpl/js/index.js.dot',
+            data: {
+                moduleName: util.format('fur/%s', name)
+            }
+        };
+    });
 
 exports.libUnitTests = moduleNames.map(function (moduleName) {
-    function capitalize(string) {
-        return string.substr(0, 1).toUpperCase() + string.substr(1);
-    }
-
-    function isDir(filename) {
-        return fs.statSync(filename).isDirectory();
-    }
 
     var dirname = path.resolve(libDir, moduleName);
     var filenames;
