@@ -19,6 +19,7 @@ exports.all = {
             'ci/tasks',
             'dist',
             'lib',
+            'lib/images',
             'lib/badges',
             'lib/util',
             'test/.work',
