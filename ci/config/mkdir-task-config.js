@@ -15,7 +15,7 @@ exports.all = {
             'ci',
             'ci/bin',
             'ci/config',
-            'ci/task',
+            'ci/tasks',
             'lib',
             'lib/badge',
             'lib/util',

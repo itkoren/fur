@@ -23,6 +23,17 @@ var binNames = [
     'test'
 ];
 
+var taskNames = [
+    'scaffold'
+];
+
+exports.ciTask = taskNames.map(function (name) {
+    return {
+        filename: util.format('ci/task/%s', name),
+        tmpl:'tmpl/js/ci_task.js.dot'
+    };
+});
+
 exports.ciBin = binNames.map(function (name) {
     return {
         filename: util.format('ci/bin/%s', name),
@@ -42,7 +53,6 @@ exports.libIndex = moduleNames.map(function (name) {
         }
     };
 });
-
 
 exports.libUnitTests = moduleNames.map(function (moduleName) {
     function capitalize(string) {

@@ -47,7 +47,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-jsdoc');
 
-    grunt.registerMultiTask('scaffold', ciTask('./ci/task/scaffold_task'));
+    grunt.registerMultiTask('scaffold', ciTask('./ci/tasks/scaffold_task'));
 
     grunt.registerTask('build', [
         'chmod',

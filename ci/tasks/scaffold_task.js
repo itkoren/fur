@@ -1,12 +1,16 @@
 /**
  * @file Scaffold task.
- * @memberof module:ci/task
+ * @memberof module:ci/tasks
  * @function scaffoldTask
  * @param grunt
  * @param {object} config - Task configuration.
  * @param {function} callback - Callback when done.
  *
  */
+
+
+
+
 var async = require('async'),
     grunt = require('grunt'),
     fs = require('fs'),
