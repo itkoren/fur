@@ -33,6 +33,7 @@ module.exports = function (grunt) {
 
 
     grunt.initConfig({
+        badge: require('./ci/config/badge-task-config.js'),
         exec: require('./ci/config/exec-task-config.js'),
         chmod: require('./ci/config/chmod-task-config'),
         jsdoc: require('./ci/config/jsdoc-task-config'),
@@ -48,6 +49,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jsdoc');
 
     grunt.registerMultiTask('scaffold', ciTask('./ci/tasks/scaffold_task'));
+    grunt.registerMultiTask('badge', ciTask('./ci/tasks/badge_task'));
+
 
     grunt.registerTask('build', [
         'chmod',
@@ -72,6 +75,11 @@ module.exports = function (grunt) {
         'doc',
         'exec:commitDoc',
         'exec:pushDoc'
+    ]);
+
+    grunt.registerTask('publish', [
+        'publishDoc',
+        'badge'
     ]);
 
     grunt.registerTask('default', [
