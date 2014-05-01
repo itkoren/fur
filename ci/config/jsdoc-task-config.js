@@ -13,6 +13,7 @@ exports.all = {
     options: {
         destination: 'doc/apiguide',
         configure: 'doc/.apiguide.json',
+        private: false,
         get template() {
             var path = require('path');
             return path.dirname(require.resolve('ink-docstrap'));

@@ -2,6 +2,9 @@
  * @file Scaffold task.
  * @memberof module:ci/task
  * @function scaffoldTask
+ * @param grunt
+ * @param {object} config - Task configuration.
+ * @param {function} callback - Callback when done.
  *
  */
 var async = require('async'),
@@ -11,33 +14,29 @@ var async = require('async'),
     path = require('path'),
     renderDotTmpl = require('../../lib/util/render_dot_tmpl');
 
-module.exports = function () {
-    var task = this,
-        done = task.async(),
-        config = task.data;
+module.exports = function (grunt, config, callback) {
     async.eachLimit(config, 5, function (config, callback) {
-        var dest = config.filename;
+        var dest = config.filename,
+            tmpl = config.tmpl,
+            data = config.data;
         fs.exists(dest, function (exists) {
             if (exists) {
                 callback();
                 return;
             }
-            mkdirp(path.dirname(dest), function (err) {
-                if (err) {
-                    callback(err);
-                    return;
+            async.series([
+                function (callback) {
+                    mkdirp(path.dirname(dest), callback);
+                },
+                function (callback) {
+                    renderDotTmpl(tmpl, data, dest, callback);
                 }
-                renderDotTmpl(config.tmpl, config.data, dest, function (err) {
-                    if (err) {
-                        grunt.log.error(err);
-                    } else {
-                        grunt.log.writeln('File created: ' + dest);
-                    }
-                    callback(err);
-                });
+            ], function (err) {
+                if (!err) {
+                    grunt.log.writeln('File created: ' + dest);
+                }
+                callback(err);
             });
         });
-    }, function () {
-        done();
-    });
+    }, callback);
 };

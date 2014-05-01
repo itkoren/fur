@@ -5,7 +5,33 @@
  *
  */
 
+"use strict";
+
+var path = require('path'),
+    fs = require('fs');
+
+
 module.exports = function (grunt) {
+
+    /**
+     * Task defined as ci.
+     * @param {string} filename
+     * @returns {function}
+     */
+    function ciTask(filename) {
+        return function () {
+            var done = this.async(),
+                config = this.data;
+            require(filename).call(this, grunt, config, function (err) {
+                if (err) {
+                    grunt.log.error(err);
+                }
+                done();
+            });
+        }
+    }
+
+
     grunt.initConfig({
         exec: require('./ci/config/exec-task-config.js'),
         chmod: require('./ci/config/chmod-task-config'),
@@ -21,7 +47,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-jsdoc');
 
-    grunt.registerMultiTask('scaffold', require('./ci/task/scaffold_task'));
+    grunt.registerMultiTask('scaffold', ciTask('./ci/task/scaffold_task'));
 
     grunt.registerTask('build', [
         'chmod',
