@@ -24,10 +24,8 @@ function isDir(filename) {
 var moduleNames = fs.readdirSync(libDir)
     .filter(function (filename) {
         return filename !== 'index.js';
-    })
-    .filter(function (filename) {
-        return isDir(path.resolve(libDir, filename));
     });
+
 
 var binNames = [
     'build',
@@ -73,6 +71,9 @@ exports.ciBin = binNames.map(function (name) {
 });
 
 exports.libIndex = moduleNames
+    .filter(function (filename) {
+        return isDir(path.resolve(libDir, filename));
+    })
     .map(function (name) {
         return {
             filename: util.format('lib/%s/index.js', changeCase.snakeCase(name)),
