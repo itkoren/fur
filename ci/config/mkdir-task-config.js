@@ -11,6 +11,7 @@ exports.all = {
         create: [
             'assets',
             'assets/web_fonts',
+            'bin',
             'doc',
             'ci',
             'ci/bin',
