@@ -1,30 +1,28 @@
 /**
- * @file badge task.
+ * @file favicon task.
  * @memberof module:ci/tasks
- * @function badgeTask
+ * @function faviconTask
  * @param grunt
  * @param {object} config - Task configuration.
  * @param {function} callback - Callback when done.
- * @author Taka Okunishi
  *
  */
 
 "use strict";
 
 var async = require('async'),
-    generateBadge = require('../../lib/generate_badge');
+    generateFavicon = require('../../lib/generate_favicon');
 
 module.exports = function (grunt, config, callback) {
     async.eachSeries(config, function (config, callback) {
         var filename = config.filename,
             options = config.options;
-        generateBadge(filename, options,
+        generateFavicon(filename, options,
             function (err) {
                 if (!err) {
-                    grunt.log.writeln('Badge file created: %s', filename);
+                    grunt.log.writeln('Favicon file created: %s', filename);
                 }
                 callback(err);
-            }
-        );
+            });
     }, callback);
 };

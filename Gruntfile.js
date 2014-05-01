@@ -34,6 +34,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         badge: require('./ci/config/badge-task-config.js'),
+        favicon: require('./ci/config/favicon-task-config.js'),
         catalog: require('./ci/config/catalog-task-config.js'),
         exec: require('./ci/config/exec-task-config.js'),
         chmod: require('./ci/config/chmod-task-config'),
@@ -51,6 +52,7 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('scaffold', ciTask('./ci/tasks/scaffold_task'));
     grunt.registerMultiTask('badge', ciTask('./ci/tasks/badge_task'));
+    grunt.registerMultiTask('favicon', ciTask('./ci/tasks/favicon_task'));
     grunt.registerMultiTask('catalog', ciTask('./ci/tasks/catalog_task'));
 
 
@@ -80,9 +82,14 @@ module.exports = function (grunt) {
         'exec:pushDoc'
     ]);
 
+    grunt.registerTask('draw', [
+        'badge',
+        'favicon'
+    ]);
+
     grunt.registerTask('publish', [
-        'publishDoc',
-        'badge'
+        'draw',
+        'publishDoc'
     ]);
 
     grunt.registerTask('default', [

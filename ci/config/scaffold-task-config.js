@@ -29,6 +29,7 @@ var moduleNames = fs.readdirSync(libDir)
 
 var binNames = [
     'build',
+    'draw',
     'doc',
     'test'
 ];
@@ -36,6 +37,7 @@ var binNames = [
 var taskNames = [
     'scaffold',
     'badge',
+    'favicon',
     'catalog'
 ];
 
