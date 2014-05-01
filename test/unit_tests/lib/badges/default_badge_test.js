@@ -19,6 +19,7 @@ exports['Default badge.'] = function (test) {
     var filename = testHelper.resolveWorkFile('work_badge.svg');
     new DefaultBadge().toSVG(function (err, data) {
         var badge = this;
+        test.equal(badge.style(), 'default');
         test.ifError(err);
         test.ok(data);
         badge.writeAsSVG(filename, function (err) {

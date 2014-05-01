@@ -12,15 +12,13 @@
 "use strict";
 
 var async = require('async'),
-    generateBadgeSvg = require('../../lib/badge/generate_badge_svg');
+    generateBadge = require('../../lib/generate_badge');
 
 module.exports = function (grunt, config, callback) {
     async.eachLimit(config, 4, function (config, callback) {
-        var filename = config.filename;
-        generateBadgeSvg(config.style,
-            config.texts,
-            config.colors,
-            filename,
+        var filename = config.filename,
+            options = config.options;
+        generateBadge(filename, options,
             function (err) {
                 if (!err) {
                     grunt.log.writeln('Badge file created: %s', filename);

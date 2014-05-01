@@ -79,16 +79,19 @@ exports.libUnitTests = moduleNames.map(function (moduleName) {
     }
 
     var dirname = path.resolve(libDir, moduleName);
-    if (!isDir(dirname)) {
-        return [];
+    var filenames;
+    if (isDir(dirname)) {
+        filenames = fs.readdirSync(dirname)
+            .filter(function (filename) {
+                return filename !== 'index.js';
+            })
+            .map(function (filename) {
+                return path.resolve(dirname, filename);
+            });
+    } else {
+        filenames = [dirname];
     }
-    return fs.readdirSync(dirname)
-        .filter(function (filename) {
-            return filename !== 'index.js';
-        })
-        .map(function (filename) {
-            return path.resolve(dirname, filename);
-        })
+    return filenames
         .map(function (filename) {
             var extname = path.extname(filename),
                 basename = path.basename(filename, extname);
