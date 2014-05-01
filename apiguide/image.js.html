@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: icons/index.js</title>
+	<title>fur Source: images/image.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -105,20 +105,74 @@
 					
 
 
-		<h1 class="page-title">Source: icons/index.js</h1>
+		<h1 class="page-title">Source: images/image.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Exports modules in dir.
- * @memberof module:fur
- * @namespace fur.icons
+ * @file Abstract image object.
+ * @memberof fur.images
+ * @abstract
+ * @constructor Image
+ * @author Taka Okunishi
  *
  */
+var define = require('../util/define'),
+    mkdirp = require('mkdirp'),
+    fs = require('fs'),
+    path = require('path'),
+    async = require('async');
 
-"use strict";
+var Image = module.exports = define({
+    init: function (values) {
+        var s = this;
+        s.set(values);
+    },
+    /**
+     * @lends Image
+     */
+    properties: {
+        /**
+         * Convert to svg data.
+         * @abstract
+         * @function
+         * @param {function} callback - Callback when done.
+         */
+        toSVG: function (callback) {
+            callback(new Error('Not implemented!'));
+        },
+        /**
+         * Write as svg file.
+         * @function
+         * @param {string} filename - Filename to write.
+         * @param {function} callback - Callback when done.
+         */
+        writeAsSVG: function (filename, callback) {
+            var s = this;
+            async.waterfall([
+                function (callback) {
+                    s.toSVG(callback);
+                },
+                function (data, callback) {
+                    Image._writeFile(filename, data, callback);
+                }
+            ], callback);
+        }
+    }
+});
 
-exports.Icon = require('./icon');</pre>
+Image._writeFile = function (filename, content, callback) {
+    async.series([
+        function (callback) {
+            var dirname = path.dirname(filename);
+            mkdirp(dirname, callback);
+        },
+        function (callback) {
+            fs.writeFile(filename, content, callback);
+        }
+    ], callback);
+};
+</pre>
         </article>
     </section>
 

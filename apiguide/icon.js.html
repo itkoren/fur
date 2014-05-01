@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: badges/badge.js</title>
+	<title>fur Source: icons/icon.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -105,64 +105,122 @@
 					
 
 
-		<h1 class="page-title">Source: badges/badge.js</h1>
+		<h1 class="page-title">Source: icons/icon.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Abstract badge object.
- * @see {@link https://www.npmjs.org/package/gh-badges|gh-badges}
- * @memberof fur.badges
+ * @file Abstract icon object.
+ * @memberof fur.icons
  * @abstract
  * @augments Image
- * @constructor Badge
+ * @constructor Icon
  * @author Taka Okunishi
  *
  */
+
+
 "use strict";
 
 var define = require('../util/define'),
-    _ghBadge = require('./_gh_badge'),
+    fabric = require('fabric').fabric,
+    fs = require('fs'),
     Image = require('../images/image');
 
-var Badge = module.exports = define({
+
+var Icon = module.exports = define({
     prototype: Image,
     accessors: [
     /**
-     * @function Badge.style
-     * @param {string} value - Badge style. "default" or "flat".
+     * @function Icon.size
+     * @param {number} value - Image size.
      */
-        'style',
+        'size',
     /**
-     * @function Badge.leftColor
-     * @param {string} leftColor - Leftside color.
+     * @function Icon.backgroundColor
+     * @param {number} value - Background color.
      */
-        'leftColor',
+        'backgroundColor',
     /**
-     * @function Badge.rightColor
-     * @param {string} rightColor - Rightside color.
+     * @function Icon.borderWidth
+     * @param {number} value - Border width.
      */
-        'rightColor',
+        'borderWidth',
     /**
-     * @function Badge.leftText
-     * @param {string} leftText - Leftside text.
+     * @function Icon.borderColor
+     * @param {string} value - Border color.
      */
-        'leftText',
+        'borderColor',
     /**
-     * @function Badge.rightTest
-     * @param {string} rightTest - Rightside text.
+     * @function Icon.cornerRadius
+     * @param {number} value - Corner radius.
      */
-        'rightText'
+        'cornerRadius'
     ],
     /**
-     * @lends Badge
+     * @lends Icon
      */
     properties: {
-        _style: 'default',
-        _leftColor: '#AAA',
-        _rightColor: '#8AE',
-        _leftText: 'left',
-        _rightText: 'right',
+        _size: 256,
+        _cornerRadius: 0,
+        _backgroundColor: 'transparent',
+        _borderWidth: 0,
+        _borderColor: 'transparent',
+        /**
+         * Create a new canvas.
+         * @function
+         * @returns {fabric.Canvas} - New canvas object.
+         */
+        createCanvas: function () {
+            var s = this,
+                size = s._size;
+            return fabric.createCanvasForNode(size, size);
+        },
+        /**
+         * Create a new background rect.
+         * @function
+         * @returns {fabric.Rect} - New background.
+         */
+        newBackground: function () {
+            var s = this,
+                size = s._size;
+            return new fabric.Rect({
+                width: size - s._borderWidth,
+                height: size - s._borderWidth,
+                rx: s._cornerRadius,
+                ry: s._cornerRadius,
+                fill: s._backgroundColor,
+                originX: 'center',
+                originY: 'center',
+                left: size / 2,
+                top: size / 2,
+                borderColor: '#3AF',
+                hasBorders: s._borderWidth > 0,
+                stroke: s._borderColor,
+                strokeWidth: s._borderWidth
+            })
+        },
+        /**
+         * Draw on a canvas.
+         * @function
+         * @param {fabric.Canvas} canvas
+         * @returns {fabric.Canvas} - Drawn canvas.
+         */
+        drawOnCanvas: function (canvas) {
+            var s = this;
+            canvas.add(s.newBackground());
+            return canvas;
+        },
+        /**
+         * Draw an image.
+         * @function
+         * @returns {fabric.Canvas}
+         */
+        draw: function () {
+            var s = this,
+                canvas = s.createCanvas();
+            return s.drawOnCanvas(canvas);
+        },
         /**
          * Convert to svg data.
          * @function
@@ -170,21 +228,38 @@ var Badge = module.exports = define({
          */
         toSVG: function (callback) {
             var s = this,
-                ghBadge = _ghBadge();
-            ghBadge({
-                template: s._style,
-                text: [s._leftText, s._rightText],
-                colorA: s._leftColor,
-                colorB: s._rightColor
-            }, function (data) {
-                callback && callback.call(s, null, data);
-            });
+                svg = s.draw().toSVG();
+            callback(null, svg);
+        },
+        /**
+         * Write as png file.
+         * @function
+         * @param {string} filename - Filename to write.
+         * @param {function} callback - Callback when done.
+         */
+        writeAsPNG: function (filename, callback) {
+            var s = this;
+            var inStream = s.draw().createPNGStream(),
+                outStream = fs.createWriteStream(filename);
+            Icon._pipe(
+                inStream,
+                outStream,
+                callback);
         }
-
     }
 });
 
-</pre>
+Icon._pipe = function (reader, writer, callback) {
+    reader.pipe(writer);
+    reader.on('error', function (err) {
+        callback && callback(err);
+        callback = null;
+    });
+    reader.on('end', function () {
+        callback && callback();
+        callback = null;
+    });
+};</pre>
         </article>
     </section>
 

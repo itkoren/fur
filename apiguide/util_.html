@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Module: fur</title>
+	<title>apeman Namespace: fur/util</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,7 +19,7 @@
 <div class="container-fluid">
 	<div class="navbar navbar-fixed-top ">
 		<div class="navbar-inner">
-			<a class="brand" href="index.html">fur</a>
+			<a class="brand" href="index.html">apeman</a>
 			<ul class="nav">
 				
 				<li class="dropdown">
@@ -40,6 +40,10 @@
 							<a href="fur.images.html">fur.images</a>
 						</li>
 						
+						<li>
+							<a href="util_.html">fur/util</a>
+						</li>
+						
 
 					</ul>
 				</li>
@@ -52,10 +56,6 @@
 						
 						<li>
 							<a href="module-fur.html">fur</a>
-						</li>
-						
-						<li>
-							<a href="util.html">fur/util</a>
 						</li>
 						
 
@@ -105,12 +105,14 @@
 					
 
 
-	<h1 class="page-title">Module: fur</h1>
+	<h1 class="page-title">Namespace: fur/util</h1>
 <section>
 
 <header>
     <h2>
-    fur
+        <span class="ancestors"><a href="module-fur.html">fur</a></span>
+    
+    fur/util
     </h2>
     
 </header>
@@ -121,7 +123,7 @@
 
     
         
-            <div class="description"><p>fur</p></div>
+            <div class="description"><p>Exports modules in dir.</p></div>
         
 
         
@@ -137,13 +139,6 @@
     
 
     
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li>Taka Okunishi</li>
-        </ul>
-    </dd>
-    
 
     
 
@@ -154,7 +149,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js___.html">index.js</a>, <a href="index.js___.html#sunlight-1-line-1">line 1</a>
+        <a href="index.js___.html">util/index.js</a>, <a href="index.js___.html#sunlight-1-line-1">line 1</a>
     </li></ul></dd>
     
 
@@ -179,13 +174,6 @@
     
 
     
-        <h3 class="subsection-title">Namespaces</h3>
-
-        <dl>
-            <dt><a href="namespaces.html#fur.icons"><a href="fur.icons.html">fur.icons</a></a></dt>
-            <dd></dd>
-        </dl>
-    
 
     
 
@@ -195,7 +183,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="generateBadge"><span class="type-signature">&lt;static> </span>generateBadge<span class="signature">(filename, options, callback)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="writeSvgFile"><span class="type-signature"></span>writeSvgFile<span class="signature">(filename, data, callback)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -203,7 +191,7 @@
     
     
     <div class="description">
-        <p>Generate a budge.</p>
+        <p>Write svg file.</p>
     </div>
     
 
@@ -253,14 +241,14 @@
 
             
 
-            <td class="description last"><p>Filename to generate.</p></td>
+            <td class="description last"><p>SVG file name.</p></td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>options</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
@@ -276,181 +264,7 @@
 
             
 
-            <td class="description last"><p>Optional settings.</p>
-                <h6>Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-		<th>Argument</th>
-		
-
-		
-		<th>Default</th>
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>format</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    svg
-                
-                </td>
-            
-
-            <td class="description last"><p>File format.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>style</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>&quot;default&quot; or &quot;flat&quot;.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>colors</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string[]</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Badge colors.</p></td>
-        </tr>
-
-	
-
-        <tr>
-            
-                <td class="name"><code>texts</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string[]</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last"><p>Badge texts.</p></td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-            </td>
+            <td class="description last"><p>SVG data.</p></td>
         </tr>
 
 	
@@ -495,6 +309,13 @@
     
 
     
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Taka Okunishi</li>
+        </ul>
+    </dd>
+    
 
     
 
@@ -505,7 +326,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="generate_badge.js.html">generate_badge.js</a>, <a href="generate_badge.js.html#sunlight-1-line-1">line 1</a>
+        <a href="write_svg_file.js.html">util/write_svg_file.js</a>, <a href="write_svg_file.js.html#sunlight-1-line-1">line 1</a>
     </li></ul></dd>
     
 
@@ -527,19 +348,6 @@
     
     
     
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">     generateBadge('foo/bar.svg', {
-         style: style,
-         format: 'svg',
-         colors: ['#999', '#36E'],
-         texts: ['powered by', ' apeman ']
-     }, function(){
-
-     });</pre>
-
-
     
 </dd>
 
@@ -563,13 +371,13 @@
 					
 					
 		<span class="copyright">
-		tick-tack Copyright © 2014
+		Apeman Copyright © 2014
 		</span>
 					<br />
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Fri May 02 2014 00:41:59 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Fri May 02 2014 00:35:45 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
