@@ -1,0 +1,4 @@
+/**
+ * @file Configuration for ci/task.{{=it.taskName}}.
+ * @ignore
+ */

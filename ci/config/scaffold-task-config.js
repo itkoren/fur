@@ -1,6 +1,6 @@
 /**
  * @file Configuration for ci/task.scaffoldTask.
- * @ignore
+ *
  */
 
 
@@ -29,14 +29,28 @@ var taskNames = [
 
 exports.ciTask = taskNames.map(function (name) {
     return {
-        filename: util.format('ci/task/%s', name),
-        tmpl:'tmpl/js/ci_task.js.dot'
+        filename: util.format('ci/tasks/%s_task.js', changeCase.snakeCase(name)),
+        tmpl: 'tmpl/js/ci_task.js.dot',
+        data: {
+            taskName: name
+        }
     };
 });
 
+exports.ciConfig = taskNames.map(function (name) {
+    return {
+        filename: util.format('ci/config/%s-task-config.js', changeCase.paramCase(name)),
+        tmpl: 'tmpl/js/ci-task-config.js.dot',
+        data: {
+            taskName: name
+        }
+    }
+});
+
+
 exports.ciBin = binNames.map(function (name) {
     return {
-        filename: util.format('ci/bin/%s', name),
+        filename: util.format('ci/bin/%s', changeCase.snakeCase(name)),
         tmpl: 'tmpl/bin/ci_bin.dot',
         data: {
             taskName: name
@@ -46,7 +60,7 @@ exports.ciBin = binNames.map(function (name) {
 
 exports.libIndex = moduleNames.map(function (name) {
     return {
-        filename: util.format('lib/%s/index.js', name),
+        filename: util.format('lib/%s/index.js', changeCase.snakeCase(name)),
         tmpl: 'tmpl/js/index.js.dot',
         data: {
             moduleName: util.format('fur/%s', name)
