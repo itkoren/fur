@@ -74,7 +74,14 @@ exports.libUnitTests = moduleNames.map(function (moduleName) {
         return string.substr(0, 1).toUpperCase() + string.substr(1);
     }
 
+    function isDir(filename) {
+        return fs.statSync(filename).isDirectory();
+    }
+
     var dirname = path.resolve(libDir, moduleName);
+    if (!isDir(dirname)) {
+        return [];
+    }
     return fs.readdirSync(dirname)
         .filter(function (filename) {
             return filename !== 'index.js';

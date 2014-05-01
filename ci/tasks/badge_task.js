@@ -5,6 +5,7 @@
  * @param grunt
  * @param {object} config - Task configuration.
  * @param {function} callback - Callback when done.
+ * @author Taka Okunishi
  *
  */
 
