@@ -20,7 +20,7 @@ exports.all = {
             'dist',
             'lib',
             'lib/images',
-            'lib/badges',
+            'lib/icons',
             'lib/util',
             'test/.work',
             'test/mock',
