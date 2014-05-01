@@ -20,7 +20,7 @@ Documents
 [grunt_badge_url]: http://cdn.gruntjs.com/builtwith.png
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
-[my_apiguide_url]: http://TODO
+[my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
 [my_codeclimate_url]: http://codeclimate.com/github/tick-tack/apeman
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/apeman.svg?style=flat
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/apeman.svg?style=flat
