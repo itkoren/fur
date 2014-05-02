@@ -1,0 +1,54 @@
+/**
+ * Gallery style.
+
+ */
+body {
+    color: #333;
+    font-family: Tahoma, Geneva, sans-serif;
+    padding: 40px 0 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(230, 230, 230, 0.975);
+    padding: 8px;
+    z-index:200;
+}
+
+
+header h1 {
+    margin: 0;
+    color: #AAA;
+    font-size: 1.25em;
+}
+
+article {
+    margin: 0 8px;
+}
+
+dt {
+    border-bottom: 1px solid #EEE;
+    padding: 4px 8px;
+    opacity: .5;
+}
+
+dt b {
+    opacity: 1;
+}
+
+dd {
+    padding: 10px 0 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
