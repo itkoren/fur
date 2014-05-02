@@ -19,15 +19,14 @@
         .s {
             font-size: 0.5em;
         }
-
         {{~it.fonts :font}}
         @font-face {
-            font-family: {{=font.fontFamily}};
+            font-family: "{{=font.fontFamily}}";
             src: url('{{=it.relativePathToBaseDir}}/{{=font.url}}');
         }
 
         .{{=font.className}}{
-            font-family: {{=font.fontFamily}};
+            font-family: "{{=font.fontFamily}}", serif;
         }
         {{~}}
     </style>

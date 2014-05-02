@@ -13,6 +13,8 @@
 var glob = require('glob'),
     path = require('path'),
     async = require('async'),
+    changeCase = require('change-case'),
+    alphabeticalIndex = require('../../lib/util/alphabetical_index'),
     writeReadonlyFile = require('../../lib/util/write_readonly_file');
 
 exports = module.exports = function (grunt, config, callback) {
@@ -25,12 +27,12 @@ exports = module.exports = function (grunt, config, callback) {
         },
         function (src, callback) {
             var data = {};
-            src.forEach(function (src) {
+            src.forEach(function (src, i) {
                 var extname = path.extname(src),
                     basename = path.basename(src, extname);
-                data[basename] = {
+                data[alphabeticalIndex(i)] = {
                     filename: path.relative(basedir, src),
-                    type: extname.replace(/\./g, '')
+                    fontFamily: changeCase.titleCase(basename)
                 }
             });
             callback(null, data);
@@ -55,9 +57,11 @@ exports = module.exports = function (grunt, config, callback) {
         callback(err);
     });
 };
+
 exports._toJson = function (data) {
     return data && JSON.stringify(data, null, 4);
 };
+
 exports._requireSafely = function (filename) {
     try {
         return require(filename);

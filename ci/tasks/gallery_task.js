@@ -12,6 +12,7 @@
 
 var path = require('path'),
     async = require('async'),
+    util = require('util'),
     changeCase = require('change-case'),
     renderDotFile = require('../../lib/util/render_dot_tmpl');
 
@@ -46,13 +47,15 @@ exports._generateFontData = function (catalogFile) {
     var data = require(path.resolve(catalogFile));
     return {
         fonts: Object.keys(data).map(function (name) {
-            var font = data[name];
-            return {
-                url: font.filename, //TODO
-                fontFamily: name,
-                name:name,
-                className: changeCase.paramCase(name)
+                var font = data[name];
+                return {
+                    url: font.filename, //TODO
+                    fontFamily: font.fontFamily,
+                    name: name,
+                    className: util.format('font-%s', name)
+                }
             }
-        })
+        )
     }
-};
+}
+;
