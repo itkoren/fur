@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+    Font gallery html.
+-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fonts</title>
+    <link rel="stylesheet" href="gallery.css"/>
+    <style>
+        .l {
+            font-size: 2em;
+        }
+
+        .m {
+            font-size: 1em;
+        }
+
+        .s {
+            font-size: 0.5em;
+        }
+        {{~it.fonts :font}}
+        @font-face {
+            font-family: {{=font.fontFamily}};
+            src: url('{{=it.relativePathToBaseDir}}/{{=font.url}}');
+        }
+
+        .{{=font.className}}{
+            font-family: {{=font.fontFamily}};
+        }
+        {{~}}
+    </style>
+</head>
+<body>
+<header><h1>Font gallery</h1></header>
+<article>
+
+
+    <dl>
+        {{~it.fonts :font}}
+            <dt><b>{{=font.className}}</b>&nbsp;
+                <small>Font with name <i>"{{=font.name}}"</i>.</small>
+            </dt>
+            <dd>
+                <div class="l sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
+                </div>
+                <div class="m sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
+                </div>
+                <div class="s sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
+                </div>
+            </dd>
+        {{~}}
+    </dl>
+</article>
+</body>
+</html>

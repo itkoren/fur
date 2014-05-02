@@ -14,12 +14,12 @@ exports.all = {
             'assets/web_fonts',
             'bin',
             'doc',
+            'doc/gallery',
             'ci',
             'ci/bin',
             'ci/config',
             'ci/tasks',
             'dist',
-            'gallery',
             'lib',
             'lib/images',
             'lib/icons',
@@ -31,6 +31,7 @@ exports.all = {
             'test/unit_tests/lib/util',
             'tmpl',
             'tmpl/bin',
+            'tmpl/css',
             'tmpl/html',
             'tmpl/js'
         ]

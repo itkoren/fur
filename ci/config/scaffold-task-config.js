@@ -36,6 +36,7 @@ var binNames = [
 
 var taskNames = [
     'scaffold',
+    'gallery',
     'badge',
     'favicon',
     'catalog'
