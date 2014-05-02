@@ -17,7 +17,7 @@ exports = module.exports = function (grunt, config, callback) {
     async.eachSeries(config, function (config, callback) {
         var filename = config.filename,
             options = config.options,
-            font = exports._fontData(options.fontFamily);
+            font = exports._fontData(options.font);
         if (font) {
             options.fontFamily = font.fontFamily;
             options.fontFilename = font.filename;
@@ -32,17 +32,17 @@ exports = module.exports = function (grunt, config, callback) {
     }, callback);
 };
 
-exports._fontData = function (fontFamily) {
-    if (!fontFamily) {
+exports._fontData = function (font) {
+    if (!font) {
         return null;
     }
     var data = require('../../assets/catalogs/web-font-catalog'),
-        found = data[fontFamily.trim()];
+        found = data[font.trim()];
     if (!found) {
-        throw new Error('Font not found :' + fontFamily);
+        throw new Error('Font not found :' + font);
     }
     return {
-        fontFamily: fontFamily,
+        fontFamily: found.fontFamily,
         filename: found.filename
     };
 

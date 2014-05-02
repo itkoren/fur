@@ -15,7 +15,7 @@ exports.tickTack = formats.map(function (format) {
             letter: 'tt',
             format: format,
             backgroundColor: '#FF9B88',
-            fontFamily: 'Arvo-BoldItalic'
+            font: 'b'
         }
     }
 });
