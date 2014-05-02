@@ -19,6 +19,7 @@
         .s {
             font-size: 0.5em;
         }
+
         {{~it.fonts :font}}
         @font-face {
             font-family: {{=font.fontFamily}};
@@ -38,8 +39,9 @@
 
     <dl>
         {{~it.fonts :font}}
-            <dt><b>{{=font.className}}</b>&nbsp;
-                <small>Font with name <i>"{{=font.name}}"</i>.</small>
+            <dt id="{{=font.className}}-dt"><b>.{{=font.className}}</b>&nbsp;
+                <small>Font with name <span
+                ><i>{{=font.name}}</i></span>.</small>
             </dt>
             <dd>
                 <div class="l sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.

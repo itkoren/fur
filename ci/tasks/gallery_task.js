@@ -50,6 +50,7 @@ exports._generateFontData = function (catalogFile) {
             return {
                 url: font.filename, //TODO
                 fontFamily: name,
+                name:name,
                 className: changeCase.paramCase(name)
             }
         })
