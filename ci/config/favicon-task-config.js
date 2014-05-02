@@ -12,10 +12,10 @@ exports.tickTack = formats.map(function (format) {
     return {
         filename: util.format('dist/images/tick-tack/tick-tack-favicon.%s', format),
         options: {
-            letter: 't',
+            letter: 'tt',
             format: format,
             backgroundColor: '#FF9B88',
-            fontFamily: 'Aller_BdIt'
+            fontFamily: 'Arvo-BoldItalic'
         }
     }
 });
