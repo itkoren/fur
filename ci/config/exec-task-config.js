@@ -18,3 +18,12 @@ exports.commitDoc = {
 exports.pushDoc = {
     cmd: 'git subtree push -q --squash --prefix=doc origin gh-pages'
 };
+
+
+exports.commitRelease = {
+    cmd: 'git add . -A && git commit -a -m "Release commit by task."'
+};
+
+exports.publishNpm = {
+    cmd: 'npm publish .'
+};

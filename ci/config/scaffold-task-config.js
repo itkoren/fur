@@ -31,13 +31,16 @@ var binNames = [
     'build',
     'draw',
     'doc',
-    'test'
+    'test',
+    'release'
 ];
 
 var taskNames = [
     'scaffold',
     'gallery',
     'badge',
+    'tag',
+    'versionup',
     'favicon',
     'catalog'
 ];
