@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-    Font gallery html.
+    Web font gallery html.
 -->
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Fonts</title>
+    <title>{{=it._title}}</title>
     <link rel="stylesheet" href="gallery.css"/>
     <style>
         .sample-label {
@@ -28,11 +28,6 @@
         .sample-td {
             padding: 10px 20px;
         }
-        tbody th{
-            font-weight:100;
-            font-size:3em;
-            color:#555;
-        }
         .v-center{
             vertical-align: middle;
         }
@@ -43,7 +38,7 @@
         {{~it.fonts :font}}
         @font-face {
             font-family: "{{=font.fontFamily}}";
-            src: url('{{=it.relativePathToBaseDir}}/{{=font.url}}');
+            src: url('{{=it._relativePathToBaseDir}}/{{=font.url}}');
         }
 
         .{{=font.className}}{
@@ -53,22 +48,22 @@
     </style>
 </head>
 <body>
-<header><h1 onclick="location.reload()">Font gallery</h1></header>
+<header><h1 onclick="location.reload()">{{=it._title}}</h1></header>
 <article>
 <br>
 <table>
-<colgroup>
-<col/><col class="w120"/><col/>
-</colgroup>
-<thead>
-    <tr><th></th><th>Font Family</th><th>Sample</th></tr>
-</thead>
-<tbody>
-{{~it.fonts :font}}
+    <colgroup>
+    <col/><col class="w120"/><col/>
+    </colgroup>
+    <thead>
+        <tr><th></th><th>Font Family</th><th>Sample</th></tr>
+    </thead>
+    <tbody>
+    {{~it.fonts :font}}
     <tr>
         <th class="">{{=font.name}}</th>
         <td class="text-center v-center">
-            <a href="{{=it.relativePathToBaseDir}}/{{=font.url}}">{{=font.fontFamily}}</a>
+            <a href="{{=it._relativePathToBaseDir}}/{{=font.url}}">{{=font.fontFamily}}</a>
         </td>
         <td class="sample-td">
             <div class="l sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
@@ -78,15 +73,13 @@
             <div class="s sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
             </div>
         </td>
-    </tr>
-{{~}}
-</tbody>
+    </tr>{{~}}
+    </tbody>
 </table>
 </article>
 
 <footer>
-
-
+{{=it._footerHtml}}
 </footer>
 </body>
 </html>

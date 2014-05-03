@@ -14,9 +14,9 @@ var onecolor = require('onecolor'),
 
 exports = module.exports = function catalogColorSchemes(options, callback) {
     var data = {}, i = 0;
-    options.schemes.forEach(function (scheme) {
-        options.variations.forEach(function (variation) {
-            options.hues.forEach(function (hue) {
+    options.hues.forEach(function (hue) {
+        options.schemes.forEach(function (scheme) {
+            options.variations.forEach(function (variation) {
                 var values = new ColorScheme()
                     .from_hue(exports._hueValue(hue))
                     .scheme(scheme)

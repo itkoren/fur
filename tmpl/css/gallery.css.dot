@@ -68,6 +68,7 @@ a:hover {
 
 table{
     border-collapse:collapse;
+    width: 100%;
 }
 
 td,th{
@@ -95,4 +96,29 @@ td:last-child{
 
 .text-center{
     text-align: center;
+}
+
+tbody th{
+    font-weight:100;
+    font-size:3em;
+    color:#555;
+}
+
+
+
+#jump-to-top-btn{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 4px 8px;
+    text-align:center;
+    display: inline-block;
+    color:#AAA;
+    background-color: rgba(255,255,255,.5);
+    font-size:0.75em;
+}
+#jump-to-top-btn:hover{
+    color:#555;
+    text-decoration: none;
+    background-color: rgba(255,255,255,.9);
 }

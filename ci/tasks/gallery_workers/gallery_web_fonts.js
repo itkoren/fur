@@ -16,7 +16,7 @@ module.exports = function galleryWebFonts(options, callback) {
             fonts: Object.keys(catalog).map(function (name) {
                     var font = catalog[name];
                     return {
-                        url: font.filename, //TODO
+                        url: font.filename,
                         fontFamily: font.fontFamily,
                         fontFile: path.basename(font.filename),
                         name: name,

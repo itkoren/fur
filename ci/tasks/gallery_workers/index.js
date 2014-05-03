@@ -6,3 +6,4 @@
  */
 
 exports.galleryWebFonts = require('./gallery_web_fonts');
+exports.galleryColorSchemes = require('./gallery_color_schemes');

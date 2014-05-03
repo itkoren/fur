@@ -12,11 +12,20 @@ exports.base = [
     }
 ];
 
-exports.font = {
+exports.webFont = {
     file: 'doc/gallery/web-font-gallery.html',
     tmpl: 'tmpl/html/web-font-gallery.html.dot',
     worker: 'galleryWebFonts',
     workerOptions: {
         catalogFile: 'assets/catalogs/web-font-catalog.json'
+    }
+};
+
+exports.colorScheme = {
+    file: 'doc/gallery/color-scheme-gallery.html',
+    tmpl: 'tmpl/html/color-scheme-gallery.html.dot',
+    worker: 'galleryColorSchemes',
+    workerOptions: {
+        catalogFile: 'assets/catalogs/color-scheme-catalog.json'
     }
 };
