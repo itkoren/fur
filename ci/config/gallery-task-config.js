@@ -9,8 +9,17 @@ exports.base = [
     {
         tmpl: 'tmpl/css/gallery.css.dot',
         file: 'doc/gallery/gallery.css'
+    },
+    {
+        tmpl: 'tmpl/js/gallery.js.dot',
+        file: 'doc/gallery/gallery.js'
     }
 ];
+
+exports.index = {
+    file: 'doc/gallery/index.html',
+    tmpl: 'tmpl/html/gallery-index.html.dot'
+};
 
 exports.webFont = {
     file: 'doc/gallery/web-font-gallery.html',

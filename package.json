@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/tick-tack/fur",
   "dependencies": {
-    "async": "^0.7.0",
-    "mkdirp": "^0.4.0",
+    "async": "^0.8.0",
     "change-case": "^2.1.1",
     "svgo": "^0.4.4",
     "canvas": "^1.1.1",

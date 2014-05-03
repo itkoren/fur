@@ -14,6 +14,7 @@ var path = require('path'),
     async = require('async'),
     util = require('util'),
     changeCase = require('change-case'),
+    os = require('os'),
     galleryWorkers = require('./gallery_workers'),
     renderDotFile = require('../../lib/util/render_dot_tmpl');
 
@@ -27,6 +28,8 @@ exports = module.exports = function (grunt, config, callback) {
             data._relativePathToBaseDir = path.relative(destDir, basedir);
             data._title = changeCase.titleCase(path.basename(dest, path.extname(dest)));
             data._footerHtml = exports._footerHtml;
+            data._headHtml = exports._headHtml;
+            data._links = exports._links;
             renderDotFile(tmpl, data, dest, function (err) {
                 if (!err) {
                     grunt.log.writeln('File crated:', dest);
@@ -51,6 +54,23 @@ exports._data = function (worker, workerOptions, callback) {
 
 };
 
+exports._headHtml = [
+    '<meta charset="UTF-8">',
+    '<link rel="stylesheet" href="gallery.css"/>',
+    '<script src="gallery.js"></script>'
+].join(os.EOL);
+
 exports._footerHtml = [
     '<a id="jump-to-top-btn" href="#">&#8679;Jump to Top</a>'
-].join('\n');
+].join(os.EOL);
+
+exports._links = [
+    {
+        title: 'color-scheme',
+        href: 'color-scheme-gallery.html'
+    },
+    {
+        title: 'web-font',
+        href: 'web-font-gallery.html'
+    }
+];

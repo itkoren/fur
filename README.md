@@ -5,6 +5,8 @@ Front end design tool.
 
 [![Build Status][my_travis_badge_url]][my_travis_url]
 [![Code Climate][my_codeclimate_badge_url]][my_codeclimate_url]
+[![dependencies][my_gemnasium_badge_url]][my_gemnasium_url]
+
 
 Prerequisites
 ------
@@ -20,8 +22,6 @@ Install
 If you never used [node-canvas][node_canvas_url],
 follow [the install guide][node_canvas_install_wiki_url].
 
-
-
 Documents
 ------
 + [API Guide][my_apiguide_url]
@@ -36,7 +36,10 @@ Documents
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
-[my_codeclimate_url]: http://codeclimate.com/github/tick-tack/apeman
-[my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/apeman.svg?style=flat
-[my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/apeman.svg?style=flat
+[my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
+[my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
+[my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
+[my_gemnasium_url]: http://gemnasium.com/tick-tack/fur
+[my_gemnasium_badge_url]: http://img.shields.io/gemnasium/tick-tack/fur.svg?style=flat
+
 

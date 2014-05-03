@@ -4,13 +4,10 @@
 -->
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
     <title>{{=it._title}}</title>
-    <link rel="stylesheet" href="gallery.css"/>
+    {{=it._headHtml}}
+
     <style>
-        table{
-            width: 100%;
-        }
         .color-sample-box{
             display: inline-block;
             margin: 0;

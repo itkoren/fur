@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<!--
+    Gallery index html.
+-->
+<html>
+<head lang="en">
+    <title>{{=it._title}}</title>
+
+    {{=it._headHtml}}
+
+</head>
+<body>
+<ul>
+{{~it._links :link}}
+<li><a href="{{=link.href}}">{{=link.title}}</a></li>{{~}}
+</ul>
+<footer>
+{{=it._footerHtml}}
+</footer>
+</body>
+</html>

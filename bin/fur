@@ -8,11 +8,17 @@
 
 var color = require('cli-color'),
     program = require('commander'),
-    lib = require('../lib');
+    commands = require('../lib/commands');
 
 program.version(require('../package.json').version);
 
-
+program
+    .command('favicon <filename>')
+    .description('Generate a favicon.')
+    .option('-f, --font-theme [theme]', 'Font theme name.')
+    .option('-c, --color-theme [theme]', 'Color theme name.')
+    .option('-l, --letters [letters]', 'Letters to print on favicon.')
+    .action(commands.favicon.bind(commands));
 
 
 program.parse(process.argv);
