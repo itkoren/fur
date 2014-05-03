@@ -1,0 +1,19 @@
+{
+  "name": "fur",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tick-tack/fur",
+  "authors": [
+    "Taka Okunishi <okunishinishi@gmail.com>"
+  ],
+  "description": "Frontend design tool.",
+  "moduleType": [
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
