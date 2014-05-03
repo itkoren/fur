@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: util/render_dot_tmpl.js</title>
+	<title>fur Module: fur/commands</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -111,88 +111,90 @@
 	<div class="row-fluid">
 
 		
-			<div class="span12">
-				
+		<div class="span8">
+			
 				<div id="main">
 					
 
 
-		<h1 class="page-title">Source: util/render_dot_tmpl.js</h1>
+	<h1 class="page-title">Module: fur/commands</h1>
+<section>
+
+<header>
+    <h2>
+    fur/commands
+    </h2>
     
-    <section>
-        <article>
-            <pre class="sunlight-highlight-javascript linenums">/**
- * @file Render dot template.
- * @memberof module:fur/util
- * @function renderDotTmpl
- * @param {string|function} tmpl - Template file name or function.
- * @param {object} data - Template data.
- * @param {string} dest - Destination file name.
- * @param {function} callback - Callback when done.
- * @see {@link https://www.npmjs.org/package/dot|dot }
- * @author Taka Okunishi
- */
-var fs = require('fs'),
-    dot = require('dot'),
-    async = require('async');
+</header>
 
-exports = module.exports = function (tmpl, data, dest, callback) {
-    async.waterfall([
-        function (callback) {
-            exports._loadTmpl(tmpl, callback);
-        },
-        function (tmpl, callback) {
-            var rendered = tmpl(data);
-            fs.writeFile(dest, rendered, callback);
-        }
-    ], callback);
-};
+<article>
+    <div class="container-overview">
+    
 
-exports._loadTmpl = function (tmpl, callback) {
-    if (typeof(tmpl) === 'string') {
-        async.waterfall([
-            function (callback) {
-                fs.readFile(tmpl, callback)
-            },
-            function (buffer, callback) {
-                exports._compile(buffer, callback);
-            }
-        ], callback);
-    } else {
-        callback(null, tmpl);
-    }
-};
+    
+        
+            <div class="description"><p>Exports modules in dir.</p></div>
+        
 
-exports._compile = function (src, callback) {
-    var settings = exports._templateSettings;
-    try {
-        var compiled = dot.template(src.toString(), settings);
-        callback(null, compiled);
-    } catch (e) {
-        callback(e);
-    }
-};
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js____.html">commands/index.js</a>, <a href="index.js____.html#sunlight-1-line-1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
 
 
-exports._templateSettings = {
-    evaluate: /\{\{([\s\S]+?(\}?)+)\}\}/g,
-    interpolate: /\{\{=([\s\S]+?)\}\}/g,
-    encode: /\{\{!([\s\S]+?)\}\}/g,
-    use: /\{\{#([\s\S]+?)\}\}/g,
-    useParams: /(^|[^\w$])def(?:\.|\[[\'\"])([\w$\.]+)(?:[\'\"]\])?\s*\:\s*([\w$\.]+|\"[^\"]+\"|\'[^\']+\'|\{[^\}]+\})/g,
-    define: /\{\{##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\}\}/g,
-    defineParams: /^\s*([\w$]+):([\s\S]+)/,
-    conditional: /\{\{\?(\?)?\s*([\s\S]*?)\s*\}\}/g,
-    iterate: /\{\{~\s*(?:\}\}|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\}\})/g,
-    varname: 'it',
-    strip: false,
-    append: true,
-    selfcontained: false
-};
-</pre>
-        </article>
-    </section>
+        
+    
+    </div>
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -215,6 +217,10 @@ exports._templateSettings = {
 				</footer>
 			</div>
 
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
 			
 			<br clear="both">
 		</div>
