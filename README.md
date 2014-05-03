@@ -18,8 +18,12 @@ Prerequisites
 Install
 ------
 
+### Install node canvas.
+
 If you never used [node-canvas][node_canvas_url],
 follow [the install guide][node_canvas_install_wiki_url].
+
+### Install fur.
 
 ```bash
 $ sudo npm install fur -g
@@ -44,15 +48,13 @@ $ fur -h
     -V, --version  output the version number
 ```
 
-## Generate a favicon file.
+### Generate a favicon file.
 
 Generate a simple favicon with themes. ([See available themes][my_gallery_url])
 
 ```bash
 $ fur --font-theme a --color-theme e --letters k my-favicon.svg
 ```
-
-
 
 
 
