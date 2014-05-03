@@ -57,7 +57,8 @@ exports._data = function (worker, workerOptions, callback) {
 exports._headHtml = [
     '<meta charset="UTF-8">',
     '<link rel="stylesheet" href="gallery.css"/>',
-    '<script src="gallery.js"></script>'
+    '<script src="gallery.js"></script>',
+    '<link rel="icon" href="favicon.png"/>'
 ].join(os.EOL);
 
 exports._footerHtml = [

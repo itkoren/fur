@@ -49,8 +49,6 @@ $ fur -h
 
 Generate a simple favicon with themes. ([See available themes][my_gallery_url])
 
-
-
 ```bash
 $ fur --font-theme a --color-theme e --letters k my-favicon.svg
 ```

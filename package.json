@@ -35,7 +35,8 @@
     "cheerio": "^0.15.0",
     "svink": "^0.1.7",
     "commander": "^2.2.0",
-    "mkdirp": "^0.4.0"
+    "mkdirp": "0.3.5",
+    "cli-color": "^0.3.2"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.0.3",

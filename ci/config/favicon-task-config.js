@@ -18,6 +18,17 @@ exports.tickTack = formats.map(function (format) {
     }
 });
 
+exports.fur = formats.map(function (format) {
+    return {
+        fontSize: 190,
+        name: 'dist/images/fur/fur-favicon',
+        format: format,
+        letter: ' fur ',
+        color: 'z',
+        font: 'a'
+    }
+});
+
 exports.ppAbstract = formats.map(function (format) {
     return {
         name: 'dist/images/pp-abstract/pp-abstract-favicon',

@@ -20,12 +20,14 @@ exports = module.exports = function (grunt, config, callback) {
             filename = [config.name, format].join('.'),
             font = _catalogSearch.searchWebFont(config.font) || {},
             colorScheme = _catalogSearch.searchColorScheme(config.color),
+            fontSize = config.fontSize,
             letter = config.letter;
 
         generateFavicon(filename, {
                 format: format,
                 letter: letter,
                 fontFamily: font.fontFamily,
+                fontSize: fontSize,
                 fontFilename: font.filename,
                 backgroundColor: colorScheme.colors[0]
             },
