@@ -10,32 +10,21 @@
 
 "use strict";
 
-var glob = require('glob'),
-    path = require('path'),
+var path = require('path'),
     async = require('async'),
-    changeCase = require('change-case'),
-    alphabeticalIndex = require('../../lib/util/alphabetical_index'),
+    catalogWorkers = require('./catalog_workers'),
     writeReadonlyFile = require('../../lib/util/write_readonly_file');
 
 exports = module.exports = function (grunt, config, callback) {
-    var dest = path.resolve(config.dest),
-        pattern = path.resolve(config.pattern),
-        basedir = process.cwd();
+    var dest = path.resolve(config.dest);
     async.waterfall([
         function (callback) {
-            glob(pattern, callback);
-        },
-        function (src, callback) {
-            var data = {};
-            src.forEach(function (src, i) {
-                var extname = path.extname(src),
-                    basename = path.basename(src, extname);
-                data[alphabeticalIndex(i)] = {
-                    filename: path.relative(basedir, src),
-                    fontFamily: changeCase.titleCase(basename)
-                }
-            });
-            callback(null, data);
+            var worker = catalogWorkers[config.worker];
+            if (!worker) {
+                callback(new Error('Unknown worker: ' + config.worker));
+                return;
+            }
+            worker(config.workerOptions || {}, callback);
         },
         function (data, callback) {
             var content = exports._toJson(data);
@@ -48,6 +37,7 @@ exports = module.exports = function (grunt, config, callback) {
                     if (!err) {
                         grunt.log.writeln('File created:%s', dest);
                     }
+                    callback(err);
                 });
             } else {
                 callback();
@@ -57,6 +47,7 @@ exports = module.exports = function (grunt, config, callback) {
         callback(err);
     });
 };
+
 
 exports._toJson = function (data) {
     return data && JSON.stringify(data, null, 4);

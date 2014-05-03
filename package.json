@@ -1,51 +1,51 @@
 {
-  "name": "fur",
-  "version": "0.0.0",
-  "description": "Front end design tool.",
-  "main": "index.js",
-  "scripts": {
-    "test": "grunt test",
-    "coverage": "istanbul cover ci/bin/test --dir doc/coverage",
-    "send-coverage": "grunt coverage && codeclimate < doc/coverage/lcov.info"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tick-tack/fur.git"
-  },
-  "author": {
-    "name": "Taka Okunishi"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tick-tack/fur/issues"
-  },
-  "homepage": "https://github.com/tick-tack/fur",
-  "dependencies": {
-    "async": "^0.7.0",
-    "mkdirp": "^0.4.0",
-    "change-case": "^2.1.1",
-    "svgo": "^0.4.4",
-    "canvas": "^1.1.1",
-    "onecolor": "^2.4.0",
-    "color-scheme": "0.0.5",
-    "fabric": "^1.4.3",
-    "glob": "^3.2.9",
-    "cheerio": "^0.15.0",
-    "svink": "^0.1.7"
-  },
-  "devDependencies": {
-    "codeclimate-test-reporter": "^0.0.3",
-    "grunt": "^0.4.4",
-    "grunt-cli": "^0.1.13",
-    "grunt-mkdir": "^0.1.1",
-    "grunt-chmod": "^1.0.3",
-    "grunt-exec": "^0.4.5",
-    "grunt-jsdoc": "^0.5.1",
-    "ink-docstrap": "^0.3.0-0",
-    "istanbul": "^0.2.7",
-    "jsdoc": "^3.3.0-alpha5",
-    "nodeunit": "^0.8.7",
-    "dot": "~1.0.2",
-    "grunt-contrib-nodeunit": "^0.3.3"
-  }
+    "name": "fur",
+    "version": "0.0.0",
+    "description": "Front end design tool.",
+    "main": "index.js",
+    "scripts": {
+        "test": "grunt test",
+        "coverage": "istanbul cover ci/bin/test --dir doc/coverage",
+        "send-coverage": "grunt coverage && codeclimate < doc/coverage/lcov.info"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tick-tack/fur.git"
+    },
+    "author": {
+        "name": "Taka Okunishi"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tick-tack/fur/issues"
+    },
+    "homepage": "https://github.com/tick-tack/fur",
+    "dependencies": {
+        "async": "^0.7.0",
+        "mkdirp": "^0.4.0",
+        "change-case": "^2.1.1",
+        "svgo": "^0.4.4",
+        "canvas": "^1.1.1",
+        "onecolor": "^2.4.0",
+        "color-scheme": "0.0.5",
+        "fabric": "^1.4.3",
+        "glob": "^3.2.9",
+        "cheerio": "^0.15.0",
+        "svink": "^0.1.7"
+    },
+    "devDependencies": {
+        "codeclimate-test-reporter": "^0.0.3",
+        "grunt": "^0.4.4",
+        "grunt-cli": "^0.1.13",
+        "grunt-mkdir": "^0.1.1",
+        "grunt-chmod": "^1.0.3",
+        "grunt-exec": "^0.4.5",
+        "grunt-jsdoc": "^0.5.1",
+        "ink-docstrap": "^0.3.0-0",
+        "istanbul": "^0.2.7",
+        "jsdoc": "^3.3.0-alpha5",
+        "nodeunit": "^0.8.7",
+        "dot": "~1.0.2",
+        "grunt-contrib-nodeunit": "^0.3.3"
+    }
 }

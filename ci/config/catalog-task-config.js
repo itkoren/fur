@@ -7,5 +7,17 @@
 
 exports.webFonts = {
     dest: 'assets/catalogs/web-font-catalog.json',
-    pattern: 'assets/web_fonts/**/*.+(ttf|otf)'
+    worker: 'catalogWebFonts',
+    workerOptions: {
+        pattern: 'assets/web_fonts/**/*.+(ttf|otf)'
+    }
 };
+
+
+//exports.colorSchemes = {
+//    dest: 'assets/catalogs/color-schemes-catalog.json',
+//    worker: 'colorScheme',
+//    workerOptions: {
+//
+//    }
+//};
