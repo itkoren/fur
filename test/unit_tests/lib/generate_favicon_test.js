@@ -18,7 +18,10 @@ exports.tearDown = function (done) {
 exports['Generate favicon.'] = function (test) {
     var filename = testHelper.resolveWorkFile('work_favicon.svg');
     generateFavicon(filename, {
-        letter: 'P'
+        letter: 'P',
+        format: 'svg',
+        fontFilename: testHelper.resolveMockFile('mock-font.ttf'),
+        fontFamily: 'mock-font'
     }, function (err) {
         test.ifError(err);
         test.done();
