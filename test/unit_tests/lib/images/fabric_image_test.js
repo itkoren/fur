@@ -15,6 +15,15 @@ exports.tearDown = function (done) {
     done();
 };
 
+exports['SVG font family style.'] = function (test) {
+    new FabricImage()
+        .addCustomFont('mock-font', testHelper.resolveMockFile('mock-font.ttf'))
+        .svgFontFamilyStyle(function (err, style) {
+            test.ifError(err);
+            test.done();
+        });
+};
+
 exports['Fabric image.'] = function (test) {
     test.ok(new FabricImage());
     test.done();
