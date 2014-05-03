@@ -11,18 +11,24 @@
 "use strict";
 
 var async = require('async'),
+    _catalogSearch = require('./_catalog_search'),
     generateFavicon = require('../../lib/generate_favicon');
 
 exports = module.exports = function (grunt, config, callback) {
     async.eachSeries(config, function (config, callback) {
-        var filename = config.filename,
-            options = config.options,
-            font = exports._fontData(options.font);
-        if (font) {
-            options.fontFamily = font.fontFamily;
-            options.fontFilename = font.filename;
-        }
-        generateFavicon(filename, options,
+        var format = config.format,
+            filename = [config.name, format].join('.'),
+            font = _catalogSearch.searchWebFont(config.font) || {},
+            colorScheme = _catalogSearch.searchColorScheme(config.color),
+            letter = config.letter;
+
+        generateFavicon(filename, {
+                format: format,
+                letter: letter,
+                fontFamily: font.fontFamily,
+                fontFilename: font.filename,
+                backgroundColor: colorScheme.colors[0]
+            },
             function (err) {
                 if (!err) {
                     grunt.log.writeln('Favicon file created: %s', filename);
@@ -32,18 +38,3 @@ exports = module.exports = function (grunt, config, callback) {
     }, callback);
 };
 
-exports._fontData = function (font) {
-    if (!font) {
-        return null;
-    }
-    var data = require('../../assets/catalogs/web-font-catalog'),
-        found = data[font.trim()];
-    if (!found) {
-        throw new Error('Font not found :' + font);
-    }
-    return {
-        fontFamily: found.fontFamily,
-        filename: found.filename
-    };
-
-};
