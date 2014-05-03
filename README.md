@@ -13,7 +13,6 @@ Prerequisites
 
 + [node.js][nodejs_url]
 + [cairo][cairo_url]
-+ [Inkscape][inkscape_url]
 
 
 Install
