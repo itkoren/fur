@@ -5,6 +5,7 @@ Front end design tool.
 
 [![Build Status][my_travis_badge_url]][my_travis_url]
 [![Code Climate][my_codeclimate_badge_url]][my_codeclimate_url]
+[![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
 [![dependencies][my_gemnasium_badge_url]][my_gemnasium_url]
 
 
@@ -70,6 +71,7 @@ Documents
 [inkscape_url]: http://www.inkscape.org/en/
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
+[my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
