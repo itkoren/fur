@@ -5,13 +5,18 @@
 
 "use strict";
 
-exports.project = {
-    dir: 'doc/gallery',
-    tmpl: {
-        baseCss: 'tmpl/css/gallery.css.dot',
-        fontHtml: 'tmpl/html/font-gallery.html.dot'
-    },
-    catalog: {
-        font: 'assets/catalogs/web-font-catalog.json'
+exports.base = [
+    {
+        tmpl: 'tmpl/css/gallery.css.dot',
+        file: 'doc/gallery/gallery.css'
+    }
+];
+
+exports.font = {
+    file: 'doc/gallery/web-font-gallery.html',
+    tmpl: 'tmpl/html/web-font-gallery.html.dot',
+    worker: 'galleryWebFonts',
+    workerOptions: {
+        catalogFile: 'assets/catalogs/web-font-catalog.json'
     }
 };

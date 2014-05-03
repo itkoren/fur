@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<!--
+    Font gallery html.
+-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fonts</title>
+    <link rel="stylesheet" href="gallery.css"/>
+    <style>
+        .sample-label {
+            margin: 5px 0;
+            line-height: 1em;
+        }
+
+        .l {
+            font-size: 2em;
+        }
+
+        .m {
+            font-size: 1em;
+        }
+
+        .s {
+            font-size: 0.5em;
+        }
+
+        .sample-td {
+            padding: 10px 20px;
+        }
+        tbody th{
+            font-weight:100;
+            font-size:3em;
+            color:#555;
+        }
+        .v-center{
+            vertical-align: middle;
+        }
+        .w120{
+            width: 120px;
+        }
+
+        
+        @font-face {
+            font-family: "Aller Display";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/AllerDisplay.ttf');
+        }
+
+        .font-a{
+            font-family: "Aller Display", serif;
+        }
+        
+        @font-face {
+            font-family: "Aller Bd";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/Aller_Bd.ttf');
+        }
+
+        .font-b{
+            font-family: "Aller Bd", serif;
+        }
+        
+        @font-face {
+            font-family: "Aller Bd It";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/Aller_BdIt.ttf');
+        }
+
+        .font-c{
+            font-family: "Aller Bd It", serif;
+        }
+        
+        @font-face {
+            font-family: "Aller It";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/Aller_It.ttf');
+        }
+
+        .font-d{
+            font-family: "Aller It", serif;
+        }
+        
+        @font-face {
+            font-family: "Aller Lt";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/Aller_Lt.ttf');
+        }
+
+        .font-e{
+            font-family: "Aller Lt", serif;
+        }
+        
+        @font-face {
+            font-family: "Aller Lt It";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/Aller_LtIt.ttf');
+        }
+
+        .font-f{
+            font-family: "Aller Lt It", serif;
+        }
+        
+        @font-face {
+            font-family: "Aller Rg";
+            src: url('../../assets/web_fonts/font_squirrel/Aller/Aller_Rg.ttf');
+        }
+
+        .font-g{
+            font-family: "Aller Rg", serif;
+        }
+        
+        @font-face {
+            font-family: "Chunkfive";
+            src: url('../../assets/web_fonts/font_squirrel/ChunkFive/Chunkfive.otf');
+        }
+
+        .font-h{
+            font-family: "Chunkfive", serif;
+        }
+        
+        @font-face {
+            font-family: "Prociono Regular";
+            src: url('../../assets/web_fonts/font_squirrel/Prociono/Prociono-Regular.otf');
+        }
+
+        .font-i{
+            font-family: "Prociono Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Junction";
+            src: url('../../assets/web_fonts/font_squirrel/junction-regular/Junction.otf');
+        }
+
+        .font-j{
+            font-family: "Junction", serif;
+        }
+        
+        @font-face {
+            font-family: "Abril Fatface Regular";
+            src: url('../../assets/web_fonts/google_fonts/Abril_Fatface/AbrilFatface-Regular.ttf');
+        }
+
+        .font-k{
+            font-family: "Abril Fatface Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Arvo Bold";
+            src: url('../../assets/web_fonts/google_fonts/Arvo/Arvo-Bold.ttf');
+        }
+
+        .font-l{
+            font-family: "Arvo Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Arvo Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Arvo/Arvo-BoldItalic.ttf');
+        }
+
+        .font-m{
+            font-family: "Arvo Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Arvo Italic";
+            src: url('../../assets/web_fonts/google_fonts/Arvo/Arvo-Italic.ttf');
+        }
+
+        .font-n{
+            font-family: "Arvo Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Arvo Regular";
+            src: url('../../assets/web_fonts/google_fonts/Arvo/Arvo-Regular.ttf');
+        }
+
+        .font-o{
+            font-family: "Arvo Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Droid Sans Bold";
+            src: url('../../assets/web_fonts/google_fonts/Droid_Sans/DroidSans-Bold.ttf');
+        }
+
+        .font-p{
+            font-family: "Droid Sans Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Droid Sans";
+            src: url('../../assets/web_fonts/google_fonts/Droid_Sans/DroidSans.ttf');
+        }
+
+        .font-q{
+            font-family: "Droid Sans", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Bold";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Bold.ttf');
+        }
+
+        .font-r{
+            font-family: "Josefin Slab Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-BoldItalic.ttf');
+        }
+
+        .font-s{
+            font-family: "Josefin Slab Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Italic";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Italic.ttf');
+        }
+
+        .font-t{
+            font-family: "Josefin Slab Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Light";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Light.ttf');
+        }
+
+        .font-u{
+            font-family: "Josefin Slab Light", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Light Italic";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-LightItalic.ttf');
+        }
+
+        .font-v{
+            font-family: "Josefin Slab Light Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Regular";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Regular.ttf');
+        }
+
+        .font-w{
+            font-family: "Josefin Slab Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Semi Bold";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-SemiBold.ttf');
+        }
+
+        .font-x{
+            font-family: "Josefin Slab Semi Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Semi Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-SemiBoldItalic.ttf');
+        }
+
+        .font-y{
+            font-family: "Josefin Slab Semi Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Thin";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Thin.ttf');
+        }
+
+        .font-z{
+            font-family: "Josefin Slab Thin", serif;
+        }
+        
+        @font-face {
+            font-family: "Josefin Slab Thin Italic";
+            src: url('../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-ThinItalic.ttf');
+        }
+
+        .font-aa{
+            font-family: "Josefin Slab Thin Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Black";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-Black.ttf');
+        }
+
+        .font-ab{
+            font-family: "Lato Black", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Black Italic";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-BlackItalic.ttf');
+        }
+
+        .font-ac{
+            font-family: "Lato Black Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Bold";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-Bold.ttf');
+        }
+
+        .font-ad{
+            font-family: "Lato Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-BoldItalic.ttf');
+        }
+
+        .font-ae{
+            font-family: "Lato Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Hairline";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-Hairline.ttf');
+        }
+
+        .font-af{
+            font-family: "Lato Hairline", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Hairline Italic";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-HairlineItalic.ttf');
+        }
+
+        .font-ag{
+            font-family: "Lato Hairline Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Italic";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-Italic.ttf');
+        }
+
+        .font-ah{
+            font-family: "Lato Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Light";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-Light.ttf');
+        }
+
+        .font-ai{
+            font-family: "Lato Light", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Light Italic";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-LightItalic.ttf');
+        }
+
+        .font-aj{
+            font-family: "Lato Light Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Lato Regular";
+            src: url('../../assets/web_fonts/google_fonts/Lato/Lato-Regular.ttf');
+        }
+
+        .font-ak{
+            font-family: "Lato Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Old Standard Bold";
+            src: url('../../assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Bold.ttf');
+        }
+
+        .font-al{
+            font-family: "Old Standard Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Old Standard Italic";
+            src: url('../../assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Italic.ttf');
+        }
+
+        .font-am{
+            font-family: "Old Standard Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Old Standard Regular";
+            src: url('../../assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Regular.ttf');
+        }
+
+        .font-an{
+            font-family: "Old Standard Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Bold";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Bold.ttf');
+        }
+
+        .font-ao{
+            font-family: "Open Sans Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-BoldItalic.ttf');
+        }
+
+        .font-ap{
+            font-family: "Open Sans Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Extra Bold";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-ExtraBold.ttf');
+        }
+
+        .font-aq{
+            font-family: "Open Sans Extra Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Extra Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf');
+        }
+
+        .font-ar{
+            font-family: "Open Sans Extra Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Italic";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Italic.ttf');
+        }
+
+        .font-as{
+            font-family: "Open Sans Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Light";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Light.ttf');
+        }
+
+        .font-at{
+            font-family: "Open Sans Light", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Light Italic";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-LightItalic.ttf');
+        }
+
+        .font-au{
+            font-family: "Open Sans Light Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Regular";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Regular.ttf');
+        }
+
+        .font-av{
+            font-family: "Open Sans Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Semibold";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Semibold.ttf');
+        }
+
+        .font-aw{
+            font-family: "Open Sans Semibold", serif;
+        }
+        
+        @font-face {
+            font-family: "Open Sans Semibold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-SemiboldItalic.ttf');
+        }
+
+        .font-ax{
+            font-family: "Open Sans Semibold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Bold";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Bold.ttf');
+        }
+
+        .font-ay{
+            font-family: "Ubuntu Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-BoldItalic.ttf');
+        }
+
+        .font-az{
+            font-family: "Ubuntu Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Italic";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Italic.ttf');
+        }
+
+        .font-ba{
+            font-family: "Ubuntu Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Light";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Light.ttf');
+        }
+
+        .font-bb{
+            font-family: "Ubuntu Light", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Light Italic";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-LightItalic.ttf');
+        }
+
+        .font-bc{
+            font-family: "Ubuntu Light Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Medium";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Medium.ttf');
+        }
+
+        .font-bd{
+            font-family: "Ubuntu Medium", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Medium Italic";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-MediumItalic.ttf');
+        }
+
+        .font-be{
+            font-family: "Ubuntu Medium Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Ubuntu Regular";
+            src: url('../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Regular.ttf');
+        }
+
+        .font-bf{
+            font-family: "Ubuntu Regular", serif;
+        }
+        
+        @font-face {
+            font-family: "Vollkorn Bold";
+            src: url('../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Bold.ttf');
+        }
+
+        .font-bg{
+            font-family: "Vollkorn Bold", serif;
+        }
+        
+        @font-face {
+            font-family: "Vollkorn Bold Italic";
+            src: url('../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-BoldItalic.ttf');
+        }
+
+        .font-bh{
+            font-family: "Vollkorn Bold Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Vollkorn Italic";
+            src: url('../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Italic.ttf');
+        }
+
+        .font-bi{
+            font-family: "Vollkorn Italic", serif;
+        }
+        
+        @font-face {
+            font-family: "Vollkorn Regular";
+            src: url('../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Regular.ttf');
+        }
+
+        .font-bj{
+            font-family: "Vollkorn Regular", serif;
+        }
+        
+    </style>
+</head>
+<body>
+<header><h1 onclick="location.reload()">Font gallery</h1></header>
+<article>
+<br>
+<table>
+<colgroup>
+<col/><col class="w120"/><col/>
+</colgroup>
+<thead>
+    <tr><th></th><th>Font Family</th><th>Sample</th></tr>
+</thead>
+<tbody>
+
+    <tr>
+        <th class="">a</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/AllerDisplay.ttf">Aller Display</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-a">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-a">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-a">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">b</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/Aller_Bd.ttf">Aller Bd</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-b">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-b">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-b">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">c</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/Aller_BdIt.ttf">Aller Bd It</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-c">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-c">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-c">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">d</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/Aller_It.ttf">Aller It</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-d">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-d">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-d">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">e</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/Aller_Lt.ttf">Aller Lt</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-e">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-e">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-e">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">f</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/Aller_LtIt.ttf">Aller Lt It</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-f">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-f">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-f">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">g</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Aller/Aller_Rg.ttf">Aller Rg</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-g">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-g">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-g">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">h</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/ChunkFive/Chunkfive.otf">Chunkfive</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-h">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-h">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-h">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">i</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/Prociono/Prociono-Regular.otf">Prociono Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-i">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-i">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-i">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">j</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/font_squirrel/junction-regular/Junction.otf">Junction</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-j">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-j">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-j">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">k</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Abril_Fatface/AbrilFatface-Regular.ttf">Abril Fatface Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-k">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-k">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-k">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">l</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Arvo/Arvo-Bold.ttf">Arvo Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-l">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-l">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-l">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">m</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Arvo/Arvo-BoldItalic.ttf">Arvo Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-m">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-m">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-m">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">n</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Arvo/Arvo-Italic.ttf">Arvo Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-n">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-n">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-n">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">o</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Arvo/Arvo-Regular.ttf">Arvo Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-o">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-o">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-o">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">p</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Droid_Sans/DroidSans-Bold.ttf">Droid Sans Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-p">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-p">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-p">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">q</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Droid_Sans/DroidSans.ttf">Droid Sans</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-q">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-q">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-q">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">r</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Bold.ttf">Josefin Slab Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-r">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-r">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-r">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">s</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-BoldItalic.ttf">Josefin Slab Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-s">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-s">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-s">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">t</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Italic.ttf">Josefin Slab Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-t">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-t">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-t">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">u</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Light.ttf">Josefin Slab Light</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-u">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-u">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-u">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">v</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-LightItalic.ttf">Josefin Slab Light Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-v">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-v">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-v">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">w</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Regular.ttf">Josefin Slab Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-w">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-w">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-w">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">x</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-SemiBold.ttf">Josefin Slab Semi Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-x">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-x">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-x">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">y</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-SemiBoldItalic.ttf">Josefin Slab Semi Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-y">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-y">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-y">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">z</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-Thin.ttf">Josefin Slab Thin</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-z">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-z">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-z">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">aa</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Josefin_Slab/JosefinSlab-ThinItalic.ttf">Josefin Slab Thin Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-aa">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-aa">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-aa">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ab</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-Black.ttf">Lato Black</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ab">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ab">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ab">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ac</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-BlackItalic.ttf">Lato Black Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ac">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ac">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ac">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ad</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-Bold.ttf">Lato Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ad">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ad">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ad">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ae</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-BoldItalic.ttf">Lato Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ae">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ae">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ae">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">af</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-Hairline.ttf">Lato Hairline</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-af">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-af">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-af">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ag</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-HairlineItalic.ttf">Lato Hairline Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ag">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ag">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ag">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ah</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-Italic.ttf">Lato Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ah">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ah">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ah">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ai</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-Light.ttf">Lato Light</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ai">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ai">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ai">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">aj</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-LightItalic.ttf">Lato Light Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-aj">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-aj">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-aj">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ak</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Lato/Lato-Regular.ttf">Lato Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ak">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ak">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ak">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">al</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Bold.ttf">Old Standard Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-al">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-al">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-al">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">am</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Italic.ttf">Old Standard Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-am">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-am">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-am">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">an</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Old_Standard_TT/OldStandard-Regular.ttf">Old Standard Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-an">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-an">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-an">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ao</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Bold.ttf">Open Sans Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ao">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ao">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ao">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ap</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-BoldItalic.ttf">Open Sans Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ap">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ap">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ap">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">aq</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-ExtraBold.ttf">Open Sans Extra Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-aq">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-aq">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-aq">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ar</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf">Open Sans Extra Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ar">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ar">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ar">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">as</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Italic.ttf">Open Sans Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-as">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-as">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-as">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">at</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Light.ttf">Open Sans Light</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-at">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-at">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-at">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">au</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-LightItalic.ttf">Open Sans Light Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-au">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-au">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-au">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">av</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Regular.ttf">Open Sans Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-av">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-av">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-av">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">aw</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-Semibold.ttf">Open Sans Semibold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-aw">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-aw">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-aw">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ax</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Open_Sans/OpenSans-SemiboldItalic.ttf">Open Sans Semibold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ax">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ax">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ax">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ay</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Bold.ttf">Ubuntu Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ay">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ay">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ay">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">az</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-BoldItalic.ttf">Ubuntu Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-az">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-az">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-az">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">ba</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Italic.ttf">Ubuntu Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-ba">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-ba">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-ba">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bb</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Light.ttf">Ubuntu Light</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bb">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bb">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bb">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bc</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-LightItalic.ttf">Ubuntu Light Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bc">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bc">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bc">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bd</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Medium.ttf">Ubuntu Medium</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bd">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bd">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bd">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">be</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-MediumItalic.ttf">Ubuntu Medium Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-be">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-be">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-be">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bf</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Regular.ttf">Ubuntu Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bf">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bf">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bf">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bg</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Bold.ttf">Vollkorn Bold</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bg">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bg">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bg">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bh</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-BoldItalic.ttf">Vollkorn Bold Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bh">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bh">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bh">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bi</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Italic.ttf">Vollkorn Italic</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bi">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bi">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bi">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="">bj</th>
+        <td class="text-center v-center">
+            <a href="../../assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Regular.ttf">Vollkorn Regular</a>
+        </td>
+        <td class="sample-td">
+            <div class="l sample-label font-bj">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="m sample-label font-bj">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+            <div class="s sample-label font-bj">Grumpy wizards make toxic brew for the evil Queen and Jack.
+            </div>
+        </td>
+    </tr>
+
+</tbody>
+</table>
+</article>
+
+<footer>
+
+
+</footer>
+</body>
+</html>
