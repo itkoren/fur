@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: index.js</title>
+	<title>fur Source: catalogs.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -121,25 +121,36 @@
 					
 
 
-		<h1 class="page-title">Source: index.js</h1>
+		<h1 class="page-title">Source: catalogs.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Front end design tools.
- * @see {@link https://github.com/tick-tack/fur|fur}
- * @module fur
- * @author Taka Okunishi
- *
+ * @file Catalogs.
+ * @memberof module:fur
+ * @namespace catalogs
  */
 
-exports.badges = require('./badges');
-exports.images = require('./images');
-exports.icons = require('./icons');
-exports.util = require('./util');
-exports.catalogs = require('./catalogs');
-exports.generateBadge = require('./generate_badge');
-exports.generateFavicon = require('./generate_favicon');</pre>
+"use strict";
+
+module.exports = {
+    /**
+     * Color scheme catalogs.
+     * @memberof catalogs
+     * @type {object}
+     */
+    get colorSchemeCatalog() {
+        return require('../assets/catalogs/color-scheme-catalog')
+    },
+    /**
+     * Web font catalogs.
+     * @memberof catalogs
+     * @type {object}
+     */
+    get webFontCatalog() {
+        return require('../assets/catalogs/web-font-catalog')
+    }
+};</pre>
         </article>
     </section>
 
