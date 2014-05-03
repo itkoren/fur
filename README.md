@@ -22,6 +22,44 @@ Install
 If you never used [node-canvas][node_canvas_url],
 follow [the install guide][node_canvas_install_wiki_url].
 
+```bash
+$ sudo npm install fur -g
+```
+
+Usage
+------
+
+```bash
+
+$ fur -h
+
+  Usage: fur [options] [command]
+
+  Commands:
+
+    favicon [options] <filename> Generate a favicon.
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+```
+
+## Generate a favicon file.
+
+Generate a simple favicon with themes. ([See available themes][my_gallery_url])
+
+
+
+```bash
+$ fur --font-theme a --color-theme e --letters k my-favicon.svg
+```
+
+
+
+
+
+
 Documents
 ------
 + [API Guide][my_apiguide_url]
@@ -36,6 +74,7 @@ Documents
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
+[my_gallery_url]: http://tick-tack.github.io/fur/gallery/
 [my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat

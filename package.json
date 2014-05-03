@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Front end design tool.",
   "main": "index.js",
+  "bin": {
+    "fur": "./bin/fur"
+  },
   "scripts": {
     "test": "grunt test",
     "coverage": "istanbul cover ci/bin/test --dir doc/coverage",
@@ -31,7 +34,8 @@
     "glob": "^3.2.9",
     "cheerio": "^0.15.0",
     "svink": "^0.1.7",
-    "commander": "^2.2.0"
+    "commander": "^2.2.0",
+    "mkdirp": "^0.4.0"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.0.3",
