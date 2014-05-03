@@ -29,6 +29,7 @@ var moduleNames = fs.readdirSync(libDir)
 
 var binNames = [
     'build',
+    'coverage',
     'draw',
     'doc',
     'test',
