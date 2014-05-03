@@ -55,6 +55,10 @@
 						</li>
 						
 						<li>
+							<a href="commands.html">fur/commands</a>
+						</li>
+						
+						<li>
 							<a href="util.html">fur/util</a>
 						</li>
 						
@@ -77,6 +81,10 @@
 						</li>
 						
 						<li>
+							<a href="FabricImage.html">FabricImage</a>
+						</li>
+						
+						<li>
 							<a href="FlatBadge.html">FlatBadge</a>
 						</li>
 						
@@ -86,6 +94,10 @@
 						
 						<li>
 							<a href="Image.html">Image</a>
+						</li>
+						
+						<li>
+							<a href="TextIcon.html">TextIcon</a>
 						</li>
 						
 
@@ -113,7 +125,7 @@
  * @file Abstract icon object.
  * @memberof fur.icons
  * @abstract
- * @augments Image
+ * @augments FabricImage
  * @constructor Icon
  * @author Taka Okunishi
  *
@@ -124,12 +136,12 @@
 
 var define = require('../util/define'),
     fabric = require('fabric').fabric,
-    fs = require('fs'),
-    Image = require('../images/image');
+    FabricImage = require('../images/fabric_image');
 
 
-var Icon = module.exports = define({
-    prototype: Image,
+var Icon;
+Icon = module.exports = define({
+    prototype: FabricImage,
     accessors: [
     /**
      * @function Icon.size
@@ -166,100 +178,53 @@ var Icon = module.exports = define({
         _backgroundColor: 'transparent',
         _borderWidth: 0,
         _borderColor: 'transparent',
-        /**
-         * Create a new canvas.
-         * @function
-         * @returns {fabric.Canvas} - New canvas object.
-         */
-        createCanvas: function () {
-            var s = this,
-                size = s._size;
-            return fabric.createCanvasForNode(size, size);
+        width: function (val) {
+            var s = this;
+            return s.size.apply(s, arguments);
+        },
+        height: function (val) {
+            var s = this;
+            return s.size.apply(s, arguments);
         },
         /**
          * Create a new background rect.
          * @function
-         * @returns {fabric.Rect} - New background.
+         * @returns {fabric.Rect} - New background object.
          */
-        newBackground: function () {
+        newBackgroundObject: function () {
             var s = this,
-                size = s._size;
+                size = s.size();
             return new fabric.Rect({
-                width: size - s._borderWidth,
-                height: size - s._borderWidth,
-                rx: s._cornerRadius,
-                ry: s._cornerRadius,
-                fill: s._backgroundColor,
+                width: size - s.borderWidth(),
+                height: size - s.borderWidth(),
+                rx: s.cornerRadius(),
+                ry: s.cornerRadius(),
+                fill: s.backgroundColor(),
                 originX: 'center',
                 originY: 'center',
                 left: size / 2,
                 top: size / 2,
                 borderColor: '#3AF',
-                hasBorders: s._borderWidth > 0,
-                stroke: s._borderColor,
-                strokeWidth: s._borderWidth
+                hasBorders: s.borderWidth() > 0,
+                stroke: s.borderColor(),
+                strokeWidth: s.borderWidth()
             })
         },
         /**
-         * Draw on a canvas.
+         * Drawable objects.
          * @function
-         * @param {fabric.Canvas} canvas
-         * @returns {fabric.Canvas} - Drawn canvas.
+         * @returns {fabric.Object[]} - Drawable objects.
          */
-        drawOnCanvas: function (canvas) {
+        drawables: function () {
             var s = this;
-            canvas.add(s.newBackground());
-            return canvas;
-        },
-        /**
-         * Draw an image.
-         * @function
-         * @returns {fabric.Canvas}
-         */
-        draw: function () {
-            var s = this,
-                canvas = s.createCanvas();
-            return s.drawOnCanvas(canvas);
-        },
-        /**
-         * Convert to svg data.
-         * @function
-         * @param {function} callback - Callback when done.
-         */
-        toSVG: function (callback) {
-            var s = this,
-                svg = s.draw().toSVG();
-            callback(null, svg);
-        },
-        /**
-         * Write as png file.
-         * @function
-         * @param {string} filename - Filename to write.
-         * @param {function} callback - Callback when done.
-         */
-        writeAsPNG: function (filename, callback) {
-            var s = this;
-            var inStream = s.draw().createPNGStream(),
-                outStream = fs.createWriteStream(filename);
-            Icon._pipe(
-                inStream,
-                outStream,
-                callback);
+            return [
+                s.newBackgroundObject()
+            ];
         }
     }
 });
 
-Icon._pipe = function (reader, writer, callback) {
-    reader.pipe(writer);
-    reader.on('error', function (err) {
-        callback && callback(err);
-        callback = null;
-    });
-    reader.on('end', function () {
-        callback && callback();
-        callback = null;
-    });
-};</pre>
+</pre>
         </article>
     </section>
 
@@ -280,7 +245,7 @@ Icon._pipe = function (reader, writer, callback) {
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Fri May 02 2014 00:41:58 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Sat May 03 2014 17:20:46 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>

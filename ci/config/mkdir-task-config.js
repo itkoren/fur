@@ -21,6 +21,7 @@ exports.all = {
             'ci/tasks',
             'dist',
             'lib',
+            'lib/commands',
             'lib/images',
             'lib/icons',
             'lib/util',

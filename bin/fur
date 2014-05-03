@@ -1,1 +1,23 @@
 #!/usr/bin/env node
+
+/**
+ * @file fur command line interface.
+ * @author Taka Okunishi
+ *
+ */
+
+var color = require('cli-color'),
+    program = require('commander'),
+    lib = require('../lib');
+
+program.version(require('../package.json').version);
+
+
+
+
+program.parse(process.argv);
+
+if (process.argv.length < 3) {
+    program.help();
+}
+

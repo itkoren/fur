@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: util/render_dot_tmpl.js</title>
+	<title>fur Source: util/alphabetical_index.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -117,79 +117,29 @@
 					
 
 
-		<h1 class="page-title">Source: util/render_dot_tmpl.js</h1>
+		<h1 class="page-title">Source: util/alphabetical_index.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Render dot template.
+ * @file Alphabet base index.
  * @memberof module:fur/util
- * @function renderDotTmpl
- * @param {string|function} tmpl - Template file name or function.
- * @param {object} data - Template data.
- * @param {string} dest - Destination file name.
- * @param {function} callback - Callback when done.
- * @see {@link https://www.npmjs.org/package/dot|dot }
+ * @function alphabeticalIndex.
+ * @param {number} i - Index number.
  * @author Taka Okunishi
+ *
  */
-var fs = require('fs'),
-    dot = require('dot'),
-    async = require('async');
 
-exports = module.exports = function (tmpl, data, dest, callback) {
-    async.waterfall([
-        function (callback) {
-            exports._loadTmpl(tmpl, callback);
-        },
-        function (tmpl, callback) {
-            var rendered = tmpl(data);
-            fs.writeFile(dest, rendered, callback);
-        }
-    ], callback);
-};
+"use strict";
 
-exports._loadTmpl = function (tmpl, callback) {
-    if (typeof(tmpl) === 'string') {
-        async.waterfall([
-            function (callback) {
-                fs.readFile(tmpl, callback)
-            },
-            function (buffer, callback) {
-                exports._compile(buffer, callback);
-            }
-        ], callback);
-    } else {
-        callback(null, tmpl);
+module.exports = function alphabeticalIndex(i) {
+    var result = '';
+    if (i >= 26) {
+        result = alphabeticalIndex(parseInt(i / 26) - 1);
     }
-};
-
-exports._compile = function (src, callback) {
-    var settings = exports._templateSettings;
-    try {
-        var compiled = dot.template(src.toString(), settings);
-        callback(null, compiled);
-    } catch (e) {
-        callback(e);
-    }
-};
-
-
-exports._templateSettings = {
-    evaluate: /\{\{([\s\S]+?(\}?)+)\}\}/g,
-    interpolate: /\{\{=([\s\S]+?)\}\}/g,
-    encode: /\{\{!([\s\S]+?)\}\}/g,
-    use: /\{\{#([\s\S]+?)\}\}/g,
-    useParams: /(^|[^\w$])def(?:\.|\[[\'\"])([\w$\.]+)(?:[\'\"]\])?\s*\:\s*([\w$\.]+|\"[^\"]+\"|\'[^\']+\'|\{[^\}]+\})/g,
-    define: /\{\{##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\}\}/g,
-    defineParams: /^\s*([\w$]+):([\s\S]+)/,
-    conditional: /\{\{\?(\?)?\s*([\s\S]*?)\s*\}\}/g,
-    iterate: /\{\{~\s*(?:\}\}|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\}\})/g,
-    varname: 'it',
-    strip: false,
-    append: true,
-    selfcontained: false
-};
-</pre>
+    result += String.fromCharCode(97 + i % 26);
+    return result;
+};</pre>
         </article>
     </section>
 

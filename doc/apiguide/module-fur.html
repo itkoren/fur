@@ -55,6 +55,10 @@
 						</li>
 						
 						<li>
+							<a href="commands.html">fur/commands</a>
+						</li>
+						
+						<li>
 							<a href="util.html">fur/util</a>
 						</li>
 						
@@ -77,6 +81,10 @@
 						</li>
 						
 						<li>
+							<a href="FabricImage.html">FabricImage</a>
+						</li>
+						
+						<li>
 							<a href="FlatBadge.html">FlatBadge</a>
 						</li>
 						
@@ -86,6 +94,10 @@
 						
 						<li>
 							<a href="Image.html">Image</a>
+						</li>
+						
+						<li>
+							<a href="TextIcon.html">TextIcon</a>
 						</li>
 						
 
@@ -543,6 +555,454 @@
     
 </dd>
 
+        
+            
+<dt>
+    <h4 class="name" id="generateFavicon"><span class="type-signature">&lt;static> </span>generateFavicon<span class="signature">(filename, options, <span class="optional">style</span>, <span class="optional">size</span>, <span class="optional">color</span>, <span class="optional">BackgroundColor</span>, callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Generate a favicon</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+		<th>Default</th>
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>filename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>File name to generate.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Optional settings.</p>
+                <h6>Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>letter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Letter to draw.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>style</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'simple'
+                
+                </td>
+            
+
+            <td class="description last"><p>Style name.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    256
+                
+                </td>
+            
+
+            <td class="description last"><p>Image size.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>color</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    '#FFF'
+                
+                </td>
+            
+
+            <td class="description last"><p>Color.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>BackgroundColor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    '#FA9'
+                
+                </td>
+            
+
+            <td class="description last"><p>Background color.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>options.format</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    svg
+                
+                </td>
+            
+
+            <td class="description last"><p>File format.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Callback when done.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="generate_favicon.js.html">generate_favicon.js</a>, <a href="generate_favicon.js.html#sunlight-1-line-1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
         </dl>
     
 
@@ -569,7 +1029,7 @@
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Fri May 02 2014 00:41:59 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Sat May 03 2014 17:20:46 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
