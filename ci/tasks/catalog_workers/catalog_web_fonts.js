@@ -4,6 +4,8 @@
  * @function catalogWebFonts
  * @param {object} options - Catalog options.
  * @param {function} callback - Callback when done.
+ * @author Taka Okunishi
+ *
  */
 
 var path = require('path'),

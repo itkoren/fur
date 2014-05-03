@@ -14,10 +14,37 @@ exports.webFonts = {
 };
 
 
-//exports.colorSchemes = {
-//    dest: 'assets/catalogs/color-schemes-catalog.json',
-//    worker: 'colorScheme',
-//    workerOptions: {
-//
-//    }
-//};
+exports.colorSchemes = {
+    dest: 'assets/catalogs/color-scheme-catalog.json',
+    worker: 'catalogColorSchemes',
+    workerOptions: {
+        schemes: [
+            'mono',
+            'contrast',
+            'triade',
+            'tetrade',
+            'analogic'
+        ],
+        variations: [
+            'pastel',
+            'soft',
+            'light',
+            'hard',
+            'pale'
+        ],
+        hues: [
+            'red',
+            'red-orange',
+            'orange',
+            'orange-yellow',
+            'yellow',
+            'yellow-green',
+            'green',
+            'green-blue',
+            'blue',
+            'blue-violet',
+            'violet',
+            'violet-red'
+        ]
+    }
+};
