@@ -40,7 +40,7 @@
     "yesno": "0.0.1"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.0.3",
+    "codeclimate-test-reporter": "0.0.3",
     "grunt": "^0.4.4",
     "grunt-cli": "^0.1.13",
     "grunt-mkdir": "^0.1.1",
