@@ -16,7 +16,7 @@ exports.tickTack = formats.map(function (format) {
             format: format,
             fontSize: 240,
             backgroundColor: '#FF9B88',
-            font: 'e'
+            font: 'k'
         }
     }
 });

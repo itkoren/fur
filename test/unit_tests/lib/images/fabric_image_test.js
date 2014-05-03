@@ -24,6 +24,7 @@ exports['SVG font family style.'] = function (test) {
         });
 };
 
+
 exports['Fabric image.'] = function (test) {
     test.ok(new FabricImage());
     test.done();
