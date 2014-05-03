@@ -6,11 +6,13 @@ Front end design tool.
 [![Build Status][my_travis_badge_url]][my_travis_url]
 [![Code Climate][my_codeclimate_badge_url]][my_codeclimate_url]
 
-Requirements
+Prerequisites
 ------
 
 + [node.js][nodejs_url]
 + [cairo][cairo_url]
++ [Inkscape][inkscape_url]
+
 
 Install
 ------
@@ -28,6 +30,7 @@ Documents
 [grunt_url]: http://gruntjs.com/
 [grunt_badge_url]: http://cdn.gruntjs.com/builtwith.png
 [cairo_url]: http://cairographics.org/
+[inkscape_url]: http://www.inkscape.org/en/
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
 [my_travis_url]: https://travis-ci.org/tick-tack/fur

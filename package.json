@@ -30,7 +30,8 @@
     "color-scheme": "0.0.5",
     "fabric": "^1.4.3",
     "glob": "^3.2.9",
-    "cheerio": "^0.15.0"
+    "cheerio": "^0.15.0",
+    "svink": "^0.1.7"
   },
   "devDependencies": {
     "codeclimate-test-reporter": "^0.0.3",

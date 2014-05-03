@@ -20,3 +20,17 @@ exports.tickTack = formats.map(function (format) {
         }
     }
 });
+
+exports.ppAbstract = formats.map(function (format) {
+    return {
+        filename: util.format('dist/images/pp-abstract/pp-abstract-favicon.%s', format),
+        options: {
+            letter:'a',
+            format:format,
+            fontSize:240,
+            backgroundColor:'#55DDAA',
+            font:'f'
+        }
+    }
+})
+;
