@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+/**
+ * @file Run "release" for this project.
+ * @see Gruntfile.js
+ * @author undefined
+ */
+var grunt = require('grunt'),
+    yesno = require('yesno');
+
+yesno.ask('Are you sure to release new version? [yes/no]', null, function (ok) {
+    if (!ok) {
+        console.log("Exit now.");
+        process.exit();
+        return;
+    }
+    grunt.tasks([
+        'build',
+        'publishDoc',
+        'versionup',
+        'exec:commitRelease',
+        'tag',
+        'exec:publishNpm'
+    ], {
+    });
+});
+

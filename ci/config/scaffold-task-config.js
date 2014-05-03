@@ -62,7 +62,7 @@ exports.ciConfig = taskNames.map(function (name) {
         data: {
             taskName: name
         }
-    }
+    };
 });
 
 
@@ -73,7 +73,7 @@ exports.ciBin = binNames.map(function (name) {
         data: {
             taskName: name
         }
-    }
+    };
 });
 
 exports.libIndex = moduleNames
@@ -124,7 +124,7 @@ exports.libUnitTests = moduleNames.map(function (moduleName) {
                     modulePath: modulePath,
                     testCaseName: capitalize(changeCase.sentenceCase(basename)) + '.'
                 }
-            }
+            };
         })
         ;
 }).
