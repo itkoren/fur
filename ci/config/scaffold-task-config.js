@@ -43,6 +43,7 @@ var taskNames = [
     'tag',
     'versionup',
     'favicon',
+    'ico',
     'catalog'
 ];
 
