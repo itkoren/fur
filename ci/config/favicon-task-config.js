@@ -25,10 +25,7 @@ exports.fur = formats.map(function (format) {
         format: format,
         letter: 'fur',
         color: 'bb',
-        font: 'a',
-        textAdjustPosition: format === 'png' ? {
-            left: -38, top: -9
-        } : null
+        font: 'a'
     }
 });
 
