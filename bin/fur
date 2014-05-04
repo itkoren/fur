@@ -17,7 +17,7 @@ program
     .description('Generate a favicon.')
     .option('-f, --font-theme [theme]', 'Font theme name.')
     .option('-c, --color-theme [theme]', 'Color theme name.')
-    .option('-l, --letters [letters]', 'Letters to print on favicon.')
+    .option('-t, --text [text]', 'Text to print on favicon.')
     .action(commands.favicon.bind(commands));
 
 

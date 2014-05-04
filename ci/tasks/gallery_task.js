@@ -11,10 +11,12 @@
 "use strict";
 
 var path = require('path'),
+    fs = require('fs'),
     async = require('async'),
     util = require('util'),
     changeCase = require('change-case'),
     os = require('os'),
+    pkg = require('../../package.json'),
     galleryWorkers = require('./gallery_workers'),
     renderDotFile = require('../../lib/util/render_dot_tmpl');
 
@@ -30,6 +32,7 @@ exports = module.exports = function (grunt, config, callback) {
             data._footerHtml = exports._footerHtml;
             data._headHtml = exports._headHtml;
             data._links = exports._links;
+            data._pcakge = pkg;
             renderDotFile(tmpl, data, dest, function (err) {
                 if (!err) {
                     grunt.log.writeln('File crated:', dest);
@@ -54,16 +57,9 @@ exports._data = function (worker, workerOptions, callback) {
 
 };
 
-exports._headHtml = [
-    '<meta charset="UTF-8">',
-    '<link rel="stylesheet" href="gallery.css"/>',
-    '<script src="gallery.js"></script>',
-    '<link rel="icon" href="favicon.png"/>'
-].join(os.EOL);
+exports._headHtml = fs.readFileSync('tmpl/html/partials/gallery-head.partial.html');
 
-exports._footerHtml = [
-    '<a id="jump-to-top-btn" href="#">&#8679;Jump to Top</a>'
-].join(os.EOL);
+exports._footerHtml = fs.readFileSync('tmpl/html/partials/gallery-footer.partial.html');
 
 exports._links = [
     {

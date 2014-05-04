@@ -9,9 +9,22 @@
 
     {{=it._headHtml}}
 
+    <style>
+        header nav{
+            display:none;
+        }
+        body h1{
+            padding: 0 20px;
+        }
+        .large {
+            font-size: 1.25em;
+        }
+    </style>
+
 </head>
 <body>
-<ul>
+<h1>gallery</h1>
+<ul class="large">
 {{~it._links :link}}
 <li><a href="{{=link.href}}">{{=link.title}}</a></li>{{~}}
 </ul>

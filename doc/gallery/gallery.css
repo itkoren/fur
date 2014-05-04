@@ -30,6 +30,22 @@ header h1 {
     margin: 0;
     color: #AAA;
     font-size: 1.25em;
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+    color: #C9C9C9;
+}
+header .nav-item:hover{
+    color: #888;
+    text-decoration: none;
 }
 
 article {
@@ -94,6 +110,11 @@ td:last-child{
     border-right:none;
 }
 
+tbody tr:last-child th,
+tbody tr:last-child td{
+    border-bottom:none;
+}
+
 .text-center{
     text-align: center;
 }
@@ -121,4 +142,20 @@ tbody th{
     color:#555;
     text-decoration: none;
     background-color: rgba(255,255,255,.9);
+}
+
+footer{
+    padding: 10px 20px;
+    border-top: 1px solid #F5F5F5;
+    margin: 40px 10px 0;
+    color:#999;
+}
+footer nav {
+    display: inline-block;
+    font-size: 0.75em;
+    margin: 0 20px;
+}
+footer .nav-item{
+    display: inline-block;
+    margin: 0 10px;
 }

@@ -66,6 +66,7 @@ $ fur --font-theme a --color-theme e --text k my-favicon.svg
 Documents
 ------
 + [API Guide][my_apiguide_url]
++ [Gallery][my_gallery_url]
 
 [nodejs_url]: http://nodejs.org/
 [npm_url]: https://www.npmjs.org/

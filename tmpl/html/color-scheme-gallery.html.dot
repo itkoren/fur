@@ -65,46 +65,46 @@
     <h1 onclick="location.reload()">{{=it._title}}</h1>
 </header>
 <article>
-<br>
-<table>
-<colgroup>
-<col class="col0"/>
-<col class="col1 narrow"/>
-<col class="col2 narrow"/>
-<col class="col3 narrow"/>
-<col class="col4"/>
-</colgroup>
-    <thead>
-        <th></th>
-        <th>hue</th>
-        <th>scheme</th>
-        <th>variation</th>
-        <th>tones</th>
-        <th>colors</th>
-    </thead>
-    <tbody>
-    {{~it.schemes :scheme}}
-    <tr>
-        <th class="">{{=scheme.name}}</th>
-        <td class="text-center">{{=scheme.hue}}</td>
-        <td class="text-center">{{=scheme.scheme}}</td>
-        <td class="text-center">{{=scheme.variation}}</td>
-        <td class="sample-td text-center">
-            <div class="sample-box-container">
-            {{~scheme.tones :tone}}<div class="color-sample-box" style="background-color:{{=tone}}"
-            ><label class="color-sample-label">{{=tone}}</label></div>{{~}}
-            </div>
-        </td>
-        <td class="sample-td">
-            <div class="sample-box-container">
-            {{~scheme.colors :color}}<div class="color-sample-box" style="background-color:{{=color}}"
-            ><label class="color-sample-label">{{=color}}</label></div>{{~}}
-            </div>
-        </td>
-    </tr>{{~}}
-    </tbody>
-</table>
-
+    <br>
+    <table>
+    <colgroup>
+    <col class="col0"/>
+    <col class="col1 narrow"/>
+    <col class="col2 narrow"/>
+    <col class="col3 narrow"/>
+    <col class="col4"/>
+    </colgroup>
+        <thead>
+            <th></th>
+            <th>hue</th>
+            <th>scheme</th>
+            <th>variation</th>
+            <th>tones</th>
+            <th>colors</th>
+        </thead>
+        <tbody>
+        {{~it.schemes :scheme}}
+        <tr>
+            <th class="">{{=scheme.name}}</th>
+            <td class="text-center">{{=scheme.hue}}</td>
+            <td class="text-center">{{=scheme.scheme}}</td>
+            <td class="text-center">{{=scheme.variation}}</td>
+            <td class="sample-td text-center">
+                <div class="sample-box-container">
+                {{~scheme.tones :tone}}<div class="color-sample-box" style="background-color:{{=tone}}"
+                ><label class="color-sample-label">{{=tone}}</label></div>{{~}}
+                </div>
+            </td>
+            <td class="sample-td">
+                <div class="sample-box-container">
+                {{~scheme.colors :color}}<div class="color-sample-box" style="background-color:{{=color}}"
+                ><label class="color-sample-label">{{=color}}</label></div>{{~}}
+                </div>
+            </td>
+        </tr>{{~}}
+        </tbody>
+    </table>
+</article>
 <footer>
 {{=it._footerHtml}}
 </footer>
