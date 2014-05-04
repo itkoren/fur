@@ -17,7 +17,7 @@ Prerequisites
 + [node.js][nodejs_url]
 + [cairo][cairo_url]
 
-fur dependes on [node-canvas][node_canvas_url], and it's requires some setting up.
+fur dependes on [node-canvas][node_canvas_url], and it requires some setting up.    
 For more detail, see [the node-canvas install guide][node_canvas_install_wiki_url].
 
 
@@ -51,10 +51,13 @@ $ fur -h
 
 ### Generate a favicon file.
 
-Generate a simple favicon with themes. ([See available themes][my_gallery_url])
+Generate a simple favicon with themes.     
+
+Theme names are short letters like 'a', 'b'.
+Available themes are listed in [the gallery][my_gallery_url].
 
 ```bash
-$ fur --font-theme a --color-theme e --letters k my-favicon.svg
+$ fur --font-theme a --color-theme e --text k my-favicon.svg
 ```
 
 
