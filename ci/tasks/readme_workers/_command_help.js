@@ -22,7 +22,7 @@ exports = module.exports = function (command, callback) {
         var result = [
             '```bash',
             ['$', 'fur', command, '-h'].filter(exports._existsFilter).join(' '),
-            stdOut,
+            stdOut.replace(/\n$/,''),
             '```'
         ].join(os.EOL);
         callback(err, result);
