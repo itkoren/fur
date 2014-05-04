@@ -239,15 +239,6 @@ exports.restoreAllInjected = function () {
     }
 };
 
-/**
- * Toggle ci log enabled or not.
- * @memberof module:testHelper
- * @function toggleCILogEnabled
- * @param enabled
- */
-exports.toggleCILogEnabled = function (enabled) {
-    process.env.APEMAN_CI_LOG_DISABLED = enabled ? 'FALSE' : 'TRUE';
-};
 
 /**
  * Get all values.
