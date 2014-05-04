@@ -46,6 +46,7 @@ module.exports = function (grunt) {
         nodeunit: require('./ci/config/nodeunit-task-config'),
         readme: require('./ci/config/readme-task-config.js'),
         scaffold: require('./ci/config/scaffold-task-config'),
+        testcase: require('./ci/config/testcase-task-config'),
         versionup: require('./ci/config/versionup-task-config')
     });
 
@@ -63,6 +64,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('readme', 'Update readme file.', ciTask('./ci/tasks/readme_task'));
     grunt.registerMultiTask('tag', 'Create a tag on github.', ciTask('./ci/tasks/tag_task'));
     grunt.registerMultiTask('scaffold', 'Generate scaffold files.', ciTask('./ci/tasks/scaffold_task'));
+    grunt.registerMultiTask('testcase', 'Generate testcase files.', ciTask('./ci/tasks/testcase_task'));
     grunt.registerMultiTask('versionup', 'Increment project version.', ciTask('./ci/tasks/versionup_task'));
 
 
@@ -72,6 +74,7 @@ module.exports = function (grunt) {
         'scaffold',
         'catalog',
         'gallery',
+        'testcase',
         'readme'
     ]);
 

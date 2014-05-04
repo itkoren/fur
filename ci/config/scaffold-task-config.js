@@ -45,6 +45,7 @@ var taskNames = [
     'favicon',
     'ico',
     'catalog',
+    'testcase',
     'readme'
 ];
 
