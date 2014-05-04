@@ -15,9 +15,13 @@ program.version(require('../package.json').version);
 program
     .command('favicon <filename>')
     .description('Generate a favicon.')
-    .option('-f, --font-theme [theme]', 'Font theme name.')
-    .option('-c, --color-theme [theme]', 'Color theme name.')
+    .option('-C, --color-theme [theme]', 'Color theme name.')
+    .option('-F, --font-theme [theme]', 'Font theme name.')
+    .option('-s, --size [size]', 'Image size')
+    .option('-S, --Style [style]', 'Image style. "simple".')
     .option('-t, --text [text]', 'Text to print on favicon.')
+    .option('-L, --text-left [position]', 'Text left position.')
+    .option('-T, --text-top [position]', 'Text top position.')
     .action(commands.favicon.bind(commands));
 
 

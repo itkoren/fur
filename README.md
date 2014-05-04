@@ -51,13 +51,30 @@ $ fur -h
 
 ### Generate a favicon file.
 
-Generate a simple favicon with themes.     
+Generate a simple favicon with themes.
+
+```bash
+$ fur favicon -h
+
+  Usage: favicon [options] <filename>
+
+  Options:
+
+    -h, --help                  output usage information
+    -C, --color-theme [theme]   Color theme name.
+    -F, --font-theme [theme]    Font theme name.
+    -s, --size [size]           Image size
+    -S, --Style [style]         Image style. "simple".
+    -t, --text [text]           Text to print on favicon.
+    -L, --text-left [position]  Text left position.
+    -T, --text-top [position]   Text top position.
+```
 
 Theme names are short letters like 'a', 'b'.
 Available themes are listed in [the gallery][my_gallery_url].
 
 ```bash
-$ fur --font-theme a --color-theme e --text k my-favicon.svg
+$ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 ```
 
 

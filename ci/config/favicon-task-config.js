@@ -10,32 +10,38 @@ var util = require('util'),
 
 exports.tickTack = formats.map(function (format) {
     return {
-        name: 'dist/images/tick-tack/tick-tack-favicon',
-        format: format,
-        letter: 'tt',
-        color: 'd',
-        font: 'k'
+        filename: 'dist/images/tick-tack/tick-tack-favicon.' + format,
+        options: {
+            format: format,
+            text: 'tt',
+            colorTheme: 'd',
+            fontTheme: 'k'
+        }
     }
 });
 
 exports.fur = formats.map(function (format) {
     return {
-        fontSize: 160,
-        name: 'dist/images/fur/fur-favicon',
-        format: format,
-        letter: 'fur',
-        color: 'bb',
-        font: 'a'
+        filename: 'dist/images/fur/fur-favicon.' + format,
+        options: {
+            fontSize: 160,
+            format: format,
+            text: 'fur',
+            colorTheme: 'bb',
+            fontTheme: 'a'
+        }
     }
 });
 
 exports.ppAbstract = formats.map(function (format) {
     return {
-        name: 'dist/images/pp-abstract/pp-abstract-favicon',
-        format: format,
-        letter: 'a',
-        color: 'k',
-        font: 'f'
+        filename: 'dist/images/pp-abstract/pp-abstract-favicon.format',
+        options: {
+            format: format,
+            text: 'a',
+            colorTheme: 'k',
+            fontTheme: 'f'
+        }
     }
 })
 ;
