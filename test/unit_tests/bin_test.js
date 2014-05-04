@@ -4,9 +4,16 @@
  *
  */
 
+exports = module.exports = {};
+
 var childProcess = require('child_process'),
     fur = require.resolve('../../bin/fur');
 
+
+/**
+ * @memberof module:binTest
+ * @param test
+ */
 exports['Print help.'] = function (test) {
     var forked = childProcess.fork(fur, ['-h'], {
         silent: true

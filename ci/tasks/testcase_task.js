@@ -34,7 +34,7 @@ exports = module.exports = function (grunt, config, callback) {
             var testFiles = src.map(function (filename) {
                 return path.relative(srcBase, filename);
             })
-            exports._testFiles(testFiles, callback);
+            exports._testFiles(srcBase, testFiles, callback);
         }
     ], function (err, data) {
         async.series([
@@ -53,7 +53,14 @@ exports = module.exports = function (grunt, config, callback) {
     });
 };
 
-exports._testFiles = function (filenames, callback) {
+exports._testFiles = function (srcBase, filenames, callback) {
+
+    function testcaseName(filename) {
+        return filename.split(path.sep).map(function (filename) {
+            return changeCase.camelCase(filename);
+        }).join(path.sep);
+    };
+
     var dirnames = filenames.map(function (filename) {
         return exports._dirnames(filename);
     }).reduce(function (result, dirnames) {
@@ -78,11 +85,31 @@ exports._testFiles = function (filenames, callback) {
                         dirnames: dirname.split(path.sep).filter(function (dirname) {
                             return dirname !== '.';
                         }),
-                        name: changeCase.camelCase(basename)
+                        name: changeCase.camelCase(basename),
+                        testcaseName: testcaseName(filename),
                     }
                 })
                 .filter(function (data) {
                     return !!data.name;
+                }),
+            testcodes: filenames
+                .map(function (filename) {
+                    var src = path.resolve(srcBase, filename);
+                    var data = require(src);
+                    return{
+                        testcaseName: testcaseName(filename),
+                        filename: filename,
+                        snippets: Object.keys(data)
+                            .filter(function (key) {
+                                return ['setUp', 'tearDown'].indexOf(key) === -1;
+                            })
+                            .map(function (key) {
+                                return {
+                                    name: key,
+                                    content: data[key].toString()
+                                }
+                            })
+                    }
                 })
         }
     )

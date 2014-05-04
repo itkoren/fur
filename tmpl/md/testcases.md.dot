@@ -1,8 +1,28 @@
 {{
     /** @file Template for testcases. */
-}}
+}}fur testcases
+=====
+
+Testcases for [fur][my_repo] project.
+
 
 Test Cases
 -----
 {{~it.testcases :testcase}}
-{{~testcase.dirnames :dirname}}    {{~}}+ {{=testcase.name}}{{~}}
+{{~testcase.dirnames :dirname}}    {{~}}- [{{=testcase.testcaseName}}][]{{~}}
+
+
+Test Codes
+-----
+
+{{~it.testcodes :testcode}}
+
+### {{=testcode.testcaseName}} ###
+
+{{~testcode.snippets :snippet}}
+{{=snippet.name}}
+```javascript
+{{=snippet.content}}
+```{{~}}{{~}}
+
+[my_repo]: https://github.com/tick-tack/fur
