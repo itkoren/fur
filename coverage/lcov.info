@@ -557,7 +557,7 @@ BRF:4
 BRH:2
 end_of_record
 TN:
-SF:/Users/okuni/WebstormProjects/fur/lib/badges/default_badge.js
+SF:/Users/okuni/WebstormProjects/fur/lib/badges/flat_badge.js
 FNF:0
 FNH:0
 DA:13,1
@@ -568,7 +568,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/okuni/WebstormProjects/fur/lib/badges/flat_badge.js
+SF:/Users/okuni/WebstormProjects/fur/lib/badges/default_badge.js
 FNF:0
 FNH:0
 DA:13,1
