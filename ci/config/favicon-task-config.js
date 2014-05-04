@@ -20,12 +20,15 @@ exports.tickTack = formats.map(function (format) {
 
 exports.fur = formats.map(function (format) {
     return {
-        fontSize: 190,
+        fontSize: 160,
         name: 'dist/images/fur/fur-favicon',
         format: format,
-        letter: ' fur ',
-        color: 'z',
-        font: 'a'
+        letter: 'fur',
+        color: 'bb',
+        font: 'a',
+        textAdjustPosition: format === 'png' ? {
+            left: -38, top: -9
+        } : null
     }
 });
 

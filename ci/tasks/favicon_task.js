@@ -21,6 +21,7 @@ exports = module.exports = function (grunt, config, callback) {
             font = _catalogSearch.searchWebFont(config.font) || {},
             colorScheme = _catalogSearch.searchColorScheme(config.color),
             fontSize = config.fontSize,
+            textAdjustPosition = config.textAdjustPosition || {},
             letter = config.letter;
 
         generateFavicon(filename, {
@@ -29,6 +30,7 @@ exports = module.exports = function (grunt, config, callback) {
                 fontFamily: font.fontFamily,
                 fontSize: fontSize,
                 fontFilename: font.filename,
+                textAdjustPosition: textAdjustPosition,
                 backgroundColor: colorScheme.colors[0]
             },
             function (err) {
