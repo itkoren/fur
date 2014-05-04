@@ -17,6 +17,8 @@
 
     window.onload = function(){
         var header = document.querySelector('header');
-        header.appendChild(nav(links));
+        if (header) {
+            header.appendChild(nav(links));
+        }
     };
 })(window, document);
