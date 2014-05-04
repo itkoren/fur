@@ -20,7 +20,7 @@ exports.tearDown = function (done) {
 exports['Ico.'] = function (test) {
     var src = testHelper.resolveMockFile('mock-png.png'),
         dest = testHelper.resolveWorkFile('work-command-ico.ico');
-    ico(src, dest, function (err) {
+    ico(src, dest, {}, function (err) {
         test.ifError(err);
         test.done();
     });

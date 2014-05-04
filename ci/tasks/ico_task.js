@@ -13,7 +13,7 @@
 var ico = require('../../lib/commands/ico');
 
 module.exports = function (grunt, config, callback) {
-    ico(config.src, config.dest, function (err) {
+    ico(config.src, config.dest, {}, function (err) {
         if (!err) {
             grunt.log.writeln('ICO file created: %s', config.dest);
             callback(err);
