@@ -4,10 +4,10 @@
  * @function testcaseTask
  * @param grunt
  * @param {object} config - Task configuration.
- * @param {string} confir.srcBase - Source base directory name.
+ * @param {string} config.srcBase - Source base directory name.
  * @param {string} config.srcPattern - Source file name pattern.
  * @param {string} config.tmpl - Template file name.
- * @param {stirng} config.dest - Destination file name.
+ * @param {string} config.dest - Destination file name.
  * @param {function} callback - Callback when done.
  *
  */
