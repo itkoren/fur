@@ -28,9 +28,9 @@ Test Codes
 
 {{~testcode.snippets :snippet}}
 {{=snippet.name}}
-```javascript
+<pre>
 {{=snippet.content}}
-```
+</pre>
 {{~}}
 
 Full source:
@@ -43,11 +43,12 @@ Full source:
 Links
 -----
 
-
-+ [fur][my_repo]
-+ [nodejs][nodejs_url]
-+ [nodeunit][nodeunit_url]
-+ [coverage report][my_coverage_url]
++ project
+    + [fur repository][my_repo]
+    + [fur coverage][my_coverage_url]
++ external
+    + [nodejs][nodejs_url]
+    + [nodeunit][nodeunit_url]
 
 
 
@@ -58,3 +59,9 @@ Links
 [my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
+
+
+
+<style>
+{{=it.highlightCss}}
+</style>

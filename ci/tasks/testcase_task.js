@@ -16,9 +16,12 @@
 
 var async = require('async'),
     mkdirp = require('mkdirp'),
+    fs = require('fs'),
+    cleanCss = require('clean-css'),
     glob = require('glob'),
     changeCase = require('change-case'),
     path = require('path'),
+    highlight = require("highlight").Highlight,
     renderDotTmpl = require('../../lib/util/render_dot_tmpl');
 
 exports = module.exports = function (grunt, config, callback) {
@@ -67,6 +70,12 @@ exports._testFiles = function (srcBase, filenames, callback) {
         return changeCase.paramCase(testcaseName(filename).split(path.sep).join('-'));
     }
 
+    function highlightCss() {
+        var dirname = path.dirname(require.resolve('highlight')),
+            filename = path.resolve(dirname, 'vendor/highlight.js/styles/github.css');
+        return new cleanCss().minify(fs.readFileSync(filename).toString());
+    }
+
     var dirnames = filenames.map(function (filename) {
         return exports._dirnames(filename);
     }).reduce(function (result, dirnames) {
@@ -79,6 +88,7 @@ exports._testFiles = function (srcBase, filenames, callback) {
         return result;
     }, []);
     callback(null, {
+            highlightCss: highlightCss(),
             testBase: srcBase,
             testcases: dirnames.concat(filenames)
                 .sort(function (a, b) {
@@ -116,7 +126,7 @@ exports._testFiles = function (srcBase, filenames, callback) {
                             .map(function (key) {
                                 return {
                                     name: key,
-                                    content: data[key].toString()
+                                    content: highlight(data[key].toString())
                                 }
                             })
                     }
