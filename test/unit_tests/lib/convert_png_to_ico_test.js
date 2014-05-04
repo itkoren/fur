@@ -1,5 +1,5 @@
 /**
- * @file nodeunit test case for "convertPngToIco}
+ * @file nodeunit test case for "convertPngToIco"
  * @see {@link https://github.com/caolan/nodeunit | nodeunit}
  *
  */

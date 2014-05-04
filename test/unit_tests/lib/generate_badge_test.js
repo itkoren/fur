@@ -1,5 +1,5 @@
 /**
- * @file nodeunit test case for "generateBadge}
+ * @file nodeunit test case for "generateBadge"
  * @see {@link https://github.com/caolan/nodeunit | nodeunit}
  *
  */

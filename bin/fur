@@ -28,7 +28,7 @@ program
 program
     .command('ico <src> <dest>')
     .description('Convert a png file to ico')
-    .action(command.ico.bin(command));
+    .action(commands.ico.bind(commands));
 
 program.parse(process.argv);
 

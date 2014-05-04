@@ -1,5 +1,5 @@
 /**
- * @file nodeunit test case for "catalogs}
+ * @file nodeunit test case for "catalogs"
  * @see {@link https://github.com/caolan/nodeunit | nodeunit}
  *
  */

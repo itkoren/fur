@@ -1,5 +1,5 @@
 /**
- * @file nodeunit test case for "generateFavicon}
+ * @file nodeunit test case for "generateFavicon"
  * @see {@link https://github.com/caolan/nodeunit | nodeunit}
  *
  */
