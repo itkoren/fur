@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+/**
+ * @file Run "coverage" for this project.
+ * @see Gruntfile.js
+ * @author undefined
+ */
+
+require('grunt').tasks([
+    'coverage'
+], {
+    debug: false
+});
