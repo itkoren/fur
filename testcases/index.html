@@ -73,51 +73,345 @@
 
 
     <section>
-        <article><h2>Test Cases</h2>
+        <article><h1>fur testcases</h1>
+<p>Testcases for <a href="https://github.com/tick-tack/fur">fur</a> project.</p>
+<h2>Test Cases</h2>
 <ul>
-<li>binTest</li>
-<li>lib<ul>
-<li>badges<ul>
-<li>defineBadgeTest</li>
-<li>ghBadgeTest</li>
-<li>badgeTest</li>
-<li>defaultBadgeTest</li>
-<li>flatBadgeTest</li>
+<li>[binTestJs][]</li>
+<li>[lib][]<ul>
+<li>[lib/badges][]<ul>
+<li>[lib/badges/defineBadgeTestJs][]</li>
+<li>[lib/badges/ghBadgeTestJs][]</li>
+<li>[lib/badges/badgeTestJs][]</li>
+<li>[lib/badges/defaultBadgeTestJs][]</li>
+<li>[lib/badges/flatBadgeTestJs][]</li>
 </ul>
 </li>
-<li>catalogsTest</li>
-<li>commands<ul>
-<li>faviconTest</li>
-<li>icoTest</li>
+<li>[lib/catalogsTestJs][]</li>
+<li>[lib/commands][]<ul>
+<li>[lib/commands/faviconTestJs][]</li>
+<li>[lib/commands/icoTestJs][]</li>
 </ul>
 </li>
-<li>convertPngToIcoTest</li>
-<li>generateBadgeTest</li>
-<li>generateFaviconTest</li>
-<li>icons<ul>
-<li>defineIconTest</li>
-<li>iconTest</li>
-<li>textIconTest</li>
+<li>[lib/convertPngToIcoTestJs][]</li>
+<li>[lib/generateBadgeTestJs][]</li>
+<li>[lib/generateFaviconTestJs][]</li>
+<li>[lib/icons][]<ul>
+<li>[lib/icons/defineIconTestJs][]</li>
+<li>[lib/icons/iconTestJs][]</li>
+<li>[lib/icons/textIconTestJs][]</li>
 </ul>
 </li>
-<li>images<ul>
-<li>fabricImageTest</li>
-<li>imageTest</li>
+<li>[lib/images][]<ul>
+<li>[lib/images/fabricImageTestJs][]</li>
+<li>[lib/images/imageTestJs][]</li>
 </ul>
 </li>
-<li>util<ul>
-<li>alphabeticalIndexTest</li>
-<li>defineTest</li>
-<li>fallbackCopyTest</li>
-<li>printTest</li>
-<li>renderDotTmplTest</li>
-<li>writeReadonlyFileTest</li>
-<li>writeSvgFileTest</li>
+<li>[lib/util][]<ul>
+<li>[lib/util/alphabeticalIndexTestJs][]</li>
+<li>[lib/util/defineTestJs][]</li>
+<li>[lib/util/fallbackCopyTestJs][]</li>
+<li>[lib/util/printTestJs][]</li>
+<li>[lib/util/renderDotTmplTestJs][]</li>
+<li>[lib/util/writeReadonlyFileTestJs][]</li>
+<li>[lib/util/writeSvgFileTestJs][]</li>
 </ul>
 </li>
 </ul>
 </li>
-</ul></article>
+</ul>
+<h2>Test Codes</h2>
+<h3>binTestJs</h3>
+<p>Print help.</p>
+<pre><code class="lang-javascript">function (test) {
+    var forked = childProcess.fork(fur, ['-h'], {
+        silent: true
+    });
+    forked.on('error', function () {
+        test.ifError(new Error('Command failed.'));
+    });
+    forked.on('close', function (code) {
+        test.equal(code, 0);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/badges/defineBadgeTestJs</h3>
+<p>Define badge.</p>
+<pre><code class="lang-javascript">function (test) {
+    var Badge = defineBadge({
+
+    });
+    test.ok(Badge);
+    test.done();
+}</code></pre>
+<h3>lib/badges/ghBadgeTestJs</h3>
+<p>Gh badge.</p>
+<pre><code class="lang-javascript">function (test) {
+    test.ok(_ghBadge());
+    test.done();
+}</code></pre>
+<h3>lib/badges/badgeTestJs</h3>
+<p>Badge.</p>
+<pre><code class="lang-javascript">function (test) {
+    var badge = new Badge();
+    badge.toSVG(function (err, data) {
+        test.ok(badge === this);
+        test.ifError(err);
+        test.ok(data);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/badges/defaultBadgeTestJs</h3>
+<p>Default badge.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work_badge.svg');
+    new DefaultBadge().toSVG(function (err, data) {
+        var badge = this;
+        test.equal(badge.style(), 'default');
+        test.ifError(err);
+        test.ok(data);
+        badge.writeAsSVG(filename, function (err) {
+            test.ifError(err);
+            test.ok(testHelper.existsSync(filename));
+            test.done();
+        });
+    });
+}</code></pre>
+<h3>lib/badges/flatBadgeTestJs</h3>
+<p>Flat badge.</p>
+<pre><code class="lang-javascript">function (test) {
+    var badge = new FlatBadge();
+    test.equal(badge.style(), 'flat');
+    badge.toSVG(function (err, data) {
+        test.ok(badge === this);
+        test.ifError(err);
+        test.ok(data);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/catalogsTestJs</h3>
+<p>Catalogs.</p>
+<pre><code class="lang-javascript">function (test) {
+    test.ok(catalogs.colorSchemeCatalog);
+    test.ok(catalogs.webFontCatalog);
+    test.done();
+}</code></pre>
+<h3>lib/commands/faviconTestJs</h3>
+<p>Favicon.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work-command-favicon.svg');
+    favicon(filename, {
+        font: 'a',
+        color: 'e',
+        format: 'svg'
+    }, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/commands/icoTestJs</h3>
+<p>Ico.</p>
+<pre><code class="lang-javascript">function (test) {
+    var src = testHelper.resolveMockFile('mock-png.png'),
+        dest = testHelper.resolveWorkFile('work-command-ico.ico');
+    ico(src, dest, {}, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/convertPngToIcoTestJs</h3>
+<p>Convert png to ico.</p>
+<pre><code class="lang-javascript">function (test) {
+    var src = testHelper.resolveMockFile('mock-png.png'),
+        dest = testHelper.resolveWorkFile('work-ico.ico');
+    convertPngToIco(src, dest, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/generateBadgeTestJs</h3>
+<p>Generate badge.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work_generateed_badge.svg');
+    generateBadge(filename, {}, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/generateFaviconTestJs</h3>
+<p>Generate favicon.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work_favicon.svg');
+    generateFavicon(filename, {
+        letter: 'P',
+        format: 'svg',
+        fontFilename: testHelper.resolveMockFile('mock-font.ttf'),
+        fontFamily: 'mock-font'
+    }, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/icons/defineIconTestJs</h3>
+<p>Define icon.</p>
+<pre><code class="lang-javascript">function (test) {
+    test.ok(defineIcon({}));
+    test.done();
+}</code></pre>
+<h3>lib/icons/iconTestJs</h3>
+<p>Icon.</p>
+<pre><code class="lang-javascript">function (test) {
+    var icon = new Icon();
+    test.ok(icon.draw());
+    var filename = testHelper.resolveWorkFile('work_icon.png');
+    icon.writeAsPNG(filename, function () {
+        test.done();
+    });
+}</code></pre>
+<p>Write as svg.</p>
+<pre><code class="lang-javascript">function (test) {
+    var icon = new Icon();
+    test.ok(icon.draw());
+    var filename = testHelper.resolveWorkFile('work_icon.svg');
+    icon.writeAsSVG(filename, function () {
+        test.done();
+    });
+}</code></pre>
+<h3>lib/icons/textIconTestJs</h3>
+<p>Text icon.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work_text_icon.svg');
+    new TextIcon({
+        text: 'foo',
+        backgroundColor: '#EEE',
+        fontSize:200
+    }).writeAsSVG(filename, function (err) {
+            test.ifError(err);
+            test.done();
+        });
+}</code></pre>
+<h3>lib/images/fabricImageTestJs</h3>
+<p>SVG font family style.</p>
+<pre><code class="lang-javascript">function (test) {
+    new FabricImage()
+        .addCustomFont('mock-font', testHelper.resolveMockFile('mock-font.ttf'))
+        .svgFontFamilyStyle(function (err, style) {
+            test.ifError(err);
+            test.done();
+        });
+}</code></pre>
+<p>Fabric image.</p>
+<pre><code class="lang-javascript">function (test) {
+    test.ok(new FabricImage());
+    test.done();
+}</code></pre>
+<h3>lib/images/imageTestJs</h3>
+<p>Image.</p>
+<pre><code class="lang-javascript">function (test) {
+    new Image().toSVG(function (err) {
+        test.ok(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/util/alphabeticalIndexTestJs</h3>
+<p>Alphabetical index.</p>
+<pre><code class="lang-javascript">function (test) {
+    test.equal(alphabeticalIndex(0), &quot;a&quot;);
+    test.equal(alphabeticalIndex(1), &quot;b&quot;);
+    test.equal(alphabeticalIndex(25), &quot;z&quot;);
+    test.equal(alphabeticalIndex(26), &quot;aa&quot;);
+    test.equal(alphabeticalIndex(27), &quot;ab&quot;);
+    test.equal(alphabeticalIndex(51), &quot;az&quot;);
+    test.equal(alphabeticalIndex(52), &quot;ba&quot;);
+    test.done();
+}</code></pre>
+<h3>lib/util/defineTestJs</h3>
+<p>Define.</p>
+<pre><code class="lang-javascript">function (test) {
+    var O = define({
+        accessors: ['foo']
+    });
+    var o = new O({});
+    o.foo('bar');
+    test.equal(o._foo, 'bar');
+    test.equal(o.foo(), o._foo);
+    test.done();
+}</code></pre>
+<h3>lib/util/fallbackCopyTestJs</h3>
+<p>Fallback copy.</p>
+<pre><code class="lang-javascript">function (test) {
+    test.ok(fallbackCopy({}, {}));
+    test.ok(fallbackCopy({}));
+    test.ok(fallbackCopy({foo: 'bar'}));
+    test.done();
+}</code></pre>
+<h3>lib/util/printTestJs</h3>
+<p>Print.</p>
+<pre><code class="lang-javascript">function (test) {
+    ['FALSE', 'TRUE'].forEach(function (flg) {
+        process.env.FUR_PRINT_DISABLED = flg;
+        print('Normal print.', 1);
+        print(new Error(), {foo: 'bar'});
+        print.info('Info print.', 2);
+        print.ng('NG print.', 3);
+        print.ng.detail('NG Detail print.', 4);
+        print.ok('OK print.', 5);
+        print.debug('foo');
+        print._indents.push(10);
+        print.debug('bar');
+        print._indents.pop();
+    });
+    process.env.APEMAN_PRINT_DISABLED = 'FALSE';
+    print('foo', 'bar');
+
+
+    print._log('foo', 'bar');
+    test.done();
+}</code></pre>
+<h3>lib/util/renderDotTmplTestJs</h3>
+<p>Load tmpl.</p>
+<pre><code class="lang-javascript">function (test) {
+    var tmplFile = testHelper.resolveMockFile('mock_dot.dot');
+    renderDotTmpl._loadTmpl(tmplFile, function (err, tmpl) {
+        test.ifError(err);
+        test.ok(tmpl);
+        test.done();
+    });
+}</code></pre>
+<p>Render dot tmpl.</p>
+<pre><code class="lang-javascript">function (test) {
+    var workDir = testHelper.prepareCleanWorkDirForTestFile(__filename),
+        tmplFile = testHelper.resolveMockFile('mock_dot.dot'),
+        dest = workDir + '/work_rendered.txt';
+    renderDotTmpl(tmplFile, {
+        foo: 'bar'
+    }, dest, function (err) {
+        test.ok(testHelper.existsSync(dest));
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre>
+<h3>lib/util/writeReadonlyFileTestJs</h3>
+<p>Write readonly file.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work_readonly_file.txt');
+    writeReadonlyFile(filename, 'foo', function (err) {
+        test.ifError(err);
+        writeReadonlyFile(filename, 'foo', function (err) {
+            test.ifError(err);
+            test.done();
+        });
+    });
+}</code></pre>
+<h3>lib/util/writeSvgFileTestJs</h3>
+<p>Write svg file.</p>
+<pre><code class="lang-javascript">function (test) {
+    var filename = testHelper.resolveWorkFile('work_svg.svg');
+    writeSvgFile(filename, '&lt;svg/&gt;', function (err) {
+        test.ifError(err);
+        test.done();
+    });
+}</code></pre></article>
     </section>
 
 
@@ -131,7 +425,7 @@
 				<div class="clearfix"></div>
 				<footer>
 					
-					<link rel="icon" href="./favicon.png"/><style>.dropdown-menu{max-height:90%;} </style>
+					<link rel="icon" href="../favicon.ico"/>
 					<br />
 					
 					
@@ -142,7 +436,7 @@
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Sun May 04 2014 21:35:40 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Sun May 04 2014 22:11:29 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
