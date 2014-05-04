@@ -77,6 +77,8 @@ $ fur -h
 ### Generate a favicon file.
 
 Generate a simple favicon with themes.
+<!-- START readme_task.faviconCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 ```bash
 $ fur favicon -h
@@ -93,8 +95,11 @@ $ fur favicon -h
     -t, --text [text]           Text to print on favicon.
     -L, --text-left [position]  Text left position.
     -T, --text-top [position]   Text top position.
+
+
 ```
 
+<!-- END readme_task.faviconCommand generated contents please keep comment here to allow auto update -->
 Theme names are short letters like 'a', 'b'.
 Available themes are listed in [the gallery][my_gallery_url].
 

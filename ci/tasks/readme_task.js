@@ -38,10 +38,14 @@ exports._data = function (config, callback) {
     async.series([
         function (callback) {
             readmeWorkers.readmeCommands(callback)
+        },
+        function (callback) {
+            readmeWorkers.readmeFaviconCommand(callback)
         }
     ], function (err, data) {
         callback(err, {
-            commands: data[0]
+            commands: data[0],
+            faviconCommand: data[1]
         });
     });
 };

@@ -1,12 +1,12 @@
 /**
- * @file Contents about command.
+ * @file Contents about favicon command.
  * @memberof readmeWorkers
- * @function readmeCommands
+ * @function readmeFaviconCommand
  * @param {function} callback - Callback when done.
  */
 
 var _commandHelp = require('./_command_help');
 
 module.exports = function (callback) {
-    _commandHelp('', callback);
+    _commandHelp('favicon', callback);
 };

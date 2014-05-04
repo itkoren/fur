@@ -27,3 +27,5 @@ node_modules
 
 .idea
 .work
+
+.DS_Store
