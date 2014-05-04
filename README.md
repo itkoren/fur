@@ -17,7 +17,6 @@ Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Prerequisites](#prerequisites)
 - [Install](#install)
@@ -101,6 +100,7 @@ $ fur favicon -h
 ```
 
 <!-- END readme_task.faviconCommand generated contents please keep comment here to allow auto update -->
+
 Theme names are short letters like 'a', 'b'.
 Available themes are listed in [the gallery][my_gallery_url].
 
@@ -108,10 +108,6 @@ Available themes are listed in [the gallery][my_gallery_url].
 ```bash
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 
-```
-
-```bash
-$ fur ico my-favicon.png favicon.ico
 ```
 
 ### Convert to ico. ###

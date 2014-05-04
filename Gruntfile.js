@@ -89,8 +89,8 @@ module.exports = function (grunt) {
     grunt.registerTask('doc', 'Generate documents.', [
         'testcase',
         'coverage',
-        'readme',
         'exec:doctoc',
+        'readme',
         'jsdoc'
     ]);
 
