@@ -128,18 +128,22 @@
 <p><a name="bin-test"></a></p>
 <h3>binTest</h3>
 <p>Print help.</p>
-<pre><code class="lang-javascript">function (test) {
-    var forked = childProcess.fork(fur, ['-h'], {
-        silent: true
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> forked = childProcess.fork(fur, [<span class="string">'-h'</span>], {
+        silent: <span class="keyword">true</span>
     });
-    forked.on('error', function () {
-        test.ifError(new Error('Command failed.'));
+    forked.on(<span class="string">'error'</span>, <span class="keyword">function</span> () {
+        test.ifError(<span class="keyword">new</span> Error(<span class="string">'Command failed.'</span>));
     });
-    forked.on('close', function (code) {
-        test.equal(code, 0);
+    forked.on(<span class="string">'close'</span>, <span class="keyword">function</span> (code) {
+        test.equal(code, <span class="number">0</span>);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/bin_test.js">bin_test.js</a>;</li>
@@ -147,13 +151,17 @@
 <p><a name="lib-badges-define-badge-test"></a></p>
 <h3>lib/badges/defineBadgeTest</h3>
 <p>Define badge.</p>
-<pre><code class="lang-javascript">function (test) {
-    var Badge = defineBadge({
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> Badge = defineBadge({
 
     });
     test.ok(Badge);
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/_define_badge_test.js">lib/badges/_define_badge_test.js</a>;</li>
@@ -161,10 +169,14 @@
 <p><a name="lib-badges-gh-badge-test"></a></p>
 <h3>lib/badges/ghBadgeTest</h3>
 <p>Gh badge.</p>
-<pre><code class="lang-javascript">function (test) {
+<pre>
+<span class="keyword">function</span> (test) {
     test.ok(_ghBadge());
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/_gh_badge_test.js">lib/badges/_gh_badge_test.js</a>;</li>
@@ -172,15 +184,19 @@
 <p><a name="lib-badges-badge-test"></a></p>
 <h3>lib/badges/badgeTest</h3>
 <p>Badge.</p>
-<pre><code class="lang-javascript">function (test) {
-    var badge = new Badge();
-    badge.toSVG(function (err, data) {
-        test.ok(badge === this);
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> badge = <span class="keyword">new</span> Badge();
+    badge.toSVG(<span class="keyword">function</span> (err, data) {
+        test.ok(badge === <span class="keyword">this</span>);
         test.ifError(err);
         test.ok(data);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/badge_test.js">lib/badges/badge_test.js</a>;</li>
@@ -188,20 +204,24 @@
 <p><a name="lib-badges-default-badge-test"></a></p>
 <h3>lib/badges/defaultBadgeTest</h3>
 <p>Default badge.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work_badge.svg');
-    new DefaultBadge().toSVG(function (err, data) {
-        var badge = this;
-        test.equal(badge.style(), 'default');
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_badge.svg'</span>);
+    <span class="keyword">new</span> DefaultBadge().toSVG(<span class="keyword">function</span> (err, data) {
+        <span class="keyword">var</span> badge = <span class="keyword">this</span>;
+        test.equal(badge.style(), <span class="string">'default'</span>);
         test.ifError(err);
         test.ok(data);
-        badge.writeAsSVG(filename, function (err) {
+        badge.writeAsSVG(filename, <span class="keyword">function</span> (err) {
             test.ifError(err);
             test.ok(testHelper.existsSync(filename));
             test.done();
         });
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/default_badge_test.js">lib/badges/default_badge_test.js</a>;</li>
@@ -209,16 +229,20 @@
 <p><a name="lib-badges-flat-badge-test"></a></p>
 <h3>lib/badges/flatBadgeTest</h3>
 <p>Flat badge.</p>
-<pre><code class="lang-javascript">function (test) {
-    var badge = new FlatBadge();
-    test.equal(badge.style(), 'flat');
-    badge.toSVG(function (err, data) {
-        test.ok(badge === this);
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> badge = <span class="keyword">new</span> FlatBadge();
+    test.equal(badge.style(), <span class="string">'flat'</span>);
+    badge.toSVG(<span class="keyword">function</span> (err, data) {
+        test.ok(badge === <span class="keyword">this</span>);
         test.ifError(err);
         test.ok(data);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/flat_badge_test.js">lib/badges/flat_badge_test.js</a>;</li>
@@ -226,11 +250,15 @@
 <p><a name="lib-catalogs-test"></a></p>
 <h3>lib/catalogsTest</h3>
 <p>Catalogs.</p>
-<pre><code class="lang-javascript">function (test) {
+<pre>
+<span class="keyword">function</span> (test) {
     test.ok(catalogs.colorSchemeCatalog);
     test.ok(catalogs.webFontCatalog);
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/catalogs_test.js">lib/catalogs_test.js</a>;</li>
@@ -238,17 +266,21 @@
 <p><a name="lib-commands-favicon-test"></a></p>
 <h3>lib/commands/faviconTest</h3>
 <p>Favicon.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work-command-favicon.svg');
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work-command-favicon.svg'</span>);
     favicon(filename, {
-        font: 'a',
-        color: 'e',
-        format: 'svg'
-    }, function (err) {
+        font: <span class="string">'a'</span>,
+        color: <span class="string">'e'</span>,
+        format: <span class="string">'svg'</span>
+    }, <span class="keyword">function</span> (err) {
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/favicon_test.js">lib/commands/favicon_test.js</a>;</li>
@@ -256,14 +288,18 @@
 <p><a name="lib-commands-ico-test"></a></p>
 <h3>lib/commands/icoTest</h3>
 <p>Ico.</p>
-<pre><code class="lang-javascript">function (test) {
-    var src = testHelper.resolveMockFile('mock-png.png'),
-        dest = testHelper.resolveWorkFile('work-command-ico.ico');
-    ico(src, dest, {}, function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> src = testHelper.resolveMockFile(<span class="string">'mock-png.png'</span>),
+        dest = testHelper.resolveWorkFile(<span class="string">'work-command-ico.ico'</span>);
+    ico(src, dest, {}, <span class="keyword">function</span> (err) {
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/ico_test.js">lib/commands/ico_test.js</a>;</li>
@@ -271,14 +307,18 @@
 <p><a name="lib-convert-png-to-ico-test"></a></p>
 <h3>lib/convertPngToIcoTest</h3>
 <p>Convert png to ico.</p>
-<pre><code class="lang-javascript">function (test) {
-    var src = testHelper.resolveMockFile('mock-png.png'),
-        dest = testHelper.resolveWorkFile('work-ico.ico');
-    convertPngToIco(src, dest, function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> src = testHelper.resolveMockFile(<span class="string">'mock-png.png'</span>),
+        dest = testHelper.resolveWorkFile(<span class="string">'work-ico.ico'</span>);
+    convertPngToIco(src, dest, <span class="keyword">function</span> (err) {
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/convert_png_to_ico_test.js">lib/convert_png_to_ico_test.js</a>;</li>
@@ -286,13 +326,17 @@
 <p><a name="lib-generate-badge-test"></a></p>
 <h3>lib/generateBadgeTest</h3>
 <p>Generate badge.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work_generateed_badge.svg');
-    generateBadge(filename, {}, function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_generateed_badge.svg'</span>);
+    generateBadge(filename, {}, <span class="keyword">function</span> (err) {
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_badge_test.js">lib/generate_badge_test.js</a>;</li>
@@ -300,18 +344,22 @@
 <p><a name="lib-generate-favicon-test"></a></p>
 <h3>lib/generateFaviconTest</h3>
 <p>Generate favicon.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work_favicon.svg');
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_favicon.svg'</span>);
     generateFavicon(filename, {
-        letter: 'P',
-        format: 'svg',
-        fontFilename: testHelper.resolveMockFile('mock-font.ttf'),
-        fontFamily: 'mock-font'
-    }, function (err) {
+        letter: <span class="string">'P'</span>,
+        format: <span class="string">'svg'</span>,
+        fontFilename: testHelper.resolveMockFile(<span class="string">'mock-font.ttf'</span>),
+        fontFamily: <span class="string">'mock-font'</span>
+    }, <span class="keyword">function</span> (err) {
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_favicon_test.js">lib/generate_favicon_test.js</a>;</li>
@@ -319,10 +367,14 @@
 <p><a name="lib-icons-define-icon-test"></a></p>
 <h3>lib/icons/defineIconTest</h3>
 <p>Define icon.</p>
-<pre><code class="lang-javascript">function (test) {
+<pre>
+<span class="keyword">function</span> (test) {
     test.ok(defineIcon({}));
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/_define_icon_test.js">lib/icons/_define_icon_test.js</a>;</li>
@@ -330,23 +382,30 @@
 <p><a name="lib-icons-icon-test"></a></p>
 <h3>lib/icons/iconTest</h3>
 <p>Icon.</p>
-<pre><code class="lang-javascript">function (test) {
-    var icon = new Icon();
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> icon = <span class="keyword">new</span> Icon();
     test.ok(icon.draw());
-    var filename = testHelper.resolveWorkFile('work_icon.png');
-    icon.writeAsPNG(filename, function () {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_icon.png'</span>);
+    icon.writeAsPNG(filename, <span class="keyword">function</span> () {
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
 <p>Write as svg.</p>
-<pre><code class="lang-javascript">function (test) {
-    var icon = new Icon();
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> icon = <span class="keyword">new</span> Icon();
     test.ok(icon.draw());
-    var filename = testHelper.resolveWorkFile('work_icon.svg');
-    icon.writeAsSVG(filename, function () {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_icon.svg'</span>);
+    icon.writeAsSVG(filename, <span class="keyword">function</span> () {
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/icon_test.js">lib/icons/icon_test.js</a>;</li>
@@ -354,17 +413,21 @@
 <p><a name="lib-icons-text-icon-test"></a></p>
 <h3>lib/icons/textIconTest</h3>
 <p>Text icon.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work_text_icon.svg');
-    new TextIcon({
-        text: 'foo',
-        backgroundColor: '#EEE',
-        fontSize:200
-    }).writeAsSVG(filename, function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_text_icon.svg'</span>);
+    <span class="keyword">new</span> TextIcon({
+        text: <span class="string">'foo'</span>,
+        backgroundColor: <span class="string">'#EEE'</span>,
+        fontSize:<span class="number">200</span>
+    }).writeAsSVG(filename, <span class="keyword">function</span> (err) {
             test.ifError(err);
             test.done();
         });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/text_icon_test.js">lib/icons/text_icon_test.js</a>;</li>
@@ -372,19 +435,26 @@
 <p><a name="lib-images-fabric-image-test"></a></p>
 <h3>lib/images/fabricImageTest</h3>
 <p>SVG font family style.</p>
-<pre><code class="lang-javascript">function (test) {
-    new FabricImage()
-        .addCustomFont('mock-font', testHelper.resolveMockFile('mock-font.ttf'))
-        .svgFontFamilyStyle(function (err, style) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">new</span> FabricImage()
+        .addCustomFont(<span class="string">'mock-font'</span>, testHelper.resolveMockFile(<span class="string">'mock-font.ttf'</span>))
+        .svgFontFamilyStyle(<span class="keyword">function</span> (err, style) {
             test.ifError(err);
             test.done();
         });
-}</code></pre>
+}
+</pre>
+
 <p>Fabric image.</p>
-<pre><code class="lang-javascript">function (test) {
-    test.ok(new FabricImage());
+<pre>
+<span class="keyword">function</span> (test) {
+    test.ok(<span class="keyword">new</span> FabricImage());
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/fabric_image_test.js">lib/images/fabric_image_test.js</a>;</li>
@@ -392,12 +462,16 @@
 <p><a name="lib-images-image-test"></a></p>
 <h3>lib/images/imageTest</h3>
 <p>Image.</p>
-<pre><code class="lang-javascript">function (test) {
-    new Image().toSVG(function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">new</span> Image().toSVG(<span class="keyword">function</span> (err) {
         test.ok(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/image_test.js">lib/images/image_test.js</a>;</li>
@@ -405,16 +479,20 @@
 <p><a name="lib-util-alphabetical-index-test"></a></p>
 <h3>lib/util/alphabeticalIndexTest</h3>
 <p>Alphabetical index.</p>
-<pre><code class="lang-javascript">function (test) {
-    test.equal(alphabeticalIndex(0), &quot;a&quot;);
-    test.equal(alphabeticalIndex(1), &quot;b&quot;);
-    test.equal(alphabeticalIndex(25), &quot;z&quot;);
-    test.equal(alphabeticalIndex(26), &quot;aa&quot;);
-    test.equal(alphabeticalIndex(27), &quot;ab&quot;);
-    test.equal(alphabeticalIndex(51), &quot;az&quot;);
-    test.equal(alphabeticalIndex(52), &quot;ba&quot;);
+<pre>
+<span class="keyword">function</span> (test) {
+    test.equal(alphabeticalIndex(<span class="number">0</span>), <span class="string">"a"</span>);
+    test.equal(alphabeticalIndex(<span class="number">1</span>), <span class="string">"b"</span>);
+    test.equal(alphabeticalIndex(<span class="number">25</span>), <span class="string">"z"</span>);
+    test.equal(alphabeticalIndex(<span class="number">26</span>), <span class="string">"aa"</span>);
+    test.equal(alphabeticalIndex(<span class="number">27</span>), <span class="string">"ab"</span>);
+    test.equal(alphabeticalIndex(<span class="number">51</span>), <span class="string">"az"</span>);
+    test.equal(alphabeticalIndex(<span class="number">52</span>), <span class="string">"ba"</span>);
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/alphabetical_index_test.js">lib/util/alphabetical_index_test.js</a>;</li>
@@ -422,16 +500,20 @@
 <p><a name="lib-util-define-test"></a></p>
 <h3>lib/util/defineTest</h3>
 <p>Define.</p>
-<pre><code class="lang-javascript">function (test) {
-    var O = define({
-        accessors: ['foo']
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> O = define({
+        accessors: [<span class="string">'foo'</span>]
     });
-    var o = new O({});
-    o.foo('bar');
-    test.equal(o._foo, 'bar');
+    <span class="keyword">var</span> o = <span class="keyword">new</span> O({});
+    o.foo(<span class="string">'bar'</span>);
+    test.equal(o._foo, <span class="string">'bar'</span>);
     test.equal(o.foo(), o._foo);
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/define_test.js">lib/util/define_test.js</a>;</li>
@@ -439,12 +521,16 @@
 <p><a name="lib-util-fallback-copy-test"></a></p>
 <h3>lib/util/fallbackCopyTest</h3>
 <p>Fallback copy.</p>
-<pre><code class="lang-javascript">function (test) {
+<pre>
+<span class="keyword">function</span> (test) {
     test.ok(fallbackCopy({}, {}));
     test.ok(fallbackCopy({}));
-    test.ok(fallbackCopy({foo: 'bar'}));
+    test.ok(fallbackCopy({foo: <span class="string">'bar'</span>}));
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/fallback_copy_test.js">lib/util/fallback_copy_test.js</a>;</li>
@@ -452,27 +538,31 @@
 <p><a name="lib-util-print-test"></a></p>
 <h3>lib/util/printTest</h3>
 <p>Print.</p>
-<pre><code class="lang-javascript">function (test) {
-    ['FALSE', 'TRUE'].forEach(function (flg) {
+<pre>
+<span class="keyword">function</span> (test) {
+    [<span class="string">'FALSE'</span>, <span class="string">'TRUE'</span>].<span class="keyword">forEach</span>(<span class="keyword">function</span> (flg) {
         process.env.FUR_PRINT_DISABLED = flg;
-        print('Normal print.', 1);
-        print(new Error(), {foo: 'bar'});
-        print.info('Info print.', 2);
-        print.ng('NG print.', 3);
-        print.ng.detail('NG Detail print.', 4);
-        print.ok('OK print.', 5);
-        print.debug('foo');
-        print._indents.push(10);
-        print.debug('bar');
-        print._indents.pop();
+        <span class="keyword">print</span>(<span class="string">'Normal print.'</span>, <span class="number">1</span>);
+        <span class="keyword">print</span>(<span class="keyword">new</span> Error(), {foo: <span class="string">'bar'</span>});
+        <span class="keyword">print</span>.info(<span class="string">'Info print.'</span>, <span class="number">2</span>);
+        <span class="keyword">print</span>.ng(<span class="string">'NG print.'</span>, <span class="number">3</span>);
+        <span class="keyword">print</span>.ng.detail(<span class="string">'NG Detail print.'</span>, <span class="number">4</span>);
+        <span class="keyword">print</span>.ok(<span class="string">'OK print.'</span>, <span class="number">5</span>);
+        <span class="keyword">print</span>.debug(<span class="string">'foo'</span>);
+        <span class="keyword">print</span>._indents.push(<span class="number">10</span>);
+        <span class="keyword">print</span>.debug(<span class="string">'bar'</span>);
+        <span class="keyword">print</span>._indents.pop();
     });
-    process.env.APEMAN_PRINT_DISABLED = 'FALSE';
-    print('foo', 'bar');
+    process.env.APEMAN_PRINT_DISABLED = <span class="string">'FALSE'</span>;
+    <span class="keyword">print</span>(<span class="string">'foo'</span>, <span class="string">'bar'</span>);
 
 
-    print._log('foo', 'bar');
+    <span class="keyword">print</span>._log(<span class="string">'foo'</span>, <span class="string">'bar'</span>);
     test.done();
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/print_test.js">lib/util/print_test.js</a>;</li>
@@ -480,27 +570,34 @@
 <p><a name="lib-util-render-dot-tmpl-test"></a></p>
 <h3>lib/util/renderDotTmplTest</h3>
 <p>Load tmpl.</p>
-<pre><code class="lang-javascript">function (test) {
-    var tmplFile = testHelper.resolveMockFile('mock_dot.dot');
-    renderDotTmpl._loadTmpl(tmplFile, function (err, tmpl) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> tmplFile = testHelper.resolveMockFile(<span class="string">'mock_dot.dot'</span>);
+    renderDotTmpl._loadTmpl(tmplFile, <span class="keyword">function</span> (err, tmpl) {
         test.ifError(err);
         test.ok(tmpl);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
 <p>Render dot tmpl.</p>
-<pre><code class="lang-javascript">function (test) {
-    var workDir = testHelper.prepareCleanWorkDirForTestFile(__filename),
-        tmplFile = testHelper.resolveMockFile('mock_dot.dot'),
-        dest = workDir + '/work_rendered.txt';
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> workDir = testHelper.prepareCleanWorkDirForTestFile(__filename),
+        tmplFile = testHelper.resolveMockFile(<span class="string">'mock_dot.dot'</span>),
+        dest = workDir + <span class="string">'/work_rendered.txt'</span>;
     renderDotTmpl(tmplFile, {
-        foo: 'bar'
-    }, dest, function (err) {
+        foo: <span class="string">'bar'</span>
+    }, dest, <span class="keyword">function</span> (err) {
         test.ok(testHelper.existsSync(dest));
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/render_dot_tmpl_test.js">lib/util/render_dot_tmpl_test.js</a>;</li>
@@ -508,16 +605,20 @@
 <p><a name="lib-util-write-readonly-file-test"></a></p>
 <h3>lib/util/writeReadonlyFileTest</h3>
 <p>Write readonly file.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work_readonly_file.txt');
-    writeReadonlyFile(filename, 'foo', function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_readonly_file.txt'</span>);
+    writeReadonlyFile(filename, <span class="string">'foo'</span>, <span class="keyword">function</span> (err) {
         test.ifError(err);
-        writeReadonlyFile(filename, 'foo', function (err) {
+        writeReadonlyFile(filename, <span class="string">'foo'</span>, <span class="keyword">function</span> (err) {
             test.ifError(err);
             test.done();
         });
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/write_readonly_file_test.js">lib/util/write_readonly_file_test.js</a>;</li>
@@ -525,24 +626,37 @@
 <p><a name="lib-util-write-svg-file-test"></a></p>
 <h3>lib/util/writeSvgFileTest</h3>
 <p>Write svg file.</p>
-<pre><code class="lang-javascript">function (test) {
-    var filename = testHelper.resolveWorkFile('work_svg.svg');
-    writeSvgFile(filename, '&lt;svg/&gt;', function (err) {
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_svg.svg'</span>);
+    writeSvgFile(filename, <span class="string">'&lt;svg/>'</span>, <span class="keyword">function</span> (err) {
         test.ifError(err);
         test.done();
     });
-}</code></pre>
+}
+</pre>
+
+
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/write_svg_file_test.js">lib/util/write_svg_file_test.js</a>;</li>
 </ul>
 <h2>Links</h2>
 <ul>
-<li><a href="https://github.com/tick-tack/fur">fur</a></li>
+<li>project<ul>
+<li><a href="https://github.com/tick-tack/fur">fur repository</a></li>
+<li><a href="http://tick-tack.github.io/fur/coverage/lcov-report/">fur coverage</a></li>
+</ul>
+</li>
+<li>external<ul>
 <li><a href="http://nodejs.org/">nodejs</a></li>
 <li><a href="https://github.com/caolan/nodeunit">nodeunit</a></li>
-<li><a href="http://tick-tack.github.io/fur/coverage/lcov-report/">coverage report</a></li>
-</ul></article>
+</ul>
+</li>
+</ul>
+<style>
+pre code{display:block;padding:.5em;color:#000;background:#f8f8ff}pre .comment,pre .diff .header,pre .javadoc,pre .template_comment{color:#998;font-style:italic}pre .css .rule .keyword,pre .javascript .title,pre .keyword,pre .lisp .title,pre .subst,pre .winutils{color:#000;font-weight:700}pre .hexcolor,pre .number{color:#40a070}pre .phpdoc,pre .string,pre .tag .value,pre .tex .formula{color:#d14}pre .id,pre .title{color:#900;font-weight:700}pre .javascript .title,pre .lisp .title,pre .subst{font-weight:400}pre .class .title,pre .haskell .label,pre .tex .command{color:#458;font-weight:700}pre .django .tag .keyword,pre .rules .property,pre .tag,pre .tag .title{color:navy;font-weight:400}pre .attribute,pre .instancevar,pre .lisp .body,pre .variable{color:teal}pre .regexp{color:#009926}pre .class{color:#458;font-weight:700}pre .input_number,pre .lisp .keyword,pre .ruby .symbol .keymethods,pre .ruby .symbol .keyword,pre .ruby .symbol .string,pre .symbol,pre .tex .special{color:#990073}pre .built_in,pre .builtin,pre .lisp .title{color:#0086b3}pre .cdata,pre .doctype,pre .pi,pre .preprocessor,pre .shebang{color:#999;font-weight:700}pre .deletion{background:#fdd}pre .addition{background:#dfd}pre .diff .change{background:#0086b3}pre .chunk{color:#aaa}pre .tex .formula{opacity:.5}
+</style></article>
     </section>
 
 
@@ -567,7 +681,7 @@
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Sun May 04 2014 23:23:01 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Sun May 04 2014 23:56:13 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
