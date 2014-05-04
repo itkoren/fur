@@ -15,10 +15,13 @@ exports.commitDoc = {
     cmd: 'git add doc -A && git commit -a -m "Update doc task. [ci skip]"'
 };
 
+exports.doctoc = {
+    cmd: 'npm run doctoc'
+};
+
 exports.pushDoc = {
     cmd: 'git subtree push -q --squash --prefix=doc origin gh-pages'
 };
-
 
 exports.commitRelease = {
     cmd: 'git add . -A && git commit -a -m "Release commit by task."'

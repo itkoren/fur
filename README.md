@@ -11,6 +11,19 @@ Generate images and stylesheets.
 
 <a href="https://nodei.co/npm/fur/"><img src="https://nodei.co/npm/fur.png" height="40"></a>
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Prerequisites](#prerequisites)
+- [Install](#install)
+- [Usage](#usage)
+  - [Generate a favicon file.](#generate-a-favicon-file)
+  - [Convert to ico.](#convert-to-ico)
+- [Documents](#documents)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 Prerequisites
 ------
 
@@ -34,8 +47,10 @@ $ sudo npm install fur -g
 Usage
 ------
 
-```bash
+<!-- START readme_task.commands generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
+```bash
 $ fur -h
 
   Usage: fur [options] [command]
@@ -43,13 +58,17 @@ $ fur -h
   Commands:
 
     favicon [options] <filename> Generate a favicon.
-    ico <src> <dest>       Convert a png file to ico.
+    ico <src> <dest>       Convert a png file to ico file.
 
   Options:
 
     -h, --help     output usage information
     -V, --version  output the version number
+
+
 ```
+
+<!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
 
 ### Generate a favicon file.
 
