@@ -41,11 +41,15 @@ exports._data = function (config, callback) {
         },
         function (callback) {
             readmeWorkers.readmeFaviconCommand(callback)
+        },
+        function (callback) {
+            readmeWorkers.readmeIcoCommand(callback);
         }
     ], function (err, data) {
         callback(err, {
             commands: data[0],
-            faviconCommand: data[1]
+            faviconCommand: data[1],
+            icoCommand: data[2]
         });
     });
 };

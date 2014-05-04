@@ -111,6 +111,9 @@ $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 
 Convert a png file into ico format.
 
+<!-- START readme_task.icoCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
 ```bash
 $ fur ico -h
 
@@ -119,7 +122,11 @@ $ fur ico -h
   Options:
 
     -h, --help  output usage information
+
+
 ```
+
+<!-- END readme_task.icoCommand generated contents please keep comment here to allow auto update -->
 
 
 ```bash
