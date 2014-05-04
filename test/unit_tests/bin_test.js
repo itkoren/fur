@@ -15,7 +15,8 @@ exports['Show help.'] = function (test) {
     forked.on('error', function () {
         test.ifError(new Error('Command failed.'));
     });
-    forked.on('exit', function () {
+    forked.on('close', function (code) {
+        test.equal(code, 0);
         test.done();
     });
 };

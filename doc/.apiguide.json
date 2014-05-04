@@ -10,7 +10,7 @@
             "outputSourceFiles": true
         },
         "systemName": "fur",
-        "footer": "",
+        "footer": "<link rel=\"icon\" href=\"../favicon.ico\"/>",
         "copyright": "tick-tack Copyright © 2014",
         "navType": "vertical",
         "theme": "journal",
