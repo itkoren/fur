@@ -55,54 +55,54 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-jsdoc');
 
-    grunt.registerMultiTask('badge', ciTask('./ci/tasks/badge_task'));
-    grunt.registerMultiTask('favicon', ciTask('./ci/tasks/favicon_task'));
-    grunt.registerMultiTask('ico', ciTask('./ci/tasks/ico_task'));
-    grunt.registerMultiTask('catalog', ciTask('./ci/tasks/catalog_task'));
-    grunt.registerMultiTask('gallery', ciTask('./ci/tasks/gallery_task'));
-    grunt.registerMultiTask('readme', ciTask('./ci/tasks/readme_task'));
-    grunt.registerMultiTask('tag', ciTask('./ci/tasks/tag_task'));
-    grunt.registerMultiTask('scaffold', ciTask('./ci/tasks/scaffold_task'));
-    grunt.registerMultiTask('versionup', ciTask('./ci/tasks/versionup_task'));
+    grunt.registerMultiTask('badge', 'Generate badge image files.', ciTask('./ci/tasks/badge_task'));
+    grunt.registerMultiTask('favicon', 'Generate favicon image files', ciTask('./ci/tasks/favicon_task'));
+    grunt.registerMultiTask('ico', 'Generate ico image files.', ciTask('./ci/tasks/ico_task'));
+    grunt.registerMultiTask('catalog', 'Generate catalog files.', ciTask('./ci/tasks/catalog_task'));
+    grunt.registerMultiTask('gallery', 'Generate gallery files.', ciTask('./ci/tasks/gallery_task'));
+    grunt.registerMultiTask('readme', 'Update readme file.', ciTask('./ci/tasks/readme_task'));
+    grunt.registerMultiTask('tag', 'Create a tag on github.', ciTask('./ci/tasks/tag_task'));
+    grunt.registerMultiTask('scaffold', 'Generate scaffold files.', ciTask('./ci/tasks/scaffold_task'));
+    grunt.registerMultiTask('versionup', 'Increment project version.', ciTask('./ci/tasks/versionup_task'));
 
 
-    grunt.registerTask('build', [
-        'chmod',
-        'mkdir',
-        'scaffold',
-        'catalog',
-        'gallery',
-        'readme'
-    ]);
+    grunt.registerTask('build', 'Build this project.' [
+            'chmod',
+            'mkdir',
+            'scaffold',
+            'catalog',
+            'gallery',
+            'readme'
+        ]);
 
-    grunt.registerTask('test', [
+    grunt.registerTask('test', 'Run tests', [
         'nodeunit'
     ]);
 
-    grunt.registerTask('coverage', [
+    grunt.registerTask('coverage', 'Generate coverage report.', [
         'exec:coverage'
     ]);
 
-    grunt.registerTask('doc', [
+    grunt.registerTask('doc', 'Generate documents.' [
         'jsdoc',
-        'coverage',
-        'readme',
-        'exec:doctoc'
-    ]);
+            'coverage',
+            'readme',
+            'exec:doctoc'
+        ]);
 
-    grunt.registerTask('publishDoc', [
+    grunt.registerTask('publishDoc', 'Publish documents.', [
         'doc',
         'exec:commitDoc',
         'exec:pushDoc'
     ]);
 
-    grunt.registerTask('draw', [
+    grunt.registerTask('draw', 'Draw images.', [
         'badge',
         'favicon',
         'ico'
     ]);
 
-    grunt.registerTask('publish', [
+    grunt.registerTask('publish', 'Publish project files', [
         'draw',
         'publishDoc'
     ]);
