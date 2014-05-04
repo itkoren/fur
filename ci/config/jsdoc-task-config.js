@@ -5,7 +5,13 @@
  *
  */
 
-exports.all = {
+
+function docstrap() {
+    var path = require('path');
+    return path.dirname(require.resolve('ink-docstrap'));
+}
+
+exports.project = {
     src: [
         'README.md',
         'lib/**/*.js'
@@ -15,8 +21,22 @@ exports.all = {
         configure: 'doc/.apiguide.json',
         private: false,
         get template() {
-            var path = require('path');
-            return path.dirname(require.resolve('ink-docstrap'));
+            return docstrap();
+        }
+    }
+};
+
+exports.projectTests = {
+    src: [
+        'test/unit_tests/**/*_test.js',
+        'test/test_helper.js'
+    ],
+    options: {
+        destination: 'doc/testcases',
+        configure: 'doc/.testcases.json',
+        private: false,
+        get template() {
+            return  docstrap();
         }
     }
 };
