@@ -33,8 +33,8 @@ exports = module.exports = function (grunt, config, callback) {
             data._headHtml = exports._headHtml;
             data._links = exports._links;
             data._pcakge = pkg;
-            renderDotFile(tmpl, data, dest, function (err) {
-                if (!err) {
+            renderDotFile(tmpl, data, dest, function (err, skip) {
+                if (!err && !skip) {
                     grunt.log.writeln('File crated:', dest);
                 }
                 callback(err);
