@@ -66,14 +66,14 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('versionup', 'Increment project version.', ciTask('./ci/tasks/versionup_task'));
 
 
-    grunt.registerTask('build', 'Build this project.' [
-            'chmod',
-            'mkdir',
-            'scaffold',
-            'catalog',
-            'gallery',
-            'readme'
-        ]);
+    grunt.registerTask('build', 'Build this project.', [
+        'chmod',
+        'mkdir',
+        'scaffold',
+        'catalog',
+        'gallery',
+        'readme'
+    ]);
 
     grunt.registerTask('test', 'Run tests', [
         'nodeunit'
@@ -83,12 +83,12 @@ module.exports = function (grunt) {
         'exec:coverage'
     ]);
 
-    grunt.registerTask('doc', 'Generate documents.' [
+    grunt.registerTask('doc', 'Generate documents.', [
         'jsdoc',
-            'coverage',
-            'readme',
-            'exec:doctoc'
-        ]);
+        'coverage',
+        'readme',
+        'exec:doctoc'
+    ]);
 
     grunt.registerTask('publishDoc', 'Publish documents.', [
         'doc',
