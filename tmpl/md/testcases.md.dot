@@ -3,7 +3,11 @@
 }}fur testcases
 =====
 
+[![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
+
 Testcases for [fur][my_repo] project.
+
+Runs with [nodeunit][nodeunit_url].
 
 <a href="https://github.com/tick-tack/fur"><img style="height:40px;" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>
 &nbsp;<a href="http://nodejs.org/"><img style="height:40px;" style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a>
@@ -36,4 +40,21 @@ Full source:
 {{~}}
 
 
+Links
+-----
+
+
++ [fur][my_repo]
++ [nodejs][nodejs_url]
++ [nodeunit][nodeunit_url]
++ [coverage report][my_coverage_url]
+
+
+
+[nodejs_url]: http://nodejs.org/
+[nodeunit_url]: https://github.com/caolan/nodeunit
 [my_repo]: https://github.com/tick-tack/fur
+[my_coverage_url]: http://tick-tack.github.io/fur/coverage/lcov-report/
+[my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
+[my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
+[my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat

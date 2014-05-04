@@ -87,10 +87,11 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('doc', 'Generate documents.', [
-        'jsdoc',
+        'testcase',
         'coverage',
         'readme',
-        'exec:doctoc'
+        'exec:doctoc',
+        'jsdoc'
     ]);
 
     grunt.registerTask('publishDoc', 'Publish documents.', [

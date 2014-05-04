@@ -1,6 +1,6 @@
 /**
- * Test helper.
- * @module test.testHelper
+ * @file Convenience functions for testing.
+ * @module testHelper
  * @author Taka Okunishi
  *
  */
@@ -8,24 +8,26 @@
 var path = require('path'),
     fs = require('fs');
 
-
 /**
  * Test root directory.
- * @name test/testHelper.testDir
+ * @memberof module:testHelper
+ * @property testDir
  * @type {String}
  */
 exports.testDir = __dirname;
 
 /**
  * Mock directory path.
- * @name test/testHelper.mockDir
+ * @memberof module:testHelper
+ * @property mockDir
  * @type {String}
  */
 exports.mockDir = path.resolve(exports.testDir, 'mock');
 
 /**
  * Work directory path.
- * @name test/testHelper.workDir
+ * @memberof module:testHelper
+ * @property workDir
  * @type {String}
  */
 exports.workDir = path.resolve(exports.testDir, '.work');
@@ -33,7 +35,8 @@ exports.workDir = path.resolve(exports.testDir, '.work');
 
 /**
  * Resolve mock file path from file name.
- * @name test/testHelper.resolveMockFile
+ * @memberof module:testHelper
+ * @function resolveMockFile
  * @param  {string} filename - Mock filename.
  * @returns {string} - Full path of mock resource file.
  */
@@ -44,7 +47,8 @@ exports.resolveMockFile = function (filename) {
 
 /**
  * Resolve work file path from file name.
- * @name test/testHelper.resolveWorkFile
+ * @memberof module:testHelper
+ * @function resolveWorkFile
  * @param {string} filename - Work filename.
  * @returns {string} - Full path of work resource file.
  */
@@ -56,7 +60,8 @@ exports.resolveWorkFile = function (filename) {
 
 /**
  * Read mock file content.
- * @name test/testHelper.readMockFile
+ * @memberof module:testHelper
+ * @function readMockFile
  * @param {string} filename - Mock filename.
  * @returns {buffer} - Read content.
  */
@@ -68,7 +73,8 @@ exports.readMockFileSync = function (filename) {
 
 /**
  * Read mock work content.
- * @name test/testHelper.readWorkFile
+ * @memberof module:testHelper
+ * @function readWorkFile
  * @param {string} filename - Work filename.
  * @returns {buffer} - Read content.
  */
@@ -80,7 +86,8 @@ exports.readWorkFileSync = function (filename) {
 
 /**
  * Require mock file content.
- * @name test/testHelper.requireMockModule
+ * @memberof module:testHelper
+ * @function requireMockModule
  * @param {string} filename - Mock filename.
  * @param {function} callback - Callback with contents.
  */
@@ -92,7 +99,8 @@ exports.requireMockModule = function (filename, callback) {
 
 /**
  * Require mock work content.
- * @name test/testHelper.requireWorkModule
+ * @memberof module:testHelper
+ * @function requireWorkModule
  * @param {string} filename - Work filename.
  * @param {function} callback - Callback with contents.
  */
@@ -103,7 +111,8 @@ exports.requireWorkModule = function (filename, callback) {
 
 /**
  * Remove directory recursively.
- * @name test/testHelper._rmdirRecursiveSync
+ * @memberof module:testHelper
+ * @function _rmdirRecursiveSync
  * @param {string} dirname - Directory name.
  * @protected
  * @ignore
@@ -132,7 +141,8 @@ exports._rmdirRecursiveSync = function (dirname) {
 
 /**
  * Make a directory with parents.
- * @name test/testHelper._mkdirPSync
+ * @memberof module:testHelper
+ * @function _mkdirPSync
  * @param {string} dirname - Directory name to make.
  * @protected
  */
@@ -148,7 +158,8 @@ exports._mkdirPSync = function (dirname) {
 
 /**
  * Prepare clean work directory.
- * @name test/testHelper.prepareCleanWorkDir
+ * @memberof module:testHelper
+ * @function prepareCleanWorkDir
  * @param {string} dirname - Directory name to prepare.
  * @returns {string} - Work directory name.
  */
@@ -164,7 +175,8 @@ exports.prepareCleanWorkDir = function (dirname) {
 
 /**
  * Prepare clean work directory.
- * @name test/testHelper.prepareCleanWorkDirForTestFile
+ * @memberof module:testHelper
+ * @function prepareCleanWorkDirForTestFile
  * @param {string} testFile - Test file name.
  * @returns {string} - Work directory name.
  */
@@ -178,7 +190,8 @@ exports.prepareCleanWorkDirForTestFile = function (testFile) {
 
 /**
  * Inject a mock to a module.
- * @name test/testHelper.inject
+ * @memberof module:testHelper
+ * @function inject
  * @param {object} module - Module to injected.
  * @param {string} key - Injection key.
  * @param {*} injection - Mock property to inject.
@@ -195,7 +208,8 @@ exports.inject = function (module, key, injection) {
 
 /**
  * Pop injected.
- * @name test/testHelper.popInjected
+ * @memberof module:testHelper
+ * @function popInjected
  * @returns {*} - Injected object.
  */
 exports.popInjected = function () {
@@ -204,7 +218,8 @@ exports.popInjected = function () {
 
 /**
  * Restore injected.
- * @name test/testHelper.restoreInjected
+ * @memberof module:testHelper
+ * @function restoreInjected
  */
 exports.restoreInjected = function () {
     var data = exports.popInjected();
@@ -215,7 +230,8 @@ exports.restoreInjected = function () {
 
 /**
  * Restore all injected.
- * @name test/testHelper.restoreAllInjected
+ * @memberof module:testHelper
+ * @function restoreAllInjected
  */
 exports.restoreAllInjected = function () {
     while (exports._injectStack.length) {
@@ -225,7 +241,8 @@ exports.restoreAllInjected = function () {
 
 /**
  * Toggle ci log enabled or not.
- * @name test/testHelper.toggleCILogEnabled
+ * @memberof module:testHelper
+ * @function toggleCILogEnabled
  * @param enabled
  */
 exports.toggleCILogEnabled = function (enabled) {

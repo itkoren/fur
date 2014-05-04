@@ -17,7 +17,6 @@ Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Prerequisites](#prerequisites)
 - [Install](#install)
@@ -151,10 +150,10 @@ Documents
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
 [image_magick_url]: http://www.imagemagick.org/
-[my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
+[my_coverage_url]: http://tick-tack.github.io/fur/coverage/lcov-report/
 [my_gallery_url]: http://tick-tack.github.io/fur/gallery/
 [my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
