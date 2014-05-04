@@ -11,6 +11,10 @@ Generate images and stylesheets.
 
 <a href="https://nodei.co/npm/fur/"><img src="https://nodei.co/npm/fur.png" height="40"></a>
 
+
+Table of Contents
+-----
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
