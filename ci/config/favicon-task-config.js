@@ -14,8 +14,9 @@ exports.tickTack = formats.map(function (format) {
         options: {
             format: format,
             text: 'tt',
-            colorTheme: 'd',
-            fontTheme: 'k'
+            colorTheme: 'jr',
+            fontTheme: 'n',
+            fontSize: 290
         }
     }
 });
@@ -35,12 +36,12 @@ exports.fur = formats.map(function (format) {
 
 exports.ppAbstract = formats.map(function (format) {
     return {
-        filename: 'dist/images/pp-abstract/pp-abstract-favicon.format',
+        filename: 'dist/images/pp-abstract/pp-abstract-favicon.' + format,
         options: {
             format: format,
             text: 'a',
-            colorTheme: 'k',
-            fontTheme: 'f'
+            colorTheme: 'z',
+            fontTheme: 'bh'
         }
     }
 })
