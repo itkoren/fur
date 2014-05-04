@@ -75,53 +75,56 @@
     <section>
         <article><h1>fur testcases</h1>
 <p>Testcases for <a href="https://github.com/tick-tack/fur">fur</a> project.</p>
+<p><a href="https://github.com/tick-tack/fur"><img style="height:40px;" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>
+&nbsp;<a href="http://nodejs.org/"><img style="height:40px;" style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a></p>
 <h2>Test Cases</h2>
 <ul>
-<li>[binTestJs][]</li>
-<li>[lib][]<ul>
-<li>[lib/badges][]<ul>
-<li>[lib/badges/defineBadgeTestJs][]</li>
-<li>[lib/badges/ghBadgeTestJs][]</li>
-<li>[lib/badges/badgeTestJs][]</li>
-<li>[lib/badges/defaultBadgeTestJs][]</li>
-<li>[lib/badges/flatBadgeTestJs][]</li>
+<li><a href="#bin-test">binTest</a></li>
+<li>lib<ul>
+<li>badges<ul>
+<li><a href="#lib-badges-define-badge-test">defineBadgeTest</a></li>
+<li><a href="#lib-badges-gh-badge-test">ghBadgeTest</a></li>
+<li><a href="#lib-badges-badge-test">badgeTest</a></li>
+<li><a href="#lib-badges-default-badge-test">defaultBadgeTest</a></li>
+<li><a href="#lib-badges-flat-badge-test">flatBadgeTest</a></li>
 </ul>
 </li>
-<li>[lib/catalogsTestJs][]</li>
-<li>[lib/commands][]<ul>
-<li>[lib/commands/faviconTestJs][]</li>
-<li>[lib/commands/icoTestJs][]</li>
+<li><a href="#lib-catalogs-test">catalogsTest</a></li>
+<li>commands<ul>
+<li><a href="#lib-commands-favicon-test">faviconTest</a></li>
+<li><a href="#lib-commands-ico-test">icoTest</a></li>
 </ul>
 </li>
-<li>[lib/convertPngToIcoTestJs][]</li>
-<li>[lib/generateBadgeTestJs][]</li>
-<li>[lib/generateFaviconTestJs][]</li>
-<li>[lib/icons][]<ul>
-<li>[lib/icons/defineIconTestJs][]</li>
-<li>[lib/icons/iconTestJs][]</li>
-<li>[lib/icons/textIconTestJs][]</li>
+<li><a href="#lib-convert-png-to-ico-test">convertPngToIcoTest</a></li>
+<li><a href="#lib-generate-badge-test">generateBadgeTest</a></li>
+<li><a href="#lib-generate-favicon-test">generateFaviconTest</a></li>
+<li>icons<ul>
+<li><a href="#lib-icons-define-icon-test">defineIconTest</a></li>
+<li><a href="#lib-icons-icon-test">iconTest</a></li>
+<li><a href="#lib-icons-text-icon-test">textIconTest</a></li>
 </ul>
 </li>
-<li>[lib/images][]<ul>
-<li>[lib/images/fabricImageTestJs][]</li>
-<li>[lib/images/imageTestJs][]</li>
+<li>images<ul>
+<li><a href="#lib-images-fabric-image-test">fabricImageTest</a></li>
+<li><a href="#lib-images-image-test">imageTest</a></li>
 </ul>
 </li>
-<li>[lib/util][]<ul>
-<li>[lib/util/alphabeticalIndexTestJs][]</li>
-<li>[lib/util/defineTestJs][]</li>
-<li>[lib/util/fallbackCopyTestJs][]</li>
-<li>[lib/util/printTestJs][]</li>
-<li>[lib/util/renderDotTmplTestJs][]</li>
-<li>[lib/util/writeReadonlyFileTestJs][]</li>
-<li>[lib/util/writeSvgFileTestJs][]</li>
+<li>util<ul>
+<li><a href="#lib-util-alphabetical-index-test">alphabeticalIndexTest</a></li>
+<li><a href="#lib-util-define-test">defineTest</a></li>
+<li><a href="#lib-util-fallback-copy-test">fallbackCopyTest</a></li>
+<li><a href="#lib-util-print-test">printTest</a></li>
+<li><a href="#lib-util-render-dot-tmpl-test">renderDotTmplTest</a></li>
+<li><a href="#lib-util-write-readonly-file-test">writeReadonlyFileTest</a></li>
+<li><a href="#lib-util-write-svg-file-test">writeSvgFileTest</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h2>Test Codes</h2>
-<h3>binTestJs</h3>
+<p><a name="bin-test"></a></p>
+<h3>binTest</h3>
 <p>Print help.</p>
 <pre><code class="lang-javascript">function (test) {
     var forked = childProcess.fork(fur, ['-h'], {
@@ -135,7 +138,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/badges/defineBadgeTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/bin_test.js">bin_test.js</a>;</li>
+</ul>
+<p><a name="lib-badges-define-badge-test"></a></p>
+<h3>lib/badges/defineBadgeTest</h3>
 <p>Define badge.</p>
 <pre><code class="lang-javascript">function (test) {
     var Badge = defineBadge({
@@ -144,13 +152,23 @@
     test.ok(Badge);
     test.done();
 }</code></pre>
-<h3>lib/badges/ghBadgeTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/_define_badge_test.js">lib/badges/_define_badge_test.js</a>;</li>
+</ul>
+<p><a name="lib-badges-gh-badge-test"></a></p>
+<h3>lib/badges/ghBadgeTest</h3>
 <p>Gh badge.</p>
 <pre><code class="lang-javascript">function (test) {
     test.ok(_ghBadge());
     test.done();
 }</code></pre>
-<h3>lib/badges/badgeTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/_gh_badge_test.js">lib/badges/_gh_badge_test.js</a>;</li>
+</ul>
+<p><a name="lib-badges-badge-test"></a></p>
+<h3>lib/badges/badgeTest</h3>
 <p>Badge.</p>
 <pre><code class="lang-javascript">function (test) {
     var badge = new Badge();
@@ -161,7 +179,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/badges/defaultBadgeTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/badge_test.js">lib/badges/badge_test.js</a>;</li>
+</ul>
+<p><a name="lib-badges-default-badge-test"></a></p>
+<h3>lib/badges/defaultBadgeTest</h3>
 <p>Default badge.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work_badge.svg');
@@ -177,7 +200,12 @@
         });
     });
 }</code></pre>
-<h3>lib/badges/flatBadgeTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/default_badge_test.js">lib/badges/default_badge_test.js</a>;</li>
+</ul>
+<p><a name="lib-badges-flat-badge-test"></a></p>
+<h3>lib/badges/flatBadgeTest</h3>
 <p>Flat badge.</p>
 <pre><code class="lang-javascript">function (test) {
     var badge = new FlatBadge();
@@ -189,14 +217,24 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/catalogsTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/flat_badge_test.js">lib/badges/flat_badge_test.js</a>;</li>
+</ul>
+<p><a name="lib-catalogs-test"></a></p>
+<h3>lib/catalogsTest</h3>
 <p>Catalogs.</p>
 <pre><code class="lang-javascript">function (test) {
     test.ok(catalogs.colorSchemeCatalog);
     test.ok(catalogs.webFontCatalog);
     test.done();
 }</code></pre>
-<h3>lib/commands/faviconTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/catalogs_test.js">lib/catalogs_test.js</a>;</li>
+</ul>
+<p><a name="lib-commands-favicon-test"></a></p>
+<h3>lib/commands/faviconTest</h3>
 <p>Favicon.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work-command-favicon.svg');
@@ -209,7 +247,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/commands/icoTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/favicon_test.js">lib/commands/favicon_test.js</a>;</li>
+</ul>
+<p><a name="lib-commands-ico-test"></a></p>
+<h3>lib/commands/icoTest</h3>
 <p>Ico.</p>
 <pre><code class="lang-javascript">function (test) {
     var src = testHelper.resolveMockFile('mock-png.png'),
@@ -219,7 +262,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/convertPngToIcoTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/ico_test.js">lib/commands/ico_test.js</a>;</li>
+</ul>
+<p><a name="lib-convert-png-to-ico-test"></a></p>
+<h3>lib/convertPngToIcoTest</h3>
 <p>Convert png to ico.</p>
 <pre><code class="lang-javascript">function (test) {
     var src = testHelper.resolveMockFile('mock-png.png'),
@@ -229,7 +277,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/generateBadgeTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/convert_png_to_ico_test.js">lib/convert_png_to_ico_test.js</a>;</li>
+</ul>
+<p><a name="lib-generate-badge-test"></a></p>
+<h3>lib/generateBadgeTest</h3>
 <p>Generate badge.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work_generateed_badge.svg');
@@ -238,7 +291,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/generateFaviconTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_badge_test.js">lib/generate_badge_test.js</a>;</li>
+</ul>
+<p><a name="lib-generate-favicon-test"></a></p>
+<h3>lib/generateFaviconTest</h3>
 <p>Generate favicon.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work_favicon.svg');
@@ -252,13 +310,23 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/icons/defineIconTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_favicon_test.js">lib/generate_favicon_test.js</a>;</li>
+</ul>
+<p><a name="lib-icons-define-icon-test"></a></p>
+<h3>lib/icons/defineIconTest</h3>
 <p>Define icon.</p>
 <pre><code class="lang-javascript">function (test) {
     test.ok(defineIcon({}));
     test.done();
 }</code></pre>
-<h3>lib/icons/iconTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/_define_icon_test.js">lib/icons/_define_icon_test.js</a>;</li>
+</ul>
+<p><a name="lib-icons-icon-test"></a></p>
+<h3>lib/icons/iconTest</h3>
 <p>Icon.</p>
 <pre><code class="lang-javascript">function (test) {
     var icon = new Icon();
@@ -277,7 +345,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/icons/textIconTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/icon_test.js">lib/icons/icon_test.js</a>;</li>
+</ul>
+<p><a name="lib-icons-text-icon-test"></a></p>
+<h3>lib/icons/textIconTest</h3>
 <p>Text icon.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work_text_icon.svg');
@@ -290,7 +363,12 @@
             test.done();
         });
 }</code></pre>
-<h3>lib/images/fabricImageTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/text_icon_test.js">lib/icons/text_icon_test.js</a>;</li>
+</ul>
+<p><a name="lib-images-fabric-image-test"></a></p>
+<h3>lib/images/fabricImageTest</h3>
 <p>SVG font family style.</p>
 <pre><code class="lang-javascript">function (test) {
     new FabricImage()
@@ -305,7 +383,12 @@
     test.ok(new FabricImage());
     test.done();
 }</code></pre>
-<h3>lib/images/imageTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/fabric_image_test.js">lib/images/fabric_image_test.js</a>;</li>
+</ul>
+<p><a name="lib-images-image-test"></a></p>
+<h3>lib/images/imageTest</h3>
 <p>Image.</p>
 <pre><code class="lang-javascript">function (test) {
     new Image().toSVG(function (err) {
@@ -313,7 +396,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/util/alphabeticalIndexTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/image_test.js">lib/images/image_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-alphabetical-index-test"></a></p>
+<h3>lib/util/alphabeticalIndexTest</h3>
 <p>Alphabetical index.</p>
 <pre><code class="lang-javascript">function (test) {
     test.equal(alphabeticalIndex(0), &quot;a&quot;);
@@ -325,7 +413,12 @@
     test.equal(alphabeticalIndex(52), &quot;ba&quot;);
     test.done();
 }</code></pre>
-<h3>lib/util/defineTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/alphabetical_index_test.js">lib/util/alphabetical_index_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-define-test"></a></p>
+<h3>lib/util/defineTest</h3>
 <p>Define.</p>
 <pre><code class="lang-javascript">function (test) {
     var O = define({
@@ -337,7 +430,12 @@
     test.equal(o.foo(), o._foo);
     test.done();
 }</code></pre>
-<h3>lib/util/fallbackCopyTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/define_test.js">lib/util/define_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-fallback-copy-test"></a></p>
+<h3>lib/util/fallbackCopyTest</h3>
 <p>Fallback copy.</p>
 <pre><code class="lang-javascript">function (test) {
     test.ok(fallbackCopy({}, {}));
@@ -345,7 +443,12 @@
     test.ok(fallbackCopy({foo: 'bar'}));
     test.done();
 }</code></pre>
-<h3>lib/util/printTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/fallback_copy_test.js">lib/util/fallback_copy_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-print-test"></a></p>
+<h3>lib/util/printTest</h3>
 <p>Print.</p>
 <pre><code class="lang-javascript">function (test) {
     ['FALSE', 'TRUE'].forEach(function (flg) {
@@ -368,7 +471,12 @@
     print._log('foo', 'bar');
     test.done();
 }</code></pre>
-<h3>lib/util/renderDotTmplTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/print_test.js">lib/util/print_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-render-dot-tmpl-test"></a></p>
+<h3>lib/util/renderDotTmplTest</h3>
 <p>Load tmpl.</p>
 <pre><code class="lang-javascript">function (test) {
     var tmplFile = testHelper.resolveMockFile('mock_dot.dot');
@@ -391,7 +499,12 @@
         test.done();
     });
 }</code></pre>
-<h3>lib/util/writeReadonlyFileTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/render_dot_tmpl_test.js">lib/util/render_dot_tmpl_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-write-readonly-file-test"></a></p>
+<h3>lib/util/writeReadonlyFileTest</h3>
 <p>Write readonly file.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work_readonly_file.txt');
@@ -403,7 +516,12 @@
         });
     });
 }</code></pre>
-<h3>lib/util/writeSvgFileTestJs</h3>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/write_readonly_file_test.js">lib/util/write_readonly_file_test.js</a>;</li>
+</ul>
+<p><a name="lib-util-write-svg-file-test"></a></p>
+<h3>lib/util/writeSvgFileTest</h3>
 <p>Write svg file.</p>
 <pre><code class="lang-javascript">function (test) {
     var filename = testHelper.resolveWorkFile('work_svg.svg');
@@ -411,7 +529,11 @@
         test.ifError(err);
         test.done();
     });
-}</code></pre></article>
+}</code></pre>
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/write_svg_file_test.js">lib/util/write_svg_file_test.js</a>;</li>
+</ul></article>
     </section>
 
 
@@ -436,7 +558,7 @@
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Sun May 04 2014 22:11:29 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Sun May 04 2014 22:35:06 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>

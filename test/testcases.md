@@ -3,48 +3,51 @@ fur testcases
 
 Testcases for [fur][my_repo] project.
 
+<a href="https://github.com/tick-tack/fur"><img style="height:40px;" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>
+&nbsp;<a href="http://nodejs.org/"><img style="height:40px;" style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a>
 
 Test Cases
 -----
 
-- [binTestJs][]
-- [lib][]
-    - [lib/badges][]
-        - [lib/badges/defineBadgeTestJs][]
-        - [lib/badges/ghBadgeTestJs][]
-        - [lib/badges/badgeTestJs][]
-        - [lib/badges/defaultBadgeTestJs][]
-        - [lib/badges/flatBadgeTestJs][]
-    - [lib/catalogsTestJs][]
-    - [lib/commands][]
-        - [lib/commands/faviconTestJs][]
-        - [lib/commands/icoTestJs][]
-    - [lib/convertPngToIcoTestJs][]
-    - [lib/generateBadgeTestJs][]
-    - [lib/generateFaviconTestJs][]
-    - [lib/icons][]
-        - [lib/icons/defineIconTestJs][]
-        - [lib/icons/iconTestJs][]
-        - [lib/icons/textIconTestJs][]
-    - [lib/images][]
-        - [lib/images/fabricImageTestJs][]
-        - [lib/images/imageTestJs][]
-    - [lib/util][]
-        - [lib/util/alphabeticalIndexTestJs][]
-        - [lib/util/defineTestJs][]
-        - [lib/util/fallbackCopyTestJs][]
-        - [lib/util/printTestJs][]
-        - [lib/util/renderDotTmplTestJs][]
-        - [lib/util/writeReadonlyFileTestJs][]
-        - [lib/util/writeSvgFileTestJs][]
+- [binTest](#bin-test)
+- lib
+    - badges
+        - [defineBadgeTest](#lib-badges-define-badge-test)
+        - [ghBadgeTest](#lib-badges-gh-badge-test)
+        - [badgeTest](#lib-badges-badge-test)
+        - [defaultBadgeTest](#lib-badges-default-badge-test)
+        - [flatBadgeTest](#lib-badges-flat-badge-test)
+    - [catalogsTest](#lib-catalogs-test)
+    - commands
+        - [faviconTest](#lib-commands-favicon-test)
+        - [icoTest](#lib-commands-ico-test)
+    - [convertPngToIcoTest](#lib-convert-png-to-ico-test)
+    - [generateBadgeTest](#lib-generate-badge-test)
+    - [generateFaviconTest](#lib-generate-favicon-test)
+    - icons
+        - [defineIconTest](#lib-icons-define-icon-test)
+        - [iconTest](#lib-icons-icon-test)
+        - [textIconTest](#lib-icons-text-icon-test)
+    - images
+        - [fabricImageTest](#lib-images-fabric-image-test)
+        - [imageTest](#lib-images-image-test)
+    - util
+        - [alphabeticalIndexTest](#lib-util-alphabetical-index-test)
+        - [defineTest](#lib-util-define-test)
+        - [fallbackCopyTest](#lib-util-fallback-copy-test)
+        - [printTest](#lib-util-print-test)
+        - [renderDotTmplTest](#lib-util-render-dot-tmpl-test)
+        - [writeReadonlyFileTest](#lib-util-write-readonly-file-test)
+        - [writeSvgFileTest](#lib-util-write-svg-file-test)
 
 
 Test Codes
 -----
 
 
+<a name="bin-test"></a>
 
-### binTestJs ###
+### binTest###
 
 
 Print help.
@@ -63,7 +66,15 @@ function (test) {
 }
 ```
 
-### lib/badges/defineBadgeTestJs ###
+
+Full source:
+
++ [bin_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/bin_test.js);
+
+
+<a name="lib-badges-define-badge-test"></a>
+
+### lib/badges/defineBadgeTest###
 
 
 Define badge.
@@ -77,7 +88,15 @@ function (test) {
 }
 ```
 
-### lib/badges/ghBadgeTestJs ###
+
+Full source:
+
++ [lib/badges/_define_badge_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/_define_badge_test.js);
+
+
+<a name="lib-badges-gh-badge-test"></a>
+
+### lib/badges/ghBadgeTest###
 
 
 Gh badge.
@@ -88,7 +107,15 @@ function (test) {
 }
 ```
 
-### lib/badges/badgeTestJs ###
+
+Full source:
+
++ [lib/badges/_gh_badge_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/_gh_badge_test.js);
+
+
+<a name="lib-badges-badge-test"></a>
+
+### lib/badges/badgeTest###
 
 
 Badge.
@@ -104,7 +131,15 @@ function (test) {
 }
 ```
 
-### lib/badges/defaultBadgeTestJs ###
+
+Full source:
+
++ [lib/badges/badge_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/badge_test.js);
+
+
+<a name="lib-badges-default-badge-test"></a>
+
+### lib/badges/defaultBadgeTest###
 
 
 Default badge.
@@ -125,7 +160,15 @@ function (test) {
 }
 ```
 
-### lib/badges/flatBadgeTestJs ###
+
+Full source:
+
++ [lib/badges/default_badge_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/default_badge_test.js);
+
+
+<a name="lib-badges-flat-badge-test"></a>
+
+### lib/badges/flatBadgeTest###
 
 
 Flat badge.
@@ -142,7 +185,15 @@ function (test) {
 }
 ```
 
-### lib/catalogsTestJs ###
+
+Full source:
+
++ [lib/badges/flat_badge_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/badges/flat_badge_test.js);
+
+
+<a name="lib-catalogs-test"></a>
+
+### lib/catalogsTest###
 
 
 Catalogs.
@@ -154,7 +205,15 @@ function (test) {
 }
 ```
 
-### lib/commands/faviconTestJs ###
+
+Full source:
+
++ [lib/catalogs_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/catalogs_test.js);
+
+
+<a name="lib-commands-favicon-test"></a>
+
+### lib/commands/faviconTest###
 
 
 Favicon.
@@ -172,7 +231,15 @@ function (test) {
 }
 ```
 
-### lib/commands/icoTestJs ###
+
+Full source:
+
++ [lib/commands/favicon_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/favicon_test.js);
+
+
+<a name="lib-commands-ico-test"></a>
+
+### lib/commands/icoTest###
 
 
 Ico.
@@ -187,7 +254,15 @@ function (test) {
 }
 ```
 
-### lib/convertPngToIcoTestJs ###
+
+Full source:
+
++ [lib/commands/ico_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/ico_test.js);
+
+
+<a name="lib-convert-png-to-ico-test"></a>
+
+### lib/convertPngToIcoTest###
 
 
 Convert png to ico.
@@ -202,7 +277,15 @@ function (test) {
 }
 ```
 
-### lib/generateBadgeTestJs ###
+
+Full source:
+
++ [lib/convert_png_to_ico_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/convert_png_to_ico_test.js);
+
+
+<a name="lib-generate-badge-test"></a>
+
+### lib/generateBadgeTest###
 
 
 Generate badge.
@@ -216,7 +299,15 @@ function (test) {
 }
 ```
 
-### lib/generateFaviconTestJs ###
+
+Full source:
+
++ [lib/generate_badge_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_badge_test.js);
+
+
+<a name="lib-generate-favicon-test"></a>
+
+### lib/generateFaviconTest###
 
 
 Generate favicon.
@@ -235,7 +326,15 @@ function (test) {
 }
 ```
 
-### lib/icons/defineIconTestJs ###
+
+Full source:
+
++ [lib/generate_favicon_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_favicon_test.js);
+
+
+<a name="lib-icons-define-icon-test"></a>
+
+### lib/icons/defineIconTest###
 
 
 Define icon.
@@ -246,7 +345,15 @@ function (test) {
 }
 ```
 
-### lib/icons/iconTestJs ###
+
+Full source:
+
++ [lib/icons/_define_icon_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/_define_icon_test.js);
+
+
+<a name="lib-icons-icon-test"></a>
+
+### lib/icons/iconTest###
 
 
 Icon.
@@ -260,6 +367,7 @@ function (test) {
     });
 }
 ```
+
 Write as svg.
 ```javascript
 function (test) {
@@ -272,7 +380,15 @@ function (test) {
 }
 ```
 
-### lib/icons/textIconTestJs ###
+
+Full source:
+
++ [lib/icons/icon_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/icon_test.js);
+
+
+<a name="lib-icons-text-icon-test"></a>
+
+### lib/icons/textIconTest###
 
 
 Text icon.
@@ -290,7 +406,15 @@ function (test) {
 }
 ```
 
-### lib/images/fabricImageTestJs ###
+
+Full source:
+
++ [lib/icons/text_icon_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/icons/text_icon_test.js);
+
+
+<a name="lib-images-fabric-image-test"></a>
+
+### lib/images/fabricImageTest###
 
 
 SVG font family style.
@@ -304,6 +428,7 @@ function (test) {
         });
 }
 ```
+
 Fabric image.
 ```javascript
 function (test) {
@@ -312,7 +437,15 @@ function (test) {
 }
 ```
 
-### lib/images/imageTestJs ###
+
+Full source:
+
++ [lib/images/fabric_image_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/fabric_image_test.js);
+
+
+<a name="lib-images-image-test"></a>
+
+### lib/images/imageTest###
 
 
 Image.
@@ -325,7 +458,15 @@ function (test) {
 }
 ```
 
-### lib/util/alphabeticalIndexTestJs ###
+
+Full source:
+
++ [lib/images/image_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/image_test.js);
+
+
+<a name="lib-util-alphabetical-index-test"></a>
+
+### lib/util/alphabeticalIndexTest###
 
 
 Alphabetical index.
@@ -342,7 +483,15 @@ function (test) {
 }
 ```
 
-### lib/util/defineTestJs ###
+
+Full source:
+
++ [lib/util/alphabetical_index_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/alphabetical_index_test.js);
+
+
+<a name="lib-util-define-test"></a>
+
+### lib/util/defineTest###
 
 
 Define.
@@ -359,7 +508,15 @@ function (test) {
 }
 ```
 
-### lib/util/fallbackCopyTestJs ###
+
+Full source:
+
++ [lib/util/define_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/define_test.js);
+
+
+<a name="lib-util-fallback-copy-test"></a>
+
+### lib/util/fallbackCopyTest###
 
 
 Fallback copy.
@@ -372,7 +529,15 @@ function (test) {
 }
 ```
 
-### lib/util/printTestJs ###
+
+Full source:
+
++ [lib/util/fallback_copy_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/fallback_copy_test.js);
+
+
+<a name="lib-util-print-test"></a>
+
+### lib/util/printTest###
 
 
 Print.
@@ -400,7 +565,15 @@ function (test) {
 }
 ```
 
-### lib/util/renderDotTmplTestJs ###
+
+Full source:
+
++ [lib/util/print_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/print_test.js);
+
+
+<a name="lib-util-render-dot-tmpl-test"></a>
+
+### lib/util/renderDotTmplTest###
 
 
 Load tmpl.
@@ -414,6 +587,7 @@ function (test) {
     });
 }
 ```
+
 Render dot tmpl.
 ```javascript
 function (test) {
@@ -430,7 +604,15 @@ function (test) {
 }
 ```
 
-### lib/util/writeReadonlyFileTestJs ###
+
+Full source:
+
++ [lib/util/render_dot_tmpl_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/render_dot_tmpl_test.js);
+
+
+<a name="lib-util-write-readonly-file-test"></a>
+
+### lib/util/writeReadonlyFileTest###
 
 
 Write readonly file.
@@ -447,7 +629,15 @@ function (test) {
 }
 ```
 
-### lib/util/writeSvgFileTestJs ###
+
+Full source:
+
++ [lib/util/write_readonly_file_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/write_readonly_file_test.js);
+
+
+<a name="lib-util-write-svg-file-test"></a>
+
+### lib/util/writeSvgFileTest###
 
 
 Write svg file.
@@ -460,5 +650,13 @@ function (test) {
     });
 }
 ```
+
+
+Full source:
+
++ [lib/util/write_svg_file_test.js](https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/util/write_svg_file_test.js);
+
+
+
 
 [my_repo]: https://github.com/tick-tack/fur

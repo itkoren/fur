@@ -34,7 +34,7 @@ exports = module.exports = function (grunt, config, callback) {
             var testFiles = src.map(function (filename) {
                 return path.relative(srcBase, filename);
             })
-            exports._testFiles(srcBase, testFiles, callback);
+            exports._testFiles(config.srcBase, testFiles, callback);
         }
     ], function (err, data) {
         async.series([
@@ -57,9 +57,15 @@ exports._testFiles = function (srcBase, filenames, callback) {
 
     function testcaseName(filename) {
         return filename.split(path.sep).map(function (filename) {
-            return changeCase.camelCase(filename);
+            var extname = path.extname(filename),
+                basename = path.basename(filename, extname);
+            return changeCase.camelCase(basename);
         }).join(path.sep);
     };
+
+    function linkName(filename) {
+        return changeCase.paramCase(testcaseName(filename).split(path.sep).join('-'));
+    }
 
     var dirnames = filenames.map(function (filename) {
         return exports._dirnames(filename);
@@ -73,6 +79,7 @@ exports._testFiles = function (srcBase, filenames, callback) {
         return result;
     }, []);
     callback(null, {
+            testBase: srcBase,
             testcases: dirnames.concat(filenames)
                 .sort(function (a, b) {
                     return a.localeCompare(b);
@@ -81,12 +88,14 @@ exports._testFiles = function (srcBase, filenames, callback) {
                     var dirname = path.dirname(filename),
                         extname = path.extname(filename),
                         basename = path.basename(filename, extname);
+                    var hasLink = !!extname;
                     return {
                         dirnames: dirname.split(path.sep).filter(function (dirname) {
                             return dirname !== '.';
                         }),
                         name: changeCase.camelCase(basename),
-                        testcaseName: testcaseName(filename),
+                        hasLink: hasLink,
+                        linkName: linkName(filename)
                     }
                 })
                 .filter(function (data) {
@@ -99,6 +108,7 @@ exports._testFiles = function (srcBase, filenames, callback) {
                     return{
                         testcaseName: testcaseName(filename),
                         filename: filename,
+                        linkName: linkName(filename),
                         snippets: Object.keys(data)
                             .filter(function (key) {
                                 return ['setUp', 'tearDown'].indexOf(key) === -1;

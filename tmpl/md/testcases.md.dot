@@ -5,24 +5,35 @@
 
 Testcases for [fur][my_repo] project.
 
+<a href="https://github.com/tick-tack/fur"><img style="height:40px;" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>
+&nbsp;<a href="http://nodejs.org/"><img style="height:40px;" style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a>
 
 Test Cases
 -----
 {{~it.testcases :testcase}}
-{{~testcase.dirnames :dirname}}    {{~}}- [{{=testcase.testcaseName}}][]{{~}}
+{{~testcase.dirnames :dirname}}    {{~}}- {{? testcase.hasLink}}[{{=testcase.name}}](#{{=testcase.linkName}}){{??}}{{=testcase.name}}{{?}}{{~}}
 
 
 Test Codes
 -----
 
 {{~it.testcodes :testcode}}
+<a name="{{=testcode.linkName}}"></a>
 
-### {{=testcode.testcaseName}} ###
+### {{=testcode.testcaseName}}###
 
 {{~testcode.snippets :snippet}}
 {{=snippet.name}}
 ```javascript
 {{=snippet.content}}
-```{{~}}{{~}}
+```
+{{~}}
+
+Full source:
+
++ [{{=testcode.filename}}](https://github.com/tick-tack/fur/blob/master/{{=it.testBase}}/{{=testcode.filename}});
+
+{{~}}
+
 
 [my_repo]: https://github.com/tick-tack/fur
