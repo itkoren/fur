@@ -151,19 +151,21 @@
 <a href="http://codeclimate.com/github/tick-tack/fur"><img src="http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat" alt="Code Coverage"></a>
 <a href="http://gemnasium.com/tick-tack/fur"><img src="http://img.shields.io/gemnasium/tick-tack/fur.svg?style=flat" alt="dependencies"></a></p>
 <p>Front end design tool.<br>Generate images and stylesheets.   </p>
-<p><a href="https://nodei.co/npm/fur/"><img src="https://nodei.co/npm/fur.png" height="40"></a></p>
+<p><a href="https://github.com/tick-tack/fur"><img src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>&nbsp;<a href="http://nodejs.org/"><img style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a>&nbsp;<a href="https://nodei.co/npm/fur/"><img src="https://nodei.co/npm/fur.png" height="40"></a></p>
+<h2>Table of Contents</h2>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<strong>Table of Contents</strong>  <em>generated with <a href="http://doctoc.herokuapp.com/">DocToc</a></em>
 
-- <a href="#fur">fur</a>
-  - <a href="#prerequisites">Prerequisites</a>
-  - <a href="#install">Install</a>
-  - <a href="#usage">Usage</a>
-    - <a href="#generate-a-favicon-file">Generate a favicon file.</a>
-    - <a href="#convert-to-ico">Convert to ico.</a>
-  - <a href="#documents">Documents</a>
-
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#generate-a-favicon-file">Generate a favicon file.</a></li>
+<li><a href="#convert-to-ico">Convert to ico.</a></li>
+</ul>
+</li>
+<li><a href="#documents">Documents</a></li>
+</ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
@@ -173,28 +175,33 @@
 <li><a href="http://cairographics.org/">cairo</a></li>
 <li><a href="http://www.imagemagick.org/">ImageMagick</a></li>
 </ul>
-<p>fur depends on <a href="https://www.npmjs.org/package/canvas">node-canvas</a>, and it requires some setting up.
-For more detail, see <a href="https://github.com/LearnBoost/node-canvas/wiki/_pages">the node-canvas install guide</a>.</p>
+<p>fur depends on <a href="https://www.npmjs.org/package/canvas">node-canvas</a>, and it requires some setting up.<br>For more detail, see <a href="https://github.com/LearnBoost/node-canvas/wiki/_pages">the node-canvas install guide</a>.</p>
 <h2>Install</h2>
 <p>Install fur via <a href="https://www.npmjs.org/">npm</a></p>
 <pre><code class="lang-bash">$ sudo npm install fur -g</code></pre>
 <h2>Usage</h2>
-<pre><code class="lang-bash">
-$ fur -h
+<!-- START readme_task.commands generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+<pre><code class="lang-bash">$ fur -h
 
   Usage: fur [options] [command]
 
   Commands:
 
     favicon [options] &lt;filename&gt; Generate a favicon.
-    ico &lt;src&gt; &lt;dest&gt;       Convert a png file to ico.
+    ico &lt;src&gt; &lt;dest&gt;       Convert a png file to ico file.
 
   Options:
 
     -h, --help     output usage information
     -V, --version  output the version number</code></pre>
+<!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
+
 <h3>Generate a favicon file.</h3>
-<p>Generate a simple favicon with themes.</p>
+<p>Generate a simple favicon with themes.
+<!-- START readme_task.faviconCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE --></p>
 <pre><code class="lang-bash">$ fur favicon -h
 
   Usage: favicon [options] &lt;filename&gt;
@@ -209,11 +216,20 @@ $ fur -h
     -t, --text [text]           Text to print on favicon.
     -L, --text-left [position]  Text left position.
     -T, --text-top [position]   Text top position.</code></pre>
-<p>Theme names are short letters like 'a', 'b'.
-Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/">the gallery</a>.</p>
-<pre><code class="lang-bash">$ fur favicon --font-theme a --color-theme e --text k my-favicon.svg</code></pre>
-<h3>Convert to ico.</h3>
-<p>Convert a png file into ico format.</p>
+<!-- END readme_task.faviconCommand generated contents please keep comment here to allow auto update -->
+Theme names are short letters like 'a', 'b'.
+Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/">the gallery</a>.
+
+<code>bash
+$ fur favicon --font-theme a --color-theme e --text k my-favicon.svg</code>
+
+### Convert to ico.
+
+Convert a png file into ico format.
+
+<!-- START readme_task.icoCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
 <pre><code class="lang-bash">$ fur ico -h
 
   Usage: ico [options] &lt;src&gt;,&lt;dest&gt;
@@ -221,6 +237,9 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
   Options:
 
     -h, --help  output usage information</code></pre>
+<!-- END readme_task.icoCommand generated contents please keep comment here to allow auto update -->
+
+
 <pre><code class="lang-bash">$ fur ico my-favicon.png favicon.ico</code></pre>
 <h2>Documents</h2>
 <ul>
@@ -251,7 +270,7 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Sun May 04 2014 16:00:28 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Sun May 04 2014 17:27:14 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
