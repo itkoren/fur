@@ -31,7 +31,10 @@ exports = module.exports = function (grunt, config, callback) {
             glob(src, callback);
         },
         function (src, callback) {
-            exports._testFiles(srcBase, src, callback);
+            var testFiles = src.map(function (filename) {
+                return path.relative(srcBase, filename);
+            })
+            exports._testFiles(testFiles, callback);
         }
     ], function (err, data) {
         async.series([
@@ -50,67 +53,45 @@ exports = module.exports = function (grunt, config, callback) {
     });
 };
 
-exports._testFiles = function (base, filenames, callback) {
-    function toKey(dirname) {
-        return changeCase.camelCase(path.basename(dirname));
-    }
-
-    function toKeys(dirname) {
-        return dirname.split(path.sep)
-            .map(function (name) {
-                return toKey(name);
-            }).join('.');
-    }
-
-    var root = 'unitTests';
+exports._testFiles = function (filenames, callback) {
+    var dirnames = filenames.map(function (filename) {
+        return exports._dirnames(filename);
+    }).reduce(function (result, dirnames) {
+        dirnames.forEach(function (dirname) {
+            var notFound = result.indexOf(dirname) === -1;
+            if (notFound) {
+                result.push(dirname);
+            }
+        });
+        return result;
+    }, []);
     callback(null, {
-        root: root,
-        namespaces: filenames
-            .map(function (filename) {
-                var dirname = path.dirname(filename);
-                return path.relative(base, dirname)
-            })
-            .filter(function (dirname) {
-                return !!dirname;
-            })
-            .sort(function (a, b) {
-                return a.split(path.sep).length - b.split(path.sep).length;
-            })
-            .filter(function (dirname, i, drinames) {
-                return drinames.indexOf(dirname) == i
-            })
-            .map(function (dirname) {
-                return {
-                    parent: toKeys(path.join(root, path.dirname(dirname))),
-                    name: toKey(dirname),
-                    dirname: dirname,
-                    keys: toKeys(dirname)
-                }
-            }),
-        suites: filenames
-            .map(function (filename) {
-                return {
-                    filename: path.relative(base, filename),
-                    data: require(filename)
-                }
-            })
-            .map(function (file) {
-                var filename = file.filename,
-                    data = file.data;
-                var extname = path.extname(filename),
-                    basename = path.basename(filename, extname);
-                var dirname = path.dirname(filename);
-                return {
-                    parent: toKeys(path.join(root, dirname)),
-                    name: toKey(basename.replace()),
-                    keys: toKeys(path.join(dirname, basename)),
-                    testcases: Object.keys(data).map(function (key) {
-                        return {
-                            name: key,
-                            filename: filename
-                        }
-                    })
-                }
-            })
-    });
+            testcases: dirnames.concat(filenames)
+                .sort(function (a, b) {
+                    return a.localeCompare(b);
+                })
+                .map(function (filename) {
+                    var dirname = path.dirname(filename),
+                        extname = path.extname(filename),
+                        basename = path.basename(filename, extname);
+                    return {
+                        dirnames: dirname.split(path.sep).filter(function (dirname) {
+                            return dirname !== '.';
+                        }),
+                        name: changeCase.camelCase(basename)
+                    }
+                })
+                .filter(function (data) {
+                    return !!data.name;
+                })
+        }
+    )
+    ;
+};
+
+exports._dirnames = function (filename) {
+    var dirname = path.dirname(filename);
+    var isRoot = dirname === filename;
+    var result = [dirname];
+    return isRoot ? result : result.concat(exports._dirnames(dirname));
 };

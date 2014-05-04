@@ -28,7 +28,7 @@ exports.project = {
 
 exports.projectTests = {
     src: [
-        'test/unit_tests.js',
+        'test/testcases.md',
         'test/test_helper.js'
     ],
     options: {

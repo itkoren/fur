@@ -9,6 +9,6 @@ exports.unitTests = {
     type: 'nodeunit',
     srcBase: 'test/unit_tests',
     srcPattern: '**/*_test.js',
-    dest: 'test/unit_tests.js',
-    tmpl: 'tmpl/js/unit_tests.js.dot'
+    dest: 'test/testcases.md',
+    tmpl: 'tmpl/md/testcases.md.dot'
 };

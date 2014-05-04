@@ -1,0 +1,8 @@
+{{
+    /** @file Template for testcases. */
+}}
+
+Test Cases
+-----
+{{~it.testcases :testcase}}
+{{~testcase.dirnames :dirname}}    {{~}}+ {{=testcase.name}}{{~}}
