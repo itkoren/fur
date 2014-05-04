@@ -43,6 +43,7 @@ $ fur -h
   Commands:
 
     favicon [options] <filename> Generate a favicon.
+    ico <src> <dest>       Convert a png file to ico.
 
   Options:
 
@@ -76,6 +77,25 @@ Available themes are listed in [the gallery][my_gallery_url].
 
 ```bash
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
+```
+
+### Convert to ico.
+
+Convert a png file into ico format.
+
+```bash
+$ fur ico -h
+
+  Usage: ico [options] <src>,<dest>
+
+  Options:
+
+    -h, --help  output usage information
+```
+
+
+```bash
+$ fur ico my-favicon.png favicon.ico
 ```
 
 
