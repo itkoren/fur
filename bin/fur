@@ -25,6 +25,11 @@ program
     .action(commands.favicon.bind(commands));
 
 
+program
+    .command('ico <src> <dest>')
+    .description('Convert a png file to ico')
+    .action(command.ico.bin(command));
+
 program.parse(process.argv);
 
 if (process.argv.length < 3) {

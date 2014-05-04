@@ -16,8 +16,9 @@ Prerequisites
 
 + [node.js][nodejs_url]
 + [cairo][cairo_url]
++ [ImageMagick][image_magick_url]
 
-fur dependes on [node-canvas][node_canvas_url], and it requires some setting up.    
+fur depends on [node-canvas][node_canvas_url], and it requires some setting up.
 For more detail, see [the node-canvas install guide][node_canvas_install_wiki_url].
 
 
@@ -93,6 +94,7 @@ Documents
 [inkscape_url]: http://www.inkscape.org/en/
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
+[image_magick_url]: http://www.imagemagick.org/
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
