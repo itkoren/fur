@@ -68,6 +68,7 @@ $ fur -h
 
     -h, --help     output usage information
     -V, --version  output the version number
+
 ```
 
 <!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
@@ -93,6 +94,7 @@ $ fur favicon -h
     -t, --text [text]           Text to print on favicon.
     -L, --text-left [position]  Text left position.
     -T, --text-top [position]   Text top position.
+
 ```
 
 <!-- END readme_task.faviconCommand generated contents please keep comment here to allow auto update -->
@@ -120,6 +122,7 @@ $ fur ico -h
   Options:
 
     -h, --help  output usage information
+
 ```
 
 <!-- END readme_task.icoCommand generated contents please keep comment here to allow auto update -->
