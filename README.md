@@ -1,13 +1,15 @@
 fur
 ===
 
-Front end design tool.
-
 [![Build Status][my_travis_badge_url]][my_travis_url]
 [![Code Climate][my_codeclimate_badge_url]][my_codeclimate_url]
 [![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
 [![dependencies][my_gemnasium_badge_url]][my_gemnasium_url]
 
+Front end design tool.    
+Generate images and stylesheets.   
+
+<a href="https://nodei.co/npm/fur/"><img src="https://nodei.co/npm/fur.png" height="40"></a>
 
 Prerequisites
 ------
@@ -15,16 +17,14 @@ Prerequisites
 + [node.js][nodejs_url]
 + [cairo][cairo_url]
 
+fur dependes on [node-canvas][node_canvas_url], and it's requires some setting up.
+For more detail, see [the node-canvas install guide][node_canvas_install_wiki_url].
+
 
 Install
 ------
 
-### Install node canvas.
-
-If you never used [node-canvas][node_canvas_url],
-follow [the install guide][node_canvas_install_wiki_url].
-
-### Install fur.
+Install fur via [npm][npm_url]
 
 ```bash
 $ sudo npm install fur -g
@@ -65,6 +65,7 @@ Documents
 + [API Guide][my_apiguide_url]
 
 [nodejs_url]: http://nodejs.org/
+[npm_url]: https://www.npmjs.org/
 [grunt_url]: http://gruntjs.com/
 [grunt_badge_url]: http://cdn.gruntjs.com/builtwith.png
 [cairo_url]: http://cairographics.org/
