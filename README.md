@@ -75,7 +75,7 @@ $ fur -h
 
 <!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
 
-### Generate a favicon file.
+### Generate a favicon file. ###
 
 Generate a simple favicon with themes.
 <!-- START readme_task.faviconCommand generated contents. please keep comment here to allow auto update -->
@@ -104,11 +104,17 @@ $ fur favicon -h
 Theme names are short letters like 'a', 'b'.
 Available themes are listed in [the gallery][my_gallery_url].
 
+
 ```bash
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
+
 ```
 
-### Convert to ico.
+```bash
+$ fur ico my-favicon.png favicon.ico
+```
+
+### Convert to ico. ###
 
 Convert a png file into ico format.
 
