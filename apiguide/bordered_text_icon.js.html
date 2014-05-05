@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: index.js</title>
+	<title>fur Source: icons/bordered_text_icon.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -129,29 +129,44 @@
 					
 
 
-		<h1 class="page-title">Source: index.js</h1>
+		<h1 class="page-title">Source: icons/bordered_text_icon.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Front end design tool.
- * @see @see {@link https://github.com/tick-tack/fur|fur}
- * @module fur
+ * @file Bordered text icon.
+ * @memberof icons
+ * @augments TextIcon
+ * @constructor BorderedTextIcon
  * @author Taka Okunishi
+ *
  */
 
 "use strict";
 
-exports.badges = require('./badges');
-exports.catalogs = require('./catalogs.js');
-exports.commands = require('./commands');
-exports.convertPngToIco = require('./convert_png_to_ico.js');
-exports.generateBadge = require('./generate_badge.js');
-exports.generateFavicon = require('./generate_favicon.js');
-exports.icons = require('./icons');
-exports.images = require('./images');
-exports.util = require('./util');
-</pre>
+var _defineIcon = require('./_define_icon'),
+    fabric = require('fabric').fabric,
+    TextIcon = require('./text_icon');
+
+module.exports = _defineIcon({
+    prototype: TextIcon,
+    accessors: [
+    ],
+    properties: {
+        _color:null,
+        backgroundColor: function () {
+            return '#FFF';
+        },
+        color: function () {
+            var s = this;
+            return s._color || s.borderColor();
+        },
+        borderWidth: function () {
+            var s = this;
+            return s.size() * 0.1;
+        }
+    }
+});</pre>
         </article>
     </section>
 
