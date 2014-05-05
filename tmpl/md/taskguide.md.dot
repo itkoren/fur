@@ -6,7 +6,7 @@
 [![Build Status][my_build_badge_url]][my_build_url]
 [![Built with Grunt][grunt_badge_url]][grunt_url]
 
-Task guide for fur project.
+Task guide for [fur project][my_repo].
 Tasks are runs with [Grunt][grunt_url].
 
 <a href="https://github.com/tick-tack/fur"><img style="height:40px;" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>
@@ -52,7 +52,7 @@ Available tasks
 
 | Name | Description| Configuration | Multiple |
 | ---------- | ------------ | -------- | :--------: |
-{{~it.availables :av}}| {{=av.name}} | {{=av.description}} | [{{=av.config}}](#{{=av.config}}) | {{=av.multiple}}
+{{~it.availables :av}}| {{? av.link}}[{{=av.name}}]({{=av.link}}){{??}}{{=av.name}}{{?}} | {{=av.description}} | [{{=av.config}}](#{{=av.config}}) | {{=av.multiple}}
 {{~}}
 
 

@@ -54,7 +54,10 @@ exports._data = function (config, callback) {
     ], function (err, data) {
         callback(err, {
             highlightCss: _highlightCss(),
-            availables: data[0],
+            availables: data[0].map(function (data) {
+                data.link = (config.links || {})[data.name];
+                return data;
+            }),
             usage: data[1],
             configs: data[2]
         });
