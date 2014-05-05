@@ -1,6 +1,8 @@
 /**
- * @file Configuration for ci/task.tag.
- * @ignore
+ * @file Configuration for "ci/task.tagTask".
+ * @memberof module:ci/config
+ * @member tagTaskConfig
+ * @property {object} - Project tag config.
  */
 
 "use strict";

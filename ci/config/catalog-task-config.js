@@ -1,6 +1,9 @@
 /**
- * @file Configuration for ci/task.catalog.
- * @ignore
+ * @file Configuration for "ci/task.catalogTask".
+ * @memberof module:ci/config
+ * @member catalogTaskConfig
+ * @property {object} webFonts - Web font catalog configuration.
+ * @property {object} colorScheme - Color scheme catalog configuration.
  */
 
 "use strict";

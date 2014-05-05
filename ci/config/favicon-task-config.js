@@ -1,6 +1,10 @@
 /**
- * @file Configuration for ci/task.favicon.
- * @ignore
+ * @file Configuration for "ci/task.faviconTask".
+ * @memberof module:ci/config
+ * @member faviconTaskConfig
+ * @property {object} tickTask - Configuration for tick-tack favicons.
+ * @property {object} fur - Configuration for fur favicons.
+ * @property {object} ppAbstract - Configuration for pp-abstract favicons.
  */
 
 "use strict";

@@ -1,6 +1,11 @@
 /**
- * @file Configuration for ci/task.gallery.
- * @ignore
+ * @file Configuration for "ci/task.galleryTask".
+ * @memberof module:ci/config
+ * @member galleryTaskConfig
+ * @property {object} base - Gallery base configuration.
+ * @property {object} index - Gallery index configuration.
+ * @property {object} webFont - Web font gallery configuration.
+ * @property {object} colorScheme - Color scheme configuration.
  */
 
 "use strict";

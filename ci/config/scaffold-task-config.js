@@ -1,5 +1,12 @@
 /**
- * @file Configuration for ci/task.scaffoldTask.
+ * @file Configuration for "ci/task.scaffoldTask".
+ * @memberof module:ci/config
+ * @member scaffoldTaskConfig
+ * @property {object} ciTask - Ci task files scaffold config.
+ * @property {object} ciConfig - Ci config files scaffold config.
+ * @property {object} ciBin - Ci bin files scaffold config.
+ * @property {object} libIndex - Ci lib index files task config.
+ * @property {object}
  *
  */
 
@@ -44,6 +51,7 @@ var taskNames = [
     'versionup',
     'favicon',
     'ico',
+    'index',
     'catalog',
     'testcase',
     'readme',

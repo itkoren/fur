@@ -1,6 +1,8 @@
 /**
- * @file Configuration for ci/task.testcase.
- * @ignore
+ * @file Configuration for "ci/task.testcaseTask".
+ * @memberof module:ci/config
+ * @member testcaseTaskConfig
+ * @property {object} uniteTests - Unit test target config.
  */
 
 "use strict";

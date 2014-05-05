@@ -1,6 +1,8 @@
 /**
- * @file Configuration for ci/task.taskguide.
- * @ignore
+ * @file Configuration for "ci/task.taskguideTask".
+ * @memberof module:ci/config
+ * @member taskguideTaskConfig
+ * @proeprty {object} project - Project taskguide configuration.
  */
 
 "use strict";

@@ -39,6 +39,7 @@ module.exports = function (grunt) {
         exec: require('./ci/config/exec-task-config.js'),
         favicon: require('./ci/config/favicon-task-config.js'),
         ico: require('./ci/config/ico-task-config.js'),
+        index: require('./ci/config/index-task-config.js'),
         jsdoc: require('./ci/config/jsdoc-task-config'),
         tag: require('./ci/config/tag-task-config.js'),
         gallery: require('./ci/config/gallery-task-config.js'),
@@ -60,6 +61,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('badge', 'Generate badge image files.', ciTask('./ci/tasks/badge_task'));
     grunt.registerMultiTask('favicon', 'Generate favicon image files', ciTask('./ci/tasks/favicon_task'));
     grunt.registerMultiTask('ico', 'Generate ico image files.', ciTask('./ci/tasks/ico_task'));
+    grunt.registerMultiTask('index', 'Generate index js files.', ciTask('./ci/tasks/index_task'));
     grunt.registerMultiTask('catalog', 'Generate catalog files.', ciTask('./ci/tasks/catalog_task'));
     grunt.registerMultiTask('gallery', 'Generate gallery files.', ciTask('./ci/tasks/gallery_task'));
     grunt.registerMultiTask('readme', 'Update readme file.', ciTask('./ci/tasks/readme_task'));
@@ -73,6 +75,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', 'Build this project.', [
         'chmod',
         'mkdir',
+        'index',
         'scaffold',
         'catalog',
         'gallery',

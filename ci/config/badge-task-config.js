@@ -1,6 +1,8 @@
 /**
- * @file Configuration for ci/task.badge.
- * @ignore
+ * @file Configuration for "ci/task.badgeTask".
+ * @memberof module:ci/config
+ * @member badgeTaskConfig
+ * @property {object} - apeman - Apeman badge configuration.
  */
 
 "use strict";

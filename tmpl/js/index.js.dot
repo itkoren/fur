@@ -5,3 +5,6 @@
  */
 
 "use strict";
+
+{{~it.subModules :subModule}}exports.{{=subModule.exportsName}} = require('{{=subModule.requireName}}');
+{{~}}

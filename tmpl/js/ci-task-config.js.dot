@@ -1,5 +1,5 @@
 /**
- * @file Configuration for ci/task.{{=it.taskName}}.
+ * @file Configuration for "ci/task.{{=it.taskName}}Task".
  * @ignore
  */
 

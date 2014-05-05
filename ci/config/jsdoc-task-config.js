@@ -1,7 +1,11 @@
 /**
  * Jsdoc task config.
- * @module ci/config/jsdocTaskConfig
+ * @memberof module:ci/config
+ * @member jsdocTaskConfig
  * @see https://github.com/krampstudio/grunt-jsdoc
+ * @property {object} project - Project doc config.
+ * @property {object} projectTasks - Taskguide doc config.
+ * @property {object} projectTests - Testcase doc config.
  *
  */
 
@@ -29,12 +33,13 @@ exports.project = {
 exports.projectTasks = {
     src: [
         'ci/.taskguide.md',
-        'ci/tasks/**/*.js'
+        'ci/tasks/**/*.js',
+        'ci/config/**/*.js'
     ],
     options: {
-        destination:'doc/taskguide',
-        configure:'doc/.taskguide.json',
-        private:false,
+        destination: 'doc/taskguide',
+        configure: 'doc/.taskguide.json',
+        private: false,
         get template() {
             return  docstrap();
         }

@@ -1,7 +1,11 @@
 /**
- * Change mode task config.
- * @module ci/config/chmodTaskConfig
- * @see https://github.com/JamesMGreene/grunt-chmod
+ * @file Change mode task config.
+ * @see {@link https://github.com/JamesMGreene/grunt-chmod|grunt-chmod}
+ * @memberof module:ci/config
+ * @member chmodTaskConfig
+ * @property {object} defaultMode - Default files configuration.
+ * @property {object} executableMode - Executable files configuration.
+ * @property {object } readonlyMode - Readonly files configuration.
  */
 
 exports.defaultMode = {

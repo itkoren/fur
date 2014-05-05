@@ -1,12 +1,13 @@
 /**
- * Directory configuration.
- * @module ci/config/dirTaskConfig
+ * @file Directory configuration.
  * @see https://github.com/rubenv/grunt-mkdir
- * @author Taka Okunishi
+ * @memberof module:ci/config
+ * @member mkdirTaskConfig
+ * @property {object} project - mkdir config for project.
  *
  */
 
-exports.all = {
+exports.project = {
     options: {
         create: [
             'assets',

@@ -1,7 +1,15 @@
 /**
- * Exec task config.
- * @module ci/config/ExecTaskConfig
- * @see https://github.com/jharding/grunt-exec
+ * @file Exec task config.
+ * @see {@link https://github.com/jharding/grunt-exec|grunt-exec}
+ * @memberof module:ci/config
+ * @member execTaskConfig
+ * @property {object} coverage - Configuration to execute coverage.
+ * @property {object} commitDoc - Configuration to execute commit doc.
+ * @property {object} doctoc - Configuration to execute doctoc.
+ * @property {object} pushDoc - Configuration to execute git push for doc.
+ * @property {object} doctoc - Configuration to execute doctoc.
+ * @property {object} commitRelease - Configuration to execute git commit for release.
+ * @property {object} publishNpm - Configuration to execute publish to npm.
  */
 
 
