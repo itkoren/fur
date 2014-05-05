@@ -23,39 +23,13 @@
 			<ul class="nav">
 				
 				<li class="dropdown">
-					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+					<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b
 						class="caret"></b></a>
 
 					<ul class="dropdown-menu ">
 						
 						<li>
-							<a href="catalogWorkers.html">catalogWorkers</a>
-						</li>
-						
-						<li>
-							<a href="galleryWorkers.html">galleryWorkers</a>
-						</li>
-						
-						<li>
-							<a href="readmeWorkers.html">readmeWorkers</a>
-						</li>
-						
-						<li>
-							<a href="taskguideWorkers.html">taskguideWorkers</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="global.html#taskguideAvaiables">taskguideAvaiables</a>
+							<a href="tasks.html">ci/tasks</a>
 						</li>
 						
 
@@ -101,110 +75,169 @@
     <section>
         <article><h1>fur taskguide</h1>
 <p><a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt"></a></p>
+<p>Task guide for fur project.
+Tasks are runs with <a href="http://gruntjs.com/">Grunt</a>.</p>
+<h2>Installing the Grunt CLI</h2>
+<p>To run task, you need to install grunt cli via npm.</p>
+<pre><code class="lang-bash">$ sudo npm install grunt-cli -g</code></pre>
+<h2>Usage of Grunt CLI</h2>
+<pre><code class="lang-bash">$ grunt -h
+
+Grunt: The JavaScript Task Runner (v0.4.4)
+
+Usage
+ grunt [options] [task [task ...]]
+
+Options
+    --help, -h  Display this help text.                                        
+        --base  Specify an alternate base path. By default, all file paths are 
+                relative to the Gruntfile. (grunt.file.setBase) *              
+    --no-color  Disable colored output.                                        
+   --gruntfile  Specify an alternate Gruntfile. By default, grunt looks in the 
+                current or parent directories for the nearest Gruntfile.js or  
+                Gruntfile.coffee file.                                         
+   --debug, -d  Enable debugging mode for tasks that support it.               
+       --stack  Print a stack trace when exiting with a warning or fatal error.
+   --force, -f  A way to force your way past warnings. Want a suggestion? Don't
+                use this option, fix your code.                                
+       --tasks  Additional directory paths to scan for task and &quot;extra&quot; files. 
+                (grunt.loadTasks) *                                            
+         --npm  Npm-installed grunt plugins to scan for task and &quot;extra&quot; files.
+                (grunt.loadNpmTasks) *                                         
+    --no-write  Disable writing files (dry run).                               
+ --verbose, -v  Verbose mode. A lot more information output.                   
+ --version, -V  Print the grunt version. Combine with --verbose for more info. 
+  --completion  Output shell auto-completion rules. See the grunt-cli          
+                documentation for more information.</code></pre>
 <h2>Available tasks</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Description</th>
+<th align="center">Multiple</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>mkdir</td>
-<td>Make directories. *</td>
+<td>mkdir  Make directories.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>chmod</td>
-<td>Modify file permissions, a la <code>chmod</code>. *</td>
+<td>chmod  Modify file permissions, a la <code>chmod</code>.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>nodeunit</td>
-<td>Run Nodeunit unit tests. *</td>
+<td>nodeunit  Run Nodeunit unit tests.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>exec</td>
-<td>Execute shell commands. *</td>
+<td>exec  Execute shell commands.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>jsdoc</td>
-<td>Generates source documentation using jsdoc *</td>
+<td>jsdoc  Generates source documentation using jsdoc</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>badge</td>
-<td>Generate badge image files. *</td>
+<td>badge  Generate badge image files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>favicon</td>
-<td>Generate favicon image files *</td>
+<td>favicon  Generate favicon image files</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>ico</td>
-<td>Generate ico image files. *</td>
+<td>ico  Generate ico image files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>catalog</td>
-<td>Generate catalog files. *</td>
+<td>catalog  Generate catalog files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>gallery</td>
-<td>Generate gallery files. *</td>
+<td>gallery  Generate gallery files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>readme</td>
-<td>Update readme file. *</td>
+<td>readme  Update readme file.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>tag</td>
-<td>Create a tag on github. *</td>
+<td>tag  Create a tag on github.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>scaffold</td>
-<td>Generate scaffold files. *</td>
+<td>scaffold  Generate scaffold files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>taskguide</td>
-<td>Generate taskguide files. *</td>
+<td>taskguide  Generate taskguide files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>testcase</td>
-<td>Generate testcase files. *</td>
+<td>testcase  Generate testcase files.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>versionup</td>
-<td>Increment project version. *</td>
+<td>versionup  Increment project version.</td>
+<td align="center">YES</td>
 </tr>
 <tr>
 <td>build</td>
-<td>Build this project.</td>
+<td>build  Build this project.</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>test</td>
-<td>Run tests</td>
+<td>test  Run tests</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>coverage</td>
-<td>Generate coverage report.</td>
+<td>coverage  Generate coverage report.</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>doc</td>
-<td>Generate documents.</td>
+<td>doc  Generate documents.</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>publishDoc</td>
-<td>Publish documents.</td>
+<td>publishDoc  Publish documents.</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>draw</td>
-<td>Draw images.</td>
+<td>draw  Draw images.</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>publish</td>
-<td>Publish project files</td>
+<td>publish  Publish project files</td>
+<td align="center">NO</td>
 </tr>
 <tr>
 <td>default</td>
-<td>Alias for &quot;build&quot; task.</td>
+<td>default  Alias for &quot;build&quot; task.</td>
+<td align="center">NO</td>
 </tr>
 </tbody>
 </table></article>
@@ -232,7 +265,7 @@
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Mon May 05 2014 09:14:28 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Mon May 05 2014 09:57:14 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
