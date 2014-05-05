@@ -69,7 +69,7 @@ exports.libCommands = {
     pattern: 'lib/commands/*.js',
     dest: 'lib/commands/index.js',
     tmpl: 'tmpl/js/fur_namespace_index.js.dot',
-    description: 'Fur commands.'
+    description: 'Fur commands. These commands are also available from CLI.'
 };
 
 exports.libIcons = {

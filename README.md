@@ -22,6 +22,7 @@ Table of Contents
 - [Install](#install)
 - [Usage](#usage)
   - [Generate a favicon file.](#generate-a-favicon-file)
+  - [Generate a badge image file.](#generate-a-badge-image-file)
   - [Convert to ico.](#convert-to-ico)
 - [Programmatic API](#programmatic-api)
 - [Examples](#examples)
@@ -48,7 +49,7 @@ For more detail, see [the node-canvas install guide][node_canvas_install_wiki_ur
 Install
 ------
 
-Install fur via [npm][npm_url]
+Install fur via [npm][npm_url]:
 
 ```bash
 $ sudo npm install fur -g
@@ -112,10 +113,46 @@ $ fur favicon -h
 Theme names are short letters like 'a', 'b'.
 Available themes are listed in [the gallery][my_gallery_url].
 
-
 ```bash
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 ```
+
+[See more favicon examples](#favicon-example).
+
+
+<a name="generate-a-badge-image-file"></a>
+### Generate a badge image file. ###
+
+Generate a badge with themes.
+
+<!-- START readme_task.badgeCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+```bash
+$ fur badge -h
+
+  Usage: badge [options] <filename>
+
+  Options:
+
+    -h, --help                 output usage information
+    -C, --color-theme [theme]  Color theme name.
+    -S, --style [style]        Image style. "default" or "flat".
+    -t, --texts [texts]        Texts to print on badge.Comma separated.
+
+```
+
+<!-- END readme_task.badgeCommand generated contents please keep comment here to allow auto update -->
+
+Theme names are short letters like 'a', 'b'.
+Available themes are listed in [the gallery][my_gallery_url].
+
+```bash
+$ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg
+```
+
+[See more badge examples](#badge-example).
+
 
 <a name="convert-to-ico"></a>
 ### Convert to ico. ###
@@ -153,9 +190,7 @@ For example,
 
 ```javascript
 #!/usr/bin/env node
-
 var fur = require('fur');
-
 fur.commands.favicon('dist/my-favicon.png', {
     text:'JJ',
     colorTheme: 'e'
@@ -163,17 +198,17 @@ fur.commands.favicon('dist/my-favicon.png', {
 });
 ```
 
-is equivalant to
+is equivalant to:
 
 ```bash
 #!/bin/bash
-fur dist/my-favicon.png --text JJ --color--theme 'e'
+fur favicon dist/my-favicon.png --text JJ --color--theme 'e'
 ```
 
 Note that option args are camel-cased in programmatic API.
 ("--color-theme" would be "colorTheme").
 
-Form more detail, see the [API Document]()
+Form more detail, see the [API Document][my_apiguide_commands_url]
 
 <a name="examples"></a>
 Examples
@@ -222,6 +257,7 @@ Documents
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
+[my_apiguide_commands_url]: http://tick-tack.github.io/fur/apiguide/commands.html
 [my_taskguide_url]: http://tick-tack.github.io/fur/taskguide/
 [my_testcases_url]: http://tick-tack.github.io/fur/testcases/
 [my_coverage_url]: http://tick-tack.github.io/fur/coverage/lcov-report/
