@@ -43,8 +43,10 @@ exports.ppAbstract = formats.map(function (format) {
             text: 'a',
             colorTheme: 'a',
             fontTheme: 'bc',
-            fontSize: 160,
-            style: 'circle'
+            fontSize: 260,
+            style: 'circle',
+            textTop: -24,
+            textLeft: -15
 
         }
     }
