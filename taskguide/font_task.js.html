@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur taskguide Source: config/index.js</title>
+	<title>fur taskguide Source: tasks/font_task.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,37 +53,65 @@
 					
 
 
-		<h1 class="page-title">Source: config/index.js</h1>
+		<h1 class="page-title">Source: tasks/font_task.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Exports modules in dir.
- * @module ci/config
- * @author Taka Okunishi
+ * @file font task.
+ * @memberof module:ci/tasks
+ * @function fontTask
+ * @param grunt
+ * @param {object} config - Task configuration.
+ * @param {function} callback - Callback when done.
+ *
  */
 
 "use strict";
 
-exports.badgeTaskConfig = require('./badge-task-config.js');
-exports.catalogTaskConfig = require('./catalog-task-config.js');
-exports.chmodTaskConfig = require('./chmod-task-config.js');
-exports.execTaskConfig = require('./exec-task-config.js');
-exports.faviconTaskConfig = require('./favicon-task-config.js');
-exports.fontTaskConfig = require('./font-task-config.js');
-exports.galleryTaskConfig = require('./gallery-task-config.js');
-exports.icoTaskConfig = require('./ico-task-config.js');
-exports.indexTaskConfig = require('./index-task-config.js');
-exports.jsdocTaskConfig = require('./jsdoc-task-config.js');
-exports.mkdirTaskConfig = require('./mkdir-task-config.js');
-exports.nodeunitTaskConfig = require('./nodeunit-task-config.js');
-exports.readmeTaskConfig = require('./readme-task-config.js');
-exports.scaffoldTaskConfig = require('./scaffold-task-config.js');
-exports.tagTaskConfig = require('./tag-task-config.js');
-exports.taskguideTaskConfig = require('./taskguide-task-config.js');
-exports.testcaseTaskConfig = require('./testcase-task-config.js');
-exports.versionupTaskConfig = require('./versionup-task-config.js');
-</pre>
+var path = require('path'),
+    util = require('util'),
+    async = require('async'),
+    mkdirp = require('mkdirp'),
+    copyFile = require('../../lib/util/copy_file'),
+    fs = require('fs');
+
+exports = module.exports = function (grunt, config, callback) {
+    var fonts = exports._fontData(config.catalog),
+        destDir = path.resolve(config.destDir);
+    async.series([
+        function (callback) {
+            mkdirp(destDir, callback)
+        },
+        function (callback) {
+            exports._writeFontFiles(fonts, destDir, callback);
+        }
+    ], function (err) {
+        if (!err) {
+            grunt.log.writeln('Font published to dir:', destDir);
+        }
+        callback(err);
+    });
+};
+
+exports._writeFontFiles = function (data, destDir, callback) {
+    async.eachLimit(data, 10, function (data, callback) {
+        var extname = path.extname(data.filename),
+            dest = path.resolve(destDir, data.theme + extname),
+            src = path.resolve(data.filename);
+        copyFile(src, dest, callback);
+    }, callback);
+};
+
+
+exports._fontData = function (catalogFile) {
+    var catalog = require(path.resolve(catalogFile));
+    return Object.keys(catalog).map(function (theme) {
+        var data = catalog[theme];
+        data.theme = theme;
+        return data;
+    })
+};</pre>
         </article>
     </section>
 

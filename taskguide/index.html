@@ -182,6 +182,12 @@ Options
 <td align="center">YES</td>
 </tr>
 <tr>
+<td>font</td>
+<td>Publish font files</td>
+<td><a href="#fontTaskConfig">fontTaskConfig</a></td>
+<td align="center">YES</td>
+</tr>
+<tr>
 <td>ico</td>
 <td>Generate ico image files.</td>
 <td><a href="#icoTaskConfig">icoTaskConfig</a></td>
@@ -526,6 +532,21 @@ Options
 }
 </pre>
 
+<p><a name="fontTaskConfig"></a></p>
+<h3>fontTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/font-task-config.js">ci/config/font-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"doc"</span>: {
+        <span class="string">"catalog"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>,
+        <span class="string">"destDir"</span>: <span class="string">"doc/fonts"</span>
+    }
+}
+</pre>
+
 <p><a name="galleryTaskConfig"></a></p>
 <h3>galleryTaskConfig</h3>
 <p>Source:</p>
@@ -553,6 +574,7 @@ Options
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/web-font-gallery.html.dot"</span>,
         <span class="string">"worker"</span>: <span class="string">"galleryWebFonts"</span>,
         <span class="string">"workerOptions"</span>: {
+            <span class="string">"fontsDir"</span>: <span class="string">"../fonts"</span>,
             <span class="string">"catalogFile"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>
         }
     },
@@ -801,20 +823,6 @@ Options
 {
     <span class="string">"ciTask"</span>: [
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/scaffold_task.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
-            }
-        },
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/gallery_task.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"gallery"</span>
-            }
-        },
-        {
             <span class="string">"filename"</span>: <span class="string">"ci/tasks/badge_task.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -822,17 +830,10 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/tag_task.js"</span>,
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/catalog_task.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"tag"</span>
-            }
-        },
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/versionup_task.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
+                <span class="string">"taskName"</span>: <span class="string">"catalog"</span>
             }
         },
         {
@@ -840,6 +841,20 @@ Options
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"favicon"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/font_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"font"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/gallery_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"gallery"</span>
             }
         },
         {
@@ -857,10 +872,31 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/catalog_task.js"</span>,
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/readme_task.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"catalog"</span>
+                <span class="string">"taskName"</span>: <span class="string">"readme"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/scaffold_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/tag_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"tag"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/taskguide_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"taskguide"</span>
             }
         },
         {
@@ -871,35 +907,14 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/readme_task.js"</span>,
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/versionup_task.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"readme"</span>
-            }
-        },
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/tasks/taskguide_task.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"taskguide"</span>
+                <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
             }
         }
     ],
     <span class="string">"ciConfig"</span>: [
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/scaffold-task-config.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
-            }
-        },
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/gallery-task-config.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"gallery"</span>
-            }
-        },
         {
             <span class="string">"filename"</span>: <span class="string">"ci/config/badge-task-config.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
@@ -908,17 +923,10 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/tag-task-config.js"</span>,
+            <span class="string">"filename"</span>: <span class="string">"ci/config/catalog-task-config.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"tag"</span>
-            }
-        },
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/versionup-task-config.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
+                <span class="string">"taskName"</span>: <span class="string">"catalog"</span>
             }
         },
         {
@@ -926,6 +934,20 @@ Options
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"favicon"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/font-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"font"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/gallery-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"gallery"</span>
             }
         },
         {
@@ -943,10 +965,31 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/catalog-task-config.js"</span>,
+            <span class="string">"filename"</span>: <span class="string">"ci/config/readme-task-config.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"catalog"</span>
+                <span class="string">"taskName"</span>: <span class="string">"readme"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/scaffold-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/tag-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"tag"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/taskguide-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"taskguide"</span>
             }
         },
         {
@@ -957,17 +1000,10 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/readme-task-config.js"</span>,
+            <span class="string">"filename"</span>: <span class="string">"ci/config/versionup-task-config.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"readme"</span>
-            }
-        },
-        {
-            <span class="string">"filename"</span>: <span class="string">"ci/config/taskguide-task-config.js"</span>,
-            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
-            <span class="string">"data"</span>: {
-                <span class="string">"taskName"</span>: <span class="string">"taskguide"</span>
+                <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
             }
         }
     ],
@@ -1254,6 +1290,16 @@ Options
             }
         },
         {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/copy_file_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"copyFile"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/copy_file.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Copy file."</span>
+            }
+        },
+        {
             <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/define_test.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -1434,7 +1480,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Mon May 05 2014 20:03:13 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Mon May 05 2014 21:39:36 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
