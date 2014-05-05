@@ -142,11 +142,11 @@ $ fur ico my-favicon.png favicon.ico
 <a name="documents"></a>
 Documents
 ------
-+ [API Guide][my_apiguide_url]
 + [Gallery][my_gallery_url]
-+ [Task guide][my_taskguide_url]
++ [API Guide][my_apiguide_url]
++ [Task Guide][my_taskguide_url]
 + [Test Cases][my_testcases_url]
-+ [Coverage report][my_coverage_url]
++ [Coverage Report][my_coverage_url]
 
 [nodejs_url]: http://nodejs.org/
 [npm_url]: https://www.npmjs.org/

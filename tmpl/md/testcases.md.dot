@@ -3,6 +3,7 @@
 }}fur testcases
 =====
 
+[![Build Status][my_travis_badge_url]][my_travis_url]
 [![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
 
 Testcases for [fur][my_repo] project.
@@ -43,8 +44,11 @@ Links
 -----
 
 + project
-    + [fur repository][my_repo]
-    + [fur coverage][my_coverage_url]
+    + [fur Repository][my_repo]
+    + [fur Gallery][my_gallery_url]
+    + [fur API Guide][my_coverage_url]
+    + [fur Task Guide][my_taskguide_url]
+    + [fur Coverage Report][my_coverage_url]
 + external
     + [nodejs][nodejs_url]
     + [nodeunit][nodeunit_url]
@@ -54,10 +58,16 @@ Links
 [nodejs_url]: http://nodejs.org/
 [nodeunit_url]: https://github.com/caolan/nodeunit
 [my_repo]: https://github.com/tick-tack/fur
+[my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
+[my_taskguide_url]: http://tick-tack.github.io/fur/taskguide/
+[my_travis_url]: https://travis-ci.org/tick-tack/fur
+[my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_coverage_url]: http://tick-tack.github.io/fur/coverage/lcov-report/
 [my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
+[my_gallery_url]: http://tick-tack.github.io/fur/gallery/
+
 
 
 
