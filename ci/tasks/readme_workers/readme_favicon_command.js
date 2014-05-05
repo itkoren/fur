@@ -1,7 +1,7 @@
 /**
  * @file Contents about favicon command.
- * @memberof readmeWorkers
- * @function readmeFaviconCommand
+ * @memberof module:ci/tasks
+ * @function readmeWorkers.readmeFaviconCommand
  * @param {function} callback - Callback when done.
  */
 

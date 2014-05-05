@@ -1,5 +1,5 @@
 /**
- * @file taskguide task.
+ * @file Generate taskguide file.
  * @memberof module:ci/tasks
  * @function taskguideTask
  * @param grunt
@@ -43,10 +43,14 @@ exports._data = function (config, callback) {
     async.series([
         function (callback) {
             taskguideWorkers.taskguidAvailables(callback);
+        },
+        function (callback) {
+            taskguideWorkers.taskUsage(callback);
         }
     ], function (err, data) {
         callback(err, {
-            availables: data[0]
+            availables: data[0],
+            usage: data[1]
         });
     })
 };

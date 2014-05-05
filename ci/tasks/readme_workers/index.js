@@ -1,7 +1,8 @@
 /**
  * @file Workers for readme task.
  * @memberof module:ci/tasks
- * @namespace readmeWorkers
+ * @member readmeWorkers
+ * @type {object}
  *
  */
 exports.readmeCommands = require('./readme_commands');

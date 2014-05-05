@@ -1,7 +1,8 @@
 /**
  * @file Workers for gallery task.
  * @memberof module:ci/tasks
- * @namespace galleryWorkers
+ * @member galleryWorkers
+ * @type {object}
  *
  */
 

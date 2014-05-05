@@ -1,7 +1,7 @@
 /**
  * @file Gallery web fonts.
- * @memberof galleryWorkers
- * @function galleryWebFonts
+ * @memberof module:ci/tasks
+ * @function galleryWorkers.galleryWebFonts
  * @param {object} options - Gallery options.
  * @param {function} callback - Callback when done.
  * @author Taka Okunishi

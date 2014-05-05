@@ -1,5 +1,5 @@
 /**
- * @file testcase task.
+ * @file Generate testcase file.
  * @memberof module:ci/tasks
  * @function testcaseTask
  * @param grunt

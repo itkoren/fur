@@ -1,5 +1,5 @@
 /**
- * @file versionup task.
+ * @file Increment project version.
  * @memberof module:ci/tasks
  * @function versionupTask
  * @param grunt

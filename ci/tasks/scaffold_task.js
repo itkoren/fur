@@ -1,5 +1,5 @@
 /**
- * @file Scaffold task.
+ * @file Generate file scaffolds.
  * @memberof module:ci/tasks
  * @function scaffoldTask
  * @param grunt

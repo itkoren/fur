@@ -1,5 +1,5 @@
 /**
- * @file gallery task.
+ * @file Generate galleries.
  * @memberof module:ci/tasks
  * @function galleryTask
  * @param grunt

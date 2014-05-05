@@ -1,7 +1,8 @@
 /**
  * @file Workers for catalog task.
  * @memberof module:ci/tasks
- * @namespace catalogWorkers
+ * @member catalogWorkers
+ * @type {object}
  */
 
 exports.catalogWebFonts = require('./catalog_web_fonts');

@@ -1,7 +1,7 @@
 /**
  * @file Contents about command.
- * @memberof readmeWorkers
- * @function readmeCommands
+ * @memberof module:ci/tasks
+ * @function readmeWorkers.readmeCommands
  * @param {function} callback - Callback when done.
  */
 

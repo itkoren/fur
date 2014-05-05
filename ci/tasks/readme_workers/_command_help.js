@@ -1,7 +1,7 @@
 /**
  * @file Command help content.
- * @memberof readmeWorkers
- * @function _commandHelp
+ * @memberof module:ci/tasks
+ * @function readmeWorkers._commandHelp
  * @param {string} bin - Bin file.
  * @param {function} callback - Callback when done.
  * @protected
@@ -22,7 +22,7 @@ exports = module.exports = function (command, callback) {
         var result = [
             '```bash',
             ['$', 'fur', command, '-h'].filter(exports._existsFilter).join(' '),
-            stdOut.replace(/\n$/,''),
+            stdOut.replace(/\n$/, ''),
             '```'
         ].join(os.EOL);
         callback(err, result);

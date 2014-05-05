@@ -1,7 +1,7 @@
 /**
  * @file Catalog web font data.
- * @memberof catalogWorkers
- * @function catalogWebFonts
+ * @memberof module:ci/tasks
+ * @function catalogWorkers.catalogWebFonts
  * @param {object} options - Catalog options.
  * @param {function} callback - Callback when done.
  * @author Taka Okunishi

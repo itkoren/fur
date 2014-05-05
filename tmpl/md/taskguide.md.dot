@@ -18,12 +18,22 @@ To run task, you need to install grunt cli via npm.
 $ sudo npm install grunt-cli -g
 ```
 
+Usage of Grunt CLI
+-----
+```bash
+$ grunt -h
+
+{{=it.usage}}
+
+```
+
+
 Available tasks
 -----
 
-| Name         | Description  |
-| ------------ | ------------ |
-{{~it.availables :available}}| {{=available.name}} | {{=available.description}} |
+| Name | Description| Multiple |
+| ---------- | ------------ | :--------: |
+{{~it.availables :available}}| {{=available.name}} | {{=available.description}} | {{=available.multiple}}
 {{~}}
 
 

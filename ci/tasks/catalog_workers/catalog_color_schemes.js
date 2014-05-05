@@ -1,7 +1,7 @@
 /**
  * @file Catalog color schemes.
- * @memberof catalogWorkers
- * @function catalogColorSchemes
+ * @memberof module:ci/tasks
+ * @function catalogWorkers.catalogColorSchemes
  * @param {object} options - Catalog options.
  * @param {function} callback - Callback when done.
  * @author Taka Okunishi

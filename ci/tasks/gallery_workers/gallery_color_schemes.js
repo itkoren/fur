@@ -1,7 +1,7 @@
 /**
  * @file Gallery color schemes.
- * @memberof galleryWorkers
- * @function galleryColorSchemes
+ * @memberof module:ci/tasks
+ * @function galleryWorkers.galleryColorSchemes
  * @param {object} options - Gallery options.
  * @param {function} callback - Callback when done.
  * @author Taka Okunishi

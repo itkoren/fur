@@ -1,5 +1,5 @@
 /**
- * @file badge task.
+ * @file Generate badges.
  * @memberof module:ci/tasks
  * @function badgeTask
  * @param grunt

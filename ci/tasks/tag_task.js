@@ -1,5 +1,5 @@
 /**
- * @file tag task.
+ * @file Create a tag on remote git.
  * @memberof module:ci/tasks
  * @function tagTask
  * @param grunt

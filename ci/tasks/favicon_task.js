@@ -1,5 +1,5 @@
 /**
- * @file favicon task.
+ * @file Generate favicon files.
  * @memberof module:ci/tasks
  * @function faviconTask
  * @param grunt

@@ -1,5 +1,5 @@
 /**
- * @file readme task.
+ * @file Update readme document.
  * @memberof module:ci/tasks
  * @function readmeTask
  * @param grunt

@@ -1,5 +1,5 @@
 /**
- * @file catalog task.
+ * @file Generate catalog files.
  * @memberof module:ci/tasks
  * @function catalogTask
  * @param grunt

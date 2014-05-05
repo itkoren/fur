@@ -1,5 +1,5 @@
 /**
- * @file ico task.
+ * @file Generate ico image files.
  * @memberof module:ci/tasks
  * @function icoTask
  * @param grunt
