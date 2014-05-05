@@ -10,7 +10,7 @@
             "outputSourceFiles": true
         },
         "systemName": "fur testcases",
-        "footer": "<link rel=\"icon\" href=\"../favicon.ico\"/>",
+        "footer": "<script>var h=document.head;h.innerHTML=h.innerHTML+'<link rel=\"shortcut icon\" href=\"../favicon.png\"/>';</script>",
         "copyright": "tick-tack Copyright © 2014",
         "navType": "vertical",
         "theme": "journal",
