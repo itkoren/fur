@@ -26,13 +26,26 @@ exports._tableLine = function (entries) {
 };
 
 exports._favicons = function (config) {
-    return exports._imgTable(config, 'favicon', 40);
+    return [
+        exports._subTitle('favicon example'),
+        exports._imgTable(config, 'favicon', 40)
+    ].join(os.EOL);
 };
 
 exports._badges = function (config) {
-    return exports._imgTable(config, 'badge', 12);
+    return [
+        exports._subTitle('badge example'),
+        exports._imgTable(config, 'badge', 10)
+    ].join(os.EOL);
 };
 
+
+exports._subTitle = function (subTitle) {
+    return util.format([
+        '<a name="%s"></a>',
+        '### %s ###'
+    ].join(os.EOL), changeCase.paramCase(subTitle), subTitle);
+};
 
 exports._imgTable = function (config, command, height) {
 

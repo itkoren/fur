@@ -20,10 +20,12 @@ Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Install](#install)
-- [Example](#example)
 - [Usage](#usage)
   - [Generate a favicon file.](#generate-a-favicon-file)
   - [Convert to ico.](#convert-to-ico)
+- [Examples](#examples)
+  - [favicon example](#favicon-example)
+  - [badge example](#badge-example)
 - [Documents](#documents)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -50,27 +52,6 @@ Install fur via [npm][npm_url]
 ```bash
 $ sudo npm install fur -g
 ```
-
-<a name="example"></a>
-Example
-------
-<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
-
-| Output | Command |
-| :------: | ------- |
-| <img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290` |
-| <img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /> | `$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme a` |
-| <img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme z --font-theme bh` |
-
-| Output | Command |
-| :------: | ------- |
-| <img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:40px" height="40" /> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by, apeman ` |
-| <img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:40px" height="40" /> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by, apeman ` |
-
-<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
-
-
 
 <a name="usage"></a>
 Usage
@@ -160,6 +141,32 @@ $ fur ico -h
 ```bash
 $ fur ico my-favicon.png favicon.ico
 ```
+
+
+<a name="examples"></a>
+Examples
+------
+<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+<a name="favicon-example"></a>
+### favicon example ###
+| Output | Command |
+| :------: | ------- |
+| <img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290` |
+| <img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /> | `$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme a` |
+| <img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme z --font-theme bh` |
+
+<a name="badge-example"></a>
+### badge example ###
+| Output | Command |
+| :------: | ------- |
+| <img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:10px" height="10" /> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by, apeman ` |
+| <img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:10px" height="10" /> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by, apeman ` |
+
+<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
+
+
 
 
 <a name="documents"></a>
