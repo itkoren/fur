@@ -15,8 +15,16 @@ exports.tearDown = function (done) {
     done();
 };
 
-exports['Generate badge.'] = function (test) {
-    var filename = testHelper.resolveWorkFile('work_generateed_badge.svg');
+exports['Generate svg badge.'] = function (test) {
+    var filename = testHelper.resolveWorkFile('work_generated_badge.svg');
+    generateBadge(filename, {}, function (err) {
+        test.ifError(err);
+        test.done();
+    });
+};
+
+exports['Generate png badge.'] = function (test) {
+    var filename = testHelper.resolveWorkFile('work_generated_badge.png');
     generateBadge(filename, {}, function (err) {
         test.ifError(err);
         test.done();

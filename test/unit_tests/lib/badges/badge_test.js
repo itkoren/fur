@@ -15,7 +15,7 @@ exports.tearDown = function (done) {
     done();
 };
 
-exports['Badge.'] = function (test) {
+exports['Create svg data.'] = function (test) {
     var badge = new Badge();
     badge.toSVG(function (err, data) {
         test.ok(badge === this);

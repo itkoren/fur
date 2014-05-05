@@ -63,6 +63,11 @@ Example
 | <img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /> | `$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme a` |
 | <img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme z --font-theme bh` |
 
+| Output | Command |
+| :------: | ------- |
+| <img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:40px" height="40" /> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by, apeman ` |
+| <img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:40px" height="40" /> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by, apeman ` |
+
 <!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
 
 
@@ -82,6 +87,7 @@ $ fur -h
   Commands:
 
     favicon [options] <filename> Generate a favicon.
+    badge [options] <filename> Generate a badge.
     ico <src> <dest>       Convert a png file to ico file.
 
   Options:
@@ -107,15 +113,15 @@ $ fur favicon -h
 
   Options:
 
-    -h, --help                  output usage information
-    -C, --color-theme [theme]   Color theme name.
-    -F, --font-theme [theme]    Font theme name.
-    -s, --size [size]           Image size
-    -f, --font-size [size]      Font size
-    -S, --style [style]         Image style. "simple".
-    -t, --text [text]           Text to print on favicon.
-    -L, --text-left [position]  Text left position.
-    -T, --text-top [position]   Text top position.
+    -h, --help                      output usage information
+    -C, --color-theme [colorTheme]  Color theme name.
+    -F, --font-theme [fontTheme]    Font theme name.
+    -s, --size [size]               Image size
+    -f, --font-size [fontSize]      Font size
+    -S, --style [style]             Image style. "simple".
+    -t, --text [text]               Text to print on favicon.
+    -L, --text-left [textLeft]      Text left position.
+    -T, --text-top [textTop]        Text top position.
 
 ```
 

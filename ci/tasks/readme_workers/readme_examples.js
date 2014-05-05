@@ -10,11 +10,14 @@ var changeCase = require('change-case'),
     util = require('util'),
     url = require('url'),
     os = require('os'),
-    faviconTaskConfig = require('../../config/favicon-task-config');
+    faviconTaskConfig = require('../../config/favicon-task-config'),
+    badgeTaskConfig = require('../../config/badge-task-config');
 
 exports = module.exports = function (callback) {
     callback(null, [
-        exports._favicons(faviconTaskConfig)
+        exports._favicons(faviconTaskConfig),
+        '',
+        exports._badges(badgeTaskConfig)
     ].join(os.EOL));
 };
 
@@ -23,6 +26,15 @@ exports._tableLine = function (entries) {
 };
 
 exports._favicons = function (config) {
+    return exports._imgTable(config, 'favicon', 40);
+};
+
+exports._badges = function (config) {
+    return exports._imgTable(config, 'badge', 12);
+};
+
+
+exports._imgTable = function (config, command, height) {
 
     var head = exports._tableLine([
             'Output',
@@ -32,30 +44,21 @@ exports._favicons = function (config) {
             ':------:',
             '-------'
         ]),
-        body = Object.keys(config)
-            .map(function (key) {
-                return config[key];
-            })
-            .reduce(function (result, current) {
-                return result.concat(current);
-            }, [])
+        body = exports._allValues(config)
             .filter(function (data) {
                 return path.extname(data.filename) === '.png';
             })
             .map(function (data) {
                 return {
                     data: data,
-                    command: exports._toCommand('favicon', data)
+                    command: exports._toCommand(command, data)
                 };
             })
-            .map(function (favicon) {
-                var filename = favicon.data.filename,
-                    extname = path.extname(filename),
-                    basename = path.basename(filename, extname);
-                var fileURL = url.resolve(exports._urlBase, filename);
+            .map(function (img) {
+                var filename = img.data.filename;
                 return exports._tableLine([
-                    util.format('<img alt="%s" src="%s" style="height:40px" height="40" />', basename, fileURL),
-                    util.format('`$ %s`', favicon.command)
+                    exports._img(filename, height),
+                    util.format('`$ %s`', img.command)
                 ]);
             })
             .join(os.EOL);
@@ -69,6 +72,24 @@ exports._toCommand = function (command, data) {
         return util.format('--%s %s', changeCase.paramCase(key), val);
     }).join(' ');
     return ['fur', command, path.basename(data.filename), options].join(' ');
+};
+
+exports._allValues = function (data) {
+    return Object.keys(data)
+        .map(function (key) {
+            return data[key];
+        })
+        .reduce(function (result, current) {
+            return result.concat(current);
+        }, []);
+};
+
+
+exports._img = function (filename, h) {
+    var extname = path.extname(filename),
+        basename = path.basename(filename, extname);
+    var fileURL = url.resolve(exports._urlBase, filename);
+    return util.format('<img alt="%s" src="%s" style="height:%dpx" height="%d" />', basename, fileURL, h, h);
 };
 
 
