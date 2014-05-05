@@ -50,5 +50,17 @@ exports.ppAbstract = formats.map(function (format) {
 
         }
     }
-})
-;
+});
+
+exports.ppStatic = formats.map(function (format) {
+    return {
+        filename: 'dist/images/pp-static/pp-static-favicon.' + format,
+        options: {
+            text: 's',
+            colorTheme: 'gs',
+            fontTheme: 'j',
+            style: 'bordered',
+            textTop: -24
+        }
+    }
+});
