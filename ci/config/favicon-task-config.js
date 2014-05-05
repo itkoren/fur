@@ -41,8 +41,9 @@ exports.ppAbstract = formats.map(function (format) {
         filename: 'dist/images/pp-abstract/pp-abstract-favicon.' + format,
         options: {
             text: 'a',
-            colorTheme: 'z',
-            fontTheme: 'bh'
+            colorTheme: 'a',
+            fontTheme: 'ad',
+            style: 'circle'
         }
     }
 })

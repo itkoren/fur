@@ -15,6 +15,15 @@ exports.tearDown = function (done) {
     done();
 };
 
+exports['Icon for style.'] = function (test) {
+    test.ok(generateFavicon._IconForStyle('simple'));
+    test.ok(generateFavicon._IconForStyle('circle'));
+    test.throws(function () {
+        generateFavicon._IconForStyle('__none_existing_style');
+    });
+    test.done();
+};
+
 exports['Generate favicon.'] = function (test) {
     var filename = testHelper.resolveWorkFile('work_favicon.svg');
     generateFavicon(filename, {
