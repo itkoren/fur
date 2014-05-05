@@ -35,7 +35,7 @@ exports.apeman = variations.map(function (variation) {
         options: {
             style: style,
             colorTheme: 'bb',
-            texts: 'powered by, apeman '
+            texts: 'powered by , apeman '
         }
     };
 });
