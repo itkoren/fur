@@ -90,6 +90,7 @@ Tasks are runs with <a href="http://gruntjs.com/">Grunt</a>.</p>
 <li><a href="#installing-the-grunt-cli">Installing the Grunt CLI</a></li>
 <li><a href="#available-tasks">Available tasks</a></li>
 <li><a href="#usage-of-grunt-cli">Usage of Grunt CLI</a></li>
+<li><a href="#task-configurations">Task configurations</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
 <p><a name="installing-the-grunt-cli"></a></p>
@@ -264,6 +265,1048 @@ Options
 </tr>
 </tbody>
 </table>
+<p><a name="task-configurations"></a></p>
+<h2>Task configurations</h2>
+<p><a name="badgeTaskConfig"></a></p>
+<h3>badgeTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/badge-task-config.js">ci/config/badge-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"apeman"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/apeman/apeman-badge-default.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"style"</span>: <span class="string">"default"</span>,
+                <span class="string">"format"</span>: <span class="string">"svg"</span>,
+                <span class="string">"colors"</span>: [
+                    <span class="string">"rgb(80,40,0)"</span>,
+                    <span class="string">"rgb(220,160,0)"</span>
+                ],
+                <span class="string">"texts"</span>: [
+                    <span class="string">"powered by"</span>,
+                    <span class="string">" apeman "</span>
+                ]
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/apeman/apeman-badge-flat.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"style"</span>: <span class="string">"flat"</span>,
+                <span class="string">"format"</span>: <span class="string">"svg"</span>,
+                <span class="string">"colors"</span>: [
+                    <span class="string">"rgb(80,40,0)"</span>,
+                    <span class="string">"rgb(220,160,0)"</span>
+                ],
+                <span class="string">"texts"</span>: [
+                    <span class="string">"powered by"</span>,
+                    <span class="string">" apeman "</span>
+                ]
+            }
+        }
+    ]
+}
+</pre>
+
+<p><a name="catalogTaskConfig"></a></p>
+<h3>catalogTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/catalog-task-config.js">ci/config/catalog-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"webFonts"</span>: {
+        <span class="string">"dest"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>,
+        <span class="string">"worker"</span>: <span class="string">"catalogWebFonts"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"pattern"</span>: <span class="string">"assets/web_fonts/**/*.+(ttf|otf)"</span>
+        }
+    },
+    <span class="string">"colorSchemes"</span>: {
+        <span class="string">"dest"</span>: <span class="string">"assets/catalogs/color-scheme-catalog.json"</span>,
+        <span class="string">"worker"</span>: <span class="string">"catalogColorSchemes"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"schemes"</span>: [
+                <span class="string">"mono"</span>,
+                <span class="string">"contrast"</span>,
+                <span class="string">"triade"</span>,
+                <span class="string">"tetrade"</span>,
+                <span class="string">"analogic"</span>
+            ],
+            <span class="string">"variations"</span>: [
+                <span class="string">"pastel"</span>,
+                <span class="string">"soft"</span>,
+                <span class="string">"light"</span>,
+                <span class="string">"hard"</span>,
+                <span class="string">"pale"</span>
+            ],
+            <span class="string">"hues"</span>: [
+                <span class="string">"red"</span>,
+                <span class="string">"red-orange"</span>,
+                <span class="string">"orange"</span>,
+                <span class="string">"orange-yellow"</span>,
+                <span class="string">"yellow"</span>,
+                <span class="string">"yellow-green"</span>,
+                <span class="string">"green"</span>,
+                <span class="string">"green-blue"</span>,
+                <span class="string">"blue"</span>,
+                <span class="string">"blue-violet"</span>,
+                <span class="string">"violet"</span>,
+                <span class="string">"violet-red"</span>
+            ]
+        }
+    }
+}
+</pre>
+
+<p><a name="chmodTaskConfig"></a></p>
+<h3>chmodTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/chmod-task-config.js">ci/config/chmod-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"defaultMode"</span>: {
+        <span class="string">"options"</span>: {
+            <span class="string">"mode"</span>: <span class="string">"644"</span>
+        },
+        <span class="string">"src"</span>: [
+            <span class="string">"lib/**/*.js"</span>
+        ]
+    },
+    <span class="string">"executableMode"</span>: {
+        <span class="string">"options"</span>: {
+            <span class="string">"mode"</span>: <span class="string">"755"</span>
+        },
+        <span class="string">"src"</span>: [
+            <span class="string">"ci/bin/*"</span>,
+            <span class="string">"doc/.*.sh"</span>
+        ]
+    },
+    <span class="string">"readonlyMode"</span>: {
+        <span class="string">"options"</span>: {
+            <span class="string">"mode"</span>: <span class="string">"444"</span>
+        },
+        <span class="string">"src"</span>: []
+    }
+}
+</pre>
+
+<p><a name="execTaskConfig"></a></p>
+<h3>execTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/exec-task-config.js">ci/config/exec-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"coverage"</span>: {
+        <span class="string">"stdout"</span>: <span class="keyword">true</span>,
+        <span class="string">"cmd"</span>: <span class="string">"npm run coverage"</span>
+    },
+    <span class="string">"commitDoc"</span>: {
+        <span class="string">"stdout"</span>: <span class="keyword">false</span>,
+        <span class="string">"cmd"</span>: <span class="string">"git add doc -A &amp;&amp; git commit -a -m \"Update doc task. [ci skip]\""</span>
+    },
+    <span class="string">"doctoc"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"npm run doctoc"</span>
+    },
+    <span class="string">"pushDoc"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"git subtree push -q --squash --prefix=doc origin gh-pages"</span>
+    },
+    <span class="string">"commitRelease"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"git add . -A &amp;&amp; git commit -a -m \"Release commit by task.\""</span>
+    },
+    <span class="string">"publishNpm"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"npm publish ."</span>
+    }
+}
+</pre>
+
+<p><a name="faviconTaskConfig"></a></p>
+<h3>faviconTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/favicon-task-config.js">ci/config/favicon-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"tickTack"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/tick-tack/tick-tack-favicon.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"format"</span>: <span class="string">"svg"</span>,
+                <span class="string">"text"</span>: <span class="string">"tt"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"jr"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"n"</span>,
+                <span class="string">"fontSize"</span>: <span class="number">290</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/tick-tack/tick-tack-favicon.png"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"format"</span>: <span class="string">"png"</span>,
+                <span class="string">"text"</span>: <span class="string">"tt"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"jr"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"n"</span>,
+                <span class="string">"fontSize"</span>: <span class="number">290</span>
+            }
+        }
+    ],
+    <span class="string">"fur"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/fur/fur-favicon.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"fontSize"</span>: <span class="number">160</span>,
+                <span class="string">"format"</span>: <span class="string">"svg"</span>,
+                <span class="string">"text"</span>: <span class="string">"fur"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"bb"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"a"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/fur/fur-favicon.png"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"fontSize"</span>: <span class="number">160</span>,
+                <span class="string">"format"</span>: <span class="string">"png"</span>,
+                <span class="string">"text"</span>: <span class="string">"fur"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"bb"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"a"</span>
+            }
+        }
+    ],
+    <span class="string">"ppAbstract"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/pp-abstract/pp-abstract-favicon.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"format"</span>: <span class="string">"svg"</span>,
+                <span class="string">"text"</span>: <span class="string">"a"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"z"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"bh"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/pp-abstract/pp-abstract-favicon.png"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"format"</span>: <span class="string">"png"</span>,
+                <span class="string">"text"</span>: <span class="string">"a"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"z"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"bh"</span>
+            }
+        }
+    ]
+}
+</pre>
+
+<p><a name="galleryTaskConfig"></a></p>
+<h3>galleryTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/gallery-task-config.js">ci/config/gallery-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"base"</span>: [
+        {
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/css/gallery.css.dot"</span>,
+            <span class="string">"file"</span>: <span class="string">"doc/gallery/gallery.css"</span>
+        },
+        {
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/gallery.js.dot"</span>,
+            <span class="string">"file"</span>: <span class="string">"doc/gallery/gallery.js"</span>
+        }
+    ],
+    <span class="string">"index"</span>: {
+        <span class="string">"file"</span>: <span class="string">"doc/gallery/index.html"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/gallery-index.html.dot"</span>
+    },
+    <span class="string">"webFont"</span>: {
+        <span class="string">"file"</span>: <span class="string">"doc/gallery/web-font-gallery.html"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/web-font-gallery.html.dot"</span>,
+        <span class="string">"worker"</span>: <span class="string">"galleryWebFonts"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"catalogFile"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>
+        }
+    },
+    <span class="string">"colorScheme"</span>: {
+        <span class="string">"file"</span>: <span class="string">"doc/gallery/color-scheme-gallery.html"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/color-scheme-gallery.html.dot"</span>,
+        <span class="string">"worker"</span>: <span class="string">"galleryColorSchemes"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"catalogFile"</span>: <span class="string">"assets/catalogs/color-scheme-catalog.json"</span>
+        }
+    }
+}
+</pre>
+
+<p><a name="icoTaskConfig"></a></p>
+<h3>icoTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/ico-task-config.js">ci/config/ico-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"tickTack"</span>: {
+        <span class="string">"src"</span>: <span class="string">"dist/images/tick-tack/tick-tack-favicon.png"</span>,
+        <span class="string">"dest"</span>: <span class="string">"dist/images/tick-tack/tick-tack-favicon.ico"</span>
+    },
+    <span class="string">"fur"</span>: {
+        <span class="string">"src"</span>: <span class="string">"dist/images/fur/fur-favicon.png"</span>,
+        <span class="string">"dest"</span>: <span class="string">"dist/images/fur/fur-favicon.ico"</span>
+    },
+    <span class="string">"ppAbstract"</span>: {
+        <span class="string">"src"</span>: <span class="string">"dist/images/pp-abstract/pp-abstract-favicon.png"</span>,
+        <span class="string">"dest"</span>: <span class="string">"dist/images/pp-abstract/pp-abstract-favicon.ico"</span>
+    }
+}
+</pre>
+
+<p><a name="indexTaskConfig"></a></p>
+<h3>indexTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/index-task-config.js">ci/config/index-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"ciTasks"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/*_task.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>
+    },
+    <span class="string">"ciConfig"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/config/*-config.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/config/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>
+    },
+    <span class="string">"libBadges"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/badges/*badge.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/badges/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Fur badges."</span>,
+        <span class="string">"capitalize"</span>: <span class="keyword">true</span>
+    },
+    <span class="string">"libCommands"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/commands/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/commands/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Fur commands."</span>
+    },
+    <span class="string">"libIcons"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/icons/*icon.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/icons/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Fur icons."</span>,
+        <span class="string">"capitalize"</span>: <span class="keyword">true</span>
+    },
+    <span class="string">"libImages"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/images/*image.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/images/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Fur images."</span>,
+        <span class="string">"capitalize"</span>: <span class="keyword">true</span>
+    },
+    <span class="string">"libUtil"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/util/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/util/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Fur util."</span>
+    },
+    <span class="string">"lib"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/*"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Front end design tool."</span>,
+        <span class="string">"see"</span>: <span class="string">"@see <a href="https://github.com/tick-tack/fur">fur</a>"</span>
+    }
+}
+</pre>
+
+<p><a name="jsdocTaskConfig"></a></p>
+<h3>jsdocTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/jsdoc-task-config.js">ci/config/jsdoc-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"project"</span>: {
+        <span class="string">"src"</span>: [
+            <span class="string">"README.md"</span>,
+            <span class="string">"lib/**/*.js"</span>
+        ],
+        <span class="string">"options"</span>: {
+            <span class="string">"destination"</span>: <span class="string">"doc/apiguide"</span>,
+            <span class="string">"configure"</span>: <span class="string">"doc/.apiguide.json"</span>,
+            <span class="string">"private"</span>: <span class="keyword">false</span>,
+            <span class="string">"template"</span>: <span class="string">"/Users/okuni/WebstormProjects/fur/node_modules/ink-docstrap/template"</span>
+        }
+    },
+    <span class="string">"projectTasks"</span>: {
+        <span class="string">"src"</span>: [
+            <span class="string">"ci/.taskguide.md"</span>,
+            <span class="string">"ci/tasks/**/*.js"</span>,
+            <span class="string">"ci/config/**/*.js"</span>
+        ],
+        <span class="string">"options"</span>: {
+            <span class="string">"destination"</span>: <span class="string">"doc/taskguide"</span>,
+            <span class="string">"configure"</span>: <span class="string">"doc/.taskguide.json"</span>,
+            <span class="string">"private"</span>: <span class="keyword">false</span>,
+            <span class="string">"template"</span>: <span class="string">"/Users/okuni/WebstormProjects/fur/node_modules/ink-docstrap/template"</span>
+        }
+    },
+    <span class="string">"projectTests"</span>: {
+        <span class="string">"src"</span>: [
+            <span class="string">"test/.testcases.md"</span>,
+            <span class="string">"test/test_helper.js"</span>
+        ],
+        <span class="string">"options"</span>: {
+            <span class="string">"destination"</span>: <span class="string">"doc/testcases"</span>,
+            <span class="string">"configure"</span>: <span class="string">"doc/.testcases.json"</span>,
+            <span class="string">"private"</span>: <span class="keyword">false</span>,
+            <span class="string">"template"</span>: <span class="string">"/Users/okuni/WebstormProjects/fur/node_modules/ink-docstrap/template"</span>
+        }
+    }
+}
+</pre>
+
+<p><a name="mkdirTaskConfig"></a></p>
+<h3>mkdirTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/mkdir-task-config.js">ci/config/mkdir-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"project"</span>: {
+        <span class="string">"options"</span>: {
+            <span class="string">"create"</span>: [
+                <span class="string">"assets"</span>,
+                <span class="string">"assets/catalogs"</span>,
+                <span class="string">"assets/web_fonts"</span>,
+                <span class="string">"bin"</span>,
+                <span class="string">"doc"</span>,
+                <span class="string">"doc/gallery"</span>,
+                <span class="string">"ci"</span>,
+                <span class="string">"ci/bin"</span>,
+                <span class="string">"ci/config"</span>,
+                <span class="string">"ci/tasks"</span>,
+                <span class="string">"dist"</span>,
+                <span class="string">"lib"</span>,
+                <span class="string">"lib/commands"</span>,
+                <span class="string">"lib/images"</span>,
+                <span class="string">"lib/icons"</span>,
+                <span class="string">"lib/util"</span>,
+                <span class="string">"test/.work"</span>,
+                <span class="string">"test/mock"</span>,
+                <span class="string">"test/unit_tests"</span>,
+                <span class="string">"test/unit_tests/lib"</span>,
+                <span class="string">"test/unit_tests/lib/util"</span>,
+                <span class="string">"tmpl"</span>,
+                <span class="string">"tmpl/bin"</span>,
+                <span class="string">"tmpl/css"</span>,
+                <span class="string">"tmpl/html"</span>,
+                <span class="string">"tmpl/js"</span>
+            ]
+        }
+    }
+}
+</pre>
+
+<p><a name="nodeunitTaskConfig"></a></p>
+<h3>nodeunitTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/nodeunit-task-config.js">ci/config/nodeunit-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"unitTests"</span>: [
+        <span class="string">"test/unit_tests/**/*_test.js"</span>
+    ]
+}
+</pre>
+
+<p><a name="readmeTaskConfig"></a></p>
+<h3>readmeTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/readme-task-config.js">ci/config/readme-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"project"</span>: {
+        <span class="string">"readmeFile"</span>: <span class="string">"README.md"</span>
+    }
+}
+</pre>
+
+<p><a name="scaffoldTaskConfig"></a></p>
+<h3>scaffoldTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/scaffold-task-config.js">ci/config/scaffold-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"ciTask"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/scaffold_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/gallery_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"gallery"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/badge_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"badge"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/tag_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"tag"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/versionup_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/favicon_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"favicon"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/ico_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"ico"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/index_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"index"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/catalog_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"catalog"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/testcase_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"testcase"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/readme_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"readme"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/taskguide_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"taskguide"</span>
+            }
+        }
+    ],
+    <span class="string">"ciConfig"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/scaffold-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/gallery-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"gallery"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/badge-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"badge"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/tag-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"tag"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/versionup-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/favicon-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"favicon"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/ico-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"ico"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/index-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"index"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/catalog-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"catalog"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/testcase-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"testcase"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/readme-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"readme"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/taskguide-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"taskguide"</span>
+            }
+        }
+    ],
+    <span class="string">"ciBin"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/bin/build"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/bin/ci_bin.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"build"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/bin/coverage"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/bin/ci_bin.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"coverage"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/bin/draw"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/bin/ci_bin.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"draw"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/bin/doc"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/bin/ci_bin.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"doc"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/bin/test"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/bin/ci_bin.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"test"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/bin/release"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/bin/ci_bin.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"release"</span>
+            }
+        }
+    ],
+    <span class="string">"libIndex"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"lib/badges/index.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fur/badges"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"lib/commands/index.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fur/commands"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"lib/icons/index.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fur/icons"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"lib/images/index.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fur/images"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"lib/util/index.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fur/util"</span>
+            }
+        }
+    ],
+    <span class="string">"libUnitTests"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/badges/_define_badge_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"defineBadge"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/badges/_define_badge.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Define badge."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/badges/_gh_badge_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"ghBadge"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/badges/_gh_badge.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Gh badge."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/badges/badge_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"badge"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/badges/badge.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Badge."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/badges/default_badge_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"defaultBadge"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/badges/default_badge.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Default badge."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/badges/flat_badge_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"flatBadge"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/badges/flat_badge.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Flat badge."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/catalogs_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"catalogs"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/catalogs.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Catalogs."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/commands/favicon_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"favicon"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/commands/favicon.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Favicon."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/commands/ico_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"ico"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/commands/ico.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Ico."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/convert_png_to_ico_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"convertPngToIco"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/convert_png_to_ico.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Convert png to ico."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/generate_badge_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"generateBadge"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/generate_badge.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Generate badge."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/generate_favicon_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"generateFavicon"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/generate_favicon.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Generate favicon."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/icons/_define_icon_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"defineIcon"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/icons/_define_icon.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Define icon."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/icons/icon_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"icon"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/icons/icon.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Icon."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/icons/text_icon_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"textIcon"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/icons/text_icon.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Text icon."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/images/fabric_image_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fabricImage"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/images/fabric_image.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Fabric image."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/images/image_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"image"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/images/image.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Image."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/alphabetical_index_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"alphabeticalIndex"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/alphabetical_index.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Alphabetical index."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/define_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"define"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/define.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Define."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/fallback_copy_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fallbackCopy"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/fallback_copy.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Fallback copy."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/print_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"print"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/print.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Print."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/render_dot_tmpl_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"renderDotTmpl"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/render_dot_tmpl.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Render dot tmpl."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/write_readonly_file_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"writeReadonlyFile"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/write_readonly_file.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Write readonly file."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/write_svg_file_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"writeSvgFile"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/util/write_svg_file.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Write svg file."</span>
+            }
+        }
+    ]
+}
+</pre>
+
+<p><a name="tagTaskConfig"></a></p>
+<h3>tagTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/tag-task-config.js">ci/config/tag-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"project"</span>: {
+        <span class="string">"packageJsonPath"</span>: <span class="string">"package.json"</span>
+    }
+}
+</pre>
+
+<p><a name="taskguideTaskConfig"></a></p>
+<h3>taskguideTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/taskguide-task-config.js">ci/config/taskguide-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"project"</span>: {
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/md/taskguide.md.dot"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/.taskguide.md"</span>,
+        <span class="string">"configFiles"</span>: <span class="string">"ci/config/*-config.js"</span>
+    }
+}
+</pre>
+
+<p><a name="testcaseTaskConfig"></a></p>
+<h3>testcaseTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/testcase-task-config.js">ci/config/testcase-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"unitTests"</span>: {
+        <span class="string">"type"</span>: <span class="string">"nodeunit"</span>,
+        <span class="string">"srcBase"</span>: <span class="string">"test/unit_tests"</span>,
+        <span class="string">"srcPattern"</span>: <span class="string">"**/*_test.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"test/.testcases.md"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/md/testcases.md.dot"</span>
+    }
+}
+</pre>
+
+<p><a name="versionupTaskConfig"></a></p>
+<h3>versionupTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/versionup-task-config.js">ci/config/versionup-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"project"</span>: {
+        <span class="string">"packageJsonPath"</span>: <span class="string">"package.json"</span>
+    }
+}
+</pre>
+
+
+
+
 <p><a name="links"></a></p>
 <h2>Links</h2>
 <ul>
@@ -277,7 +1320,11 @@ Options
 <li><a href="http://gruntjs.com/">grunt</a></li>
 </ul>
 </li>
-</ul></article>
+</ul>
+<style>
+pre code{display:block;padding:.5em;color:#000;background:#fff}pre .subst,pre .title{font-weight:400;color:#000}pre .comment,pre .diff .header,pre .javadoc,pre .template_comment{color:gray;font-style:italic}pre .annotation,pre .apache .cbracket,pre .chunk,pre .decorator,pre .doctype,pre .input_number,pre .pi,pre .preprocessor,pre .shebang{color:olive}pre .pi,pre .tag{background:#efefef}pre .attr_selector,pre .css .class,pre .css .function,pre .hexcolor,pre .id,pre .ini .title,pre .keyword,pre .list .title,pre .literal,pre .pseudo,pre .tag .title,pre .tex .command{font-weight:700;color:navy}pre .attribute,pre .date,pre .number,pre .regexp,pre .rules .keyword,pre .tex .special{font-weight:700;color:#00f}pre .number,pre .regexp{font-weight:400}pre .apache .tag,pre .css .function .params,pre .filter .argument,pre .string,pre .value{color:green;font-weight:700}pre .char,pre .ruby .symbol .keymethods,pre .ruby .symbol .keyword,pre .ruby .symbol .string,pre .symbol,pre .tex .formula{color:#000;background:#d0eded;font-style:italic}pre .javadoctag,pre .phpdoc,pre .yardoctag{text-decoration:underline}pre .apache .sqbracket,pre .envvar,pre .nginx .built_in,pre .variable{color:#660e7a}pre .addition{background:#baeeba}pre .deletion{background:#ffc8bd}pre .diff .change{background:#bccff9}
+pre code{color:inherit; background-color:inherit;}
+</style></article>
     </section>
 
 
@@ -302,7 +1349,7 @@ Options
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Mon May 05 2014 12:42:02 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Mon May 05 2014 13:34:53 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
