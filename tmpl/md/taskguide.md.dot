@@ -3,15 +3,15 @@
 }}fur taskguide
 ======
 
-[![Build Status](https://travis-ci.org/tick-tack/fur.svg?branch=master)](https://travis-ci.org/tick-tack/fur)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Build Status][my_build_badge_url]][my_build_url]
+[![Built with Grunt][grunt_badge_url]][grunt_url]
 
 Task guide for fur project.
 Tasks are runs with [Grunt][grunt_url].
 
 <a href="https://github.com/tick-tack/fur"><img style="height:40px;" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" height="40"></a>
-&nbsp;<a href="http://nodejs.org/"><img style="height:40px;" style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a>
-
+&nbsp;<a href="http://gruntjs.com/"><img style="height:40px" src="http://gruntjs.com/img/grunt-logo.png" height="40"></a>
+&nbsp;<a href="http://nodejs.org/"><img style="height:40px;" src="http://nodejs.org/images/logos/nodejs-dark.png" height="40"></a>
 
 
 Installing the Grunt CLI
@@ -22,6 +22,7 @@ To run task, you need to install grunt cli via npm.
 ```bash
 $ sudo npm install grunt-cli -g
 ```
+
 
 Usage of Grunt CLI
 -----
@@ -42,5 +43,22 @@ Available tasks
 {{~}}
 
 
+Links
+-----
+
++ project
+    + [fur repository][my_repo]
+    + [fur build][my_build_url]
++ external
+    + [nodejs][nodejs_url]
+    + [grunt][grunt_url]
+
+
+
+[nodejs_url]: http://nodejs.org/
 [grunt_url]: http://gruntjs.com/
 [grunt_badge_url]: http://cdn.gruntjs.com/builtwith.png
+[my_repo]: https://github.com/tick-tack/fur
+[my_build_badge_url]: https://travis-ci.org/tick-tack/fur.svg?branch=master
+[my_build_url]: https://travis-ci.org/tick-tack/fur
+
