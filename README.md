@@ -144,6 +144,7 @@ Documents
 ------
 + [API Guide][my_apiguide_url]
 + [Gallery][my_gallery_url]
++ [Task guide][my_taskguide_url]
 + [Test Cases][my_testcases_url]
 + [Coverage report][my_coverage_url]
 
@@ -159,6 +160,7 @@ Documents
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
+[my_taskguide_url]: http://tick-tack.github.io/fur/taskguide/
 [my_testcases_url]: http://tick-tack.github.io/fur/testcases/
 [my_coverage_url]: http://tick-tack.github.io/fur/coverage/lcov-report/
 [my_gallery_url]: http://tick-tack.github.io/fur/gallery/
