@@ -39,6 +39,7 @@ module.exports = function (grunt) {
         chmod: require('./ci/config/chmod-task-config'),
         exec: require('./ci/config/exec-task-config.js'),
         favicon: require('./ci/config/favicon-task-config.js'),
+        font: require('./ci/config/font-task-config.js'),
         ico: require('./ci/config/ico-task-config.js'),
         index: require('./ci/config/index-task-config.js'),
         jsdoc: require('./ci/config/jsdoc-task-config'),
@@ -61,6 +62,7 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('badge', 'Generate badge image files.', ciTask('./ci/tasks/badge_task'));
     grunt.registerMultiTask('favicon', 'Generate favicon image files', ciTask('./ci/tasks/favicon_task'));
+    grunt.registerMultiTask('font', 'Publish font files', ciTask('./ci/tasks/font_task'));
     grunt.registerMultiTask('ico', 'Generate ico image files.', ciTask('./ci/tasks/ico_task'));
     grunt.registerMultiTask('index', 'Generate index js files.', ciTask('./ci/tasks/index_task'));
     grunt.registerMultiTask('catalog', 'Generate catalog files.', ciTask('./ci/tasks/catalog_task'));
@@ -79,6 +81,7 @@ module.exports = function (grunt) {
         'index',
         'scaffold',
         'catalog',
+        'font',
         'gallery'
     ]);
 

@@ -38,7 +38,7 @@
         {{~it.fonts :font}}
         @font-face {
             font-family: "{{=font.fontFamily}}";
-            src: url('{{=it._relativePathToBaseDir}}/{{=font.url}}');
+            src: url('{{=font.url}}');
         }
 
         .{{=font.className}}{

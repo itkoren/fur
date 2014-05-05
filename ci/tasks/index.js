@@ -9,6 +9,7 @@
 exports.badgeTask = require('./badge_task.js');
 exports.catalogTask = require('./catalog_task.js');
 exports.faviconTask = require('./favicon_task.js');
+exports.fontTask = require('./font_task.js');
 exports.galleryTask = require('./gallery_task.js');
 exports.icoTask = require('./ico_task.js');
 exports.indexTask = require('./index_task.js');

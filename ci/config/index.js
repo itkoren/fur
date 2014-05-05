@@ -11,6 +11,7 @@ exports.catalogTaskConfig = require('./catalog-task-config.js');
 exports.chmodTaskConfig = require('./chmod-task-config.js');
 exports.execTaskConfig = require('./exec-task-config.js');
 exports.faviconTaskConfig = require('./favicon-task-config.js');
+exports.fontTaskConfig = require('./font-task-config.js');
 exports.galleryTaskConfig = require('./gallery-task-config.js');
 exports.icoTaskConfig = require('./ico-task-config.js');
 exports.indexTaskConfig = require('./index-task-config.js');

@@ -13,14 +13,14 @@ var util = require('util'),
 module.exports = function galleryWebFonts(options, callback) {
     var catalog = require(path.resolve(options.catalogFile)),
         result = {
-            fonts: Object.keys(catalog).map(function (name) {
-                    var font = catalog[name];
+            fonts: Object.keys(catalog).map(function (theme) {
+                    var font = catalog[theme];
                     return {
-                        url: font.filename,
+                        url: [options.fontsDir, theme + path.extname(font.filename)].join('/'),
                         fontFamily: font.fontFamily,
                         fontFile: path.basename(font.filename),
-                        name: name,
-                        className: util.format('font-%s', name)
+                        name: theme,
+                        className: util.format('font-%s', theme)
                     }
                 }
             )

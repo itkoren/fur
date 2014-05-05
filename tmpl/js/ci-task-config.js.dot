@@ -1,6 +1,7 @@
 /**
  * @file Configuration for "ci/task.{{=it.taskName}}Task".
- * @ignore
+ * @memberof module:ci/config
+ * @member {{=it.taskName}}TaskConfig
  */
 
 "use strict";

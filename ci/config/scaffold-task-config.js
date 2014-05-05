@@ -44,18 +44,19 @@ var binNames = [
 ];
 
 var taskNames = [
-    'scaffold',
-    'gallery',
     'badge',
-    'tag',
-    'versionup',
+    'catalog',
     'favicon',
+    'font',
+    'gallery',
     'ico',
     'index',
-    'catalog',
-    'testcase',
     'readme',
-    'taskguide'
+    'scaffold',
+    'tag',
+    'taskguide',
+    'testcase',
+    'versionup'
 ];
 
 exports.ciTask = taskNames.map(function (name) {
