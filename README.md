@@ -23,6 +23,7 @@ Table of Contents
 - [Usage](#usage)
   - [Generate a favicon file.](#generate-a-favicon-file)
   - [Convert to ico.](#convert-to-ico)
+- [Programmatic API](#programmatic-api)
 - [Examples](#examples)
   - [favicon example](#favicon-example)
   - [badge example](#badge-example)
@@ -142,6 +143,37 @@ $ fur ico -h
 $ fur ico my-favicon.png favicon.ico
 ```
 
+Programmatic API
+------
+
+All fur commands are exports in programmatic API, too.
+"commands" namespace in the fur module has all commands.
+
+For example,
+
+```javascript
+#!/usr/bin/env node
+
+var fur = require('fur');
+
+fur.commands.favicon('dist/my-favicon.png', {
+    text:'JJ',
+    colorTheme: 'e'
+}, function(err){
+});
+```
+
+is equivalant to
+
+```bash
+#!/bin/bash
+fur dist/my-favicon.png --text JJ --color--theme 'e'
+```
+
+Note that option args are camel-cased in programmatic API.
+("--color-theme" would be "colorTheme").
+
+Form more detail, see the [API Document]()
 
 <a name="examples"></a>
 Examples

@@ -1,8 +1,8 @@
 /**
- * @file Exports modules in dir.
- * @module {{=it.moduleName}}
+ * @file {{=(it.description || 'Exports modules in dir.')}}
 {{~it.see :see}} * @see {{=see}}
-{{~}} * @author {{=it.author}}
+{{~}} * @module {{=it.moduleName}}
+ * @author {{=it.author}}
  */
 
 "use strict";

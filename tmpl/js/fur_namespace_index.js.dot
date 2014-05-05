@@ -1,7 +1,7 @@
 /**
  * @file {{=it.description}}
  * @memberof module:fur
- * @namespace {{=it.moduleName}}
+ * @namespace {{=it.moduleShortName}}
  * @author {{=it.author}}
  */
 

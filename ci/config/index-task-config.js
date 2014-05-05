@@ -99,6 +99,7 @@ exports.lib = {
     pattern: 'lib/*',
     dest: 'lib/index.js',
     tmpl: 'tmpl/js/index.js.dot',
+    moduleName: 'fur',
     description: pkg.description,
     see: '@see {@link https://github.com/tick-tack/fur|fur}'
 };

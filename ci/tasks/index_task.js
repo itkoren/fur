@@ -68,6 +68,7 @@ exports._data = function (destDir, pattern, callback) {
                 moduleName: path.relative('.', destDir).split(path.sep).map(function (dirname) {
                     return changeCase.camelCase(dirname);
                 }).join('/'),
+                moduleShortName: changeCase.camelCase(path.basename(destDir)),
                 subModules: filenames
                     .filter(function (filename) {
                         return !!filename;
