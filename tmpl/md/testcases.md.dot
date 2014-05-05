@@ -24,9 +24,9 @@ Test Codes
 <a name="{{=testcode.linkName}}"></a>
 
 ### {{=testcode.testcaseName}}###
-
 {{~testcode.snippets :snippet}}
 {{=snippet.name}}
+
 <pre>
 {{=snippet.content}}
 </pre>

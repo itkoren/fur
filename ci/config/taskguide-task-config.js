@@ -9,5 +9,6 @@
 
 exports.project = {
     tmpl: 'tmpl/md/taskguide.md.dot',
-    dest: 'ci/.taskguide.md'
+    dest: 'ci/.taskguide.md',
+    configFiles: 'ci/config/*-config.js'
 };

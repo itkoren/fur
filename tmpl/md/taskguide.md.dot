@@ -20,6 +20,7 @@ Table of Contents
 - [Installing the Grunt CLI](#installing-the-grunt-cli)
 - [Available tasks](#available-tasks)
 - [Usage of Grunt CLI](#usage-of-grunt-cli)
+- [Task configurations](#task-configurations)
 - [Links](#links)
 
 
@@ -55,6 +56,24 @@ Available tasks
 {{~}}
 
 
+<a name="task-configurations"></a>
+Task configurations
+-----
+{{~it.configs :config}}
+<a name="{{=config.name}}"></a>
+### {{=config.name}} ###
+
+Source:
+
++ [{{=config.filename}}](https://github.com/tick-tack/fur/blob/master/{{=config.filename}})
+
+<pre>
+{{=config.data}}
+</pre>
+{{~}}
+
+
+
 <a name="links"></a>
 Links
 -----
@@ -75,3 +94,9 @@ Links
 [my_build_badge_url]: https://travis-ci.org/tick-tack/fur.svg?branch=master
 [my_build_url]: https://travis-ci.org/tick-tack/fur
 
+
+
+<style>
+{{=it.highlightCss}}
+pre code{color:inherit; background-color:inherit;}
+</style>

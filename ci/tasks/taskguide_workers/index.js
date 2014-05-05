@@ -6,4 +6,5 @@
  */
 
 exports.taskguidAvailables = require('./taskguide_availables');
-exports.taskUsage = require('./taskguide_usage');
+exports.taskguideUsage = require('./taskguide_usage');
+exports.taskguideConfig = require('./taskguide_config');

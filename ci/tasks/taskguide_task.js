@@ -14,6 +14,7 @@ var async = require('async'),
     mkdirp = require('mkdirp'),
     taskguideWorkers = require('./taskguide_workers'),
     highlight = require("highlight").Highlight,
+    _highlightCss = require('./_highlight_css'),
     path = require('path'),
     renderDotTmpl = require('../../lib/util/render_dot_tmpl');
 
@@ -21,7 +22,7 @@ exports = module.exports = function (grunt, config, callback) {
     var tmpl = path.resolve(config.tmpl),
         dest = path.resolve(config.dest);
 
-    exports._data(grunt, function (err, data) {
+    exports._data(config, function (err, data) {
         async.series([
             function (callback) {
                 mkdirp(path.dirname(dest), callback);
@@ -45,12 +46,17 @@ exports._data = function (config, callback) {
             taskguideWorkers.taskguidAvailables(callback);
         },
         function (callback) {
-            taskguideWorkers.taskUsage(callback);
+            taskguideWorkers.taskguideUsage(callback);
+        },
+        function (callback) {
+            taskguideWorkers.taskguideConfig(config.configFiles, callback);
         }
     ], function (err, data) {
         callback(err, {
+            highlightCss: _highlightCss(),
             availables: data[0],
-            usage: data[1]
+            usage: data[1],
+            configs: data[2]
         });
     })
 };
