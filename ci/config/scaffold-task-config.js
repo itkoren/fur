@@ -46,7 +46,8 @@ var taskNames = [
     'ico',
     'catalog',
     'testcase',
-    'readme'
+    'readme',
+    'taskguide'
 ];
 
 exports.ciTask = taskNames.map(function (name) {

@@ -26,9 +26,24 @@ exports.project = {
     }
 };
 
+exports.projectTasks = {
+    src: [
+        'ci/.taskguide.md',
+        'ci/tasks/**/*.js'
+    ],
+    options: {
+        destination:'doc/taskguide',
+        configure:'doc/.taskguide.json',
+        private:false,
+        get template() {
+            return  docstrap();
+        }
+    }
+};
+
 exports.projectTests = {
     src: [
-        'test/testcases.md',
+        'test/.testcases.md',
         'test/test_helper.js'
     ],
     options: {
