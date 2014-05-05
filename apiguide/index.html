@@ -159,10 +159,14 @@
 <ul>
 <li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#install">Install</a></li>
-<li><a href="#example">Example</a></li>
 <li><a href="#usage">Usage</a><ul>
 <li><a href="#generate-a-favicon-file">Generate a favicon file.</a></li>
 <li><a href="#convert-to-ico">Convert to ico.</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#favicon-example">favicon example</a></li>
+<li><a href="#badge-example">badge example</a></li>
 </ul>
 </li>
 <li><a href="#documents">Documents</a></li>
@@ -182,55 +186,6 @@
 <h2>Install</h2>
 <p>Install fur via <a href="https://www.npmjs.org/">npm</a></p>
 <pre><code class="lang-bash">$ sudo npm install fur -g</code></pre>
-<p><a name="example"></a></p>
-<h2>Example</h2>
-<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
-
-<table>
-<thead>
-<tr>
-<th align="center">Output</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /></td>
-<td><code>$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290</code></td>
-</tr>
-<tr>
-<td align="center"><img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /></td>
-<td><code>$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme a</code></td>
-</tr>
-<tr>
-<td align="center"><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></td>
-<td><code>$ fur favicon pp-abstract-favicon.png --text a --color-theme z --font-theme bh</code></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="center">Output</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:40px" height="40" /></td>
-<td><code>$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by, apeman</code></td>
-</tr>
-<tr>
-<td align="center"><img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:40px" height="40" /></td>
-<td><code>$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by, apeman</code></td>
-</tr>
-</tbody>
-</table>
-<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
-
-
-
 <p><a name="usage"></a></p>
 <h2>Usage</h2>
 <!-- START readme_task.commands generated contents. please keep comment here to allow auto update -->
@@ -294,6 +249,60 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
 
 
 <pre><code class="lang-bash">$ fur ico my-favicon.png favicon.ico</code></pre>
+<p><a name="examples"></a></p>
+<h2>Examples</h2>
+<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+<p><a name="favicon-example"></a></p>
+<h3>favicon example</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Output</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /></td>
+<td><code>$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290</code></td>
+</tr>
+<tr>
+<td align="center"><img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /></td>
+<td><code>$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme a</code></td>
+</tr>
+<tr>
+<td align="center"><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></td>
+<td><code>$ fur favicon pp-abstract-favicon.png --text a --color-theme z --font-theme bh</code></td>
+</tr>
+</tbody>
+</table>
+<p><a name="badge-example"></a></p>
+<h3>badge example</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Output</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:10px" height="10" /></td>
+<td><code>$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by, apeman</code></td>
+</tr>
+<tr>
+<td align="center"><img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:10px" height="10" /></td>
+<td><code>$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by, apeman</code></td>
+</tr>
+</tbody>
+</table>
+<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
+
+
+
+
 <p><a name="documents"></a></p>
 <h2>Documents</h2>
 <ul>
@@ -327,7 +336,7 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Mon May 05 2014 17:08:03 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Mon May 05 2014 17:24:45 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
