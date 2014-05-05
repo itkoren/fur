@@ -28,6 +28,7 @@ Table of Contents
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
+<a name="prerequisites"></a>
 Prerequisites
 ------
 
@@ -39,6 +40,7 @@ fur depends on [node-canvas][node_canvas_url], and it requires some setting up.
 For more detail, see [the node-canvas install guide][node_canvas_install_wiki_url].
 
 
+<a name="install"></a>
 Install
 ------
 
@@ -48,6 +50,8 @@ Install fur via [npm][npm_url]
 $ sudo npm install fur -g
 ```
 
+
+<a name="usage"></a>
 Usage
 ------
 
@@ -73,6 +77,7 @@ $ fur -h
 
 <!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
 
+<a name="generate-a-favicon-file"></a>
 ### Generate a favicon file. ###
 
 Generate a simple favicon with themes.
@@ -107,6 +112,7 @@ Available themes are listed in [the gallery][my_gallery_url].
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 ```
 
+<a name="convert-to-ico"></a>
 ### Convert to ico. ###
 
 Convert a png file into ico format.
@@ -133,6 +139,7 @@ $ fur ico my-favicon.png favicon.ico
 ```
 
 
+<a name="documents"></a>
 Documents
 ------
 + [API Guide][my_apiguide_url]
