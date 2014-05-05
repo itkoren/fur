@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Namespace: catalogs</title>
+	<title>fur Source: convert_ttf_to_woff.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -123,224 +123,48 @@
 	<div class="row-fluid">
 
 		
-		<div class="span8">
-			
+			<div class="span12">
+				
 				<div id="main">
 					
 
 
-	<h1 class="page-title">Namespace: catalogs</h1>
-<section>
+		<h1 class="page-title">Source: convert_ttf_to_woff.js</h1>
+    
+    <section>
+        <article>
+            <pre class="sunlight-highlight-javascript linenums">/**
+ * @file Convert a tt file to woff.
+ * @memberof module:fur
+ * @function convertTtfToWoff
+ * @param {string} src - Source file name.
+ * @param {string} dest - Destination file name.
+ * @param {function} callback - Callback when done.
+ * @author Taka Okunishi
+ */
 
-<header>
-    <h2>
-        <span class="ancestors"><a href="module-fur.html">fur</a></span>
-    
-    catalogs
-    </h2>
-    
-</header>
+var ttf2woff = require('ttf2woff'),
+    async = require('async'),
+    fs = require('fs');
 
-<article>
-    <div class="container-overview">
-    
+module.exports = function convertTtfToWoff(src, dest, callback) {
+    async.waterfall([
+        function (callback) {
+            fs.readFile(src, callback);
+        },
+        function (buffer, callback) {
+            var ttf = new Uint8Array(buffer),
+                woff = new Buffer(ttf2woff(ttf, {}).buffer);
+            callback(null, woff);
+        },
+        function (woff, callback) {
+            fs.writeFile(dest, woff, callback);
+        }
+    ], callback);
+};</pre>
+        </article>
+    </section>
 
-    
-        
-            <div class="description"><p>Catalogs.</p></div>
-        
-
-        
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="catalogs.js.html">catalogs.js</a>, <a href="catalogs.js.html#sunlight-1-line-1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<dt>
-    <h4 class="name" id="colorSchemeCatalog"><span class="type-signature">&lt;static> </span>colorSchemeCatalog<span class="type-signature"> :object</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Color scheme catalogs.</p>
-    </div>
-    
-    
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">object</span>
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="catalogs.js.html">catalogs.js</a>, <a href="catalogs.js.html#sunlight-1-line-15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="webFontCatalog"><span class="type-signature">&lt;static> </span>webFontCatalog<span class="type-signature"> :object</span></h4>
-    
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Web font catalogs.</p>
-    </div>
-    
-    
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">object</span>
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="catalogs.js.html">catalogs.js</a>, <a href="catalogs.js.html#sunlight-1-line-23">line 23</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-    
-    
-</dd>
-
-        </dl>
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
 
 
 
@@ -366,10 +190,6 @@
 				</footer>
 			</div>
 
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
 			
 			<br clear="both">
 		</div>
