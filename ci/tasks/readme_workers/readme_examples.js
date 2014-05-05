@@ -35,7 +35,7 @@ exports._favicons = function (config) {
 exports._badges = function (config) {
     return [
         exports._subTitle('badge example'),
-        exports._imgTable(config, 'badge', 10)
+        exports._imgTable(config, 'badge', 12)
     ].join(os.EOL);
 };
 

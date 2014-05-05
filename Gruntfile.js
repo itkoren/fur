@@ -81,7 +81,6 @@ module.exports = function (grunt) {
         'index',
         'scaffold',
         'catalog',
-        'font',
         'gallery'
     ]);
 
@@ -98,6 +97,7 @@ module.exports = function (grunt) {
         'taskguide',
         'coverage',
         'exec:doctoc',
+        'font:doc',
         'readme',
         'jsdoc'
     ]);
@@ -108,6 +108,7 @@ module.exports = function (grunt) {
         'exec:pushDoc'
     ]);
 
+
     grunt.registerTask('draw', 'Draw images.', [
         'badge',
         'favicon',
@@ -116,6 +117,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('publish', 'Publish project files', [
         'draw',
+        'font:dist',
         'publishDoc'
     ]);
 

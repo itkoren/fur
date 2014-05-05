@@ -14,7 +14,7 @@ var path = require('path'),
     util = require('util'),
     async = require('async'),
     mkdirp = require('mkdirp'),
-    copyFile = require('../../lib/util/copy_file'),
+    convertTTF2Woff = require('../../lib/convert_ttf_to_woff'),
     fs = require('fs');
 
 exports = module.exports = function (grunt, config, callback) {
@@ -38,9 +38,9 @@ exports = module.exports = function (grunt, config, callback) {
 exports._writeFontFiles = function (data, destDir, callback) {
     async.eachLimit(data, 10, function (data, callback) {
         var extname = path.extname(data.filename),
-            dest = path.resolve(destDir, data.theme + extname),
+            dest = path.resolve(destDir, data.theme + '.woff'),
             src = path.resolve(data.filename);
-        copyFile(src, dest, callback);
+        convertTTF2Woff(src, dest, callback);
     }, callback);
 };
 

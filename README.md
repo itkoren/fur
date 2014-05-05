@@ -229,8 +229,8 @@ Examples
 ### badge example ###
 | Output | Command |
 | :------: | ------- |
-| <img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:10px" height="10" /> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by , apeman ` |
-| <img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:10px" height="10" /> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by , apeman ` |
+| <img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:12px" height="12" /> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by , apeman ` |
+| <img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:12px" height="12" /> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by , apeman ` |
 
 <!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
 
