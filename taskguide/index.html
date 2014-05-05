@@ -465,7 +465,6 @@ Options
         {
             <span class="string">"filename"</span>: <span class="string">"dist/images/tick-tack/tick-tack-favicon.svg"</span>,
             <span class="string">"options"</span>: {
-                <span class="string">"format"</span>: <span class="string">"svg"</span>,
                 <span class="string">"text"</span>: <span class="string">"tt"</span>,
                 <span class="string">"colorTheme"</span>: <span class="string">"jr"</span>,
                 <span class="string">"fontTheme"</span>: <span class="string">"n"</span>,
@@ -475,7 +474,6 @@ Options
         {
             <span class="string">"filename"</span>: <span class="string">"dist/images/tick-tack/tick-tack-favicon.png"</span>,
             <span class="string">"options"</span>: {
-                <span class="string">"format"</span>: <span class="string">"png"</span>,
                 <span class="string">"text"</span>: <span class="string">"tt"</span>,
                 <span class="string">"colorTheme"</span>: <span class="string">"jr"</span>,
                 <span class="string">"fontTheme"</span>: <span class="string">"n"</span>,
@@ -488,7 +486,6 @@ Options
             <span class="string">"filename"</span>: <span class="string">"dist/images/fur/fur-favicon.svg"</span>,
             <span class="string">"options"</span>: {
                 <span class="string">"fontSize"</span>: <span class="number">160</span>,
-                <span class="string">"format"</span>: <span class="string">"svg"</span>,
                 <span class="string">"text"</span>: <span class="string">"fur"</span>,
                 <span class="string">"colorTheme"</span>: <span class="string">"bb"</span>,
                 <span class="string">"fontTheme"</span>: <span class="string">"a"</span>
@@ -498,7 +495,6 @@ Options
             <span class="string">"filename"</span>: <span class="string">"dist/images/fur/fur-favicon.png"</span>,
             <span class="string">"options"</span>: {
                 <span class="string">"fontSize"</span>: <span class="number">160</span>,
-                <span class="string">"format"</span>: <span class="string">"png"</span>,
                 <span class="string">"text"</span>: <span class="string">"fur"</span>,
                 <span class="string">"colorTheme"</span>: <span class="string">"bb"</span>,
                 <span class="string">"fontTheme"</span>: <span class="string">"a"</span>
@@ -509,7 +505,6 @@ Options
         {
             <span class="string">"filename"</span>: <span class="string">"dist/images/pp-abstract/pp-abstract-favicon.svg"</span>,
             <span class="string">"options"</span>: {
-                <span class="string">"format"</span>: <span class="string">"svg"</span>,
                 <span class="string">"text"</span>: <span class="string">"a"</span>,
                 <span class="string">"colorTheme"</span>: <span class="string">"z"</span>,
                 <span class="string">"fontTheme"</span>: <span class="string">"bh"</span>
@@ -518,7 +513,6 @@ Options
         {
             <span class="string">"filename"</span>: <span class="string">"dist/images/pp-abstract/pp-abstract-favicon.png"</span>,
             <span class="string">"options"</span>: {
-                <span class="string">"format"</span>: <span class="string">"png"</span>,
                 <span class="string">"text"</span>: <span class="string">"a"</span>,
                 <span class="string">"colorTheme"</span>: <span class="string">"z"</span>,
                 <span class="string">"fontTheme"</span>: <span class="string">"bh"</span>
@@ -609,6 +603,26 @@ Options
         <span class="string">"pattern"</span>: <span class="string">"ci/config/*-config.js"</span>,
         <span class="string">"dest"</span>: <span class="string">"ci/config/index.js"</span>,
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>
+    },
+    <span class="string">"ciCatalogWorkers"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/catalog_workers/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/catalog_workers/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
+    },
+    <span class="string">"ciGalleryWorkers"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/gallery_workers/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/gallery_workers/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
+    },
+    <span class="string">"ciReadmeWorkers"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/readme_workers/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/readme_workers/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
+    },
+    <span class="string">"ciTaskguideWorkers"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/taskguide_workers/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/taskguide_workers/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
     },
     <span class="string">"libBadges"</span>: {
         <span class="string">"pattern"</span>: <span class="string">"lib/badges/*badge.js"</span>,
@@ -1385,7 +1399,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Mon May 05 2014 15:40:32 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Mon May 05 2014 16:31:51 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
