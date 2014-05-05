@@ -5,6 +5,7 @@ fur
 [![Code Climate][my_codeclimate_badge_url]][my_codeclimate_url]
 [![Code Coverage][my_codeclimate_coverage_badge_url]][my_codeclimate_url]
 [![dependencies][my_gemnasium_badge_url]][my_gemnasium_url]
+[![Git tip][my_gittip_budge_url]][my_gittip_url]
 
 Front end design tool.    
 Generate images and stylesheets.   
@@ -29,6 +30,8 @@ Table of Contents
   - [favicon example](#favicon-example)
   - [badge example](#badge-example)
 - [Documents](#documents)
+- [Donation](#donation)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -184,7 +187,7 @@ Programmatic API
 ------
 
 All fur commands are exports in programmatic API, too.
-"commands" namespace in the fur module has all commands.
+They are exported in "commands" namespace of the fur module.
 
 For example,
 
@@ -246,6 +249,26 @@ Documents
 + [Test Cases][my_testcases_url]
 + [Coverage Report][my_coverage_url]
 
+
+<a name="donation"></a>
+Donation
+------
+
+Support this project and [others by okunishinishi][my_gittip_url] via [gittip][my_gittip_url].
+
+[<img src="https://rawgithub.com/twolfson/gittip-badge/0.2.0/dist/gittip.png" alt="Support via Gittip"/>][my_gittip_url]
+
+
+
+<a name="license"></a>
+License
+-------
+This software is released under the [MIT License][my_license_url].
+
+
+
+
+
 [nodejs_url]: http://nodejs.org/
 [npm_url]: https://www.npmjs.org/
 [grunt_url]: http://gruntjs.com/
@@ -262,11 +285,15 @@ Documents
 [my_taskguide_url]: http://tick-tack.github.io/fur/taskguide/
 [my_testcases_url]: http://tick-tack.github.io/fur/testcases/
 [my_coverage_url]: http://tick-tack.github.io/fur/coverage/lcov-report/
+[my_license_url]: http://raw.github.com/tick-tack/fur/master/LICENSE
 [my_gallery_url]: http://tick-tack.github.io/fur/gallery/
 [my_codeclimate_url]: http://codeclimate.com/github/tick-tack/fur
 [my_codeclimate_badge_url]: http://img.shields.io/codeclimate/github/tick-tack/fur.svg?style=flat
 [my_codeclimate_coverage_badge_url]: http://img.shields.io/codeclimate/coverage/github/tick-tack/fur.svg?style=flat
 [my_gemnasium_url]: http://gemnasium.com/tick-tack/fur
 [my_gemnasium_badge_url]: http://img.shields.io/gemnasium/tick-tack/fur.svg?style=flat
+
+[my_gittip_url]: http://www.gittip.com/okunishinishi/
+[my_gittip_budge_url]: http://img.shields.io/gittip/okunishinishi.svg?style=flat
 
 
