@@ -50,9 +50,9 @@ $ grunt -h
 Available tasks
 -----
 
-| Name | Description| Multiple |
-| ---------- | ------------ | :--------: |
-{{~it.availables :available}}| {{=available.name}} | {{=available.description}} | {{=available.multiple}}
+| Name | Description| Configuration | Multiple |
+| ---------- | ------------ | -------- | :--------: |
+{{~it.availables :av}}| {{=av.name}} | {{=av.description}} | [{{=av.config}}](#{{=av.config}}) | {{=av.multiple}}
 {{~}}
 
 

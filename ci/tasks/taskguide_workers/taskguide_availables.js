@@ -30,12 +30,14 @@ exports._parseGruntHelp = function (data) {
             paragrah.shift();
             return paragrah.map(function (line) {
                 var keywords = line.trim().split(/\s/);
+                var name = keywords.shift();
                 var description = keywords.join(' ').trim();
                 var multiple = !!description.match(/\*/);
                 return {
-                    name: keywords.shift(),
+                    name: name,
                     description: description.replace(/\*\s*$/, '').trim(),
-                    multiple: multiple ? 'YES' : 'NO'
+                    multiple: multiple ? 'YES' : 'NO',
+                    config: name + 'TaskConfig'
                 }
             })
         }
