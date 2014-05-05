@@ -27,6 +27,7 @@ module.exports = function (grunt) {
                     grunt.log.error(err);
                 }
                 done();
+                done = null;
             });
         }
     }
@@ -78,9 +79,7 @@ module.exports = function (grunt) {
         'index',
         'scaffold',
         'catalog',
-        'gallery',
-        'testcase',
-        'taskguide'
+        'gallery'
     ]);
 
     grunt.registerTask('test', 'Run tests', [
