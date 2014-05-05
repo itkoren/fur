@@ -97,9 +97,9 @@ module.exports = function (grunt) {
         'taskguide',
         'coverage',
         'exec:doctoc',
-        'font:doc',
         'readme',
-        'jsdoc'
+        'jsdoc',
+        'font:doc'
     ]);
 
     grunt.registerTask('publishDoc', 'Publish documents.', [

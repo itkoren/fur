@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for fur/lib/icons/bordered_text_icon.js</title>
+    <title>Code coverage report for fur/lib/convert_ttf_to_woff.js</title>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../prettify.css">
 
     <style>
         body, html {
@@ -196,23 +196,23 @@
 </head>
 <body>
 <div class="header high">
-    <h1>Code coverage report for <span class="entity">fur/lib/icons/bordered_text_icon.js</span></h1>
+    <h1>Code coverage report for <span class="entity">fur/lib/convert_ttf_to_woff.js</span></h1>
     <h2>
         
         Statements: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">100% <small>(2 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(4 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Lines: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">fur/lib/icons/</a> &#187; bordered_text_icon.js</div>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">fur/lib/</a> &#187; convert_ttf_to_woff.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -244,13 +244,7 @@
 26
 27
 28
-29
-30
-31
-32
-33
-34</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+29</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -265,57 +259,48 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4</span>
-<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * @file Bordered text icon.
- * @memberof icons
- * @augments TextIcon
- * @constructor BorderedTextIcon
+ * @file Convert a tt file to woff.
+ * @memberof module:fur
+ * @function convertTtfToWoff
+ * @param {string} src - Source file name.
+ * @param {string} dest - Destination file name.
+ * @param {function} callback - Callback when done.
  * @author Taka Okunishi
- *
  */
 &nbsp;
-"use strict";
+var ttf2woff = require('ttf2woff'),
+    async = require('async'),
+    fs = require('fs');
 &nbsp;
-var _defineIcon = require('./_define_icon'),
-    fabric = require('fabric').fabric,
-    TextIcon = require('./text_icon');
-&nbsp;
-module.exports = _defineIcon({
-    prototype: TextIcon,
-    accessors: [
-    ],
-    properties: {
-        _color:null,
-        backgroundColor: function () {
-            return '#FFF';
+module.exports = function convertTtfToWoff(src, dest, callback) {
+    async.waterfall([
+        function (callback) {
+            fs.readFile(src, callback);
         },
-        color: function () {
-            var s = this;
-            return s._color || s.borderColor();
+        function (buffer, callback) {
+            var ttf = new Uint8Array(buffer),
+                woff = new Buffer(ttf2woff(ttf, {}).buffer);
+            callback(null, woff);
         },
-        borderWidth: function () {
-            var s = this;
-            return s.size() * 0.1;
+        function (woff, callback) {
+            fs.writeFile(dest, woff, callback);
         }
-    }
-});</pre></td></tr>
+    ], callback);
+};</pre></td></tr>
 </table></pre>
 
 </div>
@@ -323,7 +308,7 @@ module.exports = _defineIcon({
     <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 06 2014 07:31:58 GMT+0900 (JST)</div>
 </div>
 
-<script src="../../../prettify.js"></script>
+<script src="../../prettify.js"></script>
 
 <script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
 <script>

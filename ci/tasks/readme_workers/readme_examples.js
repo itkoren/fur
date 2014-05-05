@@ -35,7 +35,7 @@ exports._favicons = function (config) {
 exports._badges = function (config) {
     return [
         exports._subTitle('badge example'),
-        exports._imgTable(config, 'badge', 12)
+        exports._imgTable(config, 'badge', 10)
     ].join(os.EOL);
 };
 
@@ -102,7 +102,8 @@ exports._img = function (filename, h) {
     var extname = path.extname(filename),
         basename = path.basename(filename, extname);
     var fileURL = url.resolve(exports._urlBase, filename);
-    return util.format('<img alt="%s" src="%s" style="height:%dpx" height="%d" />', basename, fileURL, h, h);
+    return util.format('<a href="%s" ><img alt="%s" src="%s" style="height:%dpx" height="%d" /></a>',
+        fileURL, basename, fileURL, h, h);
 };
 
 
