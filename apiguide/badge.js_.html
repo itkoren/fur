@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: images/index.js</title>
+	<title>fur Source: commands/badge.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -121,22 +121,38 @@
 					
 
 
-		<h1 class="page-title">Source: images/index.js</h1>
+		<h1 class="page-title">Source: commands/badge.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Fur images.
- * @memberof module:fur
- * @namespace lib/images
+ * Generate a badge.
+ * @memberof commands
+ * @function badge
+ * @param {string} src - Source file name.
+ * @param {string} dest - Destination file name.
+ * @param {function} [callback]  - Callback when done.
+ * @example
+ *      badge('foo.png', {
+ *          colorTheme: 'e',
+ *          texts: 'powered by, apeman '
+ *      });
  * @author Taka Okunishi
  */
 
 "use strict";
 
-exports.FabricImage = require('./fabric_image.js');
-exports.Image = require('./image.js');
-</pre>
+var generateBadge = require('../generate_badge'),
+    print = require('../util/print');
+
+module.exports = function ico(src, dest, options, callback) {
+    generateBadge(src, dest, function (err) {
+        if (!err) {
+            print.info('File generated:', dest);
+        }
+        callback && callback(err);
+    });
+};</pre>
         </article>
     </section>
 
