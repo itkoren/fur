@@ -1,10 +1,11 @@
 /**
- * @file Workers for catalog task.
+ * @file Exports modules in dir.
  * @memberof module:ci/tasks
- * @member catalogWorkers
- * @type {object}
+ * @member ci/tasks/catalogWorkers
+ * @author Taka Okunishi
  */
 
-exports.catalogWebFonts = require('./catalog_web_fonts');
+"use strict";
 
-exports.catalogColorSchemes = require('./catalog_color_schemes');
+exports.catalogColorSchemes = require('./catalog_color_schemes.js');
+exports.catalogWebFonts = require('./catalog_web_fonts.js');

@@ -43,7 +43,7 @@ exports = module.exports = function (grunt, config, callback) {
 exports._data = function (config, callback) {
     async.series([
         function (callback) {
-            taskguideWorkers.taskguidAvailables(callback);
+            taskguideWorkers.taskguideAvailables(callback);
         },
         function (callback) {
             taskguideWorkers.taskguideUsage(callback);

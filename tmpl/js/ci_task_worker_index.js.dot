@@ -1,0 +1,12 @@
+/**
+ * @file Exports modules in dir.
+ * @memberof module:ci/tasks
+ * @member {{=it.moduleName}}
+{{~it.see :see}} * @see {{=see}}
+{{~}} * @author {{=it.author}}
+ */
+
+"use strict";
+
+{{~it.subModules :subModule}}exports.{{=subModule.exportsName}} = require('{{=subModule.requireName}}');
+{{~}}

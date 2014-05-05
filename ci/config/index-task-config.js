@@ -4,6 +4,10 @@
  * @member indexTaskConfig
  * @property {object} ciTasks - Index file for ci/tasks directory.
  * @property {object} ciConfig - Index file for ci/config directory.
+ * @property {object} ciCatalogWorkers - Index file for ci/tasks/catalog_workers directory.
+ * @property {object} ciGalleryWorkers - Index file for ci/tasks/gallery_workers directory.
+ * @property {object} ciReadmeWorkers - Index file for ci/tasks/readme_workers directory.
+ * @property {object} ciTaskguideWorkers - Index file for ci/tasks/taskguide_workers directory.
  * @property {object} libBadges - Index file for lib/badges directory.
  * @property {object} libCommands - Index file for lib/commands directory.
  * @property {object} libIcons - Index file for lib/icons directory.
@@ -28,6 +32,31 @@ exports.ciConfig = {
     tmpl: 'tmpl/js/index.js.dot'
 };
 
+exports.ciCatalogWorkers = {
+    pattern: 'ci/tasks/catalog_workers/*.js',
+    dest: 'ci/tasks/catalog_workers/index.js',
+    tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
+};
+
+exports.ciGalleryWorkers = {
+    pattern: 'ci/tasks/gallery_workers/*.js',
+    dest: 'ci/tasks/gallery_workers/index.js',
+    tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
+};
+
+exports.ciReadmeWorkers = {
+    pattern: 'ci/tasks/readme_workers/*.js',
+    dest: 'ci/tasks/readme_workers/index.js',
+    tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
+};
+
+exports.ciTaskguideWorkers = {
+    pattern: 'ci/tasks/taskguide_workers/*.js',
+    dest: 'ci/tasks/taskguide_workers/index.js',
+    tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
+};
+
+
 exports.libBadges = {
     pattern: 'lib/badges/*badge.js',
     dest: 'lib/badges/index.js',
@@ -48,7 +77,7 @@ exports.libIcons = {
     dest: 'lib/icons/index.js',
     tmpl: 'tmpl/js/fur_namespace_index.js.dot',
     description: 'Fur icons.',
-    capitalize:true
+    capitalize: true
 };
 
 exports.libImages = {
@@ -56,7 +85,7 @@ exports.libImages = {
     dest: 'lib/images/index.js',
     tmpl: 'tmpl/js/fur_namespace_index.js.dot',
     description: 'Fur images.',
-    capitalize:true
+    capitalize: true
 };
 
 exports.libUtil = {
@@ -73,3 +102,4 @@ exports.lib = {
     description: pkg.description,
     see: '@see {@link https://github.com/tick-tack/fur|fur}'
 };
+

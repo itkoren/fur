@@ -44,12 +44,16 @@ exports._data = function (config, callback) {
         },
         function (callback) {
             readmeWorkers.readmeIcoCommand(callback);
+        },
+        function (callback) {
+            readmeWorkers.readmeExamples(callback);
         }
     ], function (err, data) {
         callback(err, {
             commands: data[0],
             faviconCommand: data[1],
-            icoCommand: data[2]
+            icoCommand: data[2],
+            examples: data[3]
         });
     });
 };

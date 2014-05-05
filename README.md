@@ -20,6 +20,7 @@ Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Install](#install)
+- [Example](#example)
 - [Usage](#usage)
   - [Generate a favicon file.](#generate-a-favicon-file)
   - [Convert to ico.](#convert-to-ico)
@@ -49,6 +50,21 @@ Install fur via [npm][npm_url]
 ```bash
 $ sudo npm install fur -g
 ```
+
+<a name="example"></a>
+Example
+------
+<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+| Output | Command |
+| :------: | ------- |
+| <img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290` |
+| <img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /> | `$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme a` |
+| <img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme z --font-theme bh` |
+
+<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
+
 
 
 <a name="usage"></a>
@@ -95,7 +111,8 @@ $ fur favicon -h
     -C, --color-theme [theme]   Color theme name.
     -F, --font-theme [theme]    Font theme name.
     -s, --size [size]           Image size
-    -S, --Style [style]         Image style. "simple".
+    -f, --font-size [size]      Font size
+    -S, --style [style]         Image style. "simple".
     -t, --text [text]           Text to print on favicon.
     -L, --text-left [position]  Text left position.
     -T, --text-top [position]   Text top position.

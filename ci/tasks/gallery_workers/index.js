@@ -1,10 +1,11 @@
 /**
- * @file Workers for gallery task.
+ * @file Exports modules in dir.
  * @memberof module:ci/tasks
- * @member galleryWorkers
- * @type {object}
- *
+ * @member ci/tasks/galleryWorkers
+ * @author Taka Okunishi
  */
 
-exports.galleryWebFonts = require('./gallery_web_fonts');
-exports.galleryColorSchemes = require('./gallery_color_schemes');
+"use strict";
+
+exports.galleryColorSchemes = require('./gallery_color_schemes.js');
+exports.galleryWebFonts = require('./gallery_web_fonts.js');

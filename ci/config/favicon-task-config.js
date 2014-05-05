@@ -16,7 +16,6 @@ exports.tickTack = formats.map(function (format) {
     return {
         filename: 'dist/images/tick-tack/tick-tack-favicon.' + format,
         options: {
-            format: format,
             text: 'tt',
             colorTheme: 'jr',
             fontTheme: 'n',
@@ -30,7 +29,6 @@ exports.fur = formats.map(function (format) {
         filename: 'dist/images/fur/fur-favicon.' + format,
         options: {
             fontSize: 160,
-            format: format,
             text: 'fur',
             colorTheme: 'bb',
             fontTheme: 'a'
@@ -42,7 +40,6 @@ exports.ppAbstract = formats.map(function (format) {
     return {
         filename: 'dist/images/pp-abstract/pp-abstract-favicon.' + format,
         options: {
-            format: format,
             text: 'a',
             colorTheme: 'z',
             fontTheme: 'bh'

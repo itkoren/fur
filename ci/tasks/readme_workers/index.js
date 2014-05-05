@@ -1,10 +1,13 @@
 /**
- * @file Workers for readme task.
+ * @file Exports modules in dir.
  * @memberof module:ci/tasks
- * @member readmeWorkers
- * @type {object}
- *
+ * @member ci/tasks/readmeWorkers
+ * @author Taka Okunishi
  */
-exports.readmeCommands = require('./readme_commands');
-exports.readmeIcoCommand = require('./readme_ico_command');
-exports.readmeFaviconCommand = require('./readme_favicon_command');
+
+"use strict";
+
+exports.readmeCommands = require('./readme_commands.js');
+exports.readmeExamples = require('./readme_examples.js');
+exports.readmeFaviconCommand = require('./readme_favicon_command.js');
+exports.readmeIcoCommand = require('./readme_ico_command.js');

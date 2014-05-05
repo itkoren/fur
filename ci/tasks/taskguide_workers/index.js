@@ -1,10 +1,12 @@
 /**
- * @file Workers for taskguide task.
+ * @file Exports modules in dir.
  * @memberof module:ci/tasks
- * @member taskguideWorkers
- * @type {object}
+ * @member ci/tasks/taskguideWorkers
+ * @author Taka Okunishi
  */
 
-exports.taskguidAvailables = require('./taskguide_availables');
-exports.taskguideUsage = require('./taskguide_usage');
-exports.taskguideConfig = require('./taskguide_config');
+"use strict";
+
+exports.taskguideAvailables = require('./taskguide_availables.js');
+exports.taskguideConfig = require('./taskguide_config.js');
+exports.taskguideUsage = require('./taskguide_usage.js');
