@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: util/define.js</title>
+	<title>fur Source: util/copy_file.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -125,113 +125,46 @@
 					
 
 
-		<h1 class="page-title">Source: util/define.js</h1>
+		<h1 class="page-title">Source: util/copy_file.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Define a class.
+ * @file Copy file.
  * @memberof util
- * @function define
- * @param {object} def - Constructor definition.
- * @param {function} def.init - Initializer of function.
- * @param {object} def.properties - Properties for prototype.
- * @param {string[]} def.accessor - Generate attr accessor methods.
+ * @function copyFile
+ * @param {string} src - File path to copy from.
+ * @param {string} dest - File path to copy to.
+ * @param {function} callback - Callback when done.
  * @author Taka Okunishi
  *
  */
-exports = module.exports = function (def) {
-    var Constructor = function () {
-        var s = this;
-        if (s.init) {
-            s.init.apply(s, arguments);
+
+var fs = require('fs');
+exports = module.exports = function copyFile(src, dest, callback) {
+    fs.exists(src, function (exists) {
+        if (!exists) {
+            callback(new Error('File not exists: ' + src));
+            return;
         }
+        var readStream = fs.createReadStream(src),
+            writeStream = fs.createWriteStream(dest);
+
+        var errorHandler = exports._errorHandler(callback);
+        readStream.on('error', errorHandler);
+        writeStream.on('error', errorHandler);
+        writeStream.on('close', function () {
+            callback(null);
+        });
+        readStream.pipe(writeStream);
+    });
+};
+
+exports._errorHandler = function (callback) {
+    return function (err) {
+        callback && callback(err);
+        callback = null;
     };
-
-    var Prototype = def.prototype || def.Prototype;
-    if (Prototype) {
-        Constructor.prototype = new Prototype();
-    }
-
-    var properties = def.properties || def.property || {};
-    exports._addProperty(Constructor, properties);
-
-    var init = def.init || def.initialize;
-    if (init) {
-        Constructor.prototype.init = init;
-    }
-
-    Constructor.prototype.toString = function () {
-        return def;
-    };
-
-    Constructor.prototype.set = exports._set;
-    Constructor.prototype.get = exports._get;
-
-    var accessor = def.accessor || def.accessors || [];
-    exports._addAccessor(Constructor, accessor);
-
-    return Constructor;
-};
-
-
-exports._set = function (values) {
-    var s = this;
-    values && Object.keys(values).forEach(function (key) {
-        if (!s[key]) {
-            throw new Error('Unknown key: ' + key);
-        }
-        var val = values[key];
-        s[key](val);
-    });
-    return s;
-};
-
-exports._get = function (key) {
-    var s = this;
-    return s[key]();
-};
-
-
-/**
- * Add a property to a Constructor.
- * @param {function} Constructor
- * @param {object} property
- * @protected
- * @ignore
- */
-exports._addProperty = function (Constructor, property) {
-    Object.keys(property).forEach(function (name) {
-        Constructor.prototype[name] = property[name];
-    });
-};
-
-/**
- * Add attr accessors a Constructor.
- * @param {function} Constructor - function to add attr
- * @param {string} attr - attribute name
- * @returns {function} Constructor
- * @protected
- * @ignore
- */
-exports._addAccessor = function (Constructor, attr) {
-    if (!(attr instanceof Array)) attr = attr.split(',');
-    attr.forEach(function (attr) {
-        var valueKey = ('_' + attr);
-        if (Constructor.prototype[valueKey] === undefined) {
-            Constructor.prototype[valueKey] = null;
-        }
-        Constructor.prototype[attr] = Constructor.prototype[attr] || function () {
-            var s = this;
-            if (arguments.length) {
-                s[valueKey] = arguments[0];
-                return s;
-            } else {
-                return s[valueKey];
-            }
-        };
-    });
-    return Constructor;
 };</pre>
         </article>
     </section>
