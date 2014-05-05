@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for fur/lib/commands/badge.js</title>
+    <title>Code coverage report for fur/lib/util/copy_file.js</title>
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="../../../prettify.css">
@@ -195,24 +195,24 @@
     </style>
 </head>
 <body>
-<div class="header high">
-    <h1>Code coverage report for <span class="entity">fur/lib/commands/badge.js</span></h1>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">fur/lib/util/copy_file.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">17.65% <small>(3 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">75% <small>(3 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(2 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">17.65% <small>(3 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">fur/lib/commands/</a> &#187; badge.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">fur/lib/util/</a> &#187; copy_file.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -248,18 +248,11 @@
 30
 31
 32
-33</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+33
+34
+35
+36
+37</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,47 +264,66 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * @file Generate a badge.
- * @see {@link http://www.npmjs.org/package/gh-badges|gh-badges}
- * @memberof commands
- * @function badge
- * @param {string} filename - Filename to generate.
- * @param {object} options - Optional settings.
- * @param {string} [options.colorTheme='a'] - Color theme name.
- * @param {string} options.style - "default" or "flat".
- * @param {string} options.texts - Badge texts.
+ * @file Copy file.
+ * @memberof util
+ * @function copyFile
+ * @param {string} src - File path to copy from.
+ * @param {string} dest - File path to copy to.
  * @param {function} callback - Callback when done.
- * @example
- *      badge('foo.png', {
- *          colorTheme: 'e',
- *          texts: 'powered by, apeman ',
- *          style: 'flat'
- *      });
  * @author Taka Okunishi
+ *
  */
 &nbsp;
-"use strict";
-&nbsp;
-var generateBadge = require('../generate_badge'),
-    print = require('../util/print');
-&nbsp;
-module.exports = function badge(filename, options, callback) {
-    generateBadge(filename, options, function (err) {
-        <span class="missing-if-branch" title="else path not taken" >E</span>if (!err) {
-            print.info('File generated:', filename);
+var fs = require('fs');
+exports = module.exports = <span class="fstat-no" title="function not covered" >function copyFile(src, dest, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    fs.exists(src, <span class="fstat-no" title="function not covered" >function (exists) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (!exists) {</span>
+<span class="cstat-no" title="statement not covered" >            callback(new Error('File not exists: ' + src));</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
         }
-        callback &amp;&amp; callback(err);
+<span class="cstat-no" title="statement not covered" >        var readStream = fs.createReadStream(src),</span>
+            writeStream = fs.createWriteStream(dest);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var errorHandler = exports._errorHandler(callback);</span>
+<span class="cstat-no" title="statement not covered" >        readStream.on('error', errorHandler);</span>
+<span class="cstat-no" title="statement not covered" >        writeStream.on('error', errorHandler);</span>
+<span class="cstat-no" title="statement not covered" >        writeStream.on('close', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            callback(null);</span>
+        });
+<span class="cstat-no" title="statement not covered" >        readStream.pipe(writeStream);</span>
     });
+};
+&nbsp;
+exports._errorHandler = <span class="fstat-no" title="function not covered" >function (callback) {</span>
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >        callback &amp;&amp; callback(err);</span>
+<span class="cstat-no" title="statement not covered" >        callback = null;</span>
+    };
 };</pre></td></tr>
 </table></pre>
 
