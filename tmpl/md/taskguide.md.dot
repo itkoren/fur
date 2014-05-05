@@ -17,8 +17,13 @@ Tasks are runs with [Grunt][grunt_url].
 Table of Contents
 -----
 
+- [Installing the Grunt CLI](#installing-the-grunt-cli)
+- [Available tasks](#available-tasks)
+- [Usage of Grunt CLI](#usage-of-grunt-cli)
+- [Links](#links)
 
 
+<a name="installing-the-grunt-cli"></a>
 Installing the Grunt CLI
 -----
 
@@ -29,6 +34,7 @@ $ sudo npm install grunt-cli -g
 ```
 
 
+<a name="usage-of-grunt-cli"></a>
 Usage of Grunt CLI
 -----
 ```bash
@@ -39,6 +45,7 @@ $ grunt -h
 ```
 
 
+<a name="available-tasks"></a>
 Available tasks
 -----
 
@@ -48,6 +55,7 @@ Available tasks
 {{~}}
 
 
+<a name="links"></a>
 Links
 -----
 
