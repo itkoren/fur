@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur taskguide Source: tasks/taskguide_task.js</title>
+	<title>fur taskguide Source: tasks/index.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,75 +53,33 @@
 					
 
 
-		<h1 class="page-title">Source: tasks/taskguide_task.js</h1>
+		<h1 class="page-title">Source: tasks/index.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Generate taskguide file.
- * @memberof module:ci/tasks
- * @function taskguideTask
- * @param grunt
- * @param {object} config - Task configuration.
- * @param {function} callback - Callback when done.
- *
+ * @file Exports modules in dir.
+ * @module ci/tasks
+ * @author Taka Okunishi
  */
 
 "use strict";
 
-var async = require('async'),
-    mkdirp = require('mkdirp'),
-    taskguideWorkers = require('./taskguide_workers'),
-    highlight = require("highlight").Highlight,
-    _highlightCss = require('./_highlight_css'),
-    path = require('path'),
-    renderDotTmpl = require('../../lib/util/render_dot_tmpl');
-
-exports = module.exports = function (grunt, config, callback) {
-    var tmpl = path.resolve(config.tmpl),
-        dest = path.resolve(config.dest);
-
-    exports._data(config, function (err, data) {
-        async.series([
-            function (callback) {
-                mkdirp(path.dirname(dest), callback);
-            },
-            function (callback) {
-                renderDotTmpl(tmpl, data, dest, callback);
-            }
-        ], function (err) {
-            if (!err) {
-                grunt.log.writeln('File created: ', dest);
-            }
-            callback();
-        });
-    });
-
-};
-
-exports._data = function (config, callback) {
-    async.series([
-        function (callback) {
-            taskguideWorkers.taskguideAvailables(callback);
-        },
-        function (callback) {
-            taskguideWorkers.taskguideUsage(callback);
-        },
-        function (callback) {
-            taskguideWorkers.taskguideConfig(config.configFiles, callback);
-        }
-    ], function (err, data) {
-        callback(err, {
-            highlightCss: _highlightCss(),
-            availables: data[0].map(function (data) {
-                data.link = (config.links || {})[data.name];
-                return data;
-            }),
-            usage: data[1],
-            configs: data[2]
-        });
-    })
-};</pre>
+exports.badgeTask = require('./badge_task.js');
+exports.catalogTask = require('./catalog_task.js');
+exports.faviconTask = require('./favicon_task.js');
+exports.fontTask = require('./font_task.js');
+exports.galleryTask = require('./gallery_task.js');
+exports.icoTask = require('./ico_task.js');
+exports.indexTask = require('./index_task.js');
+exports.readmeTask = require('./readme_task.js');
+exports.scaffoldTask = require('./scaffold_task.js');
+exports.tagTask = require('./tag_task.js');
+exports.taskguideTask = require('./taskguide_task.js');
+exports.testcaseTask = require('./testcase_task.js');
+exports.versionupTask = require('./versionup_task.js');
+exports.wikiTask = require('./wiki_task.js');
+</pre>
         </article>
     </section>
 

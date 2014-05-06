@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>fur taskguide Source: tasks/wiki_workers/wiki_dependencies.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	
+	<link type="text/css" rel="stylesheet" href="styles/site.journal.css">
+	
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html">fur taskguide</a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							<a href="config.html">ci/config</a>
+						</li>
+						
+						<li>
+							<a href="tasks.html">ci/tasks</a>
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+			<div class="span12">
+				
+				<div id="main">
+					
+
+
+		<h1 class="page-title">Source: tasks/wiki_workers/wiki_dependencies.js</h1>
+    
+    <section>
+        <article>
+            <pre class="sunlight-highlight-javascript linenums">/**
+ * @file Contents about dependencies.
+ * @memberof module:ci/tasks
+ * @function wikiWorkers.wikiDependencies
+ * @param {object} options - Worker options.
+ * @param {string} options.packageJsonFile - Package json file path.
+ * @param {string} options.bowerJsonFile - Bower json file path.
+ * @param {function} callback - Callback when done.
+ *
+ */
+
+var changeCase = require('change-case'),
+    path = require('path'),
+    os = require('os'),
+    fs = require('fs'),
+    spdxLicenses = require('spdx-licenses'),
+    util = require('util');
+
+exports = module.exports = function (options, callback) {
+    var packageJsonFile = options.packageJsonFile,
+        bowerJsonFile = options.bowerJsonFile;
+    var npmData = packageJsonFile && require(path.resolve(packageJsonFile)) || {},
+        bowerData = bowerJsonFile && require(path.resolve(bowerJsonFile)) || {};
+
+    callback(null, [
+        'Third party libraries which fur dependes on.',
+        '',
+        exports._npmDependencies(npmData.dependencies || {}, 'npm dependencies'),
+        '',
+        exports._npmDependencies(npmData.dependencies || {}, 'npm dev dependencies')
+    ].join(os.EOL));
+};
+
+
+exports._row = function (data) {
+    return [].concat('').concat(data).concat('').join(' | ').trim();
+};
+
+exports._npmDependencies = function (data, title) {
+    var head = exports._row([
+            'name',
+            'version',
+            'description',
+            'license'
+        ]),
+        neck = exports._row([
+            ':-----',
+            ':-----:',
+            ':-----',
+            ':-----:'
+        ]),
+        body = Object.keys(data)
+            .map(function (name) {
+                try {
+                    return require.resolve(name);
+                } catch (e) {
+                    return null;
+                }
+            })
+            .filter(function (resolved) {
+                return !!resolved;
+            })
+            .map(function (resolved) {
+                var dirname = path.dirname(resolved);
+                return exports._findup(dirname, 'package.json');
+            })
+            .filter(function (packageFilename) {
+                return !!packageFilename;
+            })
+            .map(function (packageFilename) {
+                var packageData = require(packageFilename),
+                    repository = packageData.repository;
+                return {
+                    name: packageData.name,
+                    version: packageData.version,
+                    license: exports._licenseForPackageData(packageData) ||
+                        exports._licenseForPackageDir(path.dirname(packageFilename)),
+                    description: packageData.description,
+                    url: packageData.homepage || repository && repository.url || repository || null
+                };
+            })
+            .map(function (data) {
+                return exports._row([
+                    util.format('[%s](%s)', data.name, data.url),
+                    data.version,
+                    data.description,
+                    data.license,
+                ]);
+            });
+    return [
+        util.format('&lt;a name="%s">&lt;/a>', title),
+        util.format('## %s ##', title),
+        '',
+        head,
+        neck
+    ]
+        .concat(body)
+        .concat([
+            ''
+        ])
+        .join(os.EOL);
+}
+
+
+exports._findup = function (dirname, filename) {
+    var resolved = path.resolve(dirname, filename),
+        exists = fs.existsSync(resolved);
+    if (exists) {
+        return resolved;
+    }
+    var parentDirname = path.dirname(dirname),
+        hasParent = parentDirname && (parentDirname !== dirname);
+    return hasParent ? exports._findup(parentDirname, filename) : null;
+};
+
+exports._licenseForPackageData = function (data) {
+    return [].concat(data.license || data.licenses || [])
+        .map(function (license) {
+            return license && license.type || license || null;
+        })
+        .filter(function (license) {
+            return !!license;
+        })
+        .join(',');
+};
+
+
+exports._licenseForPackageDir = function (dirname) {
+    var readmeFile = path.resolve(dirname, 'README.md'),
+        readmeExists = fs.existsSync(readmeFile);
+    if (readmeExists) {
+        var readmeContent = exports._parseReadmeFile(readmeFile),
+            license = readmeContent
+                .filter(function (section) {
+                    var title = section.title || '';
+                    return !!title.trim().match(/license/i);
+                })
+                .map(function (section) {
+                    return section.content.filter(function (line) {
+                        return !!line;
+                    }).shift();
+                })
+                .map(function (line) {
+                    var keywords = line.split(/\s/g) || [];
+                    for (var i = 0; i &lt; keywords.length; i++) {
+                        var keyword = keywords[i];
+                        var info = keyword && spdxLicenses.spdx(keyword.trim())
+                        if (info) {
+                            return info.id;
+                        }
+                    }
+                    return null;
+                })
+                .filter(function (id) {
+                    return !!id;
+                })
+                .shift();
+        return license || null;
+    }
+    return null;
+};
+
+exports._parseReadmeFile = function (filename) {
+    var lines = fs.readFileSync(filename).toString().split(os.EOL);
+    return lines.reduce(function (result, line) {
+        var section = result[result.length - 1];
+        var isHeader = !!line.match(/^#+/);
+        if (isHeader) {
+            result.push({title: line, content: []});
+        } else {
+            var isSeperator = !!line.match(/^\-\-|^==/);
+            if (isSeperator) {
+                var lastLine = section.content.pop();
+                result.push({title: lastLine, content: []});
+            } else {
+                if (!!line) {
+                    section.content.push(line);
+                }
+            }
+        }
+        return result;
+    }, [
+        {title: null, content: []}
+    ]);
+};
+
+exports._bowerDependencies = function () {
+
+};
+
+</pre>
+        </article>
+    </section>
+
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					<script>var h=document.head;h.innerHTML=h.innerHTML+'<link rel="shortcut icon" href="../favicon.png"/>';</script>
+					<br />
+					
+					
+		<span class="copyright">
+		tick-tack Copyright © 2014
+		</span>
+					<br />
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
+		on Tue May 06 2014 17:37:27 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<script src="scripts/sunlight.js"></script>
+	<script src="scripts/sunlight.javascript.js"></script>
+	<script src="scripts/sunlight-plugin.doclinks.js"></script>
+	<script src="scripts/sunlight-plugin.linenumbers.js"></script>
+	<script src="scripts/sunlight-plugin.menu.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/jquery.scrollTo.js"></script>
+	<script src="scripts/jquery.localScroll.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+
+	<script>  Sunlight.highlightAll({lineNumbers:true,  showMenu: true, enableDoclinks :true}); </script>
+
+	<script>
+		$( function () {
+			$( "#toc" ).toc( {
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : 60
+			} );
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+
+		} );
+	</script>
+
+	
+
+</body>
+</html>
