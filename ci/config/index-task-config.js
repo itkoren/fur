@@ -12,6 +12,7 @@
  * @property {object} libBadges - Index file for lib/badges directory.
  * @property {object} libCommands - Index file for lib/commands directory.
  * @property {object} libIcons - Index file for lib/icons directory.
+ * @property {object} libLogos - Index file for lib/logos directory.
  * @property {object} libImages - Index file for lib/images directory.
  * @property {object} libUtil - Index file for lib/util directory.
  * @property {object} lib - Index file for lib directory.
@@ -85,6 +86,14 @@ exports.libIcons = {
     dest: 'lib/icons/index.js',
     tmpl: 'tmpl/js/fur_namespace_index.js.dot',
     description: 'Fur icons.',
+    capitalize: true
+};
+
+exports.libLogos = {
+    pattern: 'lib/icons/*logo.js',
+    dest: 'lib/logos/index.js',
+    tmpl: 'tmpl/js/fur_namespace_index.js.dot',
+    description: 'Fur logos.',
     capitalize: true
 };
 
