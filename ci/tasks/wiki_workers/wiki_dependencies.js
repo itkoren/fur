@@ -22,9 +22,11 @@ exports = module.exports = function (options, callback) {
         bowerData = bowerJsonFile && require(path.resolve(bowerJsonFile)) || {};
 
     callback(null, [
-        'Dependences',
-        '===========',
-        exports._npmDependencies(npmData.dependencies || {}, 'npm dependencies')
+        'Third party libraries which fur dependes on.',
+        '',
+        exports._npmDependencies(npmData.dependencies || {}, 'npm dependencies'),
+        '',
+        exports._npmDependencies(npmData.dependencies || {}, 'npm dev dependencies')
     ].join(os.EOL));
 };
 
@@ -92,7 +94,7 @@ exports._npmDependencies = function (data, title) {
             });
     return [
         util.format('<a name="%s"></a>', title),
-        util.format('**%s**', title),
+        util.format('## %s ##', title),
         '',
         head,
         neck

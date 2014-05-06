@@ -53,9 +53,6 @@ exports._data = function (config, callback) {
         },
         function (callback) {
             readmeWorkers.readmeFaviconStyles(callback);
-        },
-        function (callback) {
-            readmeWorkers.readmeDependencies(config.packageJsonFile, config.bowerJsonFile, callback);
         }
     ], function (err, data) {
         callback(err, {
@@ -64,8 +61,7 @@ exports._data = function (config, callback) {
             icoCommand: data[2],
             examples: data[3],
             badgeCommand: data[4],
-            faviconStyles: data[5],
-            readmeDependencies: data[6]
+            faviconStyles: data[5]
         });
     });
 };
