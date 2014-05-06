@@ -46,7 +46,7 @@ exports._subTitle = function (subTitle) {
         '<a name="%s"></a>',
         '### %s ###',
         ''
-    ].join(os.EOL), changeCase.paramCase(subTitle), subTitle);
+    ].join(os.EOL), changeCase.paramCase(subTitle), changeCase.titleCase(subTitle));
 };
 
 exports._imgTable = function (config, command, height) {

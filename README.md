@@ -241,7 +241,7 @@ Demos
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 <a name="favicon-demo"></a>
-### favicon demo ###
+### Favicon Demo ###
 
 | Output | Command |
 | :------: | ------- |
@@ -251,7 +251,7 @@ Demos
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" ><img alt="pp-static-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-static-favicon.png --text s --color-theme gs --font-theme j --style bordered --text-top -24` |
 
 <a name="badge-demo"></a>
-### badge demo ###
+### Badge Demo ###
 
 | Output | Command |
 | :------: | ------- |
