@@ -26,12 +26,13 @@ Table of Contents
   - [Generate a Badge](#generate-a-badge)
   - [Convert to ICO](#convert-to-ico)
 - [Programmatic API](#programmatic-api)
-- [Demos](#demos)
-  - [favicon demo](#favicon-demo)
-  - [badge demo](#badge-demo)
+- [Examples](#examples)
+  - [Favicon Example](#favicon-example)
+  - [Badge Example](#badge-example)
 - [Documents](#documents)
 - [Donation](#donation)
 - [License](#license)
+- [Dependencies](#dependencies)
   - [Links](#links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -90,7 +91,7 @@ $ fur -h
 <a name="generate-a-favicon"></a>
 ### Generate a Favicon ###
 
-Generate a simple favicon with pre-defined styles.
+Generate a favicon with pre-defined styles.
 
 **Styles**
 <!-- START readme_task.faviconStyles generated contents. please keep comment here to allow auto update -->
@@ -136,7 +137,7 @@ Available themes are listed in [the gallery][my_gallery_url].
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 ```
 
-[See more examples](#favicon-demo).
+[See more examples](#favicon-example).
 
 
 <a name="generate-a-badge"></a>
@@ -172,7 +173,7 @@ Available themes are listed in [the gallery][my_gallery_url].
 $ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg
 ```
 
-[See more examples](#badge-demo).
+[See more examples](#badge-example).
 
 
 <a name="convert-to-ico"></a>
@@ -234,14 +235,14 @@ Note that option args are camel-cased in programmatic API.
 
 Form more detail, see the [API Document][my_apiguide_commands_url]
 
-<a name="demos"></a>
-Demos
+<a name="examples"></a>
+Examples
 ------
-<!-- START readme_task.demos generated contents. please keep comment here to allow auto update -->
+<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
-<a name="favicon-demo"></a>
-### Favicon Demo ###
+<a name="favicon-example"></a>
+### Favicon Example ###
 
 | Output | Command |
 | :------: | ------- |
@@ -250,15 +251,15 @@ Demos
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" ><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme a --font-theme e --font-size 260 --style circle --text-top -24 --text-left -15` |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" ><img alt="pp-static-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-static-favicon.png --text s --color-theme gs --font-theme j --style bordered --text-top -24` |
 
-<a name="badge-demo"></a>
-### Badge Demo ###
+<a name="badge-example"></a>
+### Badge Example ###
 
 | Output | Command |
 | :------: | ------- |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" ><img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:10px" height="10" /></a> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by , apeman ` |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" ><img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:10px" height="10" /></a> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by , apeman ` |
 
-<!-- END readme_task.demos generated contents please keep comment here to allow auto update -->
+<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
 
 
 <a name="documents"></a>
@@ -287,6 +288,37 @@ License
 
 This software is released under the [MIT License][my_license_url].
 
+
+<a name="dependencies"></a>
+Dependencies
+-----
+
+<!-- START readme_task.readmeDependencies generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+<a name="npm dependencies"></a>
+**npm dependencies**
+
+| name | version | description | license |
+| :----- | :----- | :----- | :-----: |
+| [async](https://github.com/caolan/async) | 0.8.0 | Higher-order functions and common patterns for asynchronous code |  |
+| [change-case](https://github.com/blakeembrey/change-case) | 2.1.1 | Convert a string between camelCase, PascalCase, Title Case, snake_case and more. | MIT |
+| [canvas](https://github.com/learnboost/node-canvas) | 1.1.3 | Canvas graphics API backed by Cairo |  |
+| [color-scheme](https://github.com/c0bra/color-scheme-js) | 0.0.5 | Generate pleasant color schemes | BSD |
+| [commander](https://github.com/visionmedia/commander.js) | 2.2.0 | the complete solution for node.js command-line programs |  |
+| [cheerio](https://github.com/MatthewMueller/cheerio) | 0.15.0 | Tiny, fast, and elegant implementation of core jQuery designed specifically for the server |  |
+| [cli-color](https://github.com/medikoo/cli-color) | 0.3.2 | Colors, formatting and other tools for the console |  |
+| [dot](http://github.com/olado/doT) | 1.0.2 | Concise and fast javascript templating compatible with nodejs and other javascript environments |  |
+| [fabric](https://github.com/kangax/fabric.js) | 1.4.3 | Object model for HTML5 canvas, and SVG-to-canvas parser. Backed by jsdom and node-canvas. |  |
+| [glob](https://github.com/isaacs/node-glob) | 3.2.9 | a little globber | BSD |
+| [imagemagick](https://github.com/rsms/node-imagemagick) | 0.1.3 | A wrapper around the imagemagick cli |  |
+| [mkdirp](https://github.com/substack/node-mkdirp) | 0.4.0 | Recursively mkdir, like `mkdir -p` | MIT |
+| [onecolor](https://github.com/One-com/one-color) | 2.4.0 | Javascript color object with implicit color space conversions. Supports RGB, HSV, HSL and CMYK with alpha channel. |  |
+| [svgo](http://svg.github.com/svgo/) | 0.4.4 | Nodejs-based tool for optimizing SVG vector graphics files |  |
+| [phantomjs](https://github.com/Obvious/phantomjs) | 1.9.7-5 | Headless WebKit with JS API |  |
+
+
+<!-- END readme_task.readmeDependencies generated contents please keep comment here to allow auto update -->
 
 
 <a name="links"></a>

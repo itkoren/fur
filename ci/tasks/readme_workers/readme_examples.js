@@ -1,10 +1,12 @@
 /**
- * @file Contents about demos.
+ * @file Contents about examples.
  * @memberof module:ci/tasks
- * @function readmeWorkers.readmeDemos
+ * @function readmeWorkers.readmeExamples
  * @param {function} callback - Callback when done.
  *
  */
+
+
 var changeCase = require('change-case'),
     path = require('path'),
     util = require('util'),
@@ -28,14 +30,14 @@ exports._tableLine = function (entries) {
 
 exports._favicons = function (config) {
     return [
-        exports._subTitle('favicon demo'),
+        exports._subTitle('favicon example'),
         exports._imgTable(config, 'favicon', 40)
     ].join(os.EOL);
 };
 
 exports._badges = function (config) {
     return [
-        exports._subTitle('badge demo'),
+        exports._subTitle('badge example'),
         exports._imgTable(config, 'badge', 10)
     ].join(os.EOL);
 };

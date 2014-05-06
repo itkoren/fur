@@ -8,5 +8,7 @@
 "use strict";
 
 exports.project = {
-    readmeFile: 'README.md'
+    readmeFile: 'README.md',
+    packageJsonFile: 'package.json',
+    bowerJsonFile: 'dist/bower.json'
 };
