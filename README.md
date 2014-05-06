@@ -292,10 +292,10 @@ This software is released under the [MIT License][my_license_url].
 <a name="links"></a>
 ### Links ###
 
-+ [Repository][my_repository_url]
-+ [Gallery][my_gallery_url]
-+ [Coverage Report][my_coverage_url]
-+ [Build][my_travis_url]
++ [Repository at github][my_repository_url]
++ [Theme Design Gallery][my_gallery_url]
++ [Coverage Report by Istanbul][my_coverage_url]
++ [Build at travis][my_travis_url]
 
 
 [nodejs_url]: http://nodejs.org/
