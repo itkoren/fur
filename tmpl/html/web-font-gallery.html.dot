@@ -37,8 +37,8 @@
 
         {{~it.fonts :font}}
         @font-face {
-            font-family: "{{=font.fontFamily}}";
-            src: url('{{=font.url}}');
+            font-family: "{{=font.fontFamily}}" ;
+            src: url('{{=font.url}}') format({{=font.format}});
         }
 
         .{{=font.className}}{
@@ -63,7 +63,7 @@
     <tr>
         <th class="">{{=font.name}}</th>
         <td class="text-center v-center">
-            <a href="{{=it._relativePathToBaseDir}}/{{=font.url}}">{{=font.fontFamily}}</a>
+            <a href="{{=font.url}}" download="{{=font.fontFamily}}.{{=font.format}}">{{=font.fontFamily}}</a>
         </td>
         <td class="sample-td">
             <div class="l sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.

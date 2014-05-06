@@ -47,10 +47,10 @@ exports.fur = formats.map(function (format) {
     return {
         filename: 'dist/images/fur/fur-favicon.' + format,
         options: {
-            fontSize: 160,
-            text: 'fur',
+            fontSize: 104,
+            text: 'FUR',
             colorTheme: 'bb',
-            fontTheme: 'ab'
+            fontTheme: 'by'
         }
     }
 });

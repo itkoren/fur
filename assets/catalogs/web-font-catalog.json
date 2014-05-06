@@ -199,6 +199,38 @@
         "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
         "fontFamily": "Open Sans Semibold Italic"
     },
+    "ay": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-Bold.ttf",
+        "fontFamily": "Raleway Bold"
+    },
+    "az": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-ExtraBold.ttf",
+        "fontFamily": "Raleway Extra Bold"
+    },
+    "ba": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-ExtraLight.ttf",
+        "fontFamily": "Raleway Extra Light"
+    },
+    "bb": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-Heavy.ttf",
+        "fontFamily": "Raleway Heavy"
+    },
+    "bc": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-Light.ttf",
+        "fontFamily": "Raleway Light"
+    },
+    "bd": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-Medium.ttf",
+        "fontFamily": "Raleway Medium"
+    },
+    "be": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-Regular.ttf",
+        "fontFamily": "Raleway Regular"
+    },
+    "bf": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-SemiBold.ttf",
+        "fontFamily": "Raleway Semi Bold"
+    },
     "bg": {
         "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Bold.ttf",
         "fontFamily": "Vollkorn Bold"
@@ -214,5 +246,129 @@
     "bj": {
         "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Regular.ttf",
         "fontFamily": "Vollkorn Regular"
+    },
+    "bk": {
+        "filename": "assets/web_fonts/google_fonts/Sonsie_One/SonsieOne-Regular.ttf",
+        "fontFamily": "Sonsie One Regular"
+    },
+    "bl": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-Black.ttf",
+        "fontFamily": "Source Code Pro Black"
+    },
+    "bm": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-Bold.ttf",
+        "fontFamily": "Source Code Pro Bold"
+    },
+    "bn": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-ExtraLight.ttf",
+        "fontFamily": "Source Code Pro Extra Light"
+    },
+    "bo": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-Light.ttf",
+        "fontFamily": "Source Code Pro Light"
+    },
+    "bp": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-Medium.ttf",
+        "fontFamily": "Source Code Pro Medium"
+    },
+    "bq": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-Regular.ttf",
+        "fontFamily": "Source Code Pro Regular"
+    },
+    "br": {
+        "filename": "assets/web_fonts/google_fonts/Source_Code_Pro/SourceCodePro-Semibold.ttf",
+        "fontFamily": "Source Code Pro Semibold"
+    },
+    "bs": {
+        "filename": "assets/web_fonts/google_fonts/Ultra/Ultra.ttf",
+        "fontFamily": "Ultra"
+    },
+    "bt": {
+        "filename": "assets/web_fonts/google_fonts/Bowlby_One_SC/BowlbyOneSC-Regular.ttf",
+        "fontFamily": "Bowlby One Sc Regular"
+    },
+    "bu": {
+        "filename": "assets/web_fonts/google_fonts/Erica_One/EricaOne-Regular.ttf",
+        "fontFamily": "Erica One Regular"
+    },
+    "bv": {
+        "filename": "assets/web_fonts/google_fonts/Fascinate/Fascinate-Regular.ttf",
+        "fontFamily": "Fascinate Regular"
+    },
+    "bw": {
+        "filename": "assets/web_fonts/google_fonts/Chango/Chango-Regular.ttf",
+        "fontFamily": "Chango Regular"
+    },
+    "bx": {
+        "filename": "assets/web_fonts/google_fonts/Raleway/Raleway-Thin.ttf",
+        "fontFamily": "Raleway Thin"
+    },
+    "by": {
+        "filename": "assets/web_fonts/google_fonts/Rammetto_One/RammettoOne-Regular.ttf",
+        "fontFamily": "Rammetto One Regular"
+    },
+    "bz": {
+        "filename": "assets/web_fonts/google_fonts/Sigmar_One/SigmarOne.ttf",
+        "fontFamily": "Sigmar One"
+    },
+    "ca": {
+        "filename": "assets/web_fonts/google_fonts/Sniglet/Sniglet-ExtraBold.ttf",
+        "fontFamily": "Sniglet Extra Bold"
+    },
+    "cb": {
+        "filename": "assets/web_fonts/google_fonts/Titan_One/TitanOne-Regular.ttf",
+        "fontFamily": "Titan One Regular"
+    },
+    "cc": {
+        "filename": "assets/web_fonts/font_squirrel/ChunkFive/Chunkfive.otf",
+        "fontFamily": "Chunkfive"
+    },
+    "cd": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-Bold.ttf",
+        "fontFamily": "Advent Pro Bold"
+    },
+    "ce": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-ExtraLight.ttf",
+        "fontFamily": "Advent Pro Extra Light"
+    },
+    "cf": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-Light.ttf",
+        "fontFamily": "Advent Pro Light"
+    },
+    "cg": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-Medium.ttf",
+        "fontFamily": "Advent Pro Medium"
+    },
+    "ch": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-Regular.ttf",
+        "fontFamily": "Advent Pro Regular"
+    },
+    "ci": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-SemiBold.ttf",
+        "fontFamily": "Advent Pro Semi Bold"
+    },
+    "cj": {
+        "filename": "assets/web_fonts/google_fonts/Advent_Pro/AdventPro-Thin.ttf",
+        "fontFamily": "Advent Pro Thin"
+    },
+    "ck": {
+        "filename": "assets/web_fonts/google_fonts/Sniglet/Sniglet-Regular.ttf",
+        "fontFamily": "Sniglet Regular"
+    },
+    "cl": {
+        "filename": "assets/web_fonts/google_fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf",
+        "fontFamily": "Cinzel Decorative Black"
+    },
+    "cm": {
+        "filename": "assets/web_fonts/google_fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf",
+        "fontFamily": "Cinzel Decorative Bold"
+    },
+    "cn": {
+        "filename": "assets/web_fonts/google_fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf",
+        "fontFamily": "Cinzel Decorative Regular"
+    },
+    "co": {
+        "filename": "assets/web_fonts/google_fonts/Asset/Asset.ttf",
+        "fontFamily": "Asset"
     }
 }

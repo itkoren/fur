@@ -14,10 +14,12 @@ module.exports = function galleryWebFonts(options, callback) {
     var catalog = require(path.resolve(options.catalogFile)),
         result = {
             fonts: Object.keys(catalog).map(function (theme) {
-                    var font = catalog[theme];
+                    var font = catalog[theme],
+                        format = 'woff';
                     return {
-                        url: [options.fontsDir, theme + '.woff'].join('/'),
+                        url: [options.fontsDir, [theme, format].join('.')].join('/'),
                         fontFamily: font.fontFamily,
+                        format: 'woff',
                         fontFile: path.basename(font.filename),
                         name: theme,
                         className: util.format('font-%s', theme)

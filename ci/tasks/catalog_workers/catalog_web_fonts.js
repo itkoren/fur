@@ -31,6 +31,9 @@ exports = module.exports = function catalogWebFonts(options, callback) {
                 basename = path.basename(src, extname),
                 relativeName = path.relative(basedir, src);
             var theme = reserved(relativeName) || nextTheme();
+            if (data[theme]) {
+                data[nextTheme()] = data[theme];
+            }
             data[theme] = {
                 filename: relativeName,
                 fontFamily: changeCase.titleCase(basename)

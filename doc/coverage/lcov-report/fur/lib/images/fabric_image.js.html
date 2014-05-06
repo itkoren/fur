@@ -199,16 +199,16 @@
     <h1>Code coverage report for <span class="entity">fur/lib/images/fabric_image.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">77.65% <small>(66 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">79.79% <small>(75 / 94)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">47.37% <small>(9 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">47.62% <small>(10 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">92.31% <small>(24 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">92.86% <small>(26 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">77.65% <small>(66 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">79.79% <small>(75 / 94)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -442,7 +442,23 @@
 224
 225
 226
-227</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -454,6 +470,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -568,6 +585,11 @@
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -668,6 +690,16 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * @file Abstract image using fabric.
  * @see {@link https://www.npmjs.org/package/fabric|fabric}
@@ -687,6 +719,7 @@ var define = require('../util/define'),
     fabric = require('fabric').fabric,
     cheerio = require('cheerio'),
     mkdirp = require('mkdirp'),
+    ttf2woff = require('ttf2woff'),
     Image = require('./image');
 &nbsp;
 var FabricImage = module.exports = define({
@@ -793,7 +826,12 @@ var FabricImage = module.exports = define({
         svgFontFamilyStyle: function (callback) {
             var s = this;
             async.map(s._customFontData, function (fontData, callback) {
-                fs.readFile(fontData.filename, function (err, buffer) {
+                var filename = fontData.filename,
+                    isTTF = FabricImage._isTTF(filename);
+                fs.readFile(filename, function (err, buffer) {
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (isTTF) {
+                        buffer = FabricImage._toWOFF(buffer);
+                    }
                     <span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
 <span class="cstat-no" title="statement not covered" >                        callback(err);</span>
 <span class="cstat-no" title="statement not covered" >                        return;</span>
@@ -894,12 +932,22 @@ FabricImage._pipe = function (reader, writer, callback) {
         callback &amp;&amp; callback();
         callback = null;
     });
+};
+&nbsp;
+FabricImage._isTTF = function (filename) {
+    var extname = path.extname(filename);
+    return ['.ttf', '.otf'].indexOf(extname) !== -1;
+};
+&nbsp;
+FabricImage._toWOFF = function (buffer) {
+    var ttf = new Uint8Array(buffer);
+    return new Buffer(ttf2woff(ttf, {}).buffer);
 };</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 06 2014 12:04:15 GMT+0900 (JST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 06 2014 12:30:36 GMT+0900 (JST)</div>
 </div>
 
 <script src="../../../prettify.js"></script>

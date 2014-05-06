@@ -93,6 +93,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('doc', 'Generate documents.', [
+        'catalog',
         'testcase',
         'taskguide',
         'coverage',
