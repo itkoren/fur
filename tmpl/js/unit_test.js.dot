@@ -7,11 +7,11 @@
 var {{=it.moduleName}} = require('{{=it.relativePathToBaseDir}}/{{=it.modulePath}}'),
     testHelper = require('{{=it.relativePathToBaseDir}}/test/test_helper');
 
-exports.setUp = function(done) {
+exports.setUp = function (done) {
     done();
 };
 
-exports.tearDown = function(done) {
+exports.tearDown = function (done) {
     done();
 };
 
