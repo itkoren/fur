@@ -38,3 +38,12 @@ exports.commitRelease = {
 exports.publishNpm = {
     cmd: 'npm publish .'
 };
+
+exports.installNpm = {
+    cmd: 'npm install'
+};
+
+exports.installBower = {
+    cmd: 'bower install',
+    cwd: 'dist'
+};

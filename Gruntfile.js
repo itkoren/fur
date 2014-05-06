@@ -109,6 +109,10 @@ module.exports = function (grunt) {
         'exec:pushDoc'
     ]);
 
+    grunt.registerTask('install', 'Install dependencies', [
+        'exec:installNpm',
+        'exec:installBower'
+    ]);
 
     grunt.registerTask('draw', 'Draw images.', [
         'badge',
@@ -125,4 +129,5 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'build'
     ]);
+
 };

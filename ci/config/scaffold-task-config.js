@@ -38,6 +38,7 @@ var binNames = [
     'build',
     'coverage',
     'draw',
+    'install',
     'doc',
     'test',
     'release'

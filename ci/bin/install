@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+/**
+ * @file Run "install" for this project.
+ * @see Gruntfile.js
+ * @author undefined
+ */
+
+require('grunt').tasks([
+    'install'
+], {
+    debug: false
+});

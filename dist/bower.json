@@ -6,8 +6,7 @@
     "Taka Okunishi <okunishinishi@gmail.com>"
   ],
   "description": "Frontend design tool.",
-  "moduleType": [
-  ],
+  "moduleType": [],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -15,5 +14,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "font-awesome": "~4.0.3",
+    "ionicons": "~1.4.1",
+    "angular": "~1.2.16"
+  }
 }
