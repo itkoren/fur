@@ -16,6 +16,7 @@ exports.galleryTaskConfig = require('./gallery-task-config.js');
 exports.icoTaskConfig = require('./ico-task-config.js');
 exports.indexTaskConfig = require('./index-task-config.js');
 exports.jsdocTaskConfig = require('./jsdoc-task-config.js');
+exports.logoTaskConfig = require('./logo-task-config.js');
 exports.mkdirTaskConfig = require('./mkdir-task-config.js');
 exports.nodeunitTaskConfig = require('./nodeunit-task-config.js');
 exports.readmeTaskConfig = require('./readme-task-config.js');

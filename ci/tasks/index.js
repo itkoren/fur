@@ -13,6 +13,7 @@ exports.fontTask = require('./font_task.js');
 exports.galleryTask = require('./gallery_task.js');
 exports.icoTask = require('./ico_task.js');
 exports.indexTask = require('./index_task.js');
+exports.logoTask = require('./logo_task.js');
 exports.readmeTask = require('./readme_task.js');
 exports.scaffoldTask = require('./scaffold_task.js');
 exports.tagTask = require('./tag_task.js');

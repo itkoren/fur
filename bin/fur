@@ -25,6 +25,20 @@ program
     .option('-T, --text-top [textTop]', 'Text top position.')
     .action(commands.favicon.bind(commands));
 
+program
+    .command('logo <filename>')
+    .description('Generate a logo.')
+    .option('-C, --color-theme [colorTheme]', 'Color theme name.')
+    .option('-F, --font-theme [fontTheme]', 'Font theme name.')
+    .option('-w, --width [width]', 'Image width')
+    .option('-h, --height [height]', 'Image height')
+    .option('-f, --font-size [fontSize]', 'Font size')
+    .option('-S, --style [style]', 'Image style. "simple".')
+    .option('-t, --text [text]', 'Text to print on logo.')
+    .option('-L, --text-left [textLeft]', 'Text left position.')
+    .option('-T, --text-top [textTop]', 'Text top position.')
+    .action(commands.logo.bind(commands));
+
 
 program
     .command('badge <filename>')

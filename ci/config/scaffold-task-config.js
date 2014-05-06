@@ -48,6 +48,7 @@ var taskNames = [
     'badge',
     'catalog',
     'favicon',
+    'logo',
     'font',
     'gallery',
     'ico',

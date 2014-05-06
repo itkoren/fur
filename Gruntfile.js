@@ -43,6 +43,7 @@ module.exports = function (grunt) {
         ico: require('./ci/config/ico-task-config.js'),
         index: require('./ci/config/index-task-config.js'),
         jsdoc: require('./ci/config/jsdoc-task-config'),
+        logo: require('./ci/config/logo-task-config.js'),
         tag: require('./ci/config/tag-task-config.js'),
         gallery: require('./ci/config/gallery-task-config.js'),
         mkdir: require('./ci/config/mkdir-task-config'),
@@ -66,6 +67,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('font', 'Publish font files', ciTask('./ci/tasks/font_task'));
     grunt.registerMultiTask('ico', 'Generate ico image files.', ciTask('./ci/tasks/ico_task'));
     grunt.registerMultiTask('index', 'Generate index js files.', ciTask('./ci/tasks/index_task'));
+    grunt.registerMultiTask('logo', 'Generate logo image files', ciTask('./ci/tasks/logo_task'));
     grunt.registerMultiTask('catalog', 'Generate catalog files.', ciTask('./ci/tasks/catalog_task'));
     grunt.registerMultiTask('gallery', 'Generate gallery files.', ciTask('./ci/tasks/gallery_task'));
     grunt.registerMultiTask('readme', 'Update readme file.', ciTask('./ci/tasks/readme_task'));
@@ -114,6 +116,7 @@ module.exports = function (grunt) {
     grunt.registerTask('draw', 'Draw images.', [
         'badge',
         'favicon',
+        'logo',
         'ico'
     ]);
 
