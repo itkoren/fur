@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Classes</title>
+	<title>fur Source: icons/round_text_icon.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -127,139 +127,44 @@
 	<div class="row-fluid">
 
 		
-		<div class="span8">
-			
+			<div class="span12">
+				
 				<div id="main">
 					
 
 
-	<h1 class="page-title">Classes</h1>
-<section>
-
-<header>
-    <h2>
+		<h1 class="page-title">Source: icons/round_text_icon.js</h1>
     
-    </h2>
-    
-</header>
+    <section>
+        <article>
+            <pre class="sunlight-highlight-javascript linenums">/**
+ * @file Round text icon.
+ * @memberof icons
+ * @augments TextIcon
+ * @constructor RoundTextIcon
+ * @author Taka Okunishi
+ *
+ */
 
-<article>
-    <div class="container-overview">
-    
+"use strict";
 
-    
-        
+var _defineIcon = require('./_define_icon'),
+    TextIcon = require('./text_icon');
 
-        
-<dl class="details">
-    
+module.exports = _defineIcon({
+    prototype: TextIcon,
+    accessors: [
+    ],
+    properties: {
+        cornerRadius: function () {
+            var s = this;
+            return s._cornerRadius || s.size() / 5;
+        }
+    }
+});</pre>
+        </article>
+    </section>
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Badge.html">Badge</a></dt>
-            <dd></dd>
-        
-            <dt><a href="BorderedTextIcon.html">BorderedTextIcon</a></dt>
-            <dd></dd>
-        
-            <dt><a href="CircleTextIcon.html">CircleTextIcon</a></dt>
-            <dd></dd>
-        
-            <dt><a href="DefaultBadge.html">DefaultBadge</a></dt>
-            <dd></dd>
-        
-            <dt><a href="FabricImage.html">FabricImage</a></dt>
-            <dd></dd>
-        
-            <dt><a href="FlatBadge.html">FlatBadge</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Icon.html">Icon</a></dt>
-            <dd></dd>
-        
-            <dt><a href="Image.html">Image</a></dt>
-            <dd></dd>
-        
-            <dt><a href="RoundTextIcon.html">RoundTextIcon</a></dt>
-            <dd></dd>
-        
-            <dt><a href="TextIcon.html">TextIcon</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Namespaces</h3>
-
-        <dl>
-            <dt><a href="namespaces.html#badges"><a href="badges.html">badges</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#catalogs"><a href="catalogs.html">catalogs</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#commands"><a href="commands.html">commands</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#icons"><a href="icons.html">icons</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#images"><a href="images.html">images</a></a></dt>
-            <dd></dd>
-        
-            <dt><a href="namespaces.html#util"><a href="util.html">util</a></a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
 
 
 
@@ -285,10 +190,6 @@
 				</footer>
 			</div>
 
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
 			
 			<br clear="both">
 		</div>
