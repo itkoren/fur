@@ -169,15 +169,15 @@
 <li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#install">Install</a></li>
 <li><a href="#usage">Usage</a><ul>
-<li><a href="#generate-a-favicon-file">Generate a favicon file.</a></li>
-<li><a href="#generate-a-badge-image-file">Generate a badge image file.</a></li>
-<li><a href="#convert-to-ico">Convert to ico.</a></li>
+<li><a href="#generate-a-favicon">Generate a Favicon</a></li>
+<li><a href="#generate-a-badge">Generate a Badge</a></li>
+<li><a href="#convert-to-ico">Convert to ICO</a></li>
 </ul>
 </li>
 <li><a href="#programmatic-api">Programmatic API</a></li>
-<li><a href="#examples">Examples</a><ul>
-<li><a href="#favicon-example">favicon example</a></li>
-<li><a href="#badge-example">badge example</a></li>
+<li><a href="#demos">Demos</a><ul>
+<li><a href="#favicon-demo">favicon demo</a></li>
+<li><a href="#badge-demo">badge demo</a></li>
 </ul>
 </li>
 <li><a href="#documents">Documents</a></li>
@@ -201,9 +201,9 @@
 <pre><code class="lang-bash">$ sudo npm install fur -g</code></pre>
 <p><a name="usage"></a></p>
 <h2>Usage</h2>
+<p><strong>CLI Help</strong>
 <!-- START readme_task.commands generated contents. please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
-
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE --></p>
 <pre><code class="lang-bash">$ fur -h
 
   Usage: fur [options] [command]
@@ -220,9 +220,31 @@
     -V, --version  output the version number</code></pre>
 <!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
 
-<p><a name="generate-a-favicon-file"></a></p>
-<h3>Generate a favicon file.</h3>
-<p>Generate a simple favicon with themes.
+<p><a name="generate-a-favicon"></a></p>
+<h3>Generate a Favicon</h3>
+<p>Generate a simple favicon with pre-defined styles.</p>
+<p><strong>Styles</strong>
+<!-- START readme_task.faviconStyles generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE --></p>
+<table>
+<thead>
+<tr>
+<th align="center">simple</th>
+<th align="center">circle</th>
+<th align="center">bordered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:32px" height="32" /></a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:32px" height="32" /></a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:32px" height="32" /></a></td>
+</tr>
+</tbody>
+</table>
+<!-- END readme_task.faviconStyles generated contents please keep comment here to allow auto update -->
+
+<p><strong>Favicon Help</strong>
 <!-- START readme_task.faviconCommand generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE --></p>
 <pre><code class="lang-bash">$ fur favicon -h
@@ -244,14 +266,15 @@
 
 <p>Theme names are short letters like 'a', 'b'.
 Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/">the gallery</a>.</p>
+<p><strong>Favicon Example</strong></p>
 <pre><code class="lang-bash">$ fur favicon --font-theme a --color-theme e --text k my-favicon.svg</code></pre>
-<p><a href="#favicon-example">See more favicon examples</a>.</p>
-<p><a name="generate-a-badge-image-file"></a></p>
-<h3>Generate a badge image file.</h3>
+<p><a href="#favicon-demo">See the demo</a>.</p>
+<p><a name="generate-a-badge"></a></p>
+<h3>Generate a Badge</h3>
 <p>Generate a badge with themes.</p>
+<p><strong>Badge Help</strong>
 <!-- START readme_task.badgeCommand generated contents. please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
-
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE --></p>
 <pre><code class="lang-bash">$ fur badge -h
 
   Usage: badge [options] &lt;filename&gt;
@@ -266,11 +289,13 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
 
 <p>Theme names are short letters like 'a', 'b'.
 Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/">the gallery</a>.</p>
+<p><strong>Badge Example</strong></p>
 <pre><code class="lang-bash">$ fur favicon --style=&quot;flat&quot; --color-theme e --texts foo,bar my-badge.svg</code></pre>
-<p><a href="#badge-example">See more badge examples</a>.</p>
+<p><a href="#badge-demo">See the demo</a>.</p>
 <p><a name="convert-to-ico"></a></p>
-<h3>Convert to ico.</h3>
+<h3>Convert to ICO</h3>
 <p>Convert a png file into ico format.</p>
+<p><strong>ICO Help</strong></p>
 <!-- START readme_task.icoCommand generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
@@ -283,11 +308,11 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
     -h, --help  output usage information</code></pre>
 <!-- END readme_task.icoCommand generated contents please keep comment here to allow auto update -->
 
-
+<p><strong>ICO Example</strong></p>
 <pre><code class="lang-bash">$ fur ico my-favicon.png favicon.ico</code></pre>
 <h2>Programmatic API</h2>
 <p>All fur commands are exports in programmatic API, too.
-&quot;commands&quot; namespace in the fur module has all commands.</p>
+They are exported in &quot;commands&quot; namespace of the fur module.</p>
 <p>For example,</p>
 <pre><code class="lang-javascript">#!/usr/bin/env node
 var fur = require('fur');
@@ -302,13 +327,13 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 <p>Note that option args are camel-cased in programmatic API.
 (&quot;--color-theme&quot; would be &quot;colorTheme&quot;).</p>
 <p>Form more detail, see the <a href="http://tick-tack.github.io/fur/apiguide/commands.html">API Document</a></p>
-<p><a name="examples"></a></p>
-<h2>Examples</h2>
-<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
+<p><a name="demos"></a></p>
+<h2>Demos</h2>
+<!-- START readme_task.demos generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
-<p><a name="favicon-example"></a></p>
-<h3>favicon example</h3>
+<p><a name="favicon-demo"></a></p>
+<h3>favicon demo</h3>
 <table>
 <thead>
 <tr>
@@ -327,7 +352,7 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 </tr>
 <tr>
 <td align="center"><a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" ><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></a></td>
-<td><code>$ fur favicon pp-abstract-favicon.png --text a --color-theme a --font-theme bc --font-size 260 --style circle --text-top -24 --text-left -15</code></td>
+<td><code>$ fur favicon pp-abstract-favicon.png --text a --color-theme a --font-theme e --font-size 260 --style circle --text-top -24 --text-left -15</code></td>
 </tr>
 <tr>
 <td align="center"><a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" ><img alt="pp-static-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" style="height:40px" height="40" /></a></td>
@@ -335,8 +360,8 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 </tr>
 </tbody>
 </table>
-<p><a name="badge-example"></a></p>
-<h3>badge example</h3>
+<p><a name="badge-demo"></a></p>
+<h3>badge demo</h3>
 <table>
 <thead>
 <tr>
@@ -355,8 +380,7 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 </tr>
 </tbody>
 </table>
-<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
-
+<!-- END readme_task.demos generated contents please keep comment here to allow auto update -->
 
 
 
@@ -400,7 +424,7 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Tue May 06 2014 08:38:26 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Tue May 06 2014 12:02:33 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
