@@ -65,7 +65,14 @@ exports._npmDependencies = function (data, title) {
                 return {
                     name: packageData.name,
                     version: packageData.version,
-                    license: packageData.license,
+                    license: [].concat(packageData.license || packageData.licenses || [])
+                        .map(function (license) {
+                            return license && license.type || license || null;
+                        })
+                        .filter(function (license) {
+                            return !!license;
+                        })
+                        .join(','),
                     description: packageData.description,
                     url: packageData.homepage || repository && repository.url || repository || null
                 };
