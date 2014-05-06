@@ -97,9 +97,9 @@ Generate a favicon with pre-defined styles.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 
-| simple | circle | bordered |
-| :--------: | :--------: | :--------: |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
+| simple | round | circle | bordered |
+| :--------: | :--------: | :--------: | :--------: |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-round.png" ><img alt="favicon-sample-round" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-round.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
 
 <!-- END readme_task.faviconStyles generated contents please keep comment here to allow auto update -->
 
