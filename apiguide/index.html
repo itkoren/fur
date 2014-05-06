@@ -175,14 +175,15 @@
 </ul>
 </li>
 <li><a href="#programmatic-api">Programmatic API</a></li>
-<li><a href="#demos">Demos</a><ul>
-<li><a href="#favicon-demo">favicon demo</a></li>
-<li><a href="#badge-demo">badge demo</a></li>
+<li><a href="#examples">Examples</a><ul>
+<li><a href="#favicon-example">Favicon Example</a></li>
+<li><a href="#badge-example">Badge Example</a></li>
 </ul>
 </li>
 <li><a href="#documents">Documents</a></li>
 <li><a href="#donation">Donation</a></li>
-<li><a href="#license">License</a><ul>
+<li><a href="#license">License</a></li>
+<li><a href="#dependencies">Dependencies</a><ul>
 <li><a href="#links">Links</a></li>
 </ul>
 </li>
@@ -225,7 +226,7 @@
 
 <p><a name="generate-a-favicon"></a></p>
 <h3>Generate a Favicon</h3>
-<p>Generate a simple favicon with pre-defined styles.</p>
+<p>Generate a favicon with pre-defined styles.</p>
 <p><strong>Styles</strong>
 <!-- START readme_task.faviconStyles generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE --></p>
@@ -271,7 +272,7 @@
 Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/">the gallery</a>.</p>
 <p><strong>Favicon Example</strong></p>
 <pre><code class="lang-bash">$ fur favicon --font-theme a --color-theme e --text k my-favicon.svg</code></pre>
-<p><a href="#favicon-demo">See the demo</a>.</p>
+<p><a href="#favicon-example">See more examples</a>.</p>
 <p><a name="generate-a-badge"></a></p>
 <h3>Generate a Badge</h3>
 <p>Generate a badge with themes.</p>
@@ -294,7 +295,7 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
 Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/">the gallery</a>.</p>
 <p><strong>Badge Example</strong></p>
 <pre><code class="lang-bash">$ fur favicon --style=&quot;flat&quot; --color-theme e --texts foo,bar my-badge.svg</code></pre>
-<p><a href="#badge-demo">See the demo</a>.</p>
+<p><a href="#badge-example">See more examples</a>.</p>
 <p><a name="convert-to-ico"></a></p>
 <h3>Convert to ICO</h3>
 <p>Convert a png file into ico format.</p>
@@ -317,7 +318,7 @@ Available themes are listed in <a href="http://tick-tack.github.io/fur/gallery/"
 <p>All fur commands are exports in programmatic API, too.
 They are exported in &quot;commands&quot; namespace of the fur module.</p>
 <p>For example,</p>
-<pre><code class="lang-javascript">#!/usr/bin/env node
+<pre><code class="lang-bash">#!/usr/bin/env node
 var fur = require('fur');
 fur.commands.favicon('dist/my-favicon.png', {
     text:'JJ',
@@ -330,13 +331,13 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 <p>Note that option args are camel-cased in programmatic API.
 (&quot;--color-theme&quot; would be &quot;colorTheme&quot;).</p>
 <p>Form more detail, see the <a href="http://tick-tack.github.io/fur/apiguide/commands.html">API Document</a></p>
-<p><a name="demos"></a></p>
-<h2>Demos</h2>
-<!-- START readme_task.demos generated contents. please keep comment here to allow auto update -->
+<p><a name="examples"></a></p>
+<h2>Examples</h2>
+<!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
-<p><a name="favicon-demo"></a></p>
-<h3>favicon demo</h3>
+<p><a name="favicon-example"></a></p>
+<h3>Favicon Example</h3>
 <table>
 <thead>
 <tr>
@@ -363,8 +364,8 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 </tr>
 </tbody>
 </table>
-<p><a name="badge-demo"></a></p>
-<h3>badge demo</h3>
+<p><a name="badge-example"></a></p>
+<h3>Badge Example</h3>
 <table>
 <thead>
 <tr>
@@ -383,7 +384,7 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 </tr>
 </tbody>
 </table>
-<!-- END readme_task.demos generated contents please keep comment here to allow auto update -->
+<!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
 
 
 <p><a name="documents"></a></p>
@@ -401,13 +402,124 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 <p><a name="license"></a></p>
 <h2>License</h2>
 <p>This software is released under the <a href="http://raw.github.com/tick-tack/fur/master/LICENSE">MIT License</a>.</p>
+<p><a name="dependencies"></a></p>
+<h2>Dependencies</h2>
+<!-- START readme_task.readmeDependencies generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+<p><a name="npm dependencies"></a>
+<strong>npm dependencies</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">name</th>
+<th align="left">version</th>
+<th align="left">description</th>
+<th align="center">license</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://github.com/caolan/async">async</a></td>
+<td align="left">0.8.0</td>
+<td align="left">Higher-order functions and common patterns for asynchronous code</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/blakeembrey/change-case">change-case</a></td>
+<td align="left">2.1.1</td>
+<td align="left">Convert a string between camelCase, PascalCase, Title Case, snake_case and more.</td>
+<td align="center">MIT</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/learnboost/node-canvas">canvas</a></td>
+<td align="left">1.1.3</td>
+<td align="left">Canvas graphics API backed by Cairo</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/c0bra/color-scheme-js">color-scheme</a></td>
+<td align="left">0.0.5</td>
+<td align="left">Generate pleasant color schemes</td>
+<td align="center">BSD</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/visionmedia/commander.js">commander</a></td>
+<td align="left">2.2.0</td>
+<td align="left">the complete solution for node.js command-line programs</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/MatthewMueller/cheerio">cheerio</a></td>
+<td align="left">0.15.0</td>
+<td align="left">Tiny, fast, and elegant implementation of core jQuery designed specifically for the server</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/medikoo/cli-color">cli-color</a></td>
+<td align="left">0.3.2</td>
+<td align="left">Colors, formatting and other tools for the console</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="http://github.com/olado/doT">dot</a></td>
+<td align="left">1.0.2</td>
+<td align="left">Concise and fast javascript templating compatible with nodejs and other javascript environments</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/kangax/fabric.js">fabric</a></td>
+<td align="left">1.4.3</td>
+<td align="left">Object model for HTML5 canvas, and SVG-to-canvas parser. Backed by jsdom and node-canvas.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/isaacs/node-glob">glob</a></td>
+<td align="left">3.2.9</td>
+<td align="left">a little globber</td>
+<td align="center">BSD</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/rsms/node-imagemagick">imagemagick</a></td>
+<td align="left">0.1.3</td>
+<td align="left">A wrapper around the imagemagick cli</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/substack/node-mkdirp">mkdirp</a></td>
+<td align="left">0.4.0</td>
+<td align="left">Recursively mkdir, like <code>mkdir -p</code></td>
+<td align="center">MIT</td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/One-com/one-color">onecolor</a></td>
+<td align="left">2.4.0</td>
+<td align="left">Javascript color object with implicit color space conversions. Supports RGB, HSV, HSL and CMYK with alpha channel.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="http://svg.github.com/svgo/">svgo</a></td>
+<td align="left">0.4.4</td>
+<td align="left">Nodejs-based tool for optimizing SVG vector graphics files</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><a href="https://github.com/Obvious/phantomjs">phantomjs</a></td>
+<td align="left">1.9.7-5</td>
+<td align="left">Headless WebKit with JS API</td>
+</tr>
+</tbody>
+</table>
+<!-- END readme_task.readmeDependencies generated contents please keep comment here to allow auto update -->
+
+
 <p><a name="links"></a></p>
 <h3>Links</h3>
 <ul>
-<li><a href="https://github.com/tick-tack/fur">Repository</a></li>
-<li><a href="http://tick-tack.github.io/fur/gallery/">Gallery</a></li>
-<li><a href="http://tick-tack.github.io/fur/coverage/lcov-report/">Coverage Report</a></li>
-<li><a href="https://travis-ci.org/tick-tack/fur">Build</a></li>
+<li><a href="https://github.com/tick-tack/fur">Repository at github</a></li>
+<li><a href="http://tick-tack.github.io/fur/gallery/">Theme Design Gallery</a></li>
+<li><a href="http://tick-tack.github.io/fur/coverage/lcov-report/">Coverage Report by Istanbul</a></li>
+<li><a href="https://travis-ci.org/tick-tack/fur">Build at travis</a></li>
 </ul></article>
     </section>
 
@@ -433,7 +545,7 @@ fur favicon dist/my-favicon.png --text JJ --color--theme 'e'</code></pre>
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Tue May 06 2014 14:16:41 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Tue May 06 2014 15:19:40 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
