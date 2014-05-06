@@ -72,6 +72,7 @@ exports.pushWiki = {
     cmd: [
         'cd .submodules/wiki',
         'git add . -A ',
+        '[ ! -n "$( git status --s )" ] && exit 0 || echo "" ', //Exit if no change found.
         'git commit -a -m "Update wiki by task. [ci skip]"',
         'git push'
     ].join(' && ')
