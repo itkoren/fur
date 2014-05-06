@@ -304,7 +304,6 @@ Links
 [grunt_url]: http://gruntjs.com/
 [grunt_badge_url]: http://cdn.gruntjs.com/builtwith.png
 [cairo_url]: http://cairographics.org/
-[inkscape_url]: http://www.inkscape.org/en/
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
 [image_magick_url]: http://www.imagemagick.org/
