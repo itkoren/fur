@@ -98,12 +98,14 @@ Runs with <a href="https://github.com/caolan/nodeunit">nodeunit</a>.</p>
 <li><a href="#lib-commands-badge-test">badgeTest</a></li>
 <li><a href="#lib-commands-favicon-test">faviconTest</a></li>
 <li><a href="#lib-commands-ico-test">icoTest</a></li>
+<li><a href="#lib-commands-logo-test">logoTest</a></li>
 </ul>
 </li>
 <li><a href="#lib-convert-png-to-ico-test">convertPngToIcoTest</a></li>
 <li><a href="#lib-convert-ttf-to-woff-test">convertTtfToWoffTest</a></li>
 <li><a href="#lib-generate-badge-test">generateBadgeTest</a></li>
 <li><a href="#lib-generate-favicon-test">generateFaviconTest</a></li>
+<li><a href="#lib-generate-logo-test">generateLogoTest</a></li>
 <li>icons<ul>
 <li><a href="#lib-icons-define-icon-test">defineIconTest</a></li>
 <li><a href="#lib-icons-bordered-text-icon-test">borderedTextIconTest</a></li>
@@ -116,6 +118,12 @@ Runs with <a href="https://github.com/caolan/nodeunit">nodeunit</a>.</p>
 <li>images<ul>
 <li><a href="#lib-images-fabric-image-test">fabricImageTest</a></li>
 <li><a href="#lib-images-image-test">imageTest</a></li>
+</ul>
+</li>
+<li>logos<ul>
+<li><a href="#lib-logos-define-logo-test">defineLogoTest</a></li>
+<li><a href="#lib-logos-logo-test">logoTest</a></li>
+<li><a href="#lib-logos-text-logo-test">textLogoTest</a></li>
 </ul>
 </li>
 <li>util<ul>
@@ -345,6 +353,21 @@ Runs with <a href="https://github.com/caolan/nodeunit">nodeunit</a>.</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/ico_test.js">lib/commands/ico_test.js</a>;</li>
 </ul>
+<p><a name="lib-commands-logo-test"></a></p>
+<h3>lib/commands/logoTest</h3>
+<p>Logo.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    test.ok(logo);
+    test.done();
+}
+</pre>
+
+
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/commands/logo_test.js">lib/commands/logo_test.js</a>;</li>
+</ul>
 <p><a name="lib-convert-png-to-ico-test"></a></p>
 <h3>lib/convertPngToIcoTest</h3>
 <p>Convert png to ico.</p>
@@ -448,6 +471,40 @@ Runs with <a href="https://github.com/caolan/nodeunit">nodeunit</a>.</p>
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_favicon_test.js">lib/generate_favicon_test.js</a>;</li>
+</ul>
+<p><a name="lib-generate-logo-test"></a></p>
+<h3>lib/generateLogoTest</h3>
+<p>Logo for style.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    test.ok(generateLogo._LogoForStyle(<span class="string">'simple'</span>));
+    test.throws(<span class="keyword">function</span> () {
+        generateLogo._LogoForStyle(<span class="string">'__none_existing_style'</span>);
+    });
+    test.done();
+}
+</pre>
+
+<p>Generate logo.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_logo.svg'</span>);
+    generateLogo(filename, {
+        letter: <span class="string">'P'</span>,
+        format: <span class="string">'svg'</span>,
+        fontFilename: testHelper.resolveMockFile(<span class="string">'mock-font.ttf'</span>),
+        fontFamily: <span class="string">'mock-font'</span>
+    }, <span class="keyword">function</span> (err) {
+        test.ifError(err);
+        test.done();
+    });
+}
+</pre>
+
+
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/generate_logo_test.js">lib/generate_logo_test.js</a>;</li>
 </ul>
 <p><a name="lib-icons-define-icon-test"></a></p>
 <h3>lib/icons/defineIconTest</h3>
@@ -626,6 +683,74 @@ Runs with <a href="https://github.com/caolan/nodeunit">nodeunit</a>.</p>
 <p>Full source:</p>
 <ul>
 <li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/images/image_test.js">lib/images/image_test.js</a>;</li>
+</ul>
+<p><a name="lib-logos-define-logo-test"></a></p>
+<h3>lib/logos/defineLogoTest</h3>
+<p>Define logo.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    test.ok(defineLogo({}));
+    test.done();
+}
+</pre>
+
+
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/logos/_define_logo_test.js">lib/logos/_define_logo_test.js</a>;</li>
+</ul>
+<p><a name="lib-logos-logo-test"></a></p>
+<h3>lib/logos/logoTest</h3>
+<p>Logo.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> logo = <span class="keyword">new</span> Logo();
+    test.ok(logo.draw());
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_logo.png'</span>);
+    logo.writeAsPNG(filename, <span class="keyword">function</span> () {
+        test.done();
+    });
+}
+</pre>
+
+<p>Write as svg.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> logo = <span class="keyword">new</span> Logo();
+    test.ok(logo.draw());
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_logo.svg'</span>);
+    logo.writeAsSVG(filename, <span class="keyword">function</span> () {
+        test.done();
+    });
+}
+</pre>
+
+
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/logos/logo_test.js">lib/logos/logo_test.js</a>;</li>
+</ul>
+<p><a name="lib-logos-text-logo-test"></a></p>
+<h3>lib/logos/textLogoTest</h3>
+<p>Text logo.</p>
+<pre>
+<span class="keyword">function</span> (test) {
+    <span class="keyword">var</span> filename = testHelper.resolveWorkFile(<span class="string">'work_text_logo.svg'</span>);
+    <span class="keyword">new</span> TextLogo({
+        text: <span class="string">'foo'</span>,
+        backgroundColor: <span class="string">'#EEE'</span>,
+        fontSize: <span class="number">200</span>
+    }).writeAsSVG(filename, <span class="keyword">function</span> (err) {
+            test.ifError(err);
+            test.done();
+        });
+}
+</pre>
+
+
+<p>Full source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/test/unit_tests/lib/logos/text_logo_test.js">lib/logos/text_logo_test.js</a>;</li>
 </ul>
 <p><a name="lib-util-alphabetical-index-test"></a></p>
 <h3>lib/util/alphabeticalIndexTest</h3>
@@ -869,7 +994,7 @@ pre code{display:block;padding:.5em;color:#000;background:#fff}pre .subst,pre .t
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Tue May 06 2014 18:21:15 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Wed May 07 2014 08:19:33 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>

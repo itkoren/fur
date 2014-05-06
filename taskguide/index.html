@@ -200,6 +200,12 @@ Options
 <td align="center">YES</td>
 </tr>
 <tr>
+<td>logo</td>
+<td>Generate logo image files</td>
+<td><a href="#logoTaskConfig">logoTaskConfig</a></td>
+<td align="center">YES</td>
+</tr>
+<tr>
 <td>catalog</td>
 <td>Generate catalog files.</td>
 <td><a href="#catalogTaskConfig">catalogTaskConfig</a></td>
@@ -227,6 +233,12 @@ Options
 <td>scaffold</td>
 <td>Generate scaffold files.</td>
 <td><a href="#scaffoldTaskConfig">scaffoldTaskConfig</a></td>
+<td align="center">YES</td>
+</tr>
+<tr>
+<td>static</td>
+<td>Generate,publish, or distribute static files.</td>
+<td><a href="#staticTaskConfig">staticTaskConfig</a></td>
 <td align="center">YES</td>
 </tr>
 <tr>
@@ -482,11 +494,14 @@ Options
     <span class="string">"installBower"</span>: {
         <span class="string">"cmd"</span>: <span class="string">"npm run bower-install"</span>
     },
+    <span class="string">"resetWiki"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git submodule init &amp;&amp; git submodule update &amp;&amp; git reset --hard HEAD &amp;&amp; git clean -f"</span>
+    },
     <span class="string">"pullWiki"</span>: {
-        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git submodule init &amp;&amp; git submodule update &amp;&amp; git reset --hard HEAD &amp;&amp; git clean -f &amp;&amp; git pull"</span>
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git submodule init &amp;&amp; git submodule update &amp;&amp; git pull"</span>
     },
     <span class="string">"pushWiki"</span>: {
-        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git add . -A  &amp;&amp; git commit -a -m \"Update wiki by task. [ci skip]\" &amp;&amp; git push"</span>
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git add . -A  &amp;&amp; [ ! -n \"$( git status --s )\" ] &amp;&amp; exit 0 || echo \"\"  &amp;&amp; git commit -a -m \"Update wiki by task. [ci skip]\" &amp;&amp; git push"</span>
     }
 }
 </pre>
@@ -501,7 +516,7 @@ Options
 {
     <span class="string">"samples"</span>: [
         {
-            <span class="string">"filename"</span>: <span class="string">"doc/images/favicon-sample-simple.png"</span>,
+            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-simple.png"</span>,
             <span class="string">"options"</span>: {
                 <span class="string">"style"</span>: <span class="string">"simple"</span>,
                 <span class="string">"text"</span>: <span class="string">"U"</span>,
@@ -512,7 +527,7 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"doc/images/favicon-sample-round.png"</span>,
+            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-round.png"</span>,
             <span class="string">"options"</span>: {
                 <span class="string">"style"</span>: <span class="string">"round"</span>,
                 <span class="string">"text"</span>: <span class="string">"U"</span>,
@@ -523,7 +538,7 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"doc/images/favicon-sample-circle.png"</span>,
+            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-circle.png"</span>,
             <span class="string">"options"</span>: {
                 <span class="string">"style"</span>: <span class="string">"circle"</span>,
                 <span class="string">"text"</span>: <span class="string">"U"</span>,
@@ -534,7 +549,7 @@ Options
             }
         },
         {
-            <span class="string">"filename"</span>: <span class="string">"doc/images/favicon-sample-bordered.png"</span>,
+            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-bordered.png"</span>,
             <span class="string">"options"</span>: {
                 <span class="string">"style"</span>: <span class="string">"bordered"</span>,
                 <span class="string">"text"</span>: <span class="string">"U"</span>,
@@ -646,7 +661,7 @@ Options
 {
     <span class="string">"doc"</span>: {
         <span class="string">"catalog"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>,
-        <span class="string">"destDir"</span>: <span class="string">"doc/fonts"</span>
+        <span class="string">"destDir"</span>: <span class="string">"doc/resources/fonts"</span>
     },
     <span class="string">"dist"</span>: {
         <span class="string">"catalog"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>,
@@ -682,7 +697,7 @@ Options
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/web-font-gallery.html.dot"</span>,
         <span class="string">"worker"</span>: <span class="string">"galleryWebFonts"</span>,
         <span class="string">"workerOptions"</span>: {
-            <span class="string">"fontsDir"</span>: <span class="string">"../fonts"</span>,
+            <span class="string">"fontsDir"</span>: <span class="string">"../resources/fonts"</span>,
             <span class="string">"catalogFile"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>
         }
     },
@@ -753,6 +768,11 @@ Options
         <span class="string">"dest"</span>: <span class="string">"ci/tasks/readme_workers/index.js"</span>,
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
     },
+    <span class="string">"ciStaticWorkers"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/static_workers/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/static_workers/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
+    },
     <span class="string">"ciTaskguideWorkers"</span>: {
         <span class="string">"pattern"</span>: <span class="string">"ci/tasks/taskguide_workers/*.js"</span>,
         <span class="string">"dest"</span>: <span class="string">"ci/tasks/taskguide_workers/index.js"</span>,
@@ -781,6 +801,13 @@ Options
         <span class="string">"dest"</span>: <span class="string">"lib/icons/index.js"</span>,
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
         <span class="string">"description"</span>: <span class="string">"Fur icons."</span>,
+        <span class="string">"capitalize"</span>: <span class="keyword">true</span>
+    },
+    <span class="string">"libLogos"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"lib/logos/*logo.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"lib/logos/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/fur_namespace_index.js.dot"</span>,
+        <span class="string">"description"</span>: <span class="string">"Fur logos."</span>,
         <span class="string">"capitalize"</span>: <span class="keyword">true</span>
     },
     <span class="string">"libImages"</span>: {
@@ -852,6 +879,31 @@ Options
             <span class="string">"template"</span>: <span class="string">"/Users/okuni/WebstormProjects/fur/node_modules/ink-docstrap/template"</span>
         }
     }
+}
+</pre>
+
+<p><a name="logoTaskConfig"></a></p>
+<h3>logoTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/logo-task-config.js">ci/config/logo-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"samples"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"doc/resources/logo-sample-simple.png"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"style"</span>: <span class="string">"simple"</span>,
+                <span class="string">"text"</span>: <span class="string">"foo"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"z"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"aj"</span>,
+                <span class="string">"width"</span>: <span class="number">256</span>,
+                <span class="string">"height"</span>: <span class="number">128</span>,
+                <span class="string">"fontSize"</span>: <span class="number">108</span>
+            }
+        }
+    ]
 }
 </pre>
 
@@ -961,6 +1013,13 @@ Options
             }
         },
         {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/logo_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"logo"</span>
+            }
+        },
+        {
             <span class="string">"filename"</span>: <span class="string">"ci/tasks/font_task.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -1000,6 +1059,13 @@ Options
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/static_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"static"</span>
             }
         },
         {
@@ -1061,6 +1127,13 @@ Options
             }
         },
         {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/logo-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"logo"</span>
+            }
+        },
+        {
             <span class="string">"filename"</span>: <span class="string">"ci/config/font-task-config.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -1100,6 +1173,13 @@ Options
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"scaffold"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/static-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"static"</span>
             }
         },
         {
@@ -1219,6 +1299,13 @@ Options
             }
         },
         {
+            <span class="string">"filename"</span>: <span class="string">"lib/logos/index.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"fur/logos"</span>
+            }
+        },
+        {
             <span class="string">"filename"</span>: <span class="string">"lib/util/index.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/index.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -1328,6 +1415,16 @@ Options
             }
         },
         {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/commands/logo_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"logo"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/commands/logo.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Logo."</span>
+            }
+        },
+        {
             <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/convert_png_to_ico_test.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -1365,6 +1462,16 @@ Options
                 <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../.."</span>,
                 <span class="string">"modulePath"</span>: <span class="string">"lib/generate_favicon.js"</span>,
                 <span class="string">"testCaseName"</span>: <span class="string">"Generate favicon."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/generate_logo_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"generateLogo"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/generate_logo.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Generate logo."</span>
             }
         },
         {
@@ -1448,6 +1555,36 @@ Options
             }
         },
         {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/logos/_define_logo_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"defineLogo"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/logos/_define_logo.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Define logo."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/logos/logo_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"logo"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/logos/logo.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Logo."</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/logos/text_logo_test.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"moduleName"</span>: <span class="string">"textLogo"</span>,
+                <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
+                <span class="string">"modulePath"</span>: <span class="string">"lib/logos/text_logo.js"</span>,
+                <span class="string">"testCaseName"</span>: <span class="string">"Text logo."</span>
+            }
+        },
+        {
             <span class="string">"filename"</span>: <span class="string">"test/unit_tests/lib/util/alphabetical_index_test.js"</span>,
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/unit_test.js.dot"</span>,
             <span class="string">"data"</span>: {
@@ -1525,6 +1662,26 @@ Options
                 <span class="string">"relativePathToBaseDir"</span>: <span class="string">"../../../.."</span>,
                 <span class="string">"modulePath"</span>: <span class="string">"lib/util/write_svg_file.js"</span>,
                 <span class="string">"testCaseName"</span>: <span class="string">"Write svg file."</span>
+            }
+        }
+    ]
+}
+</pre>
+
+<p><a name="staticTaskConfig"></a></p>
+<h3>staticTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/static-task-config.js">ci/config/static-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"doc"</span>: [
+        {
+            <span class="string">"worker"</span>: <span class="string">"staticCopy"</span>,
+            <span class="string">"workerOptions"</span>: {
+                <span class="string">"src"</span>: <span class="string">"dist/bower_components/angular/angular.js"</span>,
+                <span class="string">"dest"</span>: <span class="string">"doc/resources/javascripts/angular.js"</span>
             }
         }
     ]
@@ -1752,7 +1909,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Tue May 06 2014 18:21:06 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Wed May 07 2014 08:19:25 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
