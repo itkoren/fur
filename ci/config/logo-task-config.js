@@ -27,3 +27,18 @@ exports.samples = STYLES.map(function (style) {
         }
     }
 });
+
+
+exports.fur = formats.map(function (format) {
+    return {
+        filename: 'dist/images/fur/fur-logo.' + format,
+        options: {
+            fontSize: 104,
+            text: 'FUR',
+            colorTheme: 'bb',
+            fontTheme: 'by',
+            height: 256,
+            width: 256 * 1.4
+        }
+    }
+});
