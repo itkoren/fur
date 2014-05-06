@@ -127,6 +127,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('publishWiki', 'Publish wiki.', [
+        'exec:resetWiki',
         'exec:pullWiki',
         'wiki',
         'exec:pushWiki'
