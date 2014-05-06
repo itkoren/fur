@@ -97,8 +97,8 @@ Generate a simple favicon with pre-defined styles.
 
 
 | simple | circle | bordered |
-| :----: | :----: | :----: |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:32px" height="32" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:32px" height="32" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:32px" height="32" /></a> |
+| :--------: | :--------: | :--------: |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
 
 <!-- END readme_task.faviconStyles generated contents please keep comment here to allow auto update -->
 
@@ -244,7 +244,7 @@ Demos
 | Output | Command |
 | :------: | ------- |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" ><img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290` |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" ><img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon fur-favicon.png --font-size 160 --text fur --color-theme bb --font-theme bs` |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" ><img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon fur-favicon.png --font-size 104 --text FUR --color-theme bb --font-theme by` |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" ><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme a --font-theme e --font-size 260 --style circle --text-top -24 --text-left -15` |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" ><img alt="pp-static-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-static-favicon.png --text s --color-theme gs --font-theme j --style bordered --text-top -24` |
 

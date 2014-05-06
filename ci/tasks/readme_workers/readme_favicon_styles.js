@@ -11,10 +11,10 @@ var os = require('os'),
     faviconTaskConfig = require('../../config/favicon-task-config');
 
 exports = module.exports = function (callback) {
-    var cols = exports._sampleImageCols(faviconTaskConfig.samples, 32);
+    var cols = exports._sampleImageCols(faviconTaskConfig.samples, 64);
     var row0 = exports._rowsFromCols(cols, 0),
         row1 = row0.map(function () {
-            return ':----:'
+            return ':--------:'
         }),
         row2 = exports._rowsFromCols(cols, 1);
     var rows = [

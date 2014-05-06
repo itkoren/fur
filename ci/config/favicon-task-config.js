@@ -24,7 +24,7 @@ exports.samples = STYLES.map(function (style) {
             text: 'U',
             colorTheme: 't',
             fontTheme: 'ab',
-            size: 64,
+            size: 128,
             fontSize: 56
         }
     }
