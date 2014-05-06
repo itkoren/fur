@@ -3,6 +3,7 @@
  * @memberof module:ci/tasks
  * @function wikiWorkers.wikiDependencies
  * @param {object} options - Worker options.
+ * @param {string} options.description - Description text for the wiki page.
  * @param {string} options.packageJsonFile - Package json file path.
  * @param {string} options.bowerJsonFile - Bower json file path.
  * @param {function} callback - Callback when done.
@@ -18,16 +19,20 @@ var changeCase = require('change-case'),
 
 exports = module.exports = function (options, callback) {
     var packageJsonFile = options.packageJsonFile,
-        bowerJsonFile = options.bowerJsonFile;
+        bowerJsonFile = options.bowerJsonFile,
+        bowerComponentsDir = options.bowerComponentsDir;
     var npmData = packageJsonFile && require(path.resolve(packageJsonFile)) || {},
         bowerData = bowerJsonFile && require(path.resolve(bowerJsonFile)) || {};
 
+
     callback(null, [
-        'Third party libraries which fur dependes on.',
+        options.description,
         '',
         exports._npmDependencies(npmData.dependencies || {}, 'npm dependencies'),
         '',
-        exports._npmDependencies(npmData.dependencies || {}, 'npm dev dependencies')
+        exports._npmDependencies(npmData.dependencies || {}, 'npm dev dependencies'),
+        '',
+        exports._bowerDependencies(bowerData.dependencies || {}, bowerComponentsDir, 'bower dependences')
     ].join(os.EOL));
 };
 
@@ -36,19 +41,22 @@ exports._row = function (data) {
     return [].concat('').concat(data).concat('').join(' | ').trim();
 };
 
+exports._dependencyTableHead = exports._row([
+    'name',
+    'version',
+    'description',
+    'license'
+]);
+exports._dependencyTableNeck = exports._row([
+    ':-----',
+    ':-----:',
+    ':-----',
+    ':-----:'
+]);
+
 exports._npmDependencies = function (data, title) {
-    var head = exports._row([
-            'name',
-            'version',
-            'description',
-            'license'
-        ]),
-        neck = exports._row([
-            ':-----',
-            ':-----:',
-            ':-----',
-            ':-----:'
-        ]),
+    var head = exports._dependencyTableHead,
+        neck = exports._dependencyTableNeck,
         body = Object.keys(data)
             .map(function (name) {
                 try {
@@ -152,6 +160,9 @@ exports._licenseForPackageDir = function (dirname) {
                             if (keyword === 'BSD') {
                                 return 'BSD';
                             }
+                            if (keyword === 'SIL') {
+                                return 'SIL';
+                            }
 
                         }
                     }
@@ -190,7 +201,54 @@ exports._parseReadmeFile = function (filename) {
     ]);
 };
 
-exports._bowerDependencies = function () {
+exports._bowerDependencies = function (data, bowerComponentsDir, title) {
+    var head = exports._dependencyTableHead,
+        neck = exports._dependencyTableNeck,
+        body = Object.keys(data)
+            .map(function (name) {
+                return ['.bower.json', 'bower.json', 'package.json'].map(function (filename) {
+                    return exports._findup(bowerComponentsDir, path.join(name, filename));
+                }).filter(function (found) {
+                    return !!found;
+                }).shift();
+            })
+            .filter(function (jsonFilename) {
+                return !!jsonFilename;
+            })
+            .map(function (filename) {
+                var data = require(filename),
+                    repository = data.repository;
+                return {
+                    name: data.name,
+                    version: data.version,
+                    license: exports._licenseForPackageData(data) ||
+                        exports._licenseForPackageDir(path.resolve(bowerComponentsDir, data.name)) ||
+                        '?',
+                    description: data.description,
+                    url: data.homepage || repository && repository.url || repository || null
+                }
+            })
+            .map(function (data) {
+                return exports._row([
+                    util.format('[%s](%s)', data.name, data.url),
+                    data.version,
+                    data.description,
+                    data.license,
+                ]);
+            });
 
+
+    return [
+        util.format('<a name="%s"></a>', title),
+        util.format('## %s ##', title),
+        '',
+        head,
+        neck
+    ]
+        .concat(body)
+        .concat([
+            ''
+        ])
+        .join(os.EOL);
 };
 

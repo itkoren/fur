@@ -265,6 +265,7 @@ Examples
 Documents
 ------
 
++ [Wiki][my_wiki_url]
 + [Gallery][my_gallery_url]
 + [API Guide][my_apiguide_url]
 + [Task Guide][my_taskguide_url]
@@ -308,6 +309,7 @@ Links
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
 [image_magick_url]: http://www.imagemagick.org/
 [my_repository_url]: https://github.com/tick-tack/fur
+[my_wiki_url]: https://github.com/tick-tack/fur/wiki
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
