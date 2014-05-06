@@ -9,7 +9,7 @@
     "scripts": {
         "test": "grunt test",
         "doctoc": "doctoc README.md",
-        "bower-install": "bower install",
+        "bower-install": "cd dist && bower install",
         "coverage": "istanbul cover ci/bin/test --dir doc/coverage",
         "send-coverage": "grunt coverage && codeclimate < doc/coverage/lcov.info"
     },

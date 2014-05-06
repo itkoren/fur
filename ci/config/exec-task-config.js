@@ -44,6 +44,5 @@ exports.installNpm = {
 };
 
 exports.installBower = {
-    cmd: 'npm run bower-install',
-    cwd: 'dist'
+    cmd: 'npm run bower-install'
 };
