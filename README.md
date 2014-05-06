@@ -136,7 +136,7 @@ Available themes are listed in [the gallery][my_gallery_url].
 $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 ```
 
-[See the demo](#favicon-demo).
+[See more examples](#favicon-demo).
 
 
 <a name="generate-a-badge"></a>
@@ -172,7 +172,7 @@ Available themes are listed in [the gallery][my_gallery_url].
 $ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg
 ```
 
-[See the demo](#badge-demo).
+[See more examples](#badge-demo).
 
 
 <a name="convert-to-ico"></a>
@@ -212,7 +212,7 @@ They are exported in "commands" namespace of the fur module.
 
 For example,
 
-```javascript
+```bash
 #!/usr/bin/env node
 var fur = require('fur');
 fur.commands.favicon('dist/my-favicon.png', {
