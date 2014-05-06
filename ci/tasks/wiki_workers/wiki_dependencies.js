@@ -13,6 +13,7 @@ var changeCase = require('change-case'),
     path = require('path'),
     os = require('os'),
     fs = require('fs'),
+    spdxLicenses = require('spdx-licenses'),
     util = require('util');
 
 exports = module.exports = function (options, callback) {
@@ -72,14 +73,8 @@ exports._npmDependencies = function (data, title) {
                 return {
                     name: packageData.name,
                     version: packageData.version,
-                    license: [].concat(packageData.license || packageData.licenses || [])
-                        .map(function (license) {
-                            return license && license.type || license || null;
-                        })
-                        .filter(function (license) {
-                            return !!license;
-                        })
-                        .join(','),
+                    license: exports._licenseForPackageData(packageData) ||
+                        exports._licenseForPackageDir(path.dirname(packageFilename)),
                     description: packageData.description,
                     url: packageData.homepage || repository && repository.url || repository || null
                 };
@@ -116,6 +111,77 @@ exports._findup = function (dirname, filename) {
     var parentDirname = path.dirname(dirname),
         hasParent = parentDirname && (parentDirname !== dirname);
     return hasParent ? exports._findup(parentDirname, filename) : null;
+};
+
+exports._licenseForPackageData = function (data) {
+    return [].concat(data.license || data.licenses || [])
+        .map(function (license) {
+            return license && license.type || license || null;
+        })
+        .filter(function (license) {
+            return !!license;
+        })
+        .join(',');
+};
+
+
+exports._licenseForPackageDir = function (dirname) {
+    var readmeFile = path.resolve(dirname, 'README.md'),
+        readmeExists = fs.existsSync(readmeFile);
+    if (readmeExists) {
+        var readmeContent = exports._parseReadmeFile(readmeFile),
+            license = readmeContent
+                .filter(function (section) {
+                    var title = section.title || '';
+                    return !!title.trim().match(/license/i);
+                })
+                .map(function (section) {
+                    return section.content.filter(function (line) {
+                        return !!line;
+                    }).shift();
+                })
+                .map(function (line) {
+                    var keywords = line.split(/\s/g) || [];
+                    for (var i = 0; i < keywords.length; i++) {
+                        var keyword = keywords[i];
+                        var info = keyword && spdxLicenses.spdx(keyword.trim())
+                        if (info) {
+                            return info.id;
+                        }
+                    }
+                    return null;
+                })
+                .filter(function (id) {
+                    return !!id;
+                })
+                .shift();
+        return license || null;
+    }
+    return null;
+};
+
+exports._parseReadmeFile = function (filename) {
+    var lines = fs.readFileSync(filename).toString().split(os.EOL);
+    return lines.reduce(function (result, line) {
+        var section = result[result.length - 1];
+        var isHeader = !!line.match(/^#+/);
+        if (isHeader) {
+            result.push({title: line, content: []});
+        } else {
+            var isSeperator = !!line.match(/^\-\-|^==/);
+            if (isSeperator) {
+                var lastLine = section.content.pop();
+                result.push({title: lastLine, content: []});
+            } else {
+                if (!!line) {
+                    section.content.push(line);
+                }
+            }
+        }
+        return result;
+    }, [
+        {title: null, content: []}
+    ]);
 };
 
 exports._bowerDependencies = function () {

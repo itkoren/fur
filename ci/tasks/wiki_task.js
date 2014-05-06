@@ -29,7 +29,7 @@ exports = module.exports = function (grunt, config, callback) {
         }
     ], function (err) {
         if (!err) {
-            grunt.log.writeln('File crated: ', dest);
+            grunt.log.writeln('File created: ', dest);
         }
         callback(err);
     });
