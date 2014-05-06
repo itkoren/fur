@@ -74,7 +74,8 @@ exports._npmDependencies = function (data, title) {
                     name: packageData.name,
                     version: packageData.version,
                     license: exports._licenseForPackageData(packageData) ||
-                        exports._licenseForPackageDir(path.dirname(packageFilename)),
+                        exports._licenseForPackageDir(path.dirname(packageFilename)) ||
+                        '?',
                     description: packageData.description,
                     url: packageData.homepage || repository && repository.url || repository || null
                 };
@@ -147,6 +148,11 @@ exports._licenseForPackageDir = function (dirname) {
                         var info = keyword && spdxLicenses.spdx(keyword.trim())
                         if (info) {
                             return info.id;
+                        } else {
+                            if (keyword === 'BSD') {
+                                return 'BSD';
+                            }
+
                         }
                     }
                     return null;
