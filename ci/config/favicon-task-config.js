@@ -42,7 +42,7 @@ exports.ppAbstract = formats.map(function (format) {
         options: {
             text: 'a',
             colorTheme: 'a',
-            fontTheme: 'bc',
+            fontTheme: 'e',
             fontSize: 260,
             style: 'circle',
             textTop: -24,

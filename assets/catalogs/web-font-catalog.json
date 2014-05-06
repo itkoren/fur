@@ -1,35 +1,35 @@
 {
     "a": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/AllerDisplay.ttf",
-        "fontFamily": "Aller Display"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Bold.ttf",
+        "fontFamily": "Ubuntu Bold"
     },
     "b": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_Bd.ttf",
-        "fontFamily": "Aller Bd"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-BoldItalic.ttf",
+        "fontFamily": "Ubuntu Bold Italic"
     },
     "c": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_BdIt.ttf",
-        "fontFamily": "Aller Bd It"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Italic.ttf",
+        "fontFamily": "Ubuntu Italic"
     },
     "d": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_It.ttf",
-        "fontFamily": "Aller It"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Light.ttf",
+        "fontFamily": "Ubuntu Light"
     },
     "e": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_Lt.ttf",
-        "fontFamily": "Aller Lt"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-LightItalic.ttf",
+        "fontFamily": "Ubuntu Light Italic"
     },
     "f": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_LtIt.ttf",
-        "fontFamily": "Aller Lt It"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Medium.ttf",
+        "fontFamily": "Ubuntu Medium"
     },
     "g": {
-        "filename": "assets/web_fonts/font_squirrel/Aller/Aller_Rg.ttf",
-        "fontFamily": "Aller Rg"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-MediumItalic.ttf",
+        "fontFamily": "Ubuntu Medium Italic"
     },
     "h": {
-        "filename": "assets/web_fonts/font_squirrel/ChunkFive/Chunkfive.otf",
-        "fontFamily": "Chunkfive"
+        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Regular.ttf",
+        "fontFamily": "Ubuntu Regular"
     },
     "i": {
         "filename": "assets/web_fonts/font_squirrel/Prociono/Prociono-Regular.otf",
@@ -198,38 +198,6 @@
     "ax": {
         "filename": "assets/web_fonts/google_fonts/Open_Sans/OpenSans-SemiboldItalic.ttf",
         "fontFamily": "Open Sans Semibold Italic"
-    },
-    "ay": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Bold.ttf",
-        "fontFamily": "Ubuntu Bold"
-    },
-    "az": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-BoldItalic.ttf",
-        "fontFamily": "Ubuntu Bold Italic"
-    },
-    "ba": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Italic.ttf",
-        "fontFamily": "Ubuntu Italic"
-    },
-    "bb": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Light.ttf",
-        "fontFamily": "Ubuntu Light"
-    },
-    "bc": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-LightItalic.ttf",
-        "fontFamily": "Ubuntu Light Italic"
-    },
-    "bd": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Medium.ttf",
-        "fontFamily": "Ubuntu Medium"
-    },
-    "be": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-MediumItalic.ttf",
-        "fontFamily": "Ubuntu Medium Italic"
-    },
-    "bf": {
-        "filename": "assets/web_fonts/google_fonts/Ubuntu/Ubuntu-Regular.ttf",
-        "fontFamily": "Ubuntu Regular"
     },
     "bg": {
         "filename": "assets/web_fonts/google_fonts/Vollkorn/Vollkorn-Bold.ttf",

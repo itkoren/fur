@@ -14,7 +14,7 @@ var path = require('path'),
     alphabeticalIndex = require('../../../lib/util/alphabetical_index');
 
 
-module.exports = function catalogWebFonts(options, callback) {
+exports = module.exports = function catalogWebFonts(options, callback) {
     var basedir = process.cwd();
     glob(path.resolve(options.pattern), function (err, src) {
         if (err) {
@@ -22,14 +22,58 @@ module.exports = function catalogWebFonts(options, callback) {
             return;
         }
         var data = {};
+
+        var nextTheme = exports._bindNextTheme(data),
+            reserved = exports._bindReservedTheme(options._oldCatalog || { }, 'filename');
+
         src.forEach(function (src, i) {
             var extname = path.extname(src),
-                basename = path.basename(src, extname);
-            data[alphabeticalIndex(i)] = {
-                filename: path.relative(basedir, src),
+                basename = path.basename(src, extname),
+                relativeName = path.relative(basedir, src);
+            var theme = reserved(relativeName) || nextTheme();
+            data[theme] = {
+                filename: relativeName,
                 fontFamily: changeCase.titleCase(basename)
             }
         });
-        callback(null, data);
+        callback(null, exports._sortKeys(data));
     });
 };
+
+exports._bindReservedTheme = function (oldCatalog, key) {
+    var themes = Object.keys(oldCatalog);
+    return function (value) {
+        for (var i = 0; i < themes.length; i++) {
+            var theme = themes[i];
+            var hit = oldCatalog[ theme][key] === value;
+            if (hit) {
+                return theme;
+            }
+        }
+        return null;
+    }
+};
+
+exports._bindNextTheme = function (data) {
+    var index = 0;
+    return function () {
+
+        var theme;
+        do {
+            theme = alphabeticalIndex(index++);
+        } while (data[theme]);
+        return theme;
+    };
+};
+
+exports._sortKeys = function (obj) {
+    var result = {};
+    Object.keys(obj).sort(function (a, b) {
+        return (a.length - b.length) ||
+            (a.localeCompare(b));
+    }).forEach(function (key) {
+        result[key] = obj[key];
+    });
+    return result;
+};
+

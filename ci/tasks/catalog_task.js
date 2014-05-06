@@ -12,6 +12,7 @@
 
 var path = require('path'),
     async = require('async'),
+    fs = require('fs'),
     catalogWorkers = require('./catalog_workers'),
     writeReadonlyFile = require('../../lib/util/write_readonly_file');
 
@@ -24,7 +25,9 @@ exports = module.exports = function (grunt, config, callback) {
                 callback(new Error('Unknown worker: ' + config.worker));
                 return;
             }
-            worker(config.workerOptions || {}, callback);
+            var workerOptions = config.workerOptions || {};
+            workerOptions._oldCatalog = workerOptions._oldCatalog || exports._safeRequire(dest);
+            worker(workerOptions, callback);
         },
         function (data, callback) {
             var content = exports._toJson(data);
@@ -46,6 +49,11 @@ exports = module.exports = function (grunt, config, callback) {
     ], function (err) {
         callback(err);
     });
+};
+
+exports._safeRequire = function (filename) {
+    var exists = fs.existsSync(filename);
+    return exists ? require(filename) : null;
 };
 
 
