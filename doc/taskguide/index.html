@@ -248,6 +248,12 @@ Options
 <td align="center">YES</td>
 </tr>
 <tr>
+<td>wiki</td>
+<td>Generate wiki.</td>
+<td><a href="#wikiTaskConfig">wikiTaskConfig</a></td>
+<td align="center">YES</td>
+</tr>
+<tr>
 <td>build</td>
 <td>Build this project.</td>
 <td><a href="#buildTaskConfig">buildTaskConfig</a></td>
@@ -272,12 +278,6 @@ Options
 <td align="center">NO</td>
 </tr>
 <tr>
-<td>publishDoc</td>
-<td>Publish documents.</td>
-<td><a href="#publishDocTaskConfig">publishDocTaskConfig</a></td>
-<td align="center">NO</td>
-</tr>
-<tr>
 <td>install</td>
 <td>Install dependencies</td>
 <td><a href="#installTaskConfig">installTaskConfig</a></td>
@@ -287,6 +287,18 @@ Options
 <td>draw</td>
 <td>Draw images.</td>
 <td><a href="#drawTaskConfig">drawTaskConfig</a></td>
+<td align="center">NO</td>
+</tr>
+<tr>
+<td>publishDoc</td>
+<td>Publish documents.</td>
+<td><a href="#publishDocTaskConfig">publishDocTaskConfig</a></td>
+<td align="center">NO</td>
+</tr>
+<tr>
+<td>publishWiki</td>
+<td>Publish wiki.</td>
+<td><a href="#publishWikiTaskConfig">publishWikiTaskConfig</a></td>
 <td align="center">NO</td>
 </tr>
 <tr>
@@ -469,6 +481,12 @@ Options
     },
     <span class="string">"installBower"</span>: {
         <span class="string">"cmd"</span>: <span class="string">"npm run bower-install"</span>
+    },
+    <span class="string">"pullWiki"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git submodule init &amp;&amp; git submodule update &amp;&amp; git reset --hard HEAD &amp;&amp; git clean -f &amp;&amp; git pull"</span>
+    },
+    <span class="string">"pushWiki"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git add . -A  &amp;&amp; git commit -a -m \"Update wiki by task. [ci skip]\" &amp;&amp; git push"</span>
     }
 }
 </pre>
@@ -727,6 +745,11 @@ Options
     <span class="string">"ciTaskguideWorkers"</span>: {
         <span class="string">"pattern"</span>: <span class="string">"ci/tasks/taskguide_workers/*.js"</span>,
         <span class="string">"dest"</span>: <span class="string">"ci/tasks/taskguide_workers/index.js"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
+    },
+    <span class="string">"ciWikiWorkers"</span>: {
+        <span class="string">"pattern"</span>: <span class="string">"ci/tasks/wiki_workers/*.js"</span>,
+        <span class="string">"dest"</span>: <span class="string">"ci/tasks/wiki_workers/index.js"</span>,
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task_worker_index.js.dot"</span>
     },
     <span class="string">"libBadges"</span>: {
@@ -995,6 +1018,13 @@ Options
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
             }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/wiki_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"wiki"</span>
+            }
         }
     ],
     <span class="string">"ciConfig"</span>: [
@@ -1087,6 +1117,13 @@ Options
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"versionup"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/wiki-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"wiki"</span>
             }
         }
     ],
@@ -1542,6 +1579,25 @@ Options
 }
 </pre>
 
+<p><a name="wikiTaskConfig"></a></p>
+<h3>wikiTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/wiki-task-config.js">ci/config/wiki-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"dependencies"</span>: {
+        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/Dependencies.md"</span>,
+        <span class="string">"worker"</span>: <span class="string">"wikiDependencies"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"packageJsonFile"</span>: <span class="string">"package.json"</span>,
+            <span class="string">"bowerJsonFile"</span>: <span class="string">"dist/bower.json"</span>
+        }
+    }
+}
+</pre>
+
 
 
 
@@ -1673,7 +1729,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Tue May 06 2014 15:26:25 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Tue May 06 2014 17:37:27 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
