@@ -24,3 +24,4 @@ exports.tagTaskConfig = require('./tag-task-config.js');
 exports.taskguideTaskConfig = require('./taskguide-task-config.js');
 exports.testcaseTaskConfig = require('./testcase-task-config.js');
 exports.versionupTaskConfig = require('./versionup-task-config.js');
+exports.wikiTaskConfig = require('./wiki-task-config.js');

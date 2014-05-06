@@ -19,3 +19,4 @@ exports.tagTask = require('./tag_task.js');
 exports.taskguideTask = require('./taskguide_task.js');
 exports.testcaseTask = require('./testcase_task.js');
 exports.versionupTask = require('./versionup_task.js');
+exports.wikiTask = require('./wiki_task.js');

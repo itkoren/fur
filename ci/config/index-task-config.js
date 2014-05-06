@@ -8,6 +8,7 @@
  * @property {object} ciGalleryWorkers - Index file for ci/tasks/gallery_workers directory.
  * @property {object} ciReadmeWorkers - Index file for ci/tasks/readme_workers directory.
  * @property {object} ciTaskguideWorkers - Index file for ci/tasks/taskguide_workers directory.
+ * @property {object} ciWikiWorkers - Index file for ci/tasks/readme_workers directory.
  * @property {object} libBadges - Index file for lib/badges directory.
  * @property {object} libCommands - Index file for lib/commands directory.
  * @property {object} libIcons - Index file for lib/icons directory.
@@ -53,6 +54,13 @@ exports.ciReadmeWorkers = {
 exports.ciTaskguideWorkers = {
     pattern: 'ci/tasks/taskguide_workers/*.js',
     dest: 'ci/tasks/taskguide_workers/index.js',
+    tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
+};
+
+
+exports.ciWikiWorkers = {
+    pattern: 'ci/tasks/wiki_workers/*.js',
+    dest: 'ci/tasks/wiki_workers/index.js',
     tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
 };
 

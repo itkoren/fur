@@ -51,7 +51,8 @@ module.exports = function (grunt) {
         scaffold: require('./ci/config/scaffold-task-config'),
         taskguide: require('./ci/config/taskguide-task-config'),
         testcase: require('./ci/config/testcase-task-config'),
-        versionup: require('./ci/config/versionup-task-config')
+        versionup: require('./ci/config/versionup-task-config'),
+        wiki: require('./ci/config/wiki-task-config')
     });
 
     grunt.loadNpmTasks('grunt-mkdir');
@@ -73,6 +74,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('taskguide', 'Generate taskguide files.', ciTask('./ci/tasks/taskguide_task'));
     grunt.registerMultiTask('testcase', 'Generate testcase files.', ciTask('./ci/tasks/testcase_task'));
     grunt.registerMultiTask('versionup', 'Increment project version.', ciTask('./ci/tasks/versionup_task'));
+    grunt.registerMultiTask('wiki', 'Generate wiki.', ciTask('./ci/tasks/wiki_task'));
 
 
     grunt.registerTask('build', 'Build this project.', [
@@ -103,11 +105,6 @@ module.exports = function (grunt) {
         'font:doc'
     ]);
 
-    grunt.registerTask('publishDoc', 'Publish documents.', [
-        'doc',
-        'exec:commitDoc',
-        'exec:pushDoc'
-    ]);
 
     grunt.registerTask('install', 'Install dependencies', [
         'exec:installNpm',
@@ -120,10 +117,23 @@ module.exports = function (grunt) {
         'ico'
     ]);
 
+    grunt.registerTask('publishDoc', 'Publish documents.', [
+        'doc',
+        'exec:commitDoc',
+        'exec:pushDoc'
+    ]);
+
+    grunt.registerTask('publishWiki', 'Publish wiki.', [
+        'exec:pullWiki',
+        'wiki',
+        'exec:pushWiki'
+    ]);
+
     grunt.registerTask('publish', 'Publish project files', [
         'draw',
         'font:dist',
-        'publishDoc'
+        'publishDoc',
+        'publishWiki'
     ]);
 
     grunt.registerTask('default', [

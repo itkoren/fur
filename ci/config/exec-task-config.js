@@ -48,3 +48,23 @@ exports.installNpm = {
 exports.installBower = {
     cmd: 'npm run bower-install'
 };
+
+exports.pullWiki = {
+    cmd: [
+        'cd .submodules/wiki',
+        'git submodule init',
+        'git submodule update',
+        'git reset --hard HEAD',
+        'git clean -f',
+        'git pull'
+    ].join(' && ')
+};
+
+exports.pushWiki = {
+    cmd: [
+        'cd .submodules/wiki',
+        'git add . -A ',
+        'git commit -a -m "Update wiki by task. [ci skip]"',
+        'git push'
+    ].join(' && ')
+};
