@@ -21,6 +21,7 @@ exports.mkdirTaskConfig = require('./mkdir-task-config.js');
 exports.nodeunitTaskConfig = require('./nodeunit-task-config.js');
 exports.readmeTaskConfig = require('./readme-task-config.js');
 exports.scaffoldTaskConfig = require('./scaffold-task-config.js');
+exports.staticTaskConfig = require('./static-task-config.js');
 exports.tagTaskConfig = require('./tag-task-config.js');
 exports.taskguideTaskConfig = require('./taskguide-task-config.js');
 exports.testcaseTaskConfig = require('./testcase-task-config.js');

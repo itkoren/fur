@@ -3,7 +3,11 @@
  * @memberof module:ci/tasks
  * @function readmeWorkers.readmeBadgeCommand
  * @param {function} callback - Callback when done.
+ * @author Taka Okunishi
+ *
  */
+
+"use strict";
 
 var _commandHelp = require('./_command_help');
 

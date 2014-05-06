@@ -52,6 +52,12 @@ exports.ciReadmeWorkers = {
     tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
 };
 
+exports.ciStaticWorkers = {
+    pattern: 'ci/tasks/static_workers/*.js',
+    dest: 'ci/tasks/static_workers/index.js',
+    tmpl: 'tmpl/js/ci_task_worker_index.js.dot'
+};
+
 exports.ciTaskguideWorkers = {
     pattern: 'ci/tasks/taskguide_workers/*.js',
     dest: 'ci/tasks/taskguide_workers/index.js',

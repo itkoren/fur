@@ -18,7 +18,7 @@ var STYLES = require('../../lib/generate_favicon').STYLES;
 
 exports.samples = STYLES.map(function (style) {
     return {
-        filename: util.format('doc/images/favicon-sample-%s.png', style),
+        filename: util.format('doc/resources/images/favicon-sample-%s.png', style),
         options: {
             style: style,
             text: 'U',

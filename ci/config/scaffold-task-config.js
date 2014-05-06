@@ -55,6 +55,7 @@ var taskNames = [
     'index',
     'readme',
     'scaffold',
+    'static',
     'tag',
     'taskguide',
     'testcase',

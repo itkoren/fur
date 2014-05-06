@@ -15,7 +15,7 @@ var STYLES = require('../../lib/generate_logo').STYLES;
 
 exports.samples = STYLES.map(function (style) {
     return {
-        filename: util.format('doc/images/logo-sample-%s.png', style),
+        filename: util.format('doc/resources/logo-sample-%s.png', style),
         options: {
             style: style,
             text: 'foo',

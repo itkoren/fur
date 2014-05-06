@@ -11,7 +11,7 @@
 
 exports.doc = {
     catalog: 'assets/catalogs/web-font-catalog.json',
-    destDir: 'doc/fonts'
+    destDir: 'doc/resources/fonts'
 };
 
 
