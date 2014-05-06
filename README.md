@@ -33,7 +33,7 @@ Table of Contents
 - [Donation](#donation)
 - [License](#license)
 - [Dependencies](#dependencies)
-  - [Links](#links)
+- [Links](#links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -300,7 +300,7 @@ Dependencies
 **npm dependencies**
 
 | name | version | description | license |
-| :----- | :----- | :----- | :-----: |
+| :----- | :-----: | :----- | :-----: |
 | [async](https://github.com/caolan/async) | 0.8.0 | Higher-order functions and common patterns for asynchronous code |  |
 | [change-case](https://github.com/blakeembrey/change-case) | 2.1.1 | Convert a string between camelCase, PascalCase, Title Case, snake_case and more. | MIT |
 | [canvas](https://github.com/learnboost/node-canvas) | 1.1.3 | Canvas graphics API backed by Cairo |  |
@@ -322,7 +322,8 @@ Dependencies
 
 
 <a name="links"></a>
-### Links ###
+Links
+-----
 
 + [Repository at github][my_repository_url]
 + [Theme Design Gallery][my_gallery_url]
