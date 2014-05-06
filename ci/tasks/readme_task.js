@@ -46,18 +46,22 @@ exports._data = function (config, callback) {
             readmeWorkers.readmeIcoCommand(callback);
         },
         function (callback) {
-            readmeWorkers.readmeExamples(callback);
+            readmeWorkers.readmeDemos(callback);
         },
         function (callback) {
             readmeWorkers.readmeBadgeCommand(callback);
+        },
+        function (callback) {
+            readmeWorkers.readmeFaviconStyles(callback);
         }
     ], function (err, data) {
         callback(err, {
             commands: data[0],
             faviconCommand: data[1],
             icoCommand: data[2],
-            examples: data[3],
-            badgeCommand: data[4]
+            demos: data[3],
+            badgeCommand: data[4],
+            faviconStyles: data[5]
         });
     });
 };

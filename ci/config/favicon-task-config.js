@@ -2,15 +2,34 @@
  * @file Configuration for "ci/task.faviconTask".
  * @memberof module:ci/config
  * @member faviconTaskConfig
+ * @property {object} samples - Sample favicons.
  * @property {object} tickTask - Configuration for tick-tack favicons.
  * @property {object} fur - Configuration for fur favicons.
  * @property {object} ppAbstract - Configuration for pp-abstract favicons.
+ * @property {object} ppStatic - Configuration for pp-static favicons.
  */
 
 "use strict";
 
 var util = require('util'),
     formats = ['svg', 'png'];
+
+var STYLES = require('../../lib/generate_favicon').STYLES;
+
+exports.samples = STYLES.map(function (style) {
+    return {
+        filename: util.format('doc/images/favicon-sample-%s.png', style),
+        options: {
+            style: style,
+            text: 'U',
+            colorTheme: 't',
+            fontTheme: 'ab',
+            size: 64,
+            fontSize: 56
+        }
+    }
+});
+
 
 exports.tickTack = formats.map(function (format) {
     return {

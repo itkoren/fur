@@ -1,7 +1,7 @@
 /**
- * @file Contents about examples.
+ * @file Contents about demos.
  * @memberof module:ci/tasks
- * @function readmeWorkers.readmeExamples
+ * @function readmeWorkers.readmeDemos
  * @param {function} callback - Callback when done.
  *
  */
@@ -10,6 +10,7 @@ var changeCase = require('change-case'),
     util = require('util'),
     url = require('url'),
     os = require('os'),
+    _baseUrl = require('./_base_url'),
     faviconTaskConfig = require('../../config/favicon-task-config'),
     badgeTaskConfig = require('../../config/badge-task-config');
 
@@ -27,14 +28,14 @@ exports._tableLine = function (entries) {
 
 exports._favicons = function (config) {
     return [
-        exports._subTitle('favicon example'),
+        exports._subTitle('favicon demo'),
         exports._imgTable(config, 'favicon', 40)
     ].join(os.EOL);
 };
 
 exports._badges = function (config) {
     return [
-        exports._subTitle('badge example'),
+        exports._subTitle('badge demo'),
         exports._imgTable(config, 'badge', 10)
     ].join(os.EOL);
 };
@@ -60,6 +61,9 @@ exports._imgTable = function (config, command, height) {
         body = exports._allValues(config)
             .filter(function (data) {
                 return path.extname(data.filename) === '.png';
+            })
+            .filter(function (data) {
+                return !data.filename.match(/^doc/);
             })
             .map(function (data) {
                 return {
@@ -101,10 +105,9 @@ exports._allValues = function (data) {
 exports._img = function (filename, h) {
     var extname = path.extname(filename),
         basename = path.basename(filename, extname);
-    var fileURL = url.resolve(exports._urlBase, filename);
+    var fileURL = url.resolve(_baseUrl, filename);
     return util.format('<a href="%s" ><img alt="%s" src="%s" style="height:%dpx" height="%d" /></a>',
         fileURL, basename, fileURL, h, h);
 };
 
 
-exports._urlBase = 'https://raw.githubusercontent.com/tick-tack/fur/master/';

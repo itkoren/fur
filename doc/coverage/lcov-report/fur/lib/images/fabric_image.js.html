@@ -199,16 +199,16 @@
     <h1>Code coverage report for <span class="entity">fur/lib/images/fabric_image.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">79.49% <small>(62 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">77.65% <small>(66 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">47.06% <small>(8 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">47.37% <small>(9 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">90.91% <small>(20 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">92.31% <small>(24 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">79.49% <small>(62 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">77.65% <small>(66 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -423,7 +423,26 @@
 205
 206
 207
-208</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -435,6 +454,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -577,15 +597,16 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -613,11 +634,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
@@ -648,6 +686,7 @@ var define = require('../util/define'),
     path = require('path'),
     fabric = require('fabric').fabric,
     cheerio = require('cheerio'),
+    mkdirp = require('mkdirp'),
     Image = require('./image');
 &nbsp;
 var FabricImage = module.exports = define({
@@ -784,17 +823,18 @@ var FabricImage = module.exports = define({
             var s = this;
             var canvas = s.draw();
             process.nextTick(function () {
+                async.waterfall([
+                    function (callback) {
+                        FabricImage._writeStream(filename, callback);
+                    },
+                    function (outStream, callback) {
+                        var inStream = canvas.createPNGStream()
+                        FabricImage._pipe(
+                            inStream, outStream, callback
+                        );
+                    }
+                ], callback);
 &nbsp;
-                var inStream = canvas.createPNGStream(),
-                    outStream = FabricImage._writeStream(filename);
-                FabricImage._pipe(
-                    inStream,
-                    outStream,
-                    function (err) {
-                        process.nextTick(function () {
-                            callback(err);
-                        });
-                    });
             });
         },
         /**
@@ -820,11 +860,28 @@ var FabricImage = module.exports = define({
     }
 });
 &nbsp;
-FabricImage._writeStream = function (filename) {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (fs.existsSync(filename)) {
-        fs.unlinkSync(filename);
-    }
-    return fs.createWriteStream(filename);
+&nbsp;
+FabricImage._writeStream = function (filename, callback) {
+    async.series([
+        function (callback) {
+            fs.exists(filename, function (exists) {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if (exists) {
+                    fs.unlink(filename, callback);
+                } else {
+<span class="cstat-no" title="statement not covered" >                    callback();</span>
+                }
+            })
+        },
+        function (callback) {
+            mkdirp(path.dirname(filename), callback);
+        },
+    ], function (err) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
+<span class="cstat-no" title="statement not covered" >            callback(err);</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+        callback(null, fs.createWriteStream(filename));
+    });
 };
 &nbsp;
 FabricImage._pipe = function (reader, writer, callback) {
@@ -833,7 +890,7 @@ FabricImage._pipe = function (reader, writer, callback) {
 <span class="cstat-no" title="statement not covered" >        callback &amp;&amp; callback(err);</span>
 <span class="cstat-no" title="statement not covered" >        callback = null;</span>
     });
-    reader.on('end', function () {
+    reader.on('end', function (code, signal) {
         callback &amp;&amp; callback();
         callback = null;
     });
@@ -842,7 +899,7 @@ FabricImage._pipe = function (reader, writer, callback) {
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 06 2014 08:38:11 GMT+0900 (JST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 06 2014 12:02:05 GMT+0900 (JST)</div>
 </div>
 
 <script src="../../../prettify.js"></script>

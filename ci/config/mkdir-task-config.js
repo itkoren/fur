@@ -16,6 +16,8 @@ exports.project = {
             'bin',
             'doc',
             'doc/gallery',
+            'doc/images',
+            'doc/fonts',
             'ci',
             'ci/bin',
             'ci/config',
