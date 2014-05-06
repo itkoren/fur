@@ -32,6 +32,7 @@ Table of Contents
 - [Documents](#documents)
 - [Donation](#donation)
 - [License](#license)
+  - [Links](#links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -241,6 +242,7 @@ Demos
 
 <a name="favicon-demo"></a>
 ### favicon demo ###
+
 | Output | Command |
 | :------: | ------- |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" ><img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290` |
@@ -250,13 +252,13 @@ Demos
 
 <a name="badge-demo"></a>
 ### badge demo ###
+
 | Output | Command |
 | :------: | ------- |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" ><img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:10px" height="10" /></a> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by , apeman ` |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" ><img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:10px" height="10" /></a> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by , apeman ` |
 
 <!-- END readme_task.demos generated contents please keep comment here to allow auto update -->
-
 
 
 <a name="documents"></a>
@@ -267,7 +269,6 @@ Documents
 + [API Guide][my_apiguide_url]
 + [Task Guide][my_taskguide_url]
 + [Test Cases][my_testcases_url]
-+ [Coverage Report][my_coverage_url]
 
 
 <a name="donation"></a>
@@ -288,6 +289,13 @@ This software is released under the [MIT License][my_license_url].
 
 
 
+<a name="links"></a>
+### Links ###
+
++ [Repository][my_repository_url]
++ [Gallery][my_gallery_url]
++ [Coverage Report][my_coverage_url]
++ [Build][my_travis_url]
 
 
 [nodejs_url]: http://nodejs.org/
@@ -299,6 +307,7 @@ This software is released under the [MIT License][my_license_url].
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
 [image_magick_url]: http://www.imagemagick.org/
+[my_repository_url]: https://github.com/tick-tack/fur
 [my_travis_url]: https://travis-ci.org/tick-tack/fur
 [my_travis_badge_url]: http://img.shields.io/travis/tick-tack/fur.svg?style=flat
 [my_apiguide_url]: http://tick-tack.github.io/fur/apiguide/
