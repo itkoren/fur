@@ -50,7 +50,7 @@ exports.fur = formats.map(function (format) {
             fontSize: 160,
             text: 'fur',
             colorTheme: 'bb',
-            fontTheme: 'a'
+            fontTheme: 'ab'
         }
     }
 });
