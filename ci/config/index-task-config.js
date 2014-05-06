@@ -90,7 +90,7 @@ exports.libIcons = {
 };
 
 exports.libLogos = {
-    pattern: 'lib/icons/*logo.js',
+    pattern: 'lib/logos/*logo.js',
     dest: 'lib/logos/index.js',
     tmpl: 'tmpl/js/fur_namespace_index.js.dot',
     description: 'Fur logos.',
