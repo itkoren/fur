@@ -25,7 +25,7 @@ exports.samples = STYLES.map(function (style) {
             colorTheme: 't',
             fontTheme: 'ab',
             size: 128,
-            fontSize: 56
+            fontSize: 108
         }
     }
 });
