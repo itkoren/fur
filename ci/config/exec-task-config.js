@@ -10,6 +10,8 @@
  * @property {object} doctoc - Configuration to execute doctoc.
  * @property {object} commitRelease - Configuration to execute git commit for release.
  * @property {object} publishNpm - Configuration to execute publish to npm.
+ * @property {object} installNpm - Configuration to execute publish to install npm modules.
+ * @property {object} installBower - Configuration to execute publish to install bower modules.
  */
 
 
