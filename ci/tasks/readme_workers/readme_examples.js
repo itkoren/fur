@@ -59,7 +59,7 @@ exports._badges = function (config) {
 exports._subTitle = function (subTitle) {
     return util.format([
         '<a name="%s"></a>',
-        '### %s ###',
+        '#### %s ####',
         ''
     ].join(os.EOL), changeCase.paramCase(subTitle), changeCase.titleCase(subTitle));
 };
