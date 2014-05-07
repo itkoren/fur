@@ -8,4 +8,4 @@
 "use strict";
 
 exports.wikiDependencies = require('./wiki_dependencies.js');
-exports.wikiFurFavicon = require('./wiki_fur_favicon.js');
+exports.wikiFurCommand = require('./wiki_fur_command.js');

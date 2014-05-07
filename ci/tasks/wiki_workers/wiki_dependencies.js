@@ -3,7 +3,6 @@
  * @memberof module:ci/tasks
  * @function wikiWorkers.wikiDependencies
  * @param {object} options - Worker options.
- * @param {string} options.description - Description text for the wiki page.
  * @param {string} options.packageJsonFile - Package json file path.
  * @param {string} options.bowerJsonFile - Bower json file path.
  * @param {function} callback - Callback when done.
@@ -29,8 +28,6 @@ exports = module.exports = function (options, callback) {
 
 
     callback(null, [
-        options.description,
-        '',
         exports._npmDependencies(npmData.dependencies || {}, 'npm dependencies'),
         '',
         exports._npmDependencies(npmData.dependencies || {}, 'npm dev dependencies'),
