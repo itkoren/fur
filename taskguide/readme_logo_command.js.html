@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur taskguide Source: config/taskguide-task-config.js</title>
+	<title>fur taskguide Source: tasks/readme_workers/readme_logo_command.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,30 +53,21 @@
 					
 
 
-		<h1 class="page-title">Source: config/taskguide-task-config.js</h1>
+		<h1 class="page-title">Source: tasks/readme_workers/readme_logo_command.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Configuration for "ci/task.taskguideTask".
- * @memberof module:ci/config
- * @member taskguideTaskConfig
- * @property {object} project - Project taskguide configuration.
+ * @file Contents about logo command.
+ * @memberof module:ci/tasks
+ * @function readmeWorkers.readmeLogoCommand
+ * @param {function} callback - Callback when done.
  */
 
-"use strict";
+var _commandHelp = require('./_command_help');
 
-exports.project = {
-    tmpl: 'tmpl/md/taskguide.md.dot',
-    dest: 'ci/.taskguide.md',
-    configFiles: 'ci/config/*-config.js',
-    links: {
-        chmod: 'https://github.com/JamesMGreene/grunt-chmod',
-        exec: 'https://github.com/jharding/grunt-exec',
-        jsdoc: 'https://github.com/krampstudio/grunt-jsdoc',
-        nodeunit: 'https://github.com/gruntjs/grunt-contrib-nodeunit',
-        mkdir: 'https://github.com/rubenv/grunt-mkdir'
-    }
+module.exports = function (callback) {
+    _commandHelp('logo', callback);
 };</pre>
         </article>
     </section>
