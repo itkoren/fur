@@ -31,7 +31,7 @@ exports.dependencies = {
     workerOptions: {
         packageJsonFile: 'package.json',
         bowerJsonFile: 'dist/bower.json',
-        bowerComponentsDir: 'dist/bower_components',
+        bowerComponentsDir: 'dist/bower_components'
     },
     links: links
 };
@@ -41,7 +41,7 @@ exports.badgeCommand = {
     dest: '.submodules/wiki/fur-badge.md',
     worker: 'wikiFurCommand',
     workerOptions: {
-        example: '$ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg',
+        example: '$ fur favicon --style=flat --color-theme e --texts foo,bar my-badge.svg',
         command: 'badge'
     },
     links: links
@@ -59,7 +59,7 @@ exports.faviconCommand = {
                 data: faviconTaskConfig.samples
             }
         ],
-        example: '$ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg',
+        example: '$ fur favicon --style=flat --color-theme e --texts foo,bar my-badge.svg',
         command: 'favicon',
         seeMore: [repoURL, 'favicon-examples'].join('#')
     },
