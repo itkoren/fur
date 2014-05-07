@@ -6,7 +6,7 @@
 
 "use strict";
 
-var wikiTaskConfig = exports.dependencies = {
+exports.dependencies = {
     dest: '.submodules/wiki/Dependencies.md',
     worker: 'wikiDependencies',
     workerOptions: {
@@ -14,5 +14,12 @@ var wikiTaskConfig = exports.dependencies = {
         packageJsonFile: 'package.json',
         bowerJsonFile: 'dist/bower.json',
         bowerComponentsDir: 'dist/bower_components'
+    }
+};
+
+exports.faviconCommand = {
+    dest: '.submodules/wiki/fur-favicon.md',
+    worker: 'wikiFurFavicon',
+    workerOptions: {
     }
 };

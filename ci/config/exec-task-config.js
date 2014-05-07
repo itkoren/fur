@@ -51,11 +51,13 @@ exports.installBower = {
 
 exports.resetWiki = {
     cmd: [
+        'mkdir -p .submodules/wiki',
         'cd .submodules/wiki',
         'git submodule init',
         'git submodule update',
         'git reset --hard HEAD',
-        'git clean -f'
+        'git clean -f',
+        'git checkout master',
     ].join(' && ')
 };
 

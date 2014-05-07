@@ -7,8 +7,11 @@
  * @param {string} options.packageJsonFile - Package json file path.
  * @param {string} options.bowerJsonFile - Bower json file path.
  * @param {function} callback - Callback when done.
+ * @author Taka Okunishi
  *
  */
+
+"use strict";
 
 var changeCase = require('change-case'),
     path = require('path'),
