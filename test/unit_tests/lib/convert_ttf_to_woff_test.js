@@ -19,6 +19,7 @@ exports['Convert ttf to woff.'] = function (test) {
     convertTtf2Woff(
         testHelper.resolveMockFile('mock-font.ttf'),
         testHelper.resolveWorkFile('work_woff.woff'),
+        {},
         function (err) {
             test.ifError(err);
             test.done();

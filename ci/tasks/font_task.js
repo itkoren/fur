@@ -40,7 +40,7 @@ exports._writeFontFiles = function (data, destDir, callback) {
         var extname = path.extname(data.filename),
             dest = path.resolve(destDir, data.theme + '.woff'),
             src = path.resolve(data.filename);
-        convertTTF2Woff(src, dest, callback);
+        convertTTF2Woff(src, dest, {}, callback);
     }, callback);
 };
 

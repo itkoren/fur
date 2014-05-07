@@ -65,6 +65,12 @@ program
     .action(commands.resize.bind(commands));
 
 
+program
+    .command('woff <src> <dest>')
+    .description('Convert a ttf file to woff.')
+    .action(commands.ico.bind(commands));
+
+
 program.parse(process.argv);
 
 
