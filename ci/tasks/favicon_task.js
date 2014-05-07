@@ -11,7 +11,6 @@
 "use strict";
 
 var async = require('async'),
-    favicon = require('../../lib/commands/favicon'),
     generateFavicon = require('../../lib/generate_favicon');
 
 exports = module.exports = function (grunt, config, callback) {

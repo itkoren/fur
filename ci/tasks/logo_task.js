@@ -11,7 +11,6 @@
 "use strict";
 
 var async = require('async'),
-    logo = require('../../lib/commands/logo'),
     generateLogo = require('../../lib/generate_logo');
 
 module.exports = function (grunt, config, callback) {

@@ -152,7 +152,7 @@ exports._licenseForPackageDir = function (dirname) {
                     var keywords = line.split(/\s/g) || [];
                     for (var i = 0; i < keywords.length; i++) {
                         var keyword = keywords[i];
-                        var info = keyword && spdxLicenses.spdx(keyword.trim())
+                        var info = keyword && spdxLicenses.spdx(keyword.trim());
                         if (info) {
                             return info.id;
                         } else {

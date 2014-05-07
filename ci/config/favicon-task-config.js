@@ -27,7 +27,7 @@ exports.samples = STYLES.map(function (style) {
             size: 128,
             fontSize: 108
         }
-    }
+    };
 });
 
 

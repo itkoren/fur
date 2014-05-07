@@ -15,6 +15,9 @@ exports = module.exports = function (callback) {
             _gruntHelp(callback);
         },
         function (stdOut, stdErr) {
+            if (stdErr && stdErr.trim()) {
+                console.error(stdErr);
+            }
             callback(null, exports._parseGruntHelp(stdOut));
         }
     ], callback);
@@ -38,8 +41,8 @@ exports._parseGruntHelp = function (data) {
                     description: description.replace(/\*\s*$/, '').trim(),
                     multiple: multiple ? 'YES' : 'NO',
                     config: name + 'TaskConfig'
-                }
-            })
+                };
+            });
         }
     ).
         shift();
