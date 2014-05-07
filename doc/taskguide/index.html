@@ -1850,8 +1850,61 @@ Options
         <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-favicon.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
+            <span class="string">"baseURL"</span>: <span class="string">"https://raw.githubusercontent.com/tick-tack/fur/master/"</span>,
+            <span class="string">"sampleImages"</span>: [
+                {
+                    <span class="string">"name"</span>: <span class="string">"styles"</span>,
+                    <span class="string">"data"</span>: [
+                        {
+                            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-simple.png"</span>,
+                            <span class="string">"options"</span>: {
+                                <span class="string">"style"</span>: <span class="string">"simple"</span>,
+                                <span class="string">"text"</span>: <span class="string">"U"</span>,
+                                <span class="string">"colorTheme"</span>: <span class="string">"t"</span>,
+                                <span class="string">"fontTheme"</span>: <span class="string">"ab"</span>,
+                                <span class="string">"size"</span>: <span class="number">128</span>,
+                                <span class="string">"fontSize"</span>: <span class="number">108</span>
+                            }
+                        },
+                        {
+                            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-round.png"</span>,
+                            <span class="string">"options"</span>: {
+                                <span class="string">"style"</span>: <span class="string">"round"</span>,
+                                <span class="string">"text"</span>: <span class="string">"U"</span>,
+                                <span class="string">"colorTheme"</span>: <span class="string">"t"</span>,
+                                <span class="string">"fontTheme"</span>: <span class="string">"ab"</span>,
+                                <span class="string">"size"</span>: <span class="number">128</span>,
+                                <span class="string">"fontSize"</span>: <span class="number">108</span>
+                            }
+                        },
+                        {
+                            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-circle.png"</span>,
+                            <span class="string">"options"</span>: {
+                                <span class="string">"style"</span>: <span class="string">"circle"</span>,
+                                <span class="string">"text"</span>: <span class="string">"U"</span>,
+                                <span class="string">"colorTheme"</span>: <span class="string">"t"</span>,
+                                <span class="string">"fontTheme"</span>: <span class="string">"ab"</span>,
+                                <span class="string">"size"</span>: <span class="number">128</span>,
+                                <span class="string">"fontSize"</span>: <span class="number">108</span>
+                            }
+                        },
+                        {
+                            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/favicon-sample-bordered.png"</span>,
+                            <span class="string">"options"</span>: {
+                                <span class="string">"style"</span>: <span class="string">"bordered"</span>,
+                                <span class="string">"text"</span>: <span class="string">"U"</span>,
+                                <span class="string">"colorTheme"</span>: <span class="string">"t"</span>,
+                                <span class="string">"fontTheme"</span>: <span class="string">"ab"</span>,
+                                <span class="string">"size"</span>: <span class="number">128</span>,
+                                <span class="string">"fontSize"</span>: <span class="number">108</span>
+                            }
+                        }
+                    ]
+                }
+            ],
             <span class="string">"example"</span>: <span class="string">"$ fur favicon --style=\"flat\" --color-theme e --texts foo,bar my-badge.svg"</span>,
-            <span class="string">"command"</span>: <span class="string">"favicon"</span>
+            <span class="string">"command"</span>: <span class="string">"favicon"</span>,
+            <span class="string">"seeMore"</span>: <span class="string">"https://github.com/tick-tack/fur#favicon-examples"</span>
         },
         <span class="string">"links"</span>: {
             <span class="string">"my_wiki_url"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki"</span>,
@@ -1876,8 +1929,29 @@ Options
         <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-logo.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
+            <span class="string">"baseURL"</span>: <span class="string">"https://raw.githubusercontent.com/tick-tack/fur/master/"</span>,
+            <span class="string">"sampleImages"</span>: [
+                {
+                    <span class="string">"name"</span>: <span class="string">"styles"</span>,
+                    <span class="string">"data"</span>: [
+                        {
+                            <span class="string">"filename"</span>: <span class="string">"doc/resources/images/logo-sample-simple.png"</span>,
+                            <span class="string">"options"</span>: {
+                                <span class="string">"style"</span>: <span class="string">"simple"</span>,
+                                <span class="string">"text"</span>: <span class="string">"foo"</span>,
+                                <span class="string">"colorTheme"</span>: <span class="string">"z"</span>,
+                                <span class="string">"fontTheme"</span>: <span class="string">"aj"</span>,
+                                <span class="string">"width"</span>: <span class="number">256</span>,
+                                <span class="string">"height"</span>: <span class="number">128</span>,
+                                <span class="string">"fontSize"</span>: <span class="number">108</span>
+                            }
+                        }
+                    ]
+                }
+            ],
             <span class="string">"example"</span>: <span class="string">"$ fur logo --width 128 --height 40 --font-size 32 --font-theme a --color-theme e --text k my-logo.svg"</span>,
-            <span class="string">"command"</span>: <span class="string">"logo"</span>
+            <span class="string">"command"</span>: <span class="string">"logo"</span>,
+            <span class="string">"seeMore"</span>: <span class="string">"https://github.com/tick-tack/fur#favicon-examples"</span>
         },
         <span class="string">"links"</span>: {
             <span class="string">"my_wiki_url"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki"</span>,
@@ -1961,7 +2035,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Wed May 07 2014 14:01:48 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Wed May 07 2014 22:31:08 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
