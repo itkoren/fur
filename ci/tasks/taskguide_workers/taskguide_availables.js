@@ -14,11 +14,8 @@ exports = module.exports = function (callback) {
         function (callback) {
             _gruntHelp(callback);
         },
-        function (stdOut, stdErr) {
-            if (stdErr && stdErr.trim()) {
-                console.error(stdErr);
-            }
-            callback(null, exports._parseGruntHelp(stdOut));
+        function (help, callback) {
+            callback(null, exports._parseGruntHelp(help));
         }
     ], callback);
 };

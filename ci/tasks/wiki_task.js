@@ -43,7 +43,7 @@ exports = module.exports = function (grunt, config, callback) {
                 content,
                 '',
                 exports._keyValue(links).map(function (link) {
-                    return util.format('[%s]%s', link.key, link.value);
+                    return util.format('[%s]: %s', link.key, link.value);
                 }).join(os.EOL)
             ].join(os.EOL));
         },
