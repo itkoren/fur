@@ -41,11 +41,18 @@ exports._data = function (config, callback) {
         },
         function (callback) {
             readmeWorkers.readmeExamples(callback);
+        },
+        function (callback) {
+            var commandsWiki = config.commandWikiLinks.map(function (link) {
+                return util.format('+[%s](%s/%s)', link.title, config.wikiBaseUrl, link.href);
+            }).join(os.EOL);
+            callback(null, commandsWiki);
         }
     ], function (err, data) {
         callback(err, {
-            commands: data[0],
+            furCommand: data[0],
             examples: data[1],
+            commandsWiki: data[2]
         });
     });
 };

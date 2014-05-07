@@ -10,5 +10,19 @@
 exports.project = {
     readmeFile: 'README.md',
     packageJsonFile: 'package.json',
-    bowerJsonFile: 'dist/bower.json'
+    bowerJsonFile: 'dist/bower.json',
+    wikiBaseUrl: 'https://github.com/tick-tack/fur/wiki',
+    commandWikiLinks: [
+        'badge',
+        'favicon',
+        'ico',
+        'log',
+        'resize',
+        'woff'
+    ].map(function (command) {
+            return {
+                title: command,
+                href: ['fur', command].join('-')
+            }
+        })
 };

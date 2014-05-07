@@ -61,8 +61,7 @@ $ sudo npm install fur -g
 Usage
 ------
 
-**Help**
-<!-- START readme_task.commands generated contents. please keep comment here to allow auto update -->
+<!-- START readme_task.furCommand generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 ```bash
@@ -86,9 +85,19 @@ $ fur -h
 
 ```
 
-<!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
+<!-- END readme_task.furCommand generated contents please keep comment here to allow auto update -->
 
+<!-- START readme_task.commandsWiki generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
++[badge](https://github.com/tick-tack/fur/wiki/fur-badge)
++[favicon](https://github.com/tick-tack/fur/wiki/fur-favicon)
++[ico](https://github.com/tick-tack/fur/wiki/fur-ico)
++[log](https://github.com/tick-tack/fur/wiki/fur-log)
++[resize](https://github.com/tick-tack/fur/wiki/fur-resize)
++[woff](https://github.com/tick-tack/fur/wiki/fur-woff)
+
+<!-- END readme_task.commandsWiki generated contents please keep comment here to allow auto update -->
 
 Programmatic API
 ------
