@@ -2,6 +2,13 @@
  * @file Configuration for "ci/task.wikiTask".
  * @memberof module:ci/config
  * @member wikiTaskConfig
+ * @property {object} dependencies - Wiki about dependencies.
+ * @property {object} badgeCommand - Wiki about badge command.
+ * @property {object} faviconCommand - Wiki about favicon command.
+ * @property {object} icoCommand - Wiki about ico command.
+ * @property {object} logoCommand - Wiki about logo command.
+ * @property {object} resizeCommand - Wiki about resize command.
+ * @property {object} woffCommand - Wiki about woff command.
  */
 
 "use strict";
@@ -77,6 +84,18 @@ exports.resizeCommand = {
     workerOptions: {
         example: '$ fur resize favicon.png --width 64 --height 64',
         command: 'ico'
+    },
+    links: links
+};
+
+
+exports.woffCommand = {
+    description: 'Usage for `fur woff` command.',
+    dest: '.submodules/wiki/fur-woff.md',
+    worker: 'wikiFurCommand',
+    workerOptions: {
+        example: '$ fur woff my-font.ttf my-font.woff',
+        command: 'woff'
     },
     links: links
 };
