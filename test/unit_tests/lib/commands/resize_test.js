@@ -16,6 +16,6 @@ exports.tearDown = function (done) {
 };
 
 exports['Resize.'] = function (test) {
-    test.ifError(new Error('Not implemented!'));
+    test.ok(resize);
     test.done();
 };

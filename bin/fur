@@ -12,6 +12,16 @@ var color = require('cli-color'),
 
 program.version(require('../package.json').version);
 
+
+program
+    .command('badge <filename>')
+    .description('Generate a badge.')
+    .option('-C, --color-theme [theme]', 'Color theme name.')
+    .option('-S, --style [style]', 'Image style. "default" or "flat".')
+    .option('-t, --texts [texts]', 'Texts to print on badge.Comma separated.')
+    .action(commands.badge.bind(commands));
+
+
 program
     .command('favicon <filename>')
     .description('Generate a favicon.')
@@ -24,6 +34,13 @@ program
     .option('-L, --text-left [textLeft]', 'Text left position.')
     .option('-T, --text-top [textTop]', 'Text top position.')
     .action(commands.favicon.bind(commands));
+
+
+program
+    .command('ico <src> <dest>')
+    .description('Convert a png file to ico file.')
+    .action(commands.ico.bind(commands));
+
 
 program
     .command('logo')
@@ -41,27 +58,15 @@ program
 
 
 program
-    .command('badge <filename>')
-    .description('Generate a badge.')
-    .option('-C, --color-theme [theme]', 'Color theme name.')
-    .option('-S, --style [style]', 'Image style. "default" or "flat".')
-    .option('-t, --texts [texts]', 'Texts to print on badge.Comma separated.')
-    .action(commands.badge.bind(commands));
-
-program
-    .command('ico <src> <dest>')
-    .description('Convert a png file to ico file.')
-    .action(commands.ico.bind(commands));
-
-
-program
     .command('resize <src> <dest>')
     .description('Resize a image.')
-    .option('-w, --width [width]', 'Image width.')
-    .option('-h, --height [height]', 'Image height.')
+    .option('-W, --width [width]', 'Image width.')
+    .option('-H, --height [height]', 'Image height.')
     .action(commands.resize.bind(commands));
 
+
 program.parse(process.argv);
+
 
 if (process.argv.length < 3) {
     program.help();
