@@ -77,10 +77,12 @@ $ fur -h
 
   Commands:
 
-    favicon [options] <filename> Generate a favicon.
-    logo [options] <filename> Generate a logo.
     badge [options] <filename> Generate a badge.
+    favicon [options] <filename> Generate a favicon.
     ico <src> <dest>       Convert a png file to ico file.
+    logo [options]         Generate a logo.
+    resize [options] <src> <dest> Resize a image.
+    woff <src> <dest>      Convert a ttf file to woff.
 
   Options:
 
