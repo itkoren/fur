@@ -44,7 +44,7 @@ exports._data = function (config, callback) {
         },
         function (callback) {
             var commandsWiki = config.commandWikiLinks.map(function (link) {
-                return util.format('+[%s](%s/%s)', link.title, config.wikiBaseUrl, link.href);
+                return util.format('+ [%s](%s/%s)', link.title, config.wikiBaseUrl, link.href);
             }).join(os.EOL);
             callback(null, commandsWiki);
         }

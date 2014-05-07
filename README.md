@@ -87,7 +87,7 @@ $ fur -h
 
 <!-- END readme_task.furCommand generated contents please keep comment here to allow auto update -->
 
-<!-- START readme_task.commandsWiki generated contents. please keep comment here to allow auto update -->
+<!-- START readme_task.commandiki generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 +[badge](https://github.com/tick-tack/fur/wiki/fur-badge)

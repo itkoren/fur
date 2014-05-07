@@ -12,8 +12,7 @@
 
 "use strict";
 
-var changeCase = require('change-case'),
-    path = require('path'),
+var path = require('path'),
     os = require('os'),
     fs = require('fs'),
     spdxLicenses = require('spdx-licenses'),
@@ -108,7 +107,7 @@ exports._npmDependencies = function (data, title) {
             ''
         ])
         .join(os.EOL);
-}
+};
 
 
 exports._findup = function (dirname, filename) {
@@ -226,7 +225,7 @@ exports._bowerDependencies = function (data, bowerComponentsDir, title) {
                         '?',
                     description: data.description,
                     url: data.homepage || repository && repository.url || repository || null
-                }
+                };
             })
             .map(function (data) {
                 return exports._row([

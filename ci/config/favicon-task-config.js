@@ -40,7 +40,7 @@ exports.tickTack = formats.map(function (format) {
             fontTheme: 'n',
             fontSize: 145
         }
-    }
+    };
 });
 
 exports.fur = formats.map(function (format) {
@@ -52,7 +52,7 @@ exports.fur = formats.map(function (format) {
             colorTheme: 'bb',
             fontTheme: 'by'
         }
-    }
+    };
 });
 
 exports.ppAbstract = formats.map(function (format) {
@@ -68,7 +68,7 @@ exports.ppAbstract = formats.map(function (format) {
             textLeft: -7
 
         }
-    }
+    };
 });
 
 exports.ppStatic = formats.map(function (format) {
@@ -81,5 +81,5 @@ exports.ppStatic = formats.map(function (format) {
             style: 'bordered',
             textTop: -12
         }
-    }
+    };
 });
