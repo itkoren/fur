@@ -29,7 +29,9 @@ Table of Contents
   - [Generate a Badge](#generate-a-badge-1)
 - [Programmatic API](#programmatic-api)
 - [Examples](#examples)
-  - [Badge Example](#badge-example)
+  - [Badge Examples](#badge-examples)
+  - [Favicon Examples](#favicon-examples)
+  - [Logo Examples](#logo-examples)
 - [Documents](#documents)
 - [Donation](#donation)
 - [License](#license)
@@ -132,7 +134,7 @@ Generate a favicon with pre-defined styles.
 
 | simple | round | circle | bordered |
 | :--------: | :--------: | :--------: | :--------: |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-round.png" ><img alt="favicon-sample-round" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-round.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-round.png" ><img alt="favicon-sample-round" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-round.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
 
 <!-- END readme_task.faviconStyles generated contents please keep comment here to allow auto update -->
 
@@ -223,7 +225,7 @@ Generate a logo with pre-defined styles.
 
 | simple |
 | :--------: |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/logo-sample-simple.png" ><img alt="logo-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/logo-sample-simple.png" style="height:64px" height="64" /></a> |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/logo-sample-simple.png" ><img alt="logo-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/logo-sample-simple.png" style="height:64px" height="64" /></a> |
 
 <!-- END readme_task.logoStyles generated contents please keep comment here to allow auto update -->
 
