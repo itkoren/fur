@@ -53,6 +53,14 @@ program
     .description('Convert a png file to ico file.')
     .action(commands.ico.bind(commands));
 
+
+program
+    .command('resize <src> <dest>')
+    .description('Resize a image.')
+    .option('-w, --width [width]', 'Image width.')
+    .option('-h, --height [height]', 'Image height.')
+    .action(commands.resize.bind(commands));
+
 program.parse(process.argv);
 
 if (process.argv.length < 3) {

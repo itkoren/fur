@@ -18,7 +18,7 @@ exports.tearDown = function (done) {
 exports['Convert png to ico.'] = function (test) {
     var src = testHelper.resolveMockFile('mock-png.png'),
         dest = testHelper.resolveWorkFile('work-ico.ico');
-    convertPngToIco(src, dest, function (err) {
+    convertPngToIco(src, dest, {}, function (err) {
         test.ifError(err);
         test.done();
     });
