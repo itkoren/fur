@@ -22,12 +22,13 @@ Table of Contents
 - [Prerequisites](#prerequisites)
 - [Install](#install)
 - [Usage](#usage)
+  - [Convert to ICO](#convert-to-ico)
   - [Generate a Favicon](#generate-a-favicon)
   - [Generate a Badge](#generate-a-badge)
-  - [Convert to ICO](#convert-to-ico)
+  - [Generate a Logo](#generate-a-logo)
+  - [Generate a Badge](#generate-a-badge-1)
 - [Programmatic API](#programmatic-api)
 - [Examples](#examples)
-  - [Favicon Example](#favicon-example)
   - [Badge Example](#badge-example)
 - [Documents](#documents)
 - [Donation](#donation)
@@ -88,6 +89,37 @@ $ fur -h
 
 <!-- END readme_task.commands generated contents please keep comment here to allow auto update -->
 
+
+<a name="convert-to-ico"></a>
+### Convert to ICO ###
+
+Convert a png file into ico format.
+
+**ICO Help**
+
+<!-- START readme_task.icoCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+```bash
+$ fur ico -h
+
+  Usage: ico [options] <src>,<dest>
+
+  Options:
+
+    -h, --help  output usage information
+
+```
+
+<!-- END readme_task.icoCommand generated contents please keep comment here to allow auto update -->
+
+**ICO Example**
+
+```bash
+$ fur ico my-favicon.png favicon.ico
+```
+
+
 <a name="generate-a-favicon"></a>
 ### Generate a Favicon ###
 
@@ -100,7 +132,7 @@ Generate a favicon with pre-defined styles.
 
 | simple | round | circle | bordered |
 | :--------: | :--------: | :--------: | :--------: |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-round.png" ><img alt="favicon-sample-round" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-round.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" ><img alt="favicon-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-simple.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-round.png" ><img alt="favicon-sample-round" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-round.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" ><img alt="favicon-sample-circle" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-circle.png" style="height:64px" height="64" /></a> | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" ><img alt="favicon-sample-bordered" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/images/favicon-sample-bordered.png" style="height:64px" height="64" /></a> |
 
 <!-- END readme_task.faviconStyles generated contents please keep comment here to allow auto update -->
 
@@ -140,6 +172,7 @@ $ fur favicon --font-theme a --color-theme e --text k my-favicon.svg
 [See more examples](#favicon-example).
 
 
+
 <a name="generate-a-badge"></a>
 ### Generate a Badge ###
 
@@ -176,34 +209,98 @@ $ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg
 [See more examples](#badge-example).
 
 
-<a name="convert-to-ico"></a>
-### Convert to ICO ###
 
-Convert a png file into ico format.
 
-**ICO Help**
+<a name="generate-a-logo"></a>
+### Generate a Logo ###
 
-<!-- START readme_task.icoCommand generated contents. please keep comment here to allow auto update -->
+Generate a logo with pre-defined styles.
+
+**Styles**
+<!-- START readme_task.logoStyles generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
+
+
+| simple |
+| :--------: |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/logo-sample-simple.png" ><img alt="logo-sample-simple" src="https://raw.githubusercontent.com/tick-tack/fur/master/doc/resources/logo-sample-simple.png" style="height:64px" height="64" /></a> |
+
+<!-- END readme_task.logoStyles generated contents please keep comment here to allow auto update -->
+
+**Logo Help**
+<!-- START readme_task.faviconCommand generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 ```bash
-$ fur ico -h
+$ fur favicon -h
 
-  Usage: ico [options] <src>,<dest>
+  Usage: favicon [options] <filename>
 
   Options:
 
-    -h, --help  output usage information
+    -h, --help                      output usage information
+    -C, --color-theme [colorTheme]  Color theme name.
+    -F, --font-theme [fontTheme]    Font theme name.
+    -s, --size [size]               Image size
+    -f, --font-size [fontSize]      Font size
+    -S, --style [style]             Image style. "simple".
+    -t, --text [text]               Text to print on favicon.
+    -L, --text-left [textLeft]      Text left position.
+    -T, --text-top [textTop]        Text top position.
 
 ```
 
-<!-- END readme_task.icoCommand generated contents please keep comment here to allow auto update -->
+<!-- END readme_task.faviconCommand generated contents please keep comment here to allow auto update -->
 
-**ICO Example**
+Theme names are short letters like 'a', 'b'.
+Available themes are listed in [the gallery][my_gallery_url].
+
+**Logo Example**
+```bash
+$ fur logo --width 128 --height 40 --font-size 32 --font-theme a --color-theme e --text k my-favicon.svg
+```
+
+[See more examples](#logo-example).
+
+
+
+<a name="generate-a-badge"></a>
+### Generate a Badge ###
+
+Generate a badge with themes.
+
+**Badge Help**
+<!-- START readme_task.badgeCommand generated contents. please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
 ```bash
-$ fur ico my-favicon.png favicon.ico
+$ fur badge -h
+
+  Usage: badge [options] <filename>
+
+  Options:
+
+    -h, --help                 output usage information
+    -C, --color-theme [theme]  Color theme name.
+    -S, --style [style]        Image style. "default" or "flat".
+    -t, --texts [texts]        Texts to print on badge.Comma separated.
+
 ```
+
+<!-- END readme_task.badgeCommand generated contents please keep comment here to allow auto update -->
+
+Theme names are short letters like 'a', 'b'.
+Available themes are listed in [the gallery][my_gallery_url].
+
+**Badge Example**
+```bash
+$ fur favicon --style="flat" --color-theme e --texts foo,bar my-badge.svg
+```
+
+[See more examples](#badge-example).
+
+
+
 
 Programmatic API
 ------
@@ -235,31 +332,41 @@ Note that option args are camel-cased in programmatic API.
 
 Form more detail, see the [API Document][my_apiguide_commands_url]
 
+
 <a name="examples"></a>
 Examples
 ------
 <!-- START readme_task.examples generated contents. please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt readme TO UPDATE -->
 
-<a name="favicon-example"></a>
-### Favicon Example ###
-
-| Output | Command |
-| :------: | ------- |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" ><img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 290` |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" ><img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon fur-favicon.png --font-size 104 --text FUR --color-theme bb --font-theme by` |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" ><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme a --font-theme e --font-size 260 --style circle --text-top -24 --text-left -15` |
-| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" ><img alt="pp-static-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-static-favicon.png --text s --color-theme gs --font-theme j --style bordered --text-top -24` |
-
-<a name="badge-example"></a>
-### Badge Example ###
+<a name="badge-examples"></a>
+### Badge Examples ###
 
 | Output | Command |
 | :------: | ------- |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" ><img alt="apeman-badge-default" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-default.png" style="height:10px" height="10" /></a> | `$ fur badge apeman-badge-default.png --style default --color-theme bb --texts powered by , apeman ` |
 | <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" ><img alt="apeman-badge-flat" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/apeman/apeman-badge-flat.png" style="height:10px" height="10" /></a> | `$ fur badge apeman-badge-flat.png --style flat --color-theme bb --texts powered by , apeman ` |
 
+<a name="favicon-examples"></a>
+### Favicon Examples ###
+
+| Output | Command |
+| :------: | ------- |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" ><img alt="tick-tack-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/tick-tack/tick-tack-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon tick-tack-favicon.png --text tt --color-theme jr --font-theme n --font-size 145` |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" ><img alt="fur-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon fur-favicon.png --font-size 52 --text FUR --color-theme bb --font-theme by` |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" ><img alt="pp-abstract-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-abstract/pp-abstract-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-abstract-favicon.png --text a --color-theme a --font-theme e --font-size 130 --style circle --text-top -12 --text-left -7` |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" ><img alt="pp-static-favicon" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/pp-static/pp-static-favicon.png" style="height:40px" height="40" /></a> | `$ fur favicon pp-static-favicon.png --text s --color-theme gs --font-theme j --style bordered --text-top -12` |
+
+<a name="logo-examples"></a>
+### Logo Examples ###
+
+| Output | Command |
+| :------: | ------- |
+| <a href="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-logo.png" ><img alt="fur-logo" src="https://raw.githubusercontent.com/tick-tack/fur/master/dist/images/fur/fur-logo.png" style="height:40px" height="40" /></a> | `$ fur logo fur-logo.png --font-size 104 --text FUR --color-theme bb --font-theme by --height 256 --width 358.4` |
+
+
 <!-- END readme_task.examples generated contents please keep comment here to allow auto update -->
+
 
 
 <a name="documents"></a>

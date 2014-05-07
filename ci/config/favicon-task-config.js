@@ -38,7 +38,7 @@ exports.tickTack = formats.map(function (format) {
             text: 'tt',
             colorTheme: 'jr',
             fontTheme: 'n',
-            fontSize: 290
+            fontSize: 145
         }
     }
 });
@@ -47,7 +47,7 @@ exports.fur = formats.map(function (format) {
     return {
         filename: 'dist/images/fur/fur-favicon.' + format,
         options: {
-            fontSize: 104,
+            fontSize: 52,
             text: 'FUR',
             colorTheme: 'bb',
             fontTheme: 'by'
@@ -62,10 +62,10 @@ exports.ppAbstract = formats.map(function (format) {
             text: 'a',
             colorTheme: 'a',
             fontTheme: 'e',
-            fontSize: 260,
+            fontSize: 130,
             style: 'circle',
-            textTop: -24,
-            textLeft: -15
+            textTop: -12,
+            textLeft: -7
 
         }
     }
@@ -79,7 +79,7 @@ exports.ppStatic = formats.map(function (format) {
             colorTheme: 'gs',
             fontTheme: 'j',
             style: 'bordered',
-            textTop: -24
+            textTop: -12
         }
     }
 });

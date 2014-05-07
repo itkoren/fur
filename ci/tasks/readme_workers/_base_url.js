@@ -1,7 +1,7 @@
 /**
  * @file Base url string.
  * @memberof module:ci/tasks
- * @member _baseUrl
+ * @member readmeWorkers._baseUrl
  * @protected
  * @ignore
  * @type {string}

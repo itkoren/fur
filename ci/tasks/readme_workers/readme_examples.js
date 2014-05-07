@@ -3,9 +3,10 @@
  * @memberof module:ci/tasks
  * @function readmeWorkers.readmeExamples
  * @param {function} callback - Callback when done.
- *
+ * @author Taka Okunishi
  */
 
+"use strict";
 
 var changeCase = require('change-case'),
     path = require('path'),
@@ -13,14 +14,18 @@ var changeCase = require('change-case'),
     url = require('url'),
     os = require('os'),
     _baseUrl = require('./_base_url'),
+    badgeTaskConfig = require('../../config/badge-task-config'),
     faviconTaskConfig = require('../../config/favicon-task-config'),
-    badgeTaskConfig = require('../../config/badge-task-config');
+    logoTaskConfig = require('../../config/logo-task-config');
 
 exports = module.exports = function (callback) {
     callback(null, [
+        exports._badges(badgeTaskConfig),
+        '',
         exports._favicons(faviconTaskConfig),
         '',
-        exports._badges(badgeTaskConfig)
+        exports._logos(logoTaskConfig),
+        ''
     ].join(os.EOL));
 };
 
@@ -30,14 +35,22 @@ exports._tableLine = function (entries) {
 
 exports._favicons = function (config) {
     return [
-        exports._subTitle('favicon example'),
+        exports._subTitle('favicon examples'),
         exports._imgTable(config, 'favicon', 40)
     ].join(os.EOL);
 };
 
+exports._logos = function (config) {
+    return [
+        exports._subTitle('logo examples'),
+        exports._imgTable(config, 'logo', 40)
+    ].join(os.EOL);
+};
+
+
 exports._badges = function (config) {
     return [
-        exports._subTitle('badge example'),
+        exports._subTitle('badge examples'),
         exports._imgTable(config, 'badge', 10)
     ].join(os.EOL);
 };
