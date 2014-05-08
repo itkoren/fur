@@ -136,6 +136,12 @@ module.exports = function (grunt) {
         'exec:pushWiki'
     ]);
 
+    grunt.registerTask('publishTickTackResources', 'Publish tick tack resources.', [
+        'exec:resetTickTackResources',
+        'exec:pullTickTackResources',
+        'exec:pushTickTackResources'
+    ]);
+
     grunt.registerTask('publish', 'Publish project files', [
         'draw',
         'font:dist',

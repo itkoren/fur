@@ -12,7 +12,51 @@
  * @property {object} publishNpm - Configuration to execute publish to npm.
  * @property {object} installNpm - Configuration to execute publish to install npm modules.
  * @property {object} installBower - Configuration to execute publish to install bower modules.
+ * @property {object} resetWiki - Configuration to execute reset wiki directory.
+ * @property {object} pullWiki - Configuration to execute pull wiki directory.
+ * @property {object} pushWiki - Configuration to execute push wiki directory.
+ * @property {object} resetTickTackResources - Configuration to execute reset tick-tack-resources directory.
+ * @property {object} pullTickTackResources - Configuration to execute pull tick-tack-resources directory.
+ * @property {object} pushTickTackResources - Configuration to execute push tick-tack-resources directory.
  */
+
+var submodule = {
+    reset: function (dirname) {
+        return  {
+            cmd: [
+                ['mkdir -p', dirname].join(' '),
+                'cd .submodules/wiki',
+                'git submodule init',
+                'git submodule update',
+                'git reset --hard HEAD',
+                'git clean -f',
+                'git checkout master'
+            ].join(' && ')
+        };
+    },
+    pull: function (dirname) {
+        return {
+            cmd: [
+                ['cd', dirname].join(' '),
+                'git submodule init',
+                'git submodule update',
+                'git pull'
+            ].join(' && ')
+        }
+    },
+    push: function (dirname) {
+        return {
+            cmd: [
+                ['cd', dirname].join(' '),
+                'git add . -A ',
+                '[ ! -n "$( git status --s )" ] && exit 0 || echo "" ', //Exit if no change found.
+                'git commit -a -m "Update wiki by task. [ci skip]"',
+                'git push'
+            ].join(' && ')
+        };
+
+    }
+};
 
 
 exports.coverage = {
@@ -53,33 +97,11 @@ exports.installBower = {
     cmd: 'npm run bower-install'
 };
 
-exports.resetWiki = {
-    cmd: [
-        'mkdir -p .submodules/wiki',
-        'cd .submodules/wiki',
-        'git submodule init',
-        'git submodule update',
-        'git reset --hard HEAD',
-        'git clean -f',
-        'git checkout master',
-    ].join(' && ')
-};
+exports.resetWiki = submodule.reset('.submodules/wiki');
+exports.pullWiki = submodule.pull('.submodules/wiki');
+exports.pushWiki = submodule.push('.submodules/wiki');
 
-exports.pullWiki = {
-    cmd: [
-        'cd .submodules/wiki',
-        'git submodule init',
-        'git submodule update',
-        'git pull'
-    ].join(' && ')
-};
 
-exports.pushWiki = {
-    cmd: [
-        'cd .submodules/wiki',
-        'git add . -A ',
-        '[ ! -n "$( git status --s )" ] && exit 0 || echo "" ', //Exit if no change found.
-        'git commit -a -m "Update wiki by task. [ci skip]"',
-        'git push'
-    ].join(' && ')
-};
+exports.resetTickTackResources = submodule.reset('.submodules/tick-tack-resources');
+exports.pullTickTackResources = submodule.pull('.submodules/tick-tack-resources');
+exports.pushTickTackResources = submodule.push('.submodules/tick-tack-resources');
