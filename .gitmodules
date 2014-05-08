@@ -1,3 +1,6 @@
 [submodule ".submodules/wiki"]
 	path = .submodules/wiki
 	url = https://github.com/tick-tack/fur.wiki.git
+[submodule ".submodules/tick-tack-resources"]
+	path = .submodules/tick-tack-resources
+	url = https://github.com/tick-tack/tick-tack-resources.git
