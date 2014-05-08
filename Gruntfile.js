@@ -113,7 +113,6 @@ module.exports = function (grunt) {
     ]);
 
 
-
     grunt.registerTask('install', 'Install dependencies', [
         'exec:installNpm',
         'exec:installBower'
@@ -150,7 +149,8 @@ module.exports = function (grunt) {
         'draw',
         'font:dist',
         'publishDoc',
-        'publishWiki'
+        'publishWiki',
+        'publishTickTackResources'
     ]);
 
     grunt.registerTask('default', [
