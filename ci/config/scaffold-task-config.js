@@ -60,7 +60,8 @@ var taskNames = [
     'taskguide',
     'testcase',
     'versionup',
-    'wiki'
+    'wiki',
+    'tickTackResources'
 ];
 
 exports.ciTask = taskNames.map(function (name) {

@@ -52,6 +52,7 @@ module.exports = function (grunt) {
         scaffold: require('./ci/config/scaffold-task-config'),
         static: require('./ci/config/static-task-config'),
         taskguide: require('./ci/config/taskguide-task-config'),
+        tickTackResources: require('./ci/config/tick-tack-resources-task-config'),
         testcase: require('./ci/config/testcase-task-config'),
         versionup: require('./ci/config/versionup-task-config'),
         wiki: require('./ci/config/wiki-task-config')
@@ -77,6 +78,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('static', 'Generate,publish, or distribute static files.', ciTask('./ci/tasks/static_task'));
     grunt.registerMultiTask('taskguide', 'Generate taskguide files.', ciTask('./ci/tasks/taskguide_task'));
     grunt.registerMultiTask('testcase', 'Generate testcase files.', ciTask('./ci/tasks/testcase_task'));
+    grunt.registerMultiTask('tickTackResources', 'Generate files for tickTackResources.', ciTask('./ci/tasks/tick_tack_resources_task'));
     grunt.registerMultiTask('versionup', 'Increment project version.', ciTask('./ci/tasks/versionup_task'));
     grunt.registerMultiTask('wiki', 'Generate wiki.', ciTask('./ci/tasks/wiki_task'));
 
@@ -111,6 +113,7 @@ module.exports = function (grunt) {
     ]);
 
 
+
     grunt.registerTask('install', 'Install dependencies', [
         'exec:installNpm',
         'exec:installBower'
@@ -139,6 +142,7 @@ module.exports = function (grunt) {
     grunt.registerTask('publishTickTackResources', 'Publish tick tack resources.', [
         'exec:resetTickTackResources',
         'exec:pullTickTackResources',
+        'tickTackResources',
         'exec:pushTickTackResources'
     ]);
 
