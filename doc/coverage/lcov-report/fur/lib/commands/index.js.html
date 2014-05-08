@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for fur/lib/commands/ico.js</title>
+    <title>Code coverage report for fur/lib/commands/index.js</title>
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="../../../prettify.css">
@@ -196,23 +196,23 @@
 </head>
 <body>
 <div class="header high">
-    <h1>Code coverage report for <span class="entity">fur/lib/commands/ico.js</span></h1>
+    <h1>Code coverage report for <span class="entity">fur/lib/commands/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">75% <small>(3 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(2 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Lines: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">fur/lib/commands/</a> &#187; ico.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">fur/lib/commands/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -231,21 +231,7 @@
 13
 14
 15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+16</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -255,40 +241,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * @file Convert a png file to ico.
- * @memberof commands
- * @function ico
- * @param {string} src - Source file name.
- * @param {string} dest - Destination file name.
- * @param {function} [callback]  - Callback when done.
- * @example
- *      ico('foo.png', 'foo.ico');
+ * @file Fur commands. These commands are also available from CLI.
+ * @memberof module:fur
+ * @namespace commands
  * @author Taka Okunishi
  */
 &nbsp;
 "use strict";
 &nbsp;
-var convertPngToIco = require('../convert_png_to_ico'),
-    print = require('../util/print');
-&nbsp;
-module.exports = function ico(src, dest, options, callback) {
-    convertPngToIco(src, dest, options,function (err) {
-        <span class="missing-if-branch" title="else path not taken" >E</span>if (!err) {
-            print.info('File generated:', dest);
-        }
-        callback &amp;&amp; callback(err);
-    });
-};</pre></td></tr>
+exports.badge = require('./badge.js');
+exports.favicon = require('./favicon.js');
+exports.ico = require('./ico.js');
+exports.logo = require('./logo.js');
+exports.resize = require('./resize.js');
+exports.woff = require('./woff.js');
+&nbsp;</pre></td></tr>
 </table></pre>
 
 </div>

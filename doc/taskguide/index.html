@@ -1847,7 +1847,7 @@ Options
 {
     <span class="string">"dependencies"</span>: {
         <span class="string">"description"</span>: <span class="string">"Third party libraries which fur depends on."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/Dependencies.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/Dependencies.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiDependencies"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"packageJsonFile"</span>: <span class="string">"package.json"</span>,
@@ -1861,7 +1861,7 @@ Options
     },
     <span class="string">"badgeCommand"</span>: {
         <span class="string">"description"</span>: <span class="string">"Usage for `fur badge` command."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-badge.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/fur-badge.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"example"</span>: <span class="string">"$ fur favicon --style=flat --color-theme e --texts foo,bar my-badge.svg"</span>,
@@ -1874,7 +1874,7 @@ Options
     },
     <span class="string">"faviconCommand"</span>: {
         <span class="string">"description"</span>: <span class="string">"Usage for `fur favicon` command."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-favicon.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/fur-favicon.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"baseURL"</span>: <span class="string">"https://raw.githubusercontent.com/tick-tack/fur/master/"</span>,
@@ -1940,7 +1940,7 @@ Options
     },
     <span class="string">"icoCommand"</span>: {
         <span class="string">"description"</span>: <span class="string">"Usage for `fur ico` command."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-ico.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/fur-ico.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"example"</span>: <span class="string">"$ fur ico favicon.png favicon.ico"</span>,
@@ -1953,7 +1953,7 @@ Options
     },
     <span class="string">"logoCommand"</span>: {
         <span class="string">"description"</span>: <span class="string">"Usage for `fur logo` command."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-logo.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/fur-logo.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"baseURL"</span>: <span class="string">"https://raw.githubusercontent.com/tick-tack/fur/master/"</span>,
@@ -1987,7 +1987,7 @@ Options
     },
     <span class="string">"resizeCommand"</span>: {
         <span class="string">"description"</span>: <span class="string">"Usage for `fur resize` command."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-resize.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/fur-resize.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"example"</span>: <span class="string">"$ fur resize favicon.png --width 64 --height 64"</span>,
@@ -2000,7 +2000,7 @@ Options
     },
     <span class="string">"woffCommand"</span>: {
         <span class="string">"description"</span>: <span class="string">"Usage for `fur woff` command."</span>,
-        <span class="string">"dest"</span>: <span class="string">".submodules/wiki/fur-woff.md"</span>,
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/fur-woff.md"</span>,
         <span class="string">"worker"</span>: <span class="string">"wikiFurCommand"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"example"</span>: <span class="string">"$ fur woff my-font.ttf my-font.woff"</span>,
@@ -2009,6 +2009,38 @@ Options
         <span class="string">"links"</span>: {
             <span class="string">"my_wiki_url"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki"</span>,
             <span class="string">"my_gallery_url"</span>: <span class="string">"http://tick-tack.github.io/fur/gallery/"</span>
+        }
+    },
+    <span class="string">"HomeCommandsLinks"</span>: {
+        <span class="string">"filename"</span>: <span class="string">".submodules/wiki/Home.md"</span>,
+        <span class="string">"worker"</span>: <span class="string">"wikiEmbedLinks"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"links"</span>: [
+                {
+                    <span class="string">"title"</span>: <span class="string">"badge"</span>,
+                    <span class="string">"href"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki/fur-badge"</span>
+                },
+                {
+                    <span class="string">"title"</span>: <span class="string">"favicon"</span>,
+                    <span class="string">"href"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki/fur-favicon"</span>
+                },
+                {
+                    <span class="string">"title"</span>: <span class="string">"ico"</span>,
+                    <span class="string">"href"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki/fur-ico"</span>
+                },
+                {
+                    <span class="string">"title"</span>: <span class="string">"logo"</span>,
+                    <span class="string">"href"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki/fur-logo"</span>
+                },
+                {
+                    <span class="string">"title"</span>: <span class="string">"resize"</span>,
+                    <span class="string">"href"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki/fur-resize"</span>
+                },
+                {
+                    <span class="string">"title"</span>: <span class="string">"woff"</span>,
+                    <span class="string">"href"</span>: <span class="string">"https://github.com/tick-tack/fur/wiki/fur-woff"</span>
+                }
+            ]
         }
     }
 }
@@ -2062,7 +2094,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Thu May 08 2014 08:54:16 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Thu May 08 2014 21:03:56 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
