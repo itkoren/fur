@@ -14,7 +14,9 @@
 "use strict";
 
 var faviconTaskConfig = require('./favicon-task-config'),
-    logoTaskConfig = require('./logo-task-config');
+    logoTaskConfig = require('./logo-task-config'),
+    util = require('util'),
+    commands = require('../../lib/commands');
 
 var links = {
     my_wiki_url: 'https://github.com/tick-tack/fur/wiki',
@@ -26,7 +28,7 @@ var repoURL = 'https://github.com/tick-tack/fur',
 
 exports.dependencies = {
     description: 'Third party libraries which fur depends on.',
-    dest: '.submodules/wiki/Dependencies.md',
+    filename: '.submodules/wiki/Dependencies.md',
     worker: 'wikiDependencies',
     workerOptions: {
         packageJsonFile: 'package.json',
@@ -38,7 +40,7 @@ exports.dependencies = {
 
 exports.badgeCommand = {
     description: 'Usage for `fur badge` command.',
-    dest: '.submodules/wiki/fur-badge.md',
+    filename: '.submodules/wiki/fur-badge.md',
     worker: 'wikiFurCommand',
     workerOptions: {
         example: '$ fur favicon --style=flat --color-theme e --texts foo,bar my-badge.svg',
@@ -49,7 +51,7 @@ exports.badgeCommand = {
 
 exports.faviconCommand = {
     description: 'Usage for `fur favicon` command.',
-    dest: '.submodules/wiki/fur-favicon.md',
+    filename: '.submodules/wiki/fur-favicon.md',
     worker: 'wikiFurCommand',
     workerOptions: {
         baseURL: rowURL,
@@ -68,7 +70,7 @@ exports.faviconCommand = {
 
 exports.icoCommand = {
     description: 'Usage for `fur ico` command.',
-    dest: '.submodules/wiki/fur-ico.md',
+    filename: '.submodules/wiki/fur-ico.md',
     worker: 'wikiFurCommand',
     workerOptions: {
         example: '$ fur ico favicon.png favicon.ico',
@@ -80,7 +82,7 @@ exports.icoCommand = {
 
 exports.logoCommand = {
     description: 'Usage for `fur logo` command.',
-    dest: '.submodules/wiki/fur-logo.md',
+    filename: '.submodules/wiki/fur-logo.md',
     worker: 'wikiFurCommand',
     workerOptions: {
         baseURL: rowURL,
@@ -100,7 +102,7 @@ exports.logoCommand = {
 
 exports.resizeCommand = {
     description: 'Usage for `fur resize` command.',
-    dest: '.submodules/wiki/fur-resize.md',
+    filename: '.submodules/wiki/fur-resize.md',
     worker: 'wikiFurCommand',
     workerOptions: {
         example: '$ fur resize favicon.png --width 64 --height 64',
@@ -112,11 +114,25 @@ exports.resizeCommand = {
 
 exports.woffCommand = {
     description: 'Usage for `fur woff` command.',
-    dest: '.submodules/wiki/fur-woff.md',
+    filename: '.submodules/wiki/fur-woff.md',
     worker: 'wikiFurCommand',
     workerOptions: {
         example: '$ fur woff my-font.ttf my-font.woff',
         command: 'woff'
     },
     links: links
+};
+
+
+exports.HomeCommandsLinks = {
+    filename: '.submodules/wiki/Home.md',
+    worker: 'wikiEmbedLinks',
+    workerOptions: {
+        links: Object.keys(commands).map(function (command) {
+            return {
+                title: command,
+                href: util.format('https://github.com/tick-tack/fur/wiki/fur-%s', command)
+            }
+        })
+    }
 };

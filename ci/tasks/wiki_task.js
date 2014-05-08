@@ -23,7 +23,7 @@ var wikiWorkers = require('./wiki_workers'),
     async = require('async');
 
 exports = module.exports = function (grunt, config, callback) {
-    var dest = path.resolve(config.dest),
+    var filename = path.resolve(config.filename),
         worker = wikiWorkers[config.worker],
         workerOptions = config.workerOptions || {},
         links = config.links || {},
@@ -34,6 +34,16 @@ exports = module.exports = function (grunt, config, callback) {
     }
     async.waterfall([
         function (callback) {
+            fs.exists(filename, function (exists) {
+                if (!exists) {
+                    callback(null, '');
+                    return;
+                }
+                fs.readFile(filename, callback);
+            });
+        },
+        function (buffer, callback) {
+            workerOptions.originalContents = workerOptions.originalContents || buffer.toString();
             worker(workerOptions, callback);
         },
         function (content, callback) {
@@ -48,11 +58,12 @@ exports = module.exports = function (grunt, config, callback) {
             ].join(os.EOL));
         },
         function (content, callback) {
-            exports._write(dest, content, callback);
+            content = (content + os.EOL).trim();
+            exports._write(filename, content, callback);
         }
     ], function (err) {
         if (!err) {
-            grunt.log.writeln('File created: ', dest);
+            grunt.log.writeln('File created: ', filename);
         }
         callback(err);
     });
