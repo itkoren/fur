@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur taskguide Source: config/ico-task-config.js</title>
+	<title>fur taskguide Source: tasks/wiki_workers/wiki_embed_links.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,37 +53,63 @@
 					
 
 
-		<h1 class="page-title">Source: config/ico-task-config.js</h1>
+		<h1 class="page-title">Source: tasks/wiki_workers/wiki_embed_links.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Configuration for "ci/task.icoTask".
- * @memberof module:ci/config
- * @member icoTaskConfig
- * @property {object} tickTack - Configuration for tick-tack ico image.
- * @property {object} fur - Configuration for fur ico image.
- * @property {object} ppAbstract - Configuration for pp-abstract ico image.
+ * @file Embed links to wiki.
+ * @memberof module:ci/tasks
+ * @function wikiWorkers.wikiEmbedLinks
+ * @param {object} options - Worker options.
+ * @param {object} options.originalContents - Original contents.
+ * @param {object} options.links - Links to embed.
+ * @param {function} callback - Callback when done.
+ * @author Taka Okunishi
+ *
  */
-
-"use strict";
-
-
-exports.tickTack = {
-    src: 'dist/images/tick-tack/tick-tack-favicon.png',
-    dest: 'dist/images/tick-tack/tick-tack-favicon.ico'
-};
+var os = require('os'),
+    util = require('util');
 
 
-exports.fur = {
-    src: 'dist/images/fur/fur-favicon.png',
-    dest: 'dist/images/fur/fur-favicon.ico'
-};
+module.exports = function (options, callback) {
+    var embedding = false;
+    var newContent = (options.originalContents || '')
+        .split(os.EOL)
+        .filter(function (line) {
+            return !!line;
+        })
+        .map(function (line) {
 
-
-exports.ppAbstract = {
-    src: 'dist/images/pp-abstract/pp-abstract-favicon.png',
-    dest: 'dist/images/pp-abstract/pp-abstract-favicon.ico'
+            var start = !!line.match(/&lt;!\-\-\s+START\s*embedLink\s*\-\->/);
+            console.log('line', line, start);
+            if (start) {
+                embedding = embedding || start;
+                return [
+                    line,
+                    "&lt;!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN grunt wiki TO UPDATE -->",
+                    '',
+                    options.links.map(function (link) {
+                        return util.format('[%s](%s)', link.title, link.href);
+                    }).join(os.EOL),
+                    ''
+                ].join(os.EOL)
+            } else {
+                if (embedding) {
+                    var end = !!line.match(/&lt;!\-\-\s+END\s*embedLink\s*\-\->/);
+                    embedding = embedding && !end;
+                    if (embedding) {
+                        return '&lt;!-- Line to delete -->';
+                    }
+                }
+            }
+            return line;
+        })
+        .filter(function (line) {
+            return !(line.match('&lt;!-- Line to delete -->'));
+        })
+        .join(os.EOL);
+    callback(null, newContent);
 };</pre>
         </article>
     </section>
