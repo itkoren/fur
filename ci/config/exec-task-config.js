@@ -20,12 +20,15 @@
  * @property {object} pushTickTackResources - Configuration to execute push tick-tack-resources directory.
  */
 
+var path = require('path'),
+    util = require('util');
+
 var submodule = {
     reset: function (dirname) {
         return  {
             cmd: [
                 ['mkdir -p', dirname].join(' '),
-                'cd .submodules/wiki',
+                ['cd', dirname].join(' '),
                 'git submodule init',
                 'git submodule update',
                 'git reset --hard HEAD',
@@ -50,7 +53,7 @@ var submodule = {
                 ['cd', dirname].join(' '),
                 'git add . -A ',
                 '[ ! -n "$( git status --s )" ] && exit 0 || echo "" ', //Exit if no change found.
-                'git commit -a -m "Update wiki by task. [ci skip]"',
+                util.format('git commit -a -m "Update %s by task. [ci skip]"', path.basename(dirname)),
                 'git push'
             ].join(' && ')
         };
