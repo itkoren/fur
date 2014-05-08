@@ -107,26 +107,29 @@ Usage
  grunt [options] [task [task ...]]
 
 Options
-    --help, -h  Display this help text.                                        
-        --base  Specify an alternate base path. By default, all file paths are 
-                relative to the Gruntfile. (grunt.file.setBase) *              
-    --no-color  Disable colored output.                                        
-   --gruntfile  Specify an alternate Gruntfile. By default, grunt looks in the 
-                current or parent directories for the nearest Gruntfile.js or  
-                Gruntfile.coffee file.                                         
-   --debug, -d  Enable debugging mode for tasks that support it.               
-       --stack  Print a stack trace when exiting with a warning or fatal error.
-   --force, -f  A way to force your way past warnings. Want a suggestion? Don't
-                use this option, fix your code.                                
-       --tasks  Additional directory paths to scan for task and &quot;extra&quot; files. 
-                (grunt.loadTasks) *                                            
-         --npm  Npm-installed grunt plugins to scan for task and &quot;extra&quot; files.
-                (grunt.loadNpmTasks) *                                         
-    --no-write  Disable writing files (dry run).                               
- --verbose, -v  Verbose mode. A lot more information output.                   
- --version, -V  Print the grunt version. Combine with --verbose for more info. 
-  --completion  Output shell auto-completion rules. See the grunt-cli          
-                documentation for more information.</code></pre>
+               --help, -h  Display this help text.                             
+                   --base  Specify an alternate base path. By default, all file
+                           paths are relative to the Gruntfile.                
+                           (grunt.file.setBase) *                              
+               --no-color  Disable colored output.                             
+              --gruntfile  Specify an alternate Gruntfile. By default, grunt   
+                           looks in the current or parent directories for the  
+                           nearest Gruntfile.js or Gruntfile.coffee file.      
+              --debug, -d  Enable debugging mode for tasks that support it.    
+                  --stack  Print a stack trace when exiting with a warning or  
+                           fatal error.                                        
+              --force, -f  A way to force your way past warnings. Want a       
+                           suggestion? Don't use this option, fix your code.   
+                  --tasks  Additional directory paths to scan for task and     
+                           &quot;extra&quot; files. (grunt.loadTasks) *                  
+                    --npm  Npm-installed grunt plugins to scan for task and    
+                           &quot;extra&quot; files. (grunt.loadNpmTasks) *               
+               --no-write  Disable writing files (dry run).                    
+            --verbose, -v  Verbose mode. A lot more information output.        
+            --version, -V  Print the grunt version. Combine with --verbose for 
+                           more info.                                          
+             --completion  Output shell auto-completion rules. See the         
+                           grunt-cli documentation for more information.</code></pre>
 <p><a name="available-tasks"></a></p>
 <h2>Available tasks</h2>
 <table>
@@ -254,6 +257,12 @@ Options
 <td align="center">YES</td>
 </tr>
 <tr>
+<td>tickTackResources</td>
+<td>Generate files for tickTackResources.</td>
+<td><a href="#tickTackResourcesTaskConfig">tickTackResourcesTaskConfig</a></td>
+<td align="center">YES</td>
+</tr>
+<tr>
 <td>versionup</td>
 <td>Increment project version.</td>
 <td><a href="#versionupTaskConfig">versionupTaskConfig</a></td>
@@ -311,6 +320,12 @@ Options
 <td>publishWiki</td>
 <td>Publish wiki.</td>
 <td><a href="#publishWikiTaskConfig">publishWikiTaskConfig</a></td>
+<td align="center">NO</td>
+</tr>
+<tr>
+<td>publishTickTackResources</td>
+<td>Publish tick tack resources.</td>
+<td><a href="#publishTickTackResourcesTaskConfig">publishTickTackResourcesTaskConfig</a></td>
 <td align="center">NO</td>
 </tr>
 <tr>
@@ -482,6 +497,9 @@ Options
     <span class="string">"pushDoc"</span>: {
         <span class="string">"cmd"</span>: <span class="string">"git subtree push -q --squash --prefix=doc origin gh-pages"</span>
     },
+    <span class="string">"pushDist"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"git subtree push -q --squash --prefix=dist origin distribution"</span>
+    },
     <span class="string">"commitRelease"</span>: {
         <span class="string">"cmd"</span>: <span class="string">"git add . -A &amp;&amp; git commit -a -m \"Release commit by task.\""</span>
     },
@@ -502,6 +520,15 @@ Options
     },
     <span class="string">"pushWiki"</span>: {
         <span class="string">"cmd"</span>: <span class="string">"cd .submodules/wiki &amp;&amp; git add . -A  &amp;&amp; [ ! -n \"$( git status --s )\" ] &amp;&amp; exit 0 || echo \"\"  &amp;&amp; git commit -a -m \"Update wiki by task. [ci skip]\" &amp;&amp; git push"</span>
+    },
+    <span class="string">"resetTickTackResources"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"mkdir -p .submodules/tick-tack-resources &amp;&amp; cd .submodules/tick-tack-resources &amp;&amp; git submodule init &amp;&amp; git submodule update &amp;&amp; git reset --hard HEAD &amp;&amp; git clean -f &amp;&amp; git checkout master"</span>
+    },
+    <span class="string">"pullTickTackResources"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/tick-tack-resources &amp;&amp; git submodule init &amp;&amp; git submodule update &amp;&amp; git pull"</span>
+    },
+    <span class="string">"pushTickTackResources"</span>: {
+        <span class="string">"cmd"</span>: <span class="string">"cd .submodules/tick-tack-resources &amp;&amp; git add . -A  &amp;&amp; [ ! -n \"$( git status --s )\" ] &amp;&amp; exit 0 || echo \"\"  &amp;&amp; git commit -a -m \"Update tick-tack-resources by task. [ci skip]\" &amp;&amp; git push"</span>
     }
 }
 </pre>
@@ -1152,6 +1179,13 @@ Options
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"wiki"</span>
             }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/tasks/tick_tack_resources_task.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci_task.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"tickTackResources"</span>
+            }
         }
     ],
     <span class="string">"ciConfig"</span>: [
@@ -1265,6 +1299,13 @@ Options
             <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
             <span class="string">"data"</span>: {
                 <span class="string">"taskName"</span>: <span class="string">"wiki"</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"ci/config/tick-tack-resources-task-config.js"</span>,
+            <span class="string">"tmpl"</span>: <span class="string">"tmpl/js/ci-task-config.js.dot"</span>,
+            <span class="string">"data"</span>: {
+                <span class="string">"taskName"</span>: <span class="string">"tickTackResources"</span>
             }
         }
     ],
@@ -1823,6 +1864,32 @@ Options
 }
 </pre>
 
+<p><a name="tickTackResourcesTaskConfig"></a></p>
+<h3>tickTackResourcesTaskConfig</h3>
+<p>Source:</p>
+<ul>
+<li><a href="https://github.com/tick-tack/fur/blob/master/ci/config/tick-tack-resources-task-config.js">ci/config/tick-tack-resources-task-config.js</a></li>
+</ul>
+<pre>
+{
+    <span class="string">"images"</span>: {
+        <span class="string">"srcDir"</span>: <span class="string">"dist"</span>,
+        <span class="string">"destDir"</span>: <span class="string">".submodules/tick-tack-resources"</span>,
+        <span class="string">"patterns"</span>: [
+            <span class="string">"images/**/*.png"</span>,
+            <span class="string">"images/**/*.svg"</span>
+        ]
+    },
+    <span class="string">"fonts"</span>: {
+        <span class="string">"srcDir"</span>: <span class="string">"dist"</span>,
+        <span class="string">"destDir"</span>: <span class="string">".submodules/tick-tack-resources"</span>,
+        <span class="string">"patterns"</span>: [
+            <span class="string">"fonts/**/*.woff"</span>
+        ]
+    }
+}
+</pre>
+
 <p><a name="versionupTaskConfig"></a></p>
 <h3>versionupTaskConfig</h3>
 <p>Source:</p>
@@ -2094,7 +2161,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Thu May 08 2014 21:03:56 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Thu May 08 2014 23:51:43 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
