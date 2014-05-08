@@ -17,13 +17,9 @@ module.exports = function (options, callback) {
     var embedding = false;
     var newContent = (options.originalContents || '')
         .split(os.EOL)
-        .filter(function (line) {
-            return !!line;
-        })
         .map(function (line) {
 
             var start = !!line.match(/<!\-\-\s+START\s*embedLink\s*\-\->/);
-            console.log('line', line, start);
             if (start) {
                 embedding = embedding || start;
                 return [
@@ -50,5 +46,9 @@ module.exports = function (options, callback) {
             return !(line.match('<!-- Line to delete -->'));
         })
         .join(os.EOL);
-    callback(null, newContent);
+    callback(null, [
+        '',
+        newContent,
+        ''
+    ].join(os.EOL));
 };

@@ -33,6 +33,10 @@ exports.pushDoc = {
     cmd: 'git subtree push -q --squash --prefix=doc origin gh-pages'
 };
 
+exports.pushDist = {
+    cmd: 'git subtree push -q --squash --prefix=dist origin distribution'
+};
+
 exports.commitRelease = {
     cmd: 'git add . -A && git commit -a -m "Release commit by task."'
 };
