@@ -1,0 +1,17 @@
+{
+  "name": "fur",
+  "version": "0.0.4",
+  "homepage": "https://github.com/tick-tack/fur",
+  "authors": [
+    "Taka Okunishi <okunishinishi@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -32,7 +32,7 @@ exports.dependencies = {
     worker: 'wikiDependencies',
     workerOptions: {
         packageJsonFile: 'package.json',
-        bowerJsonFile: 'dist/bower.json',
+        bowerJsonFile: 'bower.json',
         bowerComponentsDir: 'dist/bower_components'
     },
     links: links
