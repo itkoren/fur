@@ -41,6 +41,7 @@ var binNames = [
     'install',
     'doc',
     'test',
+    'publish',
     'release'
 ];
 
