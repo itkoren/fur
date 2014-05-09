@@ -13,7 +13,7 @@ exports.doc = [
     {
         worker: 'staticCopy',
         workerOptions: {
-            src: 'dist/bower_components/angular/angular.js',
+            src: 'assets/bower_components/angular/angular.js',
             dest: 'doc/resources/javascripts/angular.js'
         }
     }

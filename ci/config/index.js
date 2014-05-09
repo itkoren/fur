@@ -25,5 +25,6 @@ exports.staticTaskConfig = require('./static-task-config.js');
 exports.tagTaskConfig = require('./tag-task-config.js');
 exports.taskguideTaskConfig = require('./taskguide-task-config.js');
 exports.testcaseTaskConfig = require('./testcase-task-config.js');
+exports.tickTackResourcesTaskConfig = require('./tick-tack-resources-task-config.js');
 exports.versionupTaskConfig = require('./versionup-task-config.js');
 exports.wikiTaskConfig = require('./wiki-task-config.js');
