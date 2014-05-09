@@ -10,7 +10,7 @@
 exports.project = {
     readmeFile: 'README.md',
     packageJsonFile: 'package.json',
-    bowerJsonFile: 'dist/bower.json',
+    bowerJsonFile: 'asserts/bower.json',
     wikiBaseUrl: 'https://github.com/tick-tack/fur/wiki',
     commandWikiLinks: [
         'badge',
