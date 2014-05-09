@@ -107,4 +107,10 @@ exports.pushWiki = submodule.push('.submodules/wiki');
 
 exports.resetTickTackResources = submodule.reset('.submodules/tick-tack-resources');
 exports.pullTickTackResources = submodule.pull('.submodules/tick-tack-resources');
+exports.buildTickTackResources = {
+    cmd: 'node .submodules/tick-tack-resources/ci/bin/readme.js'
+};
 exports.pushTickTackResources = submodule.push('.submodules/tick-tack-resources');
+exports.releaseTickTackResources = {
+    cmd: 'node .submodules/tick-tack-resources/ci/bin/release.js'
+};

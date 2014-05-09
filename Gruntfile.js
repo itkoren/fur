@@ -142,6 +142,7 @@ module.exports = function (grunt) {
         'exec:resetTickTackResources',
         'exec:pullTickTackResources',
         'tickTackResources',
+        'exec:buildTickTackResources',
         'exec:pushTickTackResources'
     ]);
 
