@@ -8,6 +8,9 @@
     {{=it._headHtml}}
 
     <style>
+        body{
+            margin-bottom:40px;
+        }
         .sample-label {
             margin: 5px 0;
             line-height: 1em;
@@ -35,6 +38,23 @@
             width: 120px;
         }
 
+        #setting-section{
+            position:fixed;
+            left:0;
+            bottom:0;
+            width:100%;
+            padding:4px 8px;
+            background-color:rgba(255,255,255,0.95);
+            font-size:0.75em;
+        }
+
+        #setting-section label{
+            color:#AAA;
+            display: inline-block;
+            margin:0 2px 0;
+            z-index:22;
+        }
+
         {{~it.fonts :font}}
         @font-face {
             font-family: "{{=font.fontFamily}}" ;
@@ -45,9 +65,16 @@
             font-family: "{{=font.fontFamily}}", serif;
         }
         {{~}}
+
+        .w120{
+            width:120px;
+        }
+        .wide-input{
+            width:400px;
+        }
     </style>
 </head>
-<body>
+<body ng-app ng-controller="FontGalleryController">
 <header><h1 onclick="location.reload()">{{=it._title}}</h1></header>
 <article>
 <br>
@@ -61,25 +88,33 @@
     <tbody>
     {{~it.fonts :font}}
     <tr>
-        <th class="">{{=font.name}}</th>
+        <th class="w120">{{=font.name}}</th>
         <td class="text-center v-center">
             <a href="{{=font.url}}" download="{{=font.fontFamily}}.{{=font.format}}">{{=font.fontFamily}}</a>
         </td>
         <td class="sample-td">
-            <div class="l sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
-            </div>
-            <div class="m sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
-            </div>
-            <div class="s sample-label {{=font.className}}">Grumpy wizards make toxic brew for the evil Queen and Jack.
-            </div>
+            <div class="l sample-label {{=font.className}}" ng-bind="sampleText"></div>
+            <div class="m sample-label {{=font.className}}" ng-bind="sampleText"></div>
+            <div class="s sample-label {{=font.className}}" ng-bind="sampleText"></div>
         </td>
     </tr>{{~}}
     </tbody>
 </table>
 </article>
 
+<section id="setting-section">
+    <label for="sample-text-input">Sample text</label>
+    <input ng-model="sampleText" class="wide-input" placeholder="sample text" id="sample-text-input">
+</section>
+
 <footer>
 {{=it._footerHtml}}
 </footer>
+<script>
+function FontGalleryController($scope){
+    $scope.sampleText = 'Grumpy wizards make toxic brew for the evil Queen and Jack.';
+}
+</script>
 </body>
+
 </html>

@@ -2,7 +2,9 @@
  * @file Configuration for "ci/task.logoTask".
  * @memberof module:ci/config
  * @member logoTaskConfig
- * @property {object} samples - Sample logos.
+ * @property {object[]} samples - Sample logos.
+ * @property {object[]} fur - fur logos.
+ * @property {object[]} restfulViewer - restful-viewer logos.
  *
  */
 
