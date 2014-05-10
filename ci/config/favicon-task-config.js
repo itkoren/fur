@@ -45,7 +45,7 @@ exports.tickTack = formats.map(function (format) {
 
 exports.restfulViewer = formats.map(function (format) {
     return {
-        filename: 'dist/images/restful-viewer/restful-viewer.' + format,
+        filename: 'dist/images/restful-viewer/restful-viewer-favicon.' + format,
         options: {
             text: 'V',
             colorTheme: 'ht',
