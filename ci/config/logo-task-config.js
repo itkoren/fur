@@ -42,3 +42,17 @@ exports.fur = formats.map(function (format) {
         }
     }
 });
+
+exports.restfulViewer = formats.map(function (format) {
+    return {
+        filename: 'dist/images/restful-viewer/restful-viewer-logo.' + format,
+        options: {
+            fontSize: 104,
+            text: 'Restful Viewer',
+            colorTheme: 'ht',
+            fontTheme: 'x',
+            height: 256,
+            width: 256 * 2.7
+        }
+    }
+});

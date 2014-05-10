@@ -43,6 +43,18 @@ exports.tickTack = formats.map(function (format) {
     };
 });
 
+exports.restfulViewer = formats.map(function (format) {
+    return {
+        filename: 'dist/images/restful-viewer/restful-viewer.' + format,
+        options: {
+            text: 'V',
+            colorTheme: 'ht',
+            fontTheme: 'x',
+            fontSize: 130
+        }
+    }
+});
+
 exports.fur = formats.map(function (format) {
     return {
         filename: 'dist/images/fur/fur-favicon.' + format,
