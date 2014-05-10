@@ -13,11 +13,11 @@
 exports.base = [
     {
         tmpl: 'tmpl/css/gallery.css.dot',
-        file: 'doc/gallery/gallery.css'
+        file: 'doc/resources/stylesheets/gallery.css'
     },
     {
         tmpl: 'tmpl/js/gallery.js.dot',
-        file: 'doc/gallery/gallery.js'
+        file: 'doc/resources/javascripts/gallery.js'
     }
 ];
 
@@ -31,7 +31,7 @@ exports.webFont = {
     tmpl: 'tmpl/html/web-font-gallery.html.dot',
     worker: 'galleryWebFonts',
     workerOptions: {
-        fontsDir:'../resources/fonts',
+        fontsDir: '../resources/fonts',
         catalogFile: 'assets/catalogs/web-font-catalog.json'
     }
 };

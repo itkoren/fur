@@ -20,6 +20,7 @@ exports.project = {
             'doc/resources/fonts',
             'doc/resources/images',
             'doc/resources/javascripts',
+            'doc/resources/stylesheets',
             'ci',
             'ci/bin',
             'ci/config',
