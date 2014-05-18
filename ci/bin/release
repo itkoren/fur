@@ -17,7 +17,7 @@ yesno.ask('Are you sure to release new version? [yes/no]', null, function (ok) {
     grunt.tasks([
         'build',
         'exec:releaseTickTackResources',
-        'publish',
+        'publishDoc',
         'versionup',
         'exec:commitRelease',
         'tag',
