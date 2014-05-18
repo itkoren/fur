@@ -58,3 +58,33 @@ exports.restfulViewer = formats.map(function (format) {
         }
     }
 });
+
+
+exports.ppAbstract = formats.map(function (format) {
+    return {
+        filename: 'dist/images/pp-abstract/pp-abstract-logo.' + format,
+        options: {
+            fontSize: 104,
+            text: 'pp-abstract',
+            colorTheme: 'a',
+            fontTheme: 'e',
+            height: 256,
+            width: 256 * 2.5
+        }
+    }
+});
+
+
+exports.ppStatic = formats.map(function (format) {
+    return {
+        filename: 'dist/images/pp-static/pp-static-logo.' + format,
+        options: {
+            fontSize: 104,
+            text: 'pp-static',
+            colorTheme: 'gs',
+            fontTheme: 'j',
+            height: 256,
+            width: 256 * 2.4
+        }
+    }
+});
