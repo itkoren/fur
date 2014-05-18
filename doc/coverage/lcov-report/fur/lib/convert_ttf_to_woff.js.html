@@ -195,20 +195,20 @@
     </style>
 </head>
 <body>
-<div class="header high">
+<div class="header low">
     <h1>Code coverage report for <span class="entity">fur/lib/convert_ttf_to_woff.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">84.62% <small>(11 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">23.08% <small>(3 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">50% <small>(1 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(5 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">84.62% <small>(11 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">23.08% <small>(3 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -273,29 +273,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * @file Convert a tt file to woff.
  * @memberof module:fur
@@ -312,36 +312,36 @@ var ttf2woff = require('ttf2woff'),
     path = require('path'),
     fs = require('fs');
 &nbsp;
-exports = module.exports = function convertTtfToWoff(src, dest, options, callback) {
-    var extensionValid = exports._hasValidExtension(path.extname(src));
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!extensionValid) {
+exports = module.exports = <span class="fstat-no" title="function not covered" >function convertTtfToWoff(src, dest, options, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    var extensionValid = exports._hasValidExtension(path.extname(src));</span>
+<span class="cstat-no" title="statement not covered" >    if (!extensionValid) {</span>
 <span class="cstat-no" title="statement not covered" >        callback(new Error('Invalid extention with filename :' + src));</span>
 <span class="cstat-no" title="statement not covered" >        return;</span>
     }
 &nbsp;
-    async.waterfall([
-        function (callback) {
-            fs.readFile(src, callback);
+<span class="cstat-no" title="statement not covered" >    async.waterfall([</span>
+<span class="fstat-no" title="function not covered" >        function (callback) {</span>
+<span class="cstat-no" title="statement not covered" >            fs.readFile(src, callback);</span>
         },
-        function (buffer, callback) {
-            var ttf = new Uint8Array(buffer),
+<span class="fstat-no" title="function not covered" >        function (buffer, callback) {</span>
+<span class="cstat-no" title="statement not covered" >            var ttf = new Uint8Array(buffer),</span>
                 woff = new Buffer(ttf2woff(ttf, {}).buffer);
-            callback(null, woff);
+<span class="cstat-no" title="statement not covered" >            callback(null, woff);</span>
         },
-        function (woff, callback) {
-            fs.writeFile(dest, woff, callback);
+<span class="fstat-no" title="function not covered" >        function (woff, callback) {</span>
+<span class="cstat-no" title="statement not covered" >            fs.writeFile(dest, woff, callback);</span>
         }
     ], callback);
 };
 &nbsp;
-exports._hasValidExtension = function (extname) {
-    return ['.ttf', '.otf'].indexOf(extname) != -1;
+exports._hasValidExtension = <span class="fstat-no" title="function not covered" >function (extname) {</span>
+<span class="cstat-no" title="statement not covered" >    return ['.ttf', '.otf'].indexOf(extname) != -1;</span>
 };</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 18 2014 10:41:40 GMT+0900 (JST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 18 2014 14:54:18 GMT+0900 (JST)</div>
 </div>
 
 <script src="../../prettify.js"></script>
