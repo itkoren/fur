@@ -113,5 +113,6 @@ exports.buildTickTackResources = {
 exports.pushTickTackResources = submodule.push('.submodules/tick-tack-resources');
 exports.releaseTickTackResources = {
     cmd: 'node ./ci/bin/release.js',
-    cwd: '.submodules/tick-tack-resources'
+    cwd: '.submodules/tick-tack-resources',
+    exitCode: 1
 };
