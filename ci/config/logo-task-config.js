@@ -4,6 +4,10 @@
  * @member logoTaskConfig
  * @property {object[]} samples - Sample logos.
  * @property {object[]} fur - fur logos.
+ * @property {object[]} tickTack - tickTack logos.
+ * @property {object[]} tickTack - tickTack logos.
+ * @property {object[]} pp-abstract - pp-abstract logos.
+ * @property {object[]} pp-static - pp-static logos.
  * @property {object[]} restfulViewer - restful-viewer logos.
  *
  */
@@ -41,6 +45,22 @@ exports.fur = formats.map(function (format) {
             fontTheme: 'by',
             height: 256,
             width: 256 * 1.4
+        }
+    }
+});
+
+
+exports.tickTack = formats.map(function (format) {
+    return {
+        filename: 'dist/images/tick-tack/tick-tack-logo.' + format,
+        options: {
+            fontSize: 104,
+            text: 'tick-tack',
+            textLeft: -5,
+            colorTheme: 'fo',
+            fontTheme: 'bb',
+            height: 256,
+            width: 256 * 2.0
         }
     }
 });
