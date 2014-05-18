@@ -56,7 +56,7 @@ exports.tickTack = formats.map(function (format) {
         options: {
             fontSize: 104,
             text: 'tick-tack',
-            textLeft: -5,
+            textLeft: -3,
             colorTheme: 'fo',
             fontTheme: 'bb',
             height: 256,

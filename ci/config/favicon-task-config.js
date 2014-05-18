@@ -36,7 +36,7 @@ exports.tickTack = formats.map(function (format) {
         filename: 'dist/images/tick-tack/tick-tack-favicon.' + format,
         options: {
             text: 'tt',
-            textLeft:-2,
+            textLeft:-1,
             textTop:-4,
             colorTheme: 'fo',
             fontTheme: 'bb',
