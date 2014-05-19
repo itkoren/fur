@@ -31,7 +31,7 @@ exports.webFont = {
     tmpl: 'tmpl/html/web-font-gallery.html.dot',
     worker: 'galleryWebFonts',
     workerOptions: {
-        fontsDir: '../resources/fonts',
+        fontsDir: '../resources/fonts/theme',
         catalogFile: 'assets/catalogs/web-font-catalog.json'
     }
 };

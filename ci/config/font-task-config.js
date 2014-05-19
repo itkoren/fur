@@ -11,11 +11,11 @@
 
 exports.doc = {
     catalog: 'assets/catalogs/web-font-catalog.json',
-    destDir: 'doc/resources/fonts'
+    destDir: 'doc/resources/fonts/theme'
 };
 
 
 exports.dist = {
     catalog: 'assets/catalogs/web-font-catalog.json',
-    destDir: 'dist/fonts'
+    destDir: 'dist/fonts/theme'
 };

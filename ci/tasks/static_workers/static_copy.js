@@ -17,9 +17,18 @@ var path = require('path'),
     async = require('async'),
     copyFile = require('../../../lib/util/copy_file');
 
-module.exports = function staticCopy(options, callback) {
+exports = module.exports = function staticCopy(options, callback) {
     var src = path.resolve(options.src),
-        dest = path.resolve(options.dest);
+        dest = [].concat(options.dest || []).map(function (dest) {
+            return path.resolve(dest);
+        });
+    async.each(dest, function (dest, callback) {
+        exports._copy(src, dest, callback);
+    }, callback);
+
+};
+
+exports._copy = function (src, dest, callback) {
     async.series([
         function (callback) {
             mkdirp(path.dirname(dest), callback);
