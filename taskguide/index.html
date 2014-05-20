@@ -706,6 +706,28 @@ Options
                 <span class="string">"textTop"</span>: -<span class="number">12</span>
             }
         }
+    ],
+    <span class="string">"xxPaperwork"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/xx-paperwork/xx-paperwork.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"text"</span>: <span class="string">"p"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"jj"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"l"</span>,
+                <span class="string">"style"</span>: <span class="string">"round"</span>,
+                <span class="string">"textTop"</span>: -<span class="number">10</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/xx-paperwork/xx-paperwork.png"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"text"</span>: <span class="string">"p"</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"jj"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"l"</span>,
+                <span class="string">"style"</span>: <span class="string">"round"</span>,
+                <span class="string">"textTop"</span>: -<span class="number">10</span>
+            }
+        }
     ]
 }
 </pre>
@@ -720,11 +742,11 @@ Options
 {
     <span class="string">"doc"</span>: {
         <span class="string">"catalog"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>,
-        <span class="string">"destDir"</span>: <span class="string">"doc/resources/fonts"</span>
+        <span class="string">"destDir"</span>: <span class="string">"doc/resources/fonts/theme"</span>
     },
     <span class="string">"dist"</span>: {
         <span class="string">"catalog"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>,
-        <span class="string">"destDir"</span>: <span class="string">"dist/fonts"</span>
+        <span class="string">"destDir"</span>: <span class="string">"dist/fonts/theme"</span>
     }
 }
 </pre>
@@ -756,7 +778,7 @@ Options
         <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/web-font-gallery.html.dot"</span>,
         <span class="string">"worker"</span>: <span class="string">"galleryWebFonts"</span>,
         <span class="string">"workerOptions"</span>: {
-            <span class="string">"fontsDir"</span>: <span class="string">"../resources/fonts"</span>,
+            <span class="string">"fontsDir"</span>: <span class="string">"../resources/fonts/theme"</span>,
             <span class="string">"catalogFile"</span>: <span class="string">"assets/catalogs/web-font-catalog.json"</span>
         }
     },
@@ -766,6 +788,50 @@ Options
         <span class="string">"worker"</span>: <span class="string">"galleryColorSchemes"</span>,
         <span class="string">"workerOptions"</span>: {
             <span class="string">"catalogFile"</span>: <span class="string">"assets/catalogs/color-scheme-catalog.json"</span>
+        }
+    },
+    <span class="string">"ioniconsIcon"</span>: {
+        <span class="string">"file"</span>: <span class="string">"doc/gallery/icon-ionicons-icon-gallery.html"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/icon-gallery.html.dot"</span>,
+        <span class="string">"worker"</span>: <span class="string">"galleryIcons"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"styleFile"</span>: <span class="string">"doc/resources/stylesheets/ionicons.css"</span>,
+            <span class="string">"styleClass"</span>: <span class="string">"icon"</span>,
+            <span class="string">"iconSelectorIgnore"</span>: [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ]
+        }
+    },
+    <span class="string">"fontAwesomeIcon"</span>: {
+        <span class="string">"file"</span>: <span class="string">"doc/gallery/icon-font-awesome-icon-gallery.html"</span>,
+        <span class="string">"tmpl"</span>: <span class="string">"tmpl/html/icon-gallery.html.dot"</span>,
+        <span class="string">"worker"</span>: <span class="string">"galleryIcons"</span>,
+        <span class="string">"workerOptions"</span>: {
+            <span class="string">"styleFile"</span>: <span class="string">"doc/resources/stylesheets/font-awesome.css"</span>,
+            <span class="string">"styleClass"</span>: <span class="string">"fa"</span>,
+            <span class="string">"iconSelectorIgnore"</span>: [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ]
         }
     }
 }
@@ -1084,6 +1150,32 @@ Options
                 <span class="string">"width"</span>: <span class="number">614.4</span>
             }
         }
+    ],
+    <span class="string">"xxPaperwork"</span>: [
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/xx-paperwork/xx-paperwork-logo.svg"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"fontSize"</span>: <span class="number">104</span>,
+                <span class="string">"text"</span>: <span class="string">"pp-static"</span>,
+                <span class="string">"textTop"</span>: -<span class="number">10</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"jj"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"l"</span>,
+                <span class="string">"height"</span>: <span class="number">256</span>,
+                <span class="string">"width"</span>: <span class="number">614.4</span>
+            }
+        },
+        {
+            <span class="string">"filename"</span>: <span class="string">"dist/images/xx-paperwork/xx-paperwork-logo.png"</span>,
+            <span class="string">"options"</span>: {
+                <span class="string">"fontSize"</span>: <span class="number">104</span>,
+                <span class="string">"text"</span>: <span class="string">"pp-static"</span>,
+                <span class="string">"textTop"</span>: -<span class="number">10</span>,
+                <span class="string">"colorTheme"</span>: <span class="string">"jj"</span>,
+                <span class="string">"fontTheme"</span>: <span class="string">"l"</span>,
+                <span class="string">"height"</span>: <span class="number">256</span>,
+                <span class="string">"width"</span>: <span class="number">614.4</span>
+            }
+        }
     ]
 }
 </pre>
@@ -1115,6 +1207,10 @@ Options
                 <span class="string">"ci/config"</span>,
                 <span class="string">"ci/tasks"</span>,
                 <span class="string">"dist"</span>,
+                <span class="string">"dist/fonts"</span>,
+                <span class="string">"dist/images"</span>,
+                <span class="string">"dist/javascripts"</span>,
+                <span class="string">"dist/stylesheets"</span>,
                 <span class="string">"lib"</span>,
                 <span class="string">"lib/commands"</span>,
                 <span class="string">"lib/images"</span>,
@@ -1943,7 +2039,50 @@ Options
             <span class="string">"worker"</span>: <span class="string">"staticCopy"</span>,
             <span class="string">"workerOptions"</span>: {
                 <span class="string">"src"</span>: <span class="string">"assets/bower_components/angular/angular.js"</span>,
-                <span class="string">"dest"</span>: <span class="string">"doc/resources/javascripts/angular.js"</span>
+                <span class="string">"dest"</span>: [
+                    <span class="string">"doc/resources/javascripts/angular.js"</span>,
+                    <span class="string">"dist/javascripts/angular.js"</span>
+                ]
+            }
+        },
+        {
+            <span class="string">"worker"</span>: <span class="string">"staticCopy"</span>,
+            <span class="string">"workerOptions"</span>: {
+                <span class="string">"src"</span>: <span class="string">"assets/bower_components/font-awesome/fonts/fontawesome-webfont.woff"</span>,
+                <span class="string">"dest"</span>: [
+                    <span class="string">"doc/resources/fonts/fontawesome-webfont.woff"</span>,
+                    <span class="string">"dist/fonts/fontawesome-webfont.woff"</span>
+                ]
+            }
+        },
+        {
+            <span class="string">"worker"</span>: <span class="string">"staticCopy"</span>,
+            <span class="string">"workerOptions"</span>: {
+                <span class="string">"src"</span>: <span class="string">"assets/bower_components/font-awesome/css/font-awesome.css"</span>,
+                <span class="string">"dest"</span>: [
+                    <span class="string">"doc/resources/stylesheets/font-awesome.css"</span>,
+                    <span class="string">"dist/stylesheets/font-awesome.css"</span>
+                ]
+            }
+        },
+        {
+            <span class="string">"worker"</span>: <span class="string">"staticCopy"</span>,
+            <span class="string">"workerOptions"</span>: {
+                <span class="string">"src"</span>: <span class="string">"assets/bower_components/ionicons/css/ionicons.css"</span>,
+                <span class="string">"dest"</span>: [
+                    <span class="string">"doc/resources/stylesheets/ionicons.css"</span>,
+                    <span class="string">"dist/stylesheets/ionicons.css"</span>
+                ]
+            }
+        },
+        {
+            <span class="string">"worker"</span>: <span class="string">"staticCopy"</span>,
+            <span class="string">"workerOptions"</span>: {
+                <span class="string">"src"</span>: <span class="string">"assets/bower_components/ionicons/fonts/ionicons.woff"</span>,
+                <span class="string">"dest"</span>: [
+                    <span class="string">"doc/resources/fonts/ionicons.woff"</span>,
+                    <span class="string">"dist/fonts/ionicons.woff"</span>
+                ]
             }
         },
         {
@@ -2316,7 +2455,7 @@ pre code{color:inherit; background-color:inherit;}
 					
 		<span class="jsdoc-message">
 		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a>
-		on Sun May 18 2014 15:07:05 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		on Tue May 20 2014 20:23:55 GMT+0900 (JST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
 		</span>
 				</footer>
 			</div>
