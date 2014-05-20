@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+    Web font gallery html.
+-->
+<html>
+<head lang="en">
+    <title>{{=it._title}}</title>
+    {{=it._headHtml}}
+
+    <link rel="stylesheet" href="{{=it.styleRef}}" />
+    <style>
+        tbody th{
+            font-size:1em;
+        }
+        .s{
+            font-size:1em;
+        }
+        .m{
+            font-size:2em;
+        }
+        .l{
+            font-size:4em;
+        }
+        .ion{
+            margin:0 10px;
+        }
+        table{
+            width: auto;
+        }
+    </style>
+<body>
+<header>
+    <h1 onclick="location.reload()">{{=it._title}}</h1>
+</header>
+<article>
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+<tbody>
+{{~ it.selectors :selector}}
+<tr>
+<th>{{=selector}}</th>
+<td>
+    <span class="s ion {{=selector.replace(/^./,'')}}" ></span>
+
+    <span class="m ion {{=selector.replace(/^./,'')}}" ></span>
+
+    <span class="l ion {{=selector.replace(/^./,'')}}" ></span>
+</td>
+</tr>
+{{~}}
+</tbody>
+</table>
+</article>
+
+<footer>
+{{=it._footerHtml}}
+</footer>
+</body>
+
+</html>

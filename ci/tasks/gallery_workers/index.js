@@ -8,4 +8,5 @@
 "use strict";
 
 exports.galleryColorSchemes = require('./gallery_color_schemes.js');
+exports.galleryIcons = require('./gallery_icons.js');
 exports.galleryWebFonts = require('./gallery_web_fonts.js');

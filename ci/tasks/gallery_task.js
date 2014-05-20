@@ -14,6 +14,7 @@ var path = require('path'),
     fs = require('fs'),
     async = require('async'),
     util = require('util'),
+    mkdirp = require('mkdirp'),
     changeCase = require('change-case'),
     os = require('os'),
     pkg = require('../../package.json'),
@@ -25,22 +26,42 @@ exports = module.exports = function (grunt, config, callback) {
     async.eachSeries([].concat(config), function (config, callback) {
         var tmpl = path.resolve(config.tmpl),
             dest = path.resolve(config.file);
-        exports._data(config.worker, config.workerOptions, function (err, data) {
-            var destDir = path.dirname(dest);
+        async.waterfall([
+            function (callback) {
+                config.workerOptions = config.workerOptions || {};
+                config.workerOptions._dest = dest;
+                config.workerOptions._tmpl = tmpl;
+                exports._data(config.worker, config.workerOptions, callback);
+            },
+            function (data, callback) {
+                exports._write(tmpl, basedir, data, dest, callback);
+            },
+            function (skip, callback) {
+                if (!skip) {
+                    grunt.log.writeln('File crated:', dest);
+                }
+                callback(null);
+            }
+        ], callback);
+    }, callback);
+};
+
+exports._write = function (tmpl, basedir, data, dest, callback) {
+    var destDir = path.dirname(dest);
+    async.series([
+        function (callback) {
+            mkdirp(destDir, callback);
+        },
+        function (callback) {
             data._relativePathToBaseDir = path.relative(destDir, basedir);
             data._title = changeCase.titleCase(path.basename(dest, path.extname(dest)));
             data._footerHtml = exports._footerHtml;
             data._headHtml = exports._headHtml;
             data._links = exports._links;
             data._pcakge = pkg;
-            renderDotFile(tmpl, data, dest, function (err, skip) {
-                if (!err && !skip) {
-                    grunt.log.writeln('File crated:', dest);
-                }
-                callback(err);
-            });
-        });
-    }, callback);
+            renderDotFile(tmpl, data, dest, callback);
+        }
+    ], callback);
 };
 
 exports._data = function (worker, workerOptions, callback) {

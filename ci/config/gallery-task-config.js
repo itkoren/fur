@@ -44,3 +44,21 @@ exports.colorScheme = {
         catalogFile: 'assets/catalogs/color-scheme-catalog.json'
     }
 };
+
+
+exports.ioniconsIcon = {
+    file: 'doc/gallery/icon-ionicons-icon-gallery.html',
+    tmpl: 'tmpl/html/icon-gallery.html.dot',
+    worker: 'galleryIcons',
+    workerOptions: {
+        styleFile: 'doc/resources/stylesheets/ionicons.css',
+        iconSelectorIgnore: [
+            /@/,
+            /:before/,
+            /^\.ionicons$/,
+            /^\.ion-spin$/,
+            /^\.ion$/,
+            /^\.ion\-loading\-/
+        ]
+    }
+};
