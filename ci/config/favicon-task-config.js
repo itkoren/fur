@@ -101,7 +101,7 @@ exports.ppStatic = formats.map(function (format) {
 
 exports.xxPaperwork = formats.map(function (format) {
     return {
-        filename: 'dist/images/xx-paperwork/xx-paperwork.' + format,
+        filename: 'dist/images/xx-paperwork/xx-paperwork-favicon.' + format,
         options: {
             text: 'p',
             colorTheme: 'jj',
