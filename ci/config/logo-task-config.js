@@ -108,3 +108,18 @@ exports.ppStatic = formats.map(function (format) {
         }
     }
 });
+
+exports.xxPaperwork = formats.map(function (format) {
+    return {
+        filename: 'dist/images/xx-paperwork/xx-paperwork-logo.' + format,
+        options: {
+            fontSize: 104,
+            text: 'pp-static',
+            textTop: -10,
+            colorTheme: 'jj',
+            fontTheme: 'l',
+            height: 256,
+            width: 256 * 2.4
+        }
+    }
+});

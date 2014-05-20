@@ -36,8 +36,8 @@ exports.tickTack = formats.map(function (format) {
         filename: 'dist/images/tick-tack/tick-tack-favicon.' + format,
         options: {
             text: 'tt',
-            textLeft:-1,
-            textTop:-4,
+            textLeft: -1,
+            textTop: -4,
             colorTheme: 'fo',
             fontTheme: 'bb',
             fontSize: 145
@@ -96,4 +96,19 @@ exports.ppStatic = formats.map(function (format) {
             textTop: -12
         }
     };
+});
+
+
+exports.xxPaperwork = formats.map(function (format) {
+    return {
+        filename: 'dist/images/xx-paperwork/xx-paperwork.' + format,
+        options: {
+            text: 'p',
+            colorTheme: 'jj',
+            fontTheme: 'l',
+            style: 'round',
+            textTop: -10
+        }
+
+    }
 });
