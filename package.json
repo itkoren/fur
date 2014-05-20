@@ -1,6 +1,6 @@
 {
     "name": "fur",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Front end design tool.",
     "main": "index.js",
     "bin": {
