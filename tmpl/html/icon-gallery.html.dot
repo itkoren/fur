@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+{{
+    /** @file Template for icon gallery. */
+    var colors = ['#555', '#E55', '#55E'];
+
+}}<!DOCTYPE html>
 <!--
     Web font gallery html.
 -->
@@ -14,15 +18,19 @@
         }
         .s{
             font-size:1em;
+            width:20px;
         }
         .m{
             font-size:2em;
+            width:40px;
         }
         .l{
             font-size:4em;
+            width:80px;
         }
-        .ion{
+        .{{=it.styleClass}}{
             margin:0 10px;
+            text-align: center;
         }
         table{
             width: auto;
@@ -38,17 +46,26 @@
 <col />
 <col />
 </colgroup>
+<thead>
+<tr>
+<th>Style name</th>
+{{~colors :color}}
+<th style="color:{{=color}}">{{=color}}</th>
+{{~}}
+</tr>
+</thead>
 <tbody>
 {{~ it.selectors :selector}}
 <tr>
 <th>{{=selector}}</th>
+{{~colors :color}}
 <td>
-    <span class="s ion {{=selector.replace(/^./,'')}}" ></span>
-
-    <span class="m ion {{=selector.replace(/^./,'')}}" ></span>
-
-    <span class="l ion {{=selector.replace(/^./,'')}}" ></span>
+    <span style="color:{{=color}}" class="s {{=it.styleClass}} {{=selector.replace(/^./,'')}}" ></span>
+    <span style="color:{{=color}}" class="m {{=it.styleClass}} {{=selector.replace(/^./,'')}}" ></span>
+    <span style="color:{{=color}}" class="l {{=it.styleClass}} {{=selector.replace(/^./,'')}}" ></span>
 </td>
+{{~}}
+
 </tr>
 {{~}}
 </tbody>

@@ -22,10 +22,14 @@ exports = module.exports = function galleryIcons(options, callback) {
         iconSelectorIgnore = [].concat(options.iconSelectorIgnore);
     async.waterfall([
         function (callback) {
-            exports._ionSelectors(styleFile, iconSelectorIgnore, callback);
+            exports._iconSelectors(styleFile, iconSelectorIgnore, callback);
         },
         function (selectors, callback) {
+            if (options.convert) {
+                selectors = selectors.map(options.convert);
+            }
             var data = {
+                styleClass: options.styleClass,
                 selectors: selectors,
                 styleRef: path.relative(path.dirname(options._dest), styleFile)
             };
@@ -35,7 +39,7 @@ exports = module.exports = function galleryIcons(options, callback) {
 };
 
 
-exports._ionSelectors = function (styleFile, ignorePattern, callback) {
+exports._iconSelectors = function (styleFile, ignorePattern, callback) {
     async.waterfall([
         function (callback) {
             fs.readFile(styleFile, callback)

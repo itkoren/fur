@@ -90,5 +90,9 @@ exports._links = [
     {
         title: 'web-font',
         href: 'web-font-gallery.html'
+    },
+    {
+        title: 'icons',
+        href: 'icon-font-awesome-icon-gallery.html'
     }
 ];

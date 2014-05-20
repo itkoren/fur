@@ -1,7 +1,7 @@
 
 
 (function (window, document) {
-    var links = [{"title":"color-scheme","href":"color-scheme-gallery.html"},{"title":"web-font","href":"web-font-gallery.html"}];
+    var links = [{"title":"color-scheme","href":"color-scheme-gallery.html"},{"title":"web-font","href":"web-font-gallery.html"},{"title":"icons","href":"icon-font-awesome-icon-gallery.html"}];
 
     function nav(links) {
         var nav = document.createElement('nav');

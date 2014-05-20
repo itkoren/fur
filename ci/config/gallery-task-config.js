@@ -52,6 +52,7 @@ exports.ioniconsIcon = {
     worker: 'galleryIcons',
     workerOptions: {
         styleFile: 'doc/resources/stylesheets/ionicons.css',
+        styleClass: 'icon',
         iconSelectorIgnore: [
             /@/,
             /:before/,
@@ -59,6 +60,37 @@ exports.ioniconsIcon = {
             /^\.ion-spin$/,
             /^\.ion$/,
             /^\.ion\-loading\-/
+        ]
+    }
+};
+
+exports.fontAwesomeIcon = {
+    file: 'doc/gallery/icon-font-awesome-icon-gallery.html',
+    tmpl: 'tmpl/html/icon-gallery.html.dot',
+    worker: 'galleryIcons',
+    workerOptions: {
+        styleFile: 'doc/resources/stylesheets/font-awesome.css',
+        styleClass: 'fa',
+        convert: function (val) {
+            return val.replace(/:before/, '');
+        },
+        iconSelectorIgnore: [
+            /@/,
+            /^\.fa$/,
+            /^\.fa\-lg$/,
+            /^\.fa\-ul/,
+            /^\.fa\-li/,
+            /^\.fa\-rotate/,
+            /^\.fa\-border/,
+            /^\.fa\-fw/,
+            /^\.fa\-spin/,
+            /^\.fa\-inverse/,
+            /^\.fa\-boarder/,
+            /^\.fa\-\dx$/,
+            /\.pull\-/,
+            /^\.fa\-flip\-/,
+            /^\.fa\-stack$/,
+            /^\.fa\-stack\-/
         ]
     }
 };
