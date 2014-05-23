@@ -52,6 +52,10 @@ exports.doc = [
     {
         src: 'dist/images/fur/fur-favicon.png',
         dest: 'doc/resources/images/favicon.png'
+    },
+    {
+        src: 'assets/catalogs/color-scheme-catalog.json',
+        dest: 'dist/json/color-scheme-catalog.json'
     }
 ]
     .map(function (workerOptions) {

@@ -22,3 +22,11 @@ exports.fonts = {
         'fonts/**/*.woff'
     ]
 };
+
+exports.json = {
+    srcDir: 'dist',
+    destDir: '.submodules/tick-tack-resources',
+    patterns: [
+        'json/**/*.json'
+    ]
+};

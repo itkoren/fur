@@ -1,0 +1,7022 @@
+{
+    "a": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "red",
+        "colors": [
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "b": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "red",
+        "colors": [
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "c": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "red",
+        "colors": [
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "d": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "red",
+        "colors": [
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "e": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "red",
+        "colors": [
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "f": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "red",
+        "colors": [
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "g": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "red",
+        "colors": [
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "h": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "red",
+        "colors": [
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "i": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "red",
+        "colors": [
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "j": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "red",
+        "colors": [
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "k": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "red",
+        "colors": [
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "l": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "red",
+        "colors": [
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "m": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "red",
+        "colors": [
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "n": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "red",
+        "colors": [
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "o": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "red",
+        "colors": [
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "p": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "red",
+        "colors": [
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#507EA1",
+            "#406480",
+            "#CFDCE6",
+            "#3082BF",
+            "#E6AC73",
+            "#806040",
+            "#E6DACF",
+            "#BF7830"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "q": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "red",
+        "colors": [
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#647D8F",
+            "#596F80",
+            "#CFDCE6",
+            "#6096BF",
+            "#CCAE8F",
+            "#806C59",
+            "#E6DACF",
+            "#BF9060"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "r": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "red",
+        "colors": [
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#BFE4FF",
+            "#6096BF",
+            "#E6F4FF",
+            "#80C9FF",
+            "#FFDFBF",
+            "#BF9060",
+            "#FFF2E6",
+            "#FFC080"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "s": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "red",
+        "colors": [
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#0066B3",
+            "#003D6B",
+            "#E6F4FF",
+            "#66BEFF",
+            "#FF8000",
+            "#994D00",
+            "#FFF2E6",
+            "#FFB366"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "t": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "red",
+        "colors": [
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#899198",
+            "#737A80",
+            "#E6F4FF",
+            "#ACB7BF",
+            "#D9CEC3",
+            "#807973",
+            "#FFF2E6",
+            "#BFB6AC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "u": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "red",
+        "colors": [
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "v": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "red",
+        "colors": [
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "w": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "red",
+        "colors": [
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "x": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "red",
+        "colors": [
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "y": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "red",
+        "colors": [
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "z": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "red-orange",
+        "colors": [
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "aa": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "red-orange",
+        "colors": [
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ab": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "red-orange",
+        "colors": [
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ac": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "red-orange",
+        "colors": [
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ad": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "red-orange",
+        "colors": [
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ae": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "red-orange",
+        "colors": [
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "af": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "red-orange",
+        "colors": [
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ag": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "red-orange",
+        "colors": [
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ah": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "red-orange",
+        "colors": [
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ai": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "red-orange",
+        "colors": [
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "aj": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "red-orange",
+        "colors": [
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ak": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "red-orange",
+        "colors": [
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "al": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "red-orange",
+        "colors": [
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "am": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "red-orange",
+        "colors": [
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "an": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "red-orange",
+        "colors": [
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ao": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "red-orange",
+        "colors": [
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#5C5CA1",
+            "#494980",
+            "#D2D2E6",
+            "#4444BF",
+            "#E6C373",
+            "#806C40",
+            "#E6DFCF",
+            "#BF9430"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ap": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "red-orange",
+        "colors": [
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#6A6A8F",
+            "#5F5F80",
+            "#D2D2E6",
+            "#6D6DBF",
+            "#CCBA8F",
+            "#807459",
+            "#E6DFCF",
+            "#BFA260"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "aq": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "red-orange",
+        "colors": [
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#C8C8FF",
+            "#6D6DBF",
+            "#E9E9FF",
+            "#9191FF",
+            "#FFECBF",
+            "#BFA260",
+            "#FFF7E6",
+            "#FFD980"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ar": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "red-orange",
+        "colors": [
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#1919B3",
+            "#0F0F6B",
+            "#E9E9FF",
+            "#7B7BFF",
+            "#FFB200",
+            "#996B00",
+            "#FFF7E6",
+            "#FFD166"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "as": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "red-orange",
+        "colors": [
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#8B8B98",
+            "#757580",
+            "#E9E9FF",
+            "#AFAFBF",
+            "#D9D2C3",
+            "#807C73",
+            "#FFF7E6",
+            "#BFB9AC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "at": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "red-orange",
+        "colors": [
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "au": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "red-orange",
+        "colors": [
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "av": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "red-orange",
+        "colors": [
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "aw": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "red-orange",
+        "colors": [
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ax": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "red-orange",
+        "colors": [
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ay": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "orange",
+        "colors": [
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "az": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "orange",
+        "colors": [
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ba": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "orange",
+        "colors": [
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bb": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "orange",
+        "colors": [
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bc": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "orange",
+        "colors": [
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "bd": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "orange",
+        "colors": [
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "be": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "orange",
+        "colors": [
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bf": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "orange",
+        "colors": [
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bg": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "orange",
+        "colors": [
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bh": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "orange",
+        "colors": [
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "bi": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "orange",
+        "colors": [
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bj": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "orange",
+        "colors": [
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bk": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "orange",
+        "colors": [
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bl": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "orange",
+        "colors": [
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bm": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "orange",
+        "colors": [
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "bn": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "orange",
+        "colors": [
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#62458A",
+            "#5A4080",
+            "#D8CFE6",
+            "#6C30BF",
+            "#E6DA73",
+            "#807940",
+            "#E6E3CF",
+            "#BFB130"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bo": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "orange",
+        "colors": [
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#65567A",
+            "#695980",
+            "#D8CFE6",
+            "#8860BF",
+            "#CCC68F",
+            "#807C59",
+            "#E6E3CF",
+            "#BFB660"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bp": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "orange",
+        "colors": [
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#DABFFF",
+            "#8860BF",
+            "#F0E6FF",
+            "#B580FF",
+            "#FFF9BF",
+            "#BFB660",
+            "#FFFCE6",
+            "#FFF280"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bq": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "orange",
+        "colors": [
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#400099",
+            "#26005C",
+            "#F0E6FF",
+            "#A666FF",
+            "#FFE500",
+            "#998900",
+            "#FFFCE6",
+            "#FFEF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "br": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "orange",
+        "colors": [
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#7A7582",
+            "#787380",
+            "#F0E6FF",
+            "#B4ACBF",
+            "#D9D7C3",
+            "#807E73",
+            "#FFFCE6",
+            "#BFBDAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "bs": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "orange",
+        "colors": [
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bt": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "orange",
+        "colors": [
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bu": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "orange",
+        "colors": [
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bv": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "orange",
+        "colors": [
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "bw": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "orange",
+        "colors": [
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "bx": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "orange-yellow",
+        "colors": [
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "by": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "orange-yellow",
+        "colors": [
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "bz": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ca": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cb": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "orange-yellow",
+        "colors": [
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "cc": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "orange-yellow",
+        "colors": [
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "cd": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "orange-yellow",
+        "colors": [
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ce": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cf": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cg": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "orange-yellow",
+        "colors": [
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ch": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "orange-yellow",
+        "colors": [
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ci": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "orange-yellow",
+        "colors": [
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "cj": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ck": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cl": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "orange-yellow",
+        "colors": [
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "cm": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "orange-yellow",
+        "colors": [
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#8A458A",
+            "#804080",
+            "#E6CFE6",
+            "#BF30BF",
+            "#CFE673",
+            "#738040",
+            "#E1E6CF",
+            "#A3BF30"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "cn": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "orange-yellow",
+        "colors": [
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#7A567A",
+            "#805980",
+            "#E6CFE6",
+            "#BF60BF",
+            "#C0CC8F",
+            "#788059",
+            "#E1E6CF",
+            "#ACBF60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "co": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#FFBFFF",
+            "#BF60BF",
+            "#FFE6FF",
+            "#FF80FF",
+            "#F2FFBF",
+            "#ACBF60",
+            "#FAFFE6",
+            "#E6FF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cp": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#990099",
+            "#5C005C",
+            "#FFE6FF",
+            "#FF66FF",
+            "#CCFF00",
+            "#7A9900",
+            "#FAFFE6",
+            "#E0FF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cq": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "orange-yellow",
+        "colors": [
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#827582",
+            "#807380",
+            "#FFE6FF",
+            "#BFACBF",
+            "#D4D9C3",
+            "#7D8073",
+            "#FAFFE6",
+            "#BBBFAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "cr": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "orange-yellow",
+        "colors": [
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "cs": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "orange-yellow",
+        "colors": [
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ct": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cu": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "orange-yellow",
+        "colors": [
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cv": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "orange-yellow",
+        "colors": [
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "cw": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "yellow",
+        "colors": [
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "cx": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "yellow",
+        "colors": [
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "cy": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "yellow",
+        "colors": [
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "cz": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "yellow",
+        "colors": [
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "da": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "yellow",
+        "colors": [
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "db": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "yellow",
+        "colors": [
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dc": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "yellow",
+        "colors": [
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dd": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "yellow",
+        "colors": [
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "de": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "yellow",
+        "colors": [
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "df": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "yellow",
+        "colors": [
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "dg": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "yellow",
+        "colors": [
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dh": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "yellow",
+        "colors": [
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "di": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "yellow",
+        "colors": [
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "dj": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "yellow",
+        "colors": [
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "dk": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "yellow",
+        "colors": [
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "dl": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "yellow",
+        "colors": [
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#CF6795",
+            "#80405C",
+            "#E6CFD9",
+            "#BF3070",
+            "#8AE673",
+            "#4D8040",
+            "#D3E6CF",
+            "#4DBF30"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dm": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "yellow",
+        "colors": [
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#B88199",
+            "#80596A",
+            "#E6CFD9",
+            "#BF608A",
+            "#9BCC8F",
+            "#618059",
+            "#D3E6CF",
+            "#73BF60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dn": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "yellow",
+        "colors": [
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#FFBFDC",
+            "#BF608A",
+            "#FFE6F1",
+            "#FF80B8",
+            "#CCFFBF",
+            "#73BF60",
+            "#EBFFE6",
+            "#99FF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "do": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "yellow",
+        "colors": [
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#E60066",
+            "#8A003D",
+            "#FFE6F1",
+            "#FF66AA",
+            "#33FF00",
+            "#1F9900",
+            "#EBFFE6",
+            "#85FF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "dp": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "yellow",
+        "colors": [
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#C3B0B8",
+            "#807378",
+            "#FFE6F1",
+            "#BFACB5",
+            "#C7D9C3",
+            "#758073",
+            "#EBFFE6",
+            "#B0BFAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "dq": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "yellow",
+        "colors": [
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dr": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "yellow",
+        "colors": [
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ds": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "yellow",
+        "colors": [
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "dt": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "yellow",
+        "colors": [
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "du": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "yellow",
+        "colors": [
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "dv": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "yellow-green",
+        "colors": [
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dw": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "yellow-green",
+        "colors": [
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "dx": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "yellow-green",
+        "colors": [
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "dy": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "yellow-green",
+        "colors": [
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "dz": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "yellow-green",
+        "colors": [
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ea": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "yellow-green",
+        "colors": [
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "eb": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "yellow-green",
+        "colors": [
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ec": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "yellow-green",
+        "colors": [
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ed": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "yellow-green",
+        "colors": [
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ee": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "yellow-green",
+        "colors": [
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ef": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "yellow-green",
+        "colors": [
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "eg": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "yellow-green",
+        "colors": [
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "eh": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "yellow-green",
+        "colors": [
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ei": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "yellow-green",
+        "colors": [
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ej": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "yellow-green",
+        "colors": [
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ek": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "yellow-green",
+        "colors": [
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#E68A73",
+            "#804D40",
+            "#E6D3CF",
+            "#BF4D30",
+            "#50A17E",
+            "#408064",
+            "#CFE6DC",
+            "#30BF82"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "el": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "yellow-green",
+        "colors": [
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#CC9B8F",
+            "#806159",
+            "#E6D3CF",
+            "#BF7360",
+            "#648F7D",
+            "#59806F",
+            "#CFE6DC",
+            "#60BF96"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "em": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "yellow-green",
+        "colors": [
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#FFCCBF",
+            "#BF7360",
+            "#FFEBE6",
+            "#FF9980",
+            "#BFFFE4",
+            "#60BF96",
+            "#E6FFF4",
+            "#80FFC9"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "en": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "yellow-green",
+        "colors": [
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#FF3300",
+            "#991F00",
+            "#FFEBE6",
+            "#FF8566",
+            "#00B366",
+            "#006B3D",
+            "#E6FFF4",
+            "#66FFBE"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "eo": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "yellow-green",
+        "colors": [
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#D9C7C3",
+            "#807573",
+            "#FFEBE6",
+            "#BFB0AC",
+            "#899891",
+            "#73807A",
+            "#E6FFF4",
+            "#ACBFB7"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ep": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "yellow-green",
+        "colors": [
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30"
+        ],
+        "tones": [
+            "#E6E6E6",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "eq": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "yellow-green",
+        "colors": [
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "er": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "yellow-green",
+        "colors": [
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "es": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "yellow-green",
+        "colors": [
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#999999",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "et": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "yellow-green",
+        "colors": [
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC"
+        ],
+        "tones": [
+            "#D9D9D9",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "eu": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "green",
+        "colors": [
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ev": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "green",
+        "colors": [
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ew": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "green",
+        "colors": [
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ex": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "green",
+        "colors": [
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ey": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "green",
+        "colors": [
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ez": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "green",
+        "colors": [
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fa": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "green",
+        "colors": [
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fb": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "green",
+        "colors": [
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fc": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "green",
+        "colors": [
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fd": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "green",
+        "colors": [
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "fe": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "green",
+        "colors": [
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ff": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "green",
+        "colors": [
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fg": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "green",
+        "colors": [
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fh": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "green",
+        "colors": [
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fi": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "green",
+        "colors": [
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "fj": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "green",
+        "colors": [
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#E6AC73",
+            "#806040",
+            "#E6DACF",
+            "#BF7830",
+            "#507EA1",
+            "#406480",
+            "#CFDCE6",
+            "#3082BF"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fk": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "green",
+        "colors": [
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#CCAE8F",
+            "#806C59",
+            "#E6DACF",
+            "#BF9060",
+            "#647D8F",
+            "#596F80",
+            "#CFDCE6",
+            "#6096BF"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fl": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "green",
+        "colors": [
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#FFDFBF",
+            "#BF9060",
+            "#FFF2E6",
+            "#FFC080",
+            "#BFE4FF",
+            "#6096BF",
+            "#E6F4FF",
+            "#80C9FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fm": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "green",
+        "colors": [
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#FF8000",
+            "#994D00",
+            "#FFF2E6",
+            "#FFB366",
+            "#0066B3",
+            "#003D6B",
+            "#E6F4FF",
+            "#66BEFF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fn": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "green",
+        "colors": [
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#D9CEC3",
+            "#807973",
+            "#FFF2E6",
+            "#BFB6AC",
+            "#899198",
+            "#737A80",
+            "#E6F4FF",
+            "#ACB7BF"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "fo": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "green",
+        "colors": [
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30",
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fp": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "green",
+        "colors": [
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60",
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fq": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "green",
+        "colors": [
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80",
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fr": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "green",
+        "colors": [
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66",
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fs": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "green",
+        "colors": [
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC",
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ft": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "green-blue",
+        "colors": [
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fu": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "green-blue",
+        "colors": [
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fv": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "green-blue",
+        "colors": [
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fw": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "green-blue",
+        "colors": [
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "fx": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "green-blue",
+        "colors": [
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "fy": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "green-blue",
+        "colors": [
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "fz": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "green-blue",
+        "colors": [
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ga": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "green-blue",
+        "colors": [
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gb": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "green-blue",
+        "colors": [
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gc": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "green-blue",
+        "colors": [
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "gd": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "green-blue",
+        "colors": [
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ge": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "green-blue",
+        "colors": [
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gf": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "green-blue",
+        "colors": [
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gg": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "green-blue",
+        "colors": [
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gh": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "green-blue",
+        "colors": [
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "gi": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "green-blue",
+        "colors": [
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#E6C373",
+            "#806C40",
+            "#E6DFCF",
+            "#BF9430",
+            "#5C5CA1",
+            "#494980",
+            "#D2D2E6",
+            "#4444BF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gj": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "green-blue",
+        "colors": [
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#CCBA8F",
+            "#807459",
+            "#E6DFCF",
+            "#BFA260",
+            "#6A6A8F",
+            "#5F5F80",
+            "#D2D2E6",
+            "#6D6DBF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gk": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "green-blue",
+        "colors": [
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#FFECBF",
+            "#BFA260",
+            "#FFF7E6",
+            "#FFD980",
+            "#C8C8FF",
+            "#6D6DBF",
+            "#E9E9FF",
+            "#9191FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gl": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "green-blue",
+        "colors": [
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#FFB200",
+            "#996B00",
+            "#FFF7E6",
+            "#FFD166",
+            "#1919B3",
+            "#0F0F6B",
+            "#E9E9FF",
+            "#7B7BFF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gm": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "green-blue",
+        "colors": [
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#D9D2C3",
+            "#807C73",
+            "#FFF7E6",
+            "#BFB9AC",
+            "#8B8B98",
+            "#757580",
+            "#E9E9FF",
+            "#AFAFBF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "gn": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "green-blue",
+        "colors": [
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF",
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "go": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "green-blue",
+        "colors": [
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF",
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gp": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "green-blue",
+        "colors": [
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF",
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gq": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "green-blue",
+        "colors": [
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF",
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gr": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "green-blue",
+        "colors": [
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF",
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "gs": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "blue",
+        "colors": [
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gt": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "blue",
+        "colors": [
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gu": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "blue",
+        "colors": [
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gv": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "blue",
+        "colors": [
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "gw": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "blue",
+        "colors": [
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "gx": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "blue",
+        "colors": [
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gy": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "blue",
+        "colors": [
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "gz": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "blue",
+        "colors": [
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ha": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "blue",
+        "colors": [
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hb": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "blue",
+        "colors": [
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "hc": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "blue",
+        "colors": [
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#E6A173",
+            "#805940",
+            "#E6D8CF",
+            "#BF6930",
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hd": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "blue",
+        "colors": [
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#CCA78F",
+            "#806959",
+            "#E6D8CF",
+            "#BF8660",
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "he": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "blue",
+        "colors": [
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#FFD9BF",
+            "#BF8660",
+            "#FFF0E6",
+            "#FFB380",
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hf": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "blue",
+        "colors": [
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#FF6600",
+            "#993D00",
+            "#FFF0E6",
+            "#FFA366",
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hg": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "blue",
+        "colors": [
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#D9CCC3",
+            "#807873",
+            "#FFF0E6",
+            "#BFB4AC",
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "hh": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "blue",
+        "colors": [
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#E6DA73",
+            "#807940",
+            "#E6E3CF",
+            "#BFB130",
+            "#62458A",
+            "#5A4080",
+            "#D8CFE6",
+            "#6C30BF"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hi": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "blue",
+        "colors": [
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#CCC68F",
+            "#807C59",
+            "#E6E3CF",
+            "#BFB660",
+            "#65567A",
+            "#695980",
+            "#D8CFE6",
+            "#8860BF"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hj": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "blue",
+        "colors": [
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#FFF9BF",
+            "#BFB660",
+            "#FFFCE6",
+            "#FFF280",
+            "#DABFFF",
+            "#8860BF",
+            "#F0E6FF",
+            "#B580FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hk": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "blue",
+        "colors": [
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#FFE500",
+            "#998900",
+            "#FFFCE6",
+            "#FFEF66",
+            "#400099",
+            "#26005C",
+            "#F0E6FF",
+            "#A666FF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hl": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "blue",
+        "colors": [
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#D9D7C3",
+            "#807E73",
+            "#FFFCE6",
+            "#BFBDAC",
+            "#7A7582",
+            "#787380",
+            "#F0E6FF",
+            "#B4ACBF"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "hm": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "blue",
+        "colors": [
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF",
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#458A8A",
+            "#408080",
+            "#CFE6E6",
+            "#30BFBF"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hn": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "blue",
+        "colors": [
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF",
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#567A7A",
+            "#598080",
+            "#CFE6E6",
+            "#60BFBF"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ho": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "blue",
+        "colors": [
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF",
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#BFFFFF",
+            "#60BFBF",
+            "#E6FFFF",
+            "#80FFFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hp": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "blue",
+        "colors": [
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF",
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#009999",
+            "#005C5C",
+            "#E6FFFF",
+            "#66FFFF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hq": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "blue",
+        "colors": [
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF",
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#758282",
+            "#738080",
+            "#E6FFFF",
+            "#ACBFBF"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "hr": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "blue-violet",
+        "colors": [
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hs": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "blue-violet",
+        "colors": [
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ht": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "blue-violet",
+        "colors": [
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hu": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "blue-violet",
+        "colors": [
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hv": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "blue-violet",
+        "colors": [
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "hw": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "blue-violet",
+        "colors": [
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hx": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "blue-violet",
+        "colors": [
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "hy": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "blue-violet",
+        "colors": [
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "hz": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "blue-violet",
+        "colors": [
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ia": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "blue-violet",
+        "colors": [
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ib": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "blue-violet",
+        "colors": [
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#E6B873",
+            "#806640",
+            "#E6DCCF",
+            "#BF8630",
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ic": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "blue-violet",
+        "colors": [
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#CCB48F",
+            "#807059",
+            "#E6DCCF",
+            "#BF9960",
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "id": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "blue-violet",
+        "colors": [
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#FFE6BF",
+            "#BF9960",
+            "#FFF5E6",
+            "#FFCC80",
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ie": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "blue-violet",
+        "colors": [
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#FF9900",
+            "#995C00",
+            "#FFF5E6",
+            "#FFC266",
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "if": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "blue-violet",
+        "colors": [
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#D9D0C3",
+            "#807A73",
+            "#FFF5E6",
+            "#BFB8AC",
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ig": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "blue-violet",
+        "colors": [
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#CFE673",
+            "#738040",
+            "#E1E6CF",
+            "#A3BF30",
+            "#8A458A",
+            "#804080",
+            "#E6CFE6",
+            "#BF30BF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ih": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "blue-violet",
+        "colors": [
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#C0CC8F",
+            "#788059",
+            "#E1E6CF",
+            "#ACBF60",
+            "#7A567A",
+            "#805980",
+            "#E6CFE6",
+            "#BF60BF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ii": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "blue-violet",
+        "colors": [
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#F2FFBF",
+            "#ACBF60",
+            "#FAFFE6",
+            "#E6FF80",
+            "#FFBFFF",
+            "#BF60BF",
+            "#FFE6FF",
+            "#FF80FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ij": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "blue-violet",
+        "colors": [
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#CCFF00",
+            "#7A9900",
+            "#FAFFE6",
+            "#E0FF66",
+            "#990099",
+            "#5C005C",
+            "#FFE6FF",
+            "#FF66FF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ik": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "blue-violet",
+        "colors": [
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#D4D9C3",
+            "#7D8073",
+            "#FAFFE6",
+            "#BBBFAC",
+            "#827582",
+            "#807380",
+            "#FFE6FF",
+            "#BFACBF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "il": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "blue-violet",
+        "colors": [
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF",
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#5C73B8",
+            "#405080",
+            "#CFD4E6",
+            "#3054BF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "im": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "blue-violet",
+        "colors": [
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF",
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#727EA3",
+            "#596380",
+            "#CFD4E6",
+            "#6078BF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "in": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "blue-violet",
+        "colors": [
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF",
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#BFCFFF",
+            "#6078BF",
+            "#E6ECFF",
+            "#809FFF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "io": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "blue-violet",
+        "colors": [
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF",
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#0033CC",
+            "#001F7A",
+            "#E6ECFF",
+            "#668CFF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ip": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "blue-violet",
+        "colors": [
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF",
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#9CA0AD",
+            "#737680",
+            "#E6ECFF",
+            "#ACB1BF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "iq": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "violet",
+        "colors": [
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ir": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "violet",
+        "colors": [
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "is": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "violet",
+        "colors": [
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "it": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "violet",
+        "colors": [
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "iu": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "violet",
+        "colors": [
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "iv": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "violet",
+        "colors": [
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "iw": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "violet",
+        "colors": [
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ix": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "violet",
+        "colors": [
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "iy": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "violet",
+        "colors": [
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "iz": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "violet",
+        "colors": [
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ja": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "violet",
+        "colors": [
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#E6CF73",
+            "#807340",
+            "#E6E1CF",
+            "#BFA330",
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jb": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "violet",
+        "colors": [
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#CCC08F",
+            "#807859",
+            "#E6E1CF",
+            "#BFAC60",
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jc": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "violet",
+        "colors": [
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#FFF2BF",
+            "#BFAC60",
+            "#FFFAE6",
+            "#FFE680",
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jd": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "violet",
+        "colors": [
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#FFCC00",
+            "#997A00",
+            "#FFFAE6",
+            "#FFE066",
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "je": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "violet",
+        "colors": [
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#D9D4C3",
+            "#807D73",
+            "#FFFAE6",
+            "#BFBBAC",
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "jf": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "violet",
+        "colors": [
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#8AE673",
+            "#4D8040",
+            "#D3E6CF",
+            "#4DBF30",
+            "#CF6795",
+            "#80405C",
+            "#E6CFD9",
+            "#BF3070"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jg": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "violet",
+        "colors": [
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#9BCC8F",
+            "#618059",
+            "#D3E6CF",
+            "#73BF60",
+            "#B88199",
+            "#80596A",
+            "#E6CFD9",
+            "#BF608A"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jh": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "violet",
+        "colors": [
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#CCFFBF",
+            "#73BF60",
+            "#EBFFE6",
+            "#99FF80",
+            "#FFBFDC",
+            "#BF608A",
+            "#FFE6F1",
+            "#FF80B8"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ji": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "violet",
+        "colors": [
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#33FF00",
+            "#1F9900",
+            "#EBFFE6",
+            "#85FF66",
+            "#E60066",
+            "#8A003D",
+            "#FFE6F1",
+            "#FF66AA"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jj": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "violet",
+        "colors": [
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#C7D9C3",
+            "#758073",
+            "#EBFFE6",
+            "#B0BFAC",
+            "#C3B0B8",
+            "#807378",
+            "#FFE6F1",
+            "#BFACB5"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "jk": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "violet",
+        "colors": [
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF",
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#5C458A",
+            "#554080",
+            "#D6CFE6",
+            "#6030BF"
+        ],
+        "tones": [
+            "#8A8A8A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jl": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "violet",
+        "colors": [
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF",
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#62567A",
+            "#665980",
+            "#D6CFE6",
+            "#8060BF"
+        ],
+        "tones": [
+            "#7A7A7A",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jm": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "violet",
+        "colors": [
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF",
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#D5BFFF",
+            "#8060BF",
+            "#EEE6FF",
+            "#AA80FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jn": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "violet",
+        "colors": [
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF",
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#330099",
+            "#1F005C",
+            "#EEE6FF",
+            "#9966FF"
+        ],
+        "tones": [
+            "#999999",
+            "#5C5C5C",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jo": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "violet",
+        "colors": [
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF",
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#797582",
+            "#777380",
+            "#EEE6FF",
+            "#B3ACBF"
+        ],
+        "tones": [
+            "#828282",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "jp": {
+        "scheme": "mono",
+        "variation": "pastel",
+        "hue": "violet-red",
+        "colors": [
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jq": {
+        "scheme": "mono",
+        "variation": "soft",
+        "hue": "violet-red",
+        "colors": [
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jr": {
+        "scheme": "mono",
+        "variation": "light",
+        "hue": "violet-red",
+        "colors": [
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "js": {
+        "scheme": "mono",
+        "variation": "hard",
+        "hue": "violet-red",
+        "colors": [
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jt": {
+        "scheme": "mono",
+        "variation": "pale",
+        "hue": "violet-red",
+        "colors": [
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ju": {
+        "scheme": "contrast",
+        "variation": "pastel",
+        "hue": "violet-red",
+        "colors": [
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jv": {
+        "scheme": "contrast",
+        "variation": "soft",
+        "hue": "violet-red",
+        "colors": [
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "jw": {
+        "scheme": "contrast",
+        "variation": "light",
+        "hue": "violet-red",
+        "colors": [
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jx": {
+        "scheme": "contrast",
+        "variation": "hard",
+        "hue": "violet-red",
+        "colors": [
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "jy": {
+        "scheme": "contrast",
+        "variation": "pale",
+        "hue": "violet-red",
+        "colors": [
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "jz": {
+        "scheme": "triade",
+        "variation": "pastel",
+        "hue": "violet-red",
+        "colors": [
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#E6E673",
+            "#808040",
+            "#E6E6CF",
+            "#BFBF30",
+            "#5CB85C",
+            "#408040",
+            "#CFE6CF",
+            "#30BF30"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "ka": {
+        "scheme": "triade",
+        "variation": "soft",
+        "hue": "violet-red",
+        "colors": [
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#CCCC8F",
+            "#808059",
+            "#E6E6CF",
+            "#BFBF60",
+            "#72A372",
+            "#598059",
+            "#CFE6CF",
+            "#60BF60"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "kb": {
+        "scheme": "triade",
+        "variation": "light",
+        "hue": "violet-red",
+        "colors": [
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#FFFFBF",
+            "#BFBF60",
+            "#FFFFE6",
+            "#FFFF80",
+            "#BFFFBF",
+            "#60BF60",
+            "#E6FFE6",
+            "#80FF80"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "kc": {
+        "scheme": "triade",
+        "variation": "hard",
+        "hue": "violet-red",
+        "colors": [
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#FFFF00",
+            "#999900",
+            "#FFFFE6",
+            "#FFFF66",
+            "#00CC00",
+            "#007A00",
+            "#E6FFE6",
+            "#66FF66"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "kd": {
+        "scheme": "triade",
+        "variation": "pale",
+        "hue": "violet-red",
+        "colors": [
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#D9D9C3",
+            "#808073",
+            "#FFFFE6",
+            "#BFBFAC",
+            "#9CAD9C",
+            "#738073",
+            "#E6FFE6",
+            "#ACBFAC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "ke": {
+        "scheme": "tetrade",
+        "variation": "pastel",
+        "hue": "violet-red",
+        "colors": [
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#B8E673",
+            "#668040",
+            "#DCE6CF",
+            "#86BF30",
+            "#50A17E",
+            "#408064",
+            "#CFE6DC",
+            "#30BF82",
+            "#E68A73",
+            "#804D40",
+            "#E6D3CF",
+            "#BF4D30"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "kf": {
+        "scheme": "tetrade",
+        "variation": "soft",
+        "hue": "violet-red",
+        "colors": [
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#B4CC8F",
+            "#708059",
+            "#DCE6CF",
+            "#99BF60",
+            "#648F7D",
+            "#59806F",
+            "#CFE6DC",
+            "#60BF96",
+            "#CC9B8F",
+            "#806159",
+            "#E6D3CF",
+            "#BF7360"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "kg": {
+        "scheme": "tetrade",
+        "variation": "light",
+        "hue": "violet-red",
+        "colors": [
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#E6FFBF",
+            "#99BF60",
+            "#F5FFE6",
+            "#CCFF80",
+            "#BFFFE4",
+            "#60BF96",
+            "#E6FFF4",
+            "#80FFC9",
+            "#FFCCBF",
+            "#BF7360",
+            "#FFEBE6",
+            "#FF9980"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "kh": {
+        "scheme": "tetrade",
+        "variation": "hard",
+        "hue": "violet-red",
+        "colors": [
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#99FF00",
+            "#5C9900",
+            "#F5FFE6",
+            "#C2FF66",
+            "#00B366",
+            "#006B3D",
+            "#E6FFF4",
+            "#66FFBE",
+            "#FF3300",
+            "#991F00",
+            "#FFEBE6",
+            "#FF8566"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "ki": {
+        "scheme": "tetrade",
+        "variation": "pale",
+        "hue": "violet-red",
+        "colors": [
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#D0D9C3",
+            "#7A8073",
+            "#F5FFE6",
+            "#B8BFAC",
+            "#899891",
+            "#73807A",
+            "#E6FFF4",
+            "#ACBFB7",
+            "#D9C7C3",
+            "#807573",
+            "#FFEBE6",
+            "#BFB0AC"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    },
+    "kj": {
+        "scheme": "analogic",
+        "variation": "pastel",
+        "hue": "violet-red",
+        "colors": [
+            "#B85CA1",
+            "#804070",
+            "#E6CFE0",
+            "#BF309B",
+            "#E67373",
+            "#804040",
+            "#E6CFCF",
+            "#BF3030",
+            "#73458A",
+            "#6A4080",
+            "#DECFE6",
+            "#8F30BF"
+        ],
+        "tones": [
+            "#B8B8B8",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "kk": {
+        "scheme": "analogic",
+        "variation": "soft",
+        "hue": "violet-red",
+        "colors": [
+            "#A37297",
+            "#805976",
+            "#E6CFE0",
+            "#BF60A7",
+            "#CC8F8F",
+            "#805959",
+            "#E6CFCF",
+            "#BF6060",
+            "#6E567A",
+            "#735980",
+            "#DECFE6",
+            "#9F60BF"
+        ],
+        "tones": [
+            "#A3A3A3",
+            "#808080",
+            "#E6E6E6",
+            "#BFBFBF"
+        ]
+    },
+    "kl": {
+        "scheme": "analogic",
+        "variation": "light",
+        "hue": "violet-red",
+        "colors": [
+            "#FFBFEF",
+            "#BF60A7",
+            "#FFE6F9",
+            "#FF80DF",
+            "#FFBFBF",
+            "#BF6060",
+            "#FFE6E6",
+            "#FF8080",
+            "#EABFFF",
+            "#9F60BF",
+            "#F7E6FF",
+            "#D580FF"
+        ],
+        "tones": [
+            "#FFFFFF",
+            "#BFBFBF",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "km": {
+        "scheme": "analogic",
+        "variation": "hard",
+        "hue": "violet-red",
+        "colors": [
+            "#CC0099",
+            "#7A005C",
+            "#FFE6F9",
+            "#FF66D9",
+            "#FF0000",
+            "#990000",
+            "#FFE6E6",
+            "#FF6666",
+            "#660099",
+            "#3D005C",
+            "#F7E6FF",
+            "#CC66FF"
+        ],
+        "tones": [
+            "#CCCCCC",
+            "#7A7A7A",
+            "#FFFFFF",
+            "#FFFFFF"
+        ]
+    },
+    "kn": {
+        "scheme": "analogic",
+        "variation": "pale",
+        "hue": "violet-red",
+        "colors": [
+            "#AD9CA9",
+            "#80737C",
+            "#FFE6F9",
+            "#BFACBA",
+            "#D9C3C3",
+            "#807373",
+            "#FFE6E6",
+            "#BFACAC",
+            "#7E7582",
+            "#7B7380",
+            "#F7E6FF",
+            "#B9ACBF"
+        ],
+        "tones": [
+            "#ADADAD",
+            "#808080",
+            "#FFFFFF",
+            "#BFBFBF"
+        ]
+    }
+}
