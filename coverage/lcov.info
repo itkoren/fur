@@ -1085,12 +1085,12 @@ BRH:2
 end_of_record
 TN:
 SF:/Users/okuni/WebstormProjects/fur/ci/config/static-task-config.js
-FN:57,(anonymous_1)
+FN:61,(anonymous_1)
 FNF:1
 FNH:1
-FNDA:7,(anonymous_1)
+FNDA:8,(anonymous_1)
 DA:12,1
-DA:58,7
+DA:62,8
 LF:2
 LH:2
 BRF:0
@@ -1112,8 +1112,9 @@ FNF:0
 FNH:0
 DA:9,1
 DA:18,1
-LF:2
-LH:2
+DA:26,1
+LF:3
+LH:3
 BRF:0
 BRH:0
 end_of_record
