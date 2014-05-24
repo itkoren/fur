@@ -2,7 +2,7 @@
     "name": "fur",
     "version": "0.0.9",
     "description": "Front end design tool.",
-    "main": "index.js",
+    "main": "lib/index.js",
     "bin": {
         "fur": "./bin/fur"
     },
