@@ -44,6 +44,7 @@ Prerequisites
 + [node.js][nodejs_url]
 + [cairo][cairo_url]
 + [ImageMagick][image_magick_url]
++ [FontForge][font_forge_url]
 
 fur depends on [node-canvas][node_canvas_url], and it requires some setting up.    
 For more detail, see [the node-canvas install guide][node_canvas_install_wiki_url].
@@ -223,6 +224,7 @@ Links
 [node_canvas_url]: https://www.npmjs.org/package/canvas
 [node_canvas_install_wiki_url]: https://github.com/LearnBoost/node-canvas/wiki/_pages
 [image_magick_url]: http://www.imagemagick.org/
+[font_forge_url]: http://fontforge.github.io/en-US/downloads/source/
 [my_repository_url]: https://github.com/tick-tack/fur
 [my_wiki_url]: https://github.com/tick-tack/fur/wiki
 [my_travis_url]: https://travis-ci.org/tick-tack/fur

@@ -71,6 +71,10 @@ program
     .option('-H, --height [height]', 'Image height.')
     .action(commands.resize.bind(commands));
 
+program
+    .command('subset <letters> <src> <dest>')
+    .description('Generate font subset.')
+    .action(commands.subset.bind(commands));
 
 program
     .command('woff <src> <dest>')
