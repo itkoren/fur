@@ -80,6 +80,7 @@ $ fur -h
     ico <src> <dest>       Convert a png file to ico file.
     logo [options]         Generate a logo.
     resize [options] <src> <dest> Resize a image.
+    subset <letters> <src> <dest> Generate font subset.
     woff <src> <dest>      Convert a ttf file to woff.
 
   Options:

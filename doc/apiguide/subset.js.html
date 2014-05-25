@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: resize_image.js</title>
+	<title>fur Source: commands/subset.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -145,53 +145,28 @@
 					
 
 
-		<h1 class="page-title">Source: resize_image.js</h1>
+		<h1 class="page-title">Source: commands/subset.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Resize a image.
- * @memberof module:fur
- * @function resizeImage
- * @param {string} src - Source image file path.
- * @param {string} dest - Destination image file path.
- * @param {object} options - Resize options.
- * @param {number} options.width - Resize image width.
- * @param {number} options.height - Resize image height.
- * @param {function} callback - Callback when done.
+ * Create a font subset.
+ * @memberof commands
+ * @function subset
  * @author Taka Okunishi
- *
  */
-exports = module.exports = function resizeImage(src, dest, options, callback) {
-    var missing = exports._findMissing(options || {});
-    if (missing.length) {
-        callback(new Error(missing.join(',') + ' is required!'));
-        return;
 
-    }
+"use strict";
 
-    var imagemagick = require('imagemagick');
-    try {
-        imagemagick.resize({
-            srcPath: src,
-            dstPath: dest,
-            width: options.width,
-            height: options.height
-        }, function (err) {
-            callback(err);
-        });
-    } catch (e) {
-        callback(new Error('Resized image failed with error: ' + e));
-    }
-};
+var generateSubset = require('../generate_subset'),
+    print = require('../util/print');
 
-exports._required = [
-    'width', 'height'
-];
-
-exports._findMissing = function (options) {
-    return exports._required.filter(function (key) {
-        return !options[key];
+module.exports = function subset(letter, src, dest, callback) {
+    generateSubset(letter, src, dest, function (err) {
+        if (!err) {
+            print.info('File generated:', dest);
+        }
+        callback && callback(err);
     });
 };</pre>
         </article>
