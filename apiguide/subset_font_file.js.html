@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>fur Source: resize_image.js</title>
+	<title>fur Source: util/subset_font_file.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -145,53 +145,59 @@
 					
 
 
-		<h1 class="page-title">Source: resize_image.js</h1>
+		<h1 class="page-title">Source: util/subset_font_file.js</h1>
     
     <section>
         <article>
             <pre class="sunlight-highlight-javascript linenums">/**
- * @file Resize a image.
- * @memberof module:fur
- * @function resizeImage
- * @param {string} src - Source image file path.
- * @param {string} dest - Destination image file path.
- * @param {object} options - Resize options.
- * @param {number} options.width - Resize image width.
- * @param {number} options.height - Resize image height.
- * @param {function} callback - Callback when done.
- * @author Taka Okunishi
- *
+ * @file Generate font sub set file.
+ * @memberof util
+ * @function subsetFontFile.
+ * @param {string} subset - Letters to subset.
+ * @param {string} src - Source file name.
+ * @param {string} dest - Destination file name.
+ * @param callback
  */
-exports = module.exports = function resizeImage(src, dest, options, callback) {
-    var missing = exports._findMissing(options || {});
-    if (missing.length) {
-        callback(new Error(missing.join(',') + ' is required!'));
-        return;
 
-    }
+"use strict";
 
-    var imagemagick = require('imagemagick');
-    try {
-        imagemagick.resize({
-            srcPath: src,
-            dstPath: dest,
-            width: options.width,
-            height: options.height
-        }, function (err) {
-            callback(err);
-        });
-    } catch (e) {
-        callback(new Error('Resized image failed with error: ' + e));
-    }
+var async = require('async'),
+    path = require('path'),
+    childProcess = require('child_process');
+
+exports = module.exports = function subsetFontFile(subset, src, dest, callback) {
+    var args = [
+        exports._supsetPy(),
+        subset,
+        src,
+        dest
+    ];
+    exports._spawnPython(args, callback);
 };
 
-exports._required = [
-    'width', 'height'
-];
+/**
+ * Subset python file.
+ * @protected
+ * @ignore
+ */
+exports._supsetPy = function () {
+    return path.resolve(__dirname, '../../support/font-extractor/font-extractor.py');
+};
 
-exports._findMissing = function (options) {
-    return exports._required.filter(function (key) {
-        return !options[key];
+/**
+ * Spawn python command.
+ * @param args
+ * @param callback
+ * @protected
+ * @ignore
+ */
+exports._spawnPython = function (args, callback) {
+    var spawned = childProcess.spawn('python', args, callback);
+    spawned.stdout.pipe(process.stdout);
+    spawned.stderr.pipe(process.stderr);
+    spawned.on('exit', function (code) {
+        var err = code == 0 ? null : new Error('Exist with code:' + code);
+        callback(err);
     });
 };</pre>
         </article>
