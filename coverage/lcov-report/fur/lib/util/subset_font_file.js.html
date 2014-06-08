@@ -195,20 +195,20 @@
     </style>
 </head>
 <body>
-<div class="header high">
+<div class="header medium">
     <h1>Code coverage report for <span class="entity">fur/lib/util/subset_font_file.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">100% <small>(13 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">63.16% <small>(12 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">50% <small>(1 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">33.33% <small>(2 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(4 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">60% <small>(3 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">100% <small>(13 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">63.16% <small>(12 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -266,7 +266,19 @@
 48
 49
 50
-51</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -282,13 +294,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -299,7 +307,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -310,17 +323,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * @file Generate font sub set file.
  * @memberof util
  * @function subsetFontFile.
- * @param {string} subset - Letters to subset.
+ * @param {string} subset text - Text file which contains letters to subset.
  * @param {string} src - Source file name.
  * @param {string} dest - Destination file name.
  * @param callback
@@ -330,16 +354,28 @@
 &nbsp;
 var async = require('async'),
     path = require('path'),
+    util = require('util'),
     childProcess = require('child_process');
 &nbsp;
 exports = module.exports = function subsetFontFile(subset, src, dest, callback) {
-    var args = [
+    console.log('subset', subset);
+    var command = [
+        'python',
         exports._supsetPy(),
-        subset,
         src,
-        dest
-    ];
-    exports._spawnPython(args, callback);
+        dest,
+        '&lt;',
+        subset
+    ].join(' ');
+    childProcess.exec(command, function (err, stdOut, stdErr) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (stdOut) {
+            console.log(stdOut);
+        }
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (stdErr) {
+<span class="cstat-no" title="statement not covered" >            console.error(stdErr);</span>
+        }
+        callback(err);
+    });
 };
 &nbsp;
 /**
@@ -348,7 +384,7 @@ exports = module.exports = function subsetFontFile(subset, src, dest, callback) 
  * @ignore
  */
 exports._supsetPy = function () {
-    return path.resolve(__dirname, '../../support/font-extractor/font-extractor.py');
+    return path.resolve(__dirname, '../../support/subset.py');
 };
 &nbsp;
 /**
@@ -358,20 +394,20 @@ exports._supsetPy = function () {
  * @protected
  * @ignore
  */
-exports._spawnPython = function (args, callback) {
-    var spawned = childProcess.spawn('python', args, callback);
-    spawned.stdout.pipe(process.stdout);
-    spawned.stderr.pipe(process.stderr);
-    spawned.on('exit', function (code) {
-        var err = code == 0 ? null : <span class="branch-1 cbranch-no" title="branch not covered" >new Error('Exist with code:' + code);</span>
-        callback(err);
+exports._spawnPython = <span class="fstat-no" title="function not covered" >function (args, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    var spawned = childProcess.spawn('python', args, callback);</span>
+<span class="cstat-no" title="statement not covered" >    spawned.stdout.pipe(process.stdout);</span>
+<span class="cstat-no" title="statement not covered" >    spawned.stderr.pipe(process.stderr);</span>
+<span class="cstat-no" title="statement not covered" >    spawned.on('exit', <span class="fstat-no" title="function not covered" >function (code) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var err = code == 0 ? null : new Error('Exist with code:' + code);</span>
+<span class="cstat-no" title="statement not covered" >        callback(err);</span>
     });
 };</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 25 2014 10:24:05 GMT+0900 (JST)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 08 2014 14:48:41 GMT+0900 (JST)</div>
 </div>
 
 <script src="../../../prettify.js"></script>
