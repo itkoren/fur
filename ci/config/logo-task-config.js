@@ -109,15 +109,14 @@ exports.ppStatic = formats.map(function (format) {
     }
 });
 
-exports.xxPaperwork = formats.map(function (format) {
+exports.ppRestful = formats.map(function (format) {
     return {
-        filename: 'dist/images/xx-paperwork/xx-paperwork-logo.' + format,
+        filename: 'dist/images/pp-restful/pp-restful-logo.' + format,
         options: {
             fontSize: 104,
-            text: 'pp-static',
-            textTop: -10,
-            colorTheme: 'jj',
-            fontTheme: 'l',
+            text: 'pp-restful',
+            colorTheme: 'j',
+            fontTheme: 'k',
             height: 256,
             width: 256 * 2.4
         }

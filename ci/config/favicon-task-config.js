@@ -99,16 +99,15 @@ exports.ppStatic = formats.map(function (format) {
 });
 
 
-exports.xxPaperwork = formats.map(function (format) {
+exports.ppRestful = formats.map(function (format) {
     return {
-        filename: 'dist/images/xx-paperwork/xx-paperwork-favicon.' + format,
+        filename: 'dist/images/pp-restful/pp-restful-favicon.' + format,
         options: {
-            text: 'p',
-            colorTheme: 'jj',
-            fontTheme: 'l',
-            style: 'round',
-            textTop: -10
+            text: 'r',
+            colorTheme: 'j',
+            fontTheme: 'k',
+            style: 'bordered',
+            textTop: -12
         }
-
-    }
+    };
 });
